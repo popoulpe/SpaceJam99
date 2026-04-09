@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dd6vht2m2k8gn"]
+
+[ext_resource type="Script" uid="uid://rvb5waeq6ts4" path="res://mainMenu2D.gd" id="1_uimbt"]
+
+[node name="scene_MainMenu" type="Node3D" unique_id=1718710614]
+
+[node name="MainMenuCanvas2D" type="Node2D" parent="." unique_id=1263593866]
+script = ExtResource("1_uimbt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="MainMenuCanvas2D" unique_id=941420194]
+process_mode = 3
+follow_viewport_enabled = true
+
+[node name="ButtonManager" type="Control" parent="MainMenuCanvas2D/CanvasLayer" unique_id=654920789]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StartButton" type="Button" parent="MainMenuCanvas2D/CanvasLayer/ButtonManager" unique_id=957605518]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.3
+anchor_right = 0.6
+anchor_bottom = 0.4
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="MainMenuCanvas2D/CanvasLayer/ButtonManager" unique_id=2022094692]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.5
+anchor_right = 0.6
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="MainMenuCanvas2D/CanvasLayer/ButtonManager" unique_id=1880692453]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.7
+anchor_right = 0.6
+anchor_bottom = 0.8
+text = "Quit"
+
+[connection signal="pressed" from="MainMenuCanvas2D/CanvasLayer/ButtonManager/StartButton" to="MainMenuCanvas2D" method="_on_start_button_pressed"]
+[connection signal="pressed" from="MainMenuCanvas2D/CanvasLayer/ButtonManager/OptionsButton" to="MainMenuCanvas2D" method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMenuCanvas2D/CanvasLayer/ButtonManager/QuitButton" to="MainMenuCanvas2D" method="_on_quit_button_pressed"]
