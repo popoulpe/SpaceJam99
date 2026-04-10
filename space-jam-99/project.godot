@@ -13,7 +13,6 @@ config_version=5
 config/name="space jam 99"
 run/main_scene="uid://dd6vht2m2k8gn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [physics]
 

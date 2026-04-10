@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c4auicf67w3w0"]
+
+[ext_resource type="PackedScene" uid="uid://dxqwqklwlyrou" path="res://Scenes/PrefabScene/Player.tscn" id="1_6i62q"]
+[ext_resource type="Script" uid="uid://bqc8yxoweiqbl" path="res://Scripts/Character/player.gd" id="2_kwkfq"]
+
+[node name="Node3D" type="Node3D" unique_id=158570227]
+
+[node name="CharacterBody3D" parent="." unique_id=1835597114 instance=ExtResource("1_6i62q")]
+script = ExtResource("2_kwkfq")
