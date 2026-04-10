@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dj21aelpqhw17"]
+
+[ext_resource type="Script" uid="uid://dx60118m0y52k" path="res://addons/cesium_godot/scripts/georeference_camera_controller.gd" id="1_s6jqd"]
+
+[sub_resource type="Environment" id="Environment_s6jqd"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ihrw0"]
+
+[sub_resource type="Compositor" id="Compositor_dswxw"]
+
+[node name="ItsAButifulWorld" type="Node3D" unique_id=1254952831]
+
+[node name="CesiumGeoreference2" type="CesiumGeoreference" parent="." unique_id=1439904893]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="Cesium3DTileset" type="Cesium3DTileset" parent="CesiumGeoreference2" unique_id=863337459]
+forbid_holes = true
+generate_missing_normals_smooth = true
+ion_asset_id = 1
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="CesiumIonRasterOverlay" type="CesiumIonRasterOverlay" parent="CesiumGeoreference2/Cesium3DTileset" unique_id=1812912999]
+asset_id = 3
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=191273420 node_paths=PackedStringArray("globe_node", "tilesets")]
+script = ExtResource("1_s6jqd")
+globe_node = NodePath("../CesiumGeoreference2")
+tilesets = [NodePath("../CesiumGeoreference2/Cesium3DTileset")]
+
+[node name="CesiumGeoreference" type="CesiumGeoreference" parent="." unique_id=399919813]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=479463131]
+environment = SubResource("Environment_s6jqd")
+camera_attributes = SubResource("CameraAttributesPractical_ihrw0")
+compositor = SubResource("Compositor_dswxw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=2091768769]
+transform = Transform3D(0.33301705, -0.6734954, 0.659927, 0, 0.69987535, 0.7142651, -0.9429208, -0.23786245, 0.23307042, 0, 0, 0)

@@ -14,6 +14,10 @@ config/name="space jam 99"
 run/main_scene="uid://dd6vht2m2k8gn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/cesium_godot/plugin.cfg", "res://addons/godotsteam/plugin.cfg")
+
 [input]
 
 Forward={
@@ -51,3 +55,10 @@ Jump={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+
+[steam]
+
+initialization/app_id=0
+initialization/initialize_on_startup=false
+initialization/embed_callbacks=false
+multiplayer_peer/max_channels=4
