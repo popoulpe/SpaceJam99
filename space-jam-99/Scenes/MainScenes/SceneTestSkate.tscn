@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c4auicf67w3w0"]
+
+[ext_resource type="PackedScene" uid="uid://h1ie5l1rdwd5" path="res://Scenes/PrefabScene/player.tscn" id="1_mp6fv"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_mp6fv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mp6fv"]
+albedo_color = Color(0.12156863, 0.101960786, 0.14901961, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6i62q"]
+size = Vector2(20, 20)
+
+[node name="Node3D" type="Node3D" unique_id=158570227]
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=436877336]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1641532606]
+shape = SubResource("WorldBoundaryShape3D_mp6fv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=409672549]
+material_override = SubResource("StandardMaterial3D_mp6fv")
+mesh = SubResource("PlaneMesh_6i62q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1160791285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.153059, 0)
+light_angular_distance = 57.03
+
+[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("1_mp6fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.070906, 0)

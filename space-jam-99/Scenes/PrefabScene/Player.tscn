@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://h1ie5l1rdwd5"]
+
+[ext_resource type="Script" uid="uid://ylt23iw2ykxd" path="res://Scripts/Character/Player.gd" id="1_yucit"]
+[ext_resource type="Script" uid="uid://bqc8yxoweiqbl" path="res://Scripts/Character/playerController.gd" id="2_dbo68"]
+[ext_resource type="Script" uid="uid://dtmu6cvkg03uj" path="res://Scripts/Character/PlayerVisual.gd" id="3_4bud8"]
+[ext_resource type="Script" uid="uid://bmxxf5jnyyw83" path="res://Scripts/Character/PlayerCamera.gd" id="4_0x3iv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lw5so"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0i86"]
+albedo_color = Color(0.19215687, 0.3137255, 0.14901961, 1)
+metallic = 0.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_18ka7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxw1g"]
+albedo_color = Color(0.52695054, 0.49953848, 0.52692914, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ycpt8"]
+size = Vector3(0.22, 0.21, 0.47)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nef04"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_33snw"]
+size = Vector3(2, 0.15, 0.8)
+
+[node name="Player" type="Node3D" unique_id=2002350393]
+script = ExtResource("1_yucit")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1186776535]
+script = ExtResource("2_dbo68")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1513453063]
+shape = SubResource("CapsuleShape3D_lw5so")
+
+[node name="Mesh" type="Node3D" parent="CharacterBody3D" unique_id=1870025486]
+script = ExtResource("3_4bud8")
+
+[node name="Body" type="MeshInstance3D" parent="CharacterBody3D/Mesh" unique_id=1038807568]
+material_override = SubResource("StandardMaterial3D_a0i86")
+mesh = SubResource("CapsuleMesh_18ka7")
+
+[node name="Eyes" type="MeshInstance3D" parent="CharacterBody3D/Mesh" unique_id=1807513498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42, 0.46, 0)
+material_override = SubResource("StandardMaterial3D_oxw1g")
+mesh = SubResource("BoxMesh_ycpt8")
+
+[node name="Skate" type="MeshInstance3D" parent="CharacterBody3D/Mesh" unique_id=1003738383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9472681, 0)
+material_override = SubResource("StandardMaterial3D_nef04")
+mesh = SubResource("BoxMesh_33snw")
+
+[node name="PushTimer" type="Timer" parent="CharacterBody3D" unique_id=2045653735]
+process_callback = 0
+one_shot = true
+
+[node name="Camera" type="Node3D" parent="." unique_id=820782626]
+script = ExtResource("4_0x3iv")
+
+[node name="Camera3D" type="Camera3D" parent="Camera" unique_id=595510102]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.6292502, 0.49172783, 0.3729782)
+fov = 100.0
+
+[connection signal="timeout" from="CharacterBody3D/PushTimer" to="CharacterBody3D" method="_on_push_timer_timeout"]
