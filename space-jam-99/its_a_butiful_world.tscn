@@ -3,6 +3,27 @@
 [ext_resource type="Script" uid="uid://dx60118m0y52k" path="res://addons/cesium_godot/scripts/georeference_camera_controller.gd" id="1_s6jqd"]
 
 [sub_resource type="Environment" id="Environment_s6jqd"]
+background_mode = 1
+background_color = Color(0.05205836, 0.17316252, 0.25617296, 1)
+background_energy_multiplier = 0.13
+ambient_light_source = 2
+ambient_light_color = Color(0.8745098, 1, 0.9372549, 1)
+ambient_light_energy = 0.69
+ssao_radius = 2.74
+glow_intensity = 0.2
+glow_bloom = 0.14
+glow_hdr_threshold = 0.3
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.32025236, 0.47067416, 0.72156566, 1)
+fog_light_energy = 0.54
+fog_sun_scatter = 0.44
+fog_density = 0.74
+fog_sky_affect = 0.147
+fog_height = 680.49
+fog_depth_curve = 1.9318736
+fog_depth_begin = 30000.0
+fog_depth_end = 100000.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ihrw0"]
 
@@ -37,3 +58,5 @@ compositor = SubResource("Compositor_dswxw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=2091768769]
 transform = Transform3D(0.33301705, -0.6734954, 0.659927, 0, 0.69987535, 0.7142651, -0.9429208, -0.23786245, 0.23307042, 0, 0, 0)
+light_color = Color(1, 0.83137256, 0.70980394, 1)
+sky_mode = 1
