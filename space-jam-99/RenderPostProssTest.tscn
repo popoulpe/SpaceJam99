@@ -3,6 +3,7 @@
 [ext_resource type="Shader" uid="uid://buivys841eua8" path="res://PostProssfr1.gdshader" id="1_4wkif"]
 [ext_resource type="PackedScene" uid="uid://dj21aelpqhw17" path="res://its_a_butiful_world.tscn" id="1_ejyuv"]
 [ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/SM_Satelifeet.fbx" id="3_7ecto"]
+[ext_resource type="PackedScene" uid="uid://b3lwwea8rwu32" path="res://Assets/Perso_principal_idle_V1.fbx" id="4_sfdi4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ecto"]
 shader = ExtResource("1_4wkif")
@@ -33,4 +34,7 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="SM_Satelifeet" parent="." unique_id=1208232473 instance=ExtResource("3_7ecto")]
-transform = Transform3D(3137.9133, 0, -3892.7495, 0, 5000, 0, 3892.7495, 0, 3137.9133, 2.281, 0, 23001)
+transform = Transform3D(3137.9133, 0, -3892.7495, 0, 5000, 0, 3892.7495, 0, 3137.9133, 2.281, 0, 30001)
+
+[node name="Perso_principal_idle_V1" parent="." unique_id=893794732 instance=ExtResource("4_sfdi4")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 50, 0, 0)
