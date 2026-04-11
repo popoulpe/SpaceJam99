@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hi4j3nygouwj"]
+
+[ext_resource type="Texture2D" uid="uid://0l8xio5ieu6l" path="res://Assets/feetelite.tga" id="1_u137o"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_u137o")
+metallic = 1.0
+metallic_specular = 0.21
+metallic_texture = ExtResource("1_u137o")
+roughness = 0.2
+roughness_texture = ExtResource("1_u137o")
+roughness_texture_channel = 2
+stencil_flags = 2
+stencil_outline_thickness = 0.0
