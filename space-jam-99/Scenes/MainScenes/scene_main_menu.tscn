@@ -1,17 +1,51 @@
 [gd_scene format=3 uid="uid://dd6vht2m2k8gn"]
 
 [ext_resource type="Script" uid="uid://rvb5waeq6ts4" path="res://Scripts/UI/mainMenu2D.gd" id="1_uimbt"]
+[ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Art/UI/fonts/Astron Boy Video.otf" id="2_jwy2b"]
+[ext_resource type="Script" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="3_jwy2b"]
+
+[sub_resource type="GDScript" id="GDScript_u7qd6"]
+script/source = "@tool
+extends Node
+class_name AutoSizeLabelManager
+
+#region Variables
+static var _active_labels : Array[Control]
+#endregion
+
+
+#region Public functions
+static func register_label(label: Control) -> void:
+	_active_labels.append(label)
+
+
+static func erase_label(label: Control) -> void:
+	_active_labels.erase(label)
+
+
+## This function is to be called by the user after manually changing the locale of the game.
+## Will cause to check the size of all the active labels, useful after changing the language of text pieces.
+## Call it with: LabelFotAutoSizeManager.locale_changed()
+static func locale_chaged() -> void:
+	for label: Control in _active_labels:
+		label._on_locale_changed()
+#endregion
+"
 
 [node name="scene_MainMenu" type="Node3D" unique_id=1718710614]
 
-[node name="MainMenuCanvas2D" type="Node2D" parent="." unique_id=1263593866]
+[node name="script_MainMenu" type="Control" parent="." unique_id=714102044]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_uimbt")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="MainMenuCanvas2D" unique_id=941420194]
+[node name="CanvasLayer" type="CanvasLayer" parent="script_MainMenu" unique_id=941420194]
 process_mode = 3
 follow_viewport_enabled = true
 
-[node name="ButtonManager" type="Control" parent="MainMenuCanvas2D/CanvasLayer" unique_id=654920789]
+[node name="ButtonManager" type="Control" parent="script_MainMenu/CanvasLayer" unique_id=654920789]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -21,36 +55,94 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = SubResource("GDScript_u7qd6")
 
-[node name="StartButton" type="Button" parent="MainMenuCanvas2D/CanvasLayer/ButtonManager" unique_id=957605518]
+[node name="StartTextureButton" type="TextureButton" parent="script_MainMenu/CanvasLayer/ButtonManager" unique_id=731802818]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.3
 anchor_right = 0.6
 anchor_bottom = 0.4
-text = "Start"
 
-[node name="OptionsButton" type="Button" parent="MainMenuCanvas2D/CanvasLayer/ButtonManager" unique_id=2022094692]
+[node name="Label" type="Label" parent="script_MainMenu/CanvasLayer/ButtonManager/StartTextureButton" unique_id=1782916379]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_jwy2b")
+theme_override_font_sizes/font_size = 42
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+script = ExtResource("3_jwy2b")
+watch_text_change = true
+max_font_size = 64
+
+[node name="OptionsTextureButton" type="TextureButton" parent="script_MainMenu/CanvasLayer/ButtonManager" unique_id=434921340]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.5
 anchor_right = 0.6
 anchor_bottom = 0.6
+
+[node name="Label" type="Label" parent="script_MainMenu/CanvasLayer/ButtonManager/OptionsTextureButton" unique_id=742673760]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_jwy2b")
+theme_override_font_sizes/font_size = 42
 text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+script = ExtResource("3_jwy2b")
+max_font_size = 64
 
-[node name="QuitButton" type="Button" parent="MainMenuCanvas2D/CanvasLayer/ButtonManager" unique_id=1880692453]
+[node name="QuitTextureButton" type="TextureButton" parent="script_MainMenu/CanvasLayer/ButtonManager" unique_id=966524864]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.7
 anchor_right = 0.6
 anchor_bottom = 0.8
-text = "Quit"
 
-[connection signal="pressed" from="MainMenuCanvas2D/CanvasLayer/ButtonManager/StartButton" to="MainMenuCanvas2D" method="_on_start_button_pressed"]
-[connection signal="pressed" from="MainMenuCanvas2D/CanvasLayer/ButtonManager/OptionsButton" to="MainMenuCanvas2D" method="_on_options_button_pressed"]
-[connection signal="pressed" from="MainMenuCanvas2D/CanvasLayer/ButtonManager/QuitButton" to="MainMenuCanvas2D" method="_on_quit_button_pressed"]
+[node name="Label" type="Label" parent="script_MainMenu/CanvasLayer/ButtonManager/QuitTextureButton" unique_id=1905737099]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_jwy2b")
+theme_override_font_sizes/font_size = 42
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+script = ExtResource("3_jwy2b")
+min_font_size = 2
+max_font_size = 64
+
+[connection signal="pressed" from="script_MainMenu/CanvasLayer/ButtonManager/StartTextureButton" to="script_MainMenu" method="_on_start_texture_button_pressed"]
+[connection signal="pressed" from="script_MainMenu/CanvasLayer/ButtonManager/OptionsTextureButton" to="script_MainMenu" method="_on_options_texture_button_pressed"]
+[connection signal="pressed" from="script_MainMenu/CanvasLayer/ButtonManager/QuitTextureButton" to="script_MainMenu" method="_on_quit_texture_button_pressed"]
