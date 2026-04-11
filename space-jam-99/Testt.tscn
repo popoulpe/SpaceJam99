@@ -84,7 +84,7 @@ transform = Transform3D(1, 0, 0, 0, 0.5995266, 0.80035484, 0, -0.80035484, 0.599
 [node name="SkateParticle" type="CPUParticles3D" parent="." unique_id=1800973084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04215622, 0, 1.9533868)
 amount = 12
-lifetime = 0.24000000000000002
+lifetime = 0.24
 preprocess = 0.53
 explosiveness = 0.19
 randomness = 0.31

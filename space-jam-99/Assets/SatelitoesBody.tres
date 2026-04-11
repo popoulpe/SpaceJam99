@@ -15,6 +15,6 @@ diffuse_mode = 3
 specular_mode = 1
 albedo_texture = ExtResource("1_gg0ki")
 metallic = 0.6
-roughness = 0.3
+roughness = 0.01
 stencil_flags = 2
 stencil_outline_thickness = 0.028

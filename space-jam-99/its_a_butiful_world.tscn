@@ -32,6 +32,12 @@ fog_depth_end = 100000.0
 [node name="ItsAButifulWorld" type="Node3D" unique_id=1254952831]
 
 [node name="CesiumGeoreference2" type="CesiumGeoreference" parent="." unique_id=1439904893]
+ecefX = 5681976.7528118575
+ecefY = 227715.11657734498
+ecefZ = 6476975.672932956
+latitude = 48.85900015982031
+longitude = 2.2949999999999995
+altitude = 2253000.9405378476
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="Cesium3DTileset" type="Cesium3DTileset" parent="CesiumGeoreference2" unique_id=863337459]
@@ -41,7 +47,7 @@ ion_asset_id = 1
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="CesiumIonRasterOverlay" type="CesiumIonRasterOverlay" parent="CesiumGeoreference2/Cesium3DTileset" unique_id=1812912999]
-asset_id = 3
+asset_id = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=191273420 node_paths=PackedStringArray("globe_node", "tilesets")]
 script = ExtResource("1_s6jqd")
