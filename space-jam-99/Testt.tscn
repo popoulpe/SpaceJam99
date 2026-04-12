@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/SM_Satelifeet.fbx" id="2_2kr1e"]
 [ext_resource type="Texture2D" uid="uid://dy3fwkwr6fa24" path="res://Assets/rainbow-gradient-line.jpg" id="2_jc3le"]
 [ext_resource type="Material" uid="uid://dbyakhpgiql0d" path="res://Assets/MainChara.tres" id="4_xmkne"]
+[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/EarthRender.tres" id="5_f48s1"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2kr1e"]
 
@@ -666,6 +667,9 @@ tracks/51/keys = PackedFloat32Array(0, 1, 1.8005679e-08, 0.045677833, 1.8651843e
 _data = {
 &"mixamo_com": SubResource("Animation_k0okk")
 }
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4ak8j"]
+material = ExtResource("5_f48s1")
 
 [node name="TestScene" type="Node3D" unique_id=678299224]
 
@@ -1361,3 +1365,7 @@ skeleton = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Perso_principal_idle_V1" unique_id=220339002]
 libraries/ = SubResource("AnimationLibrary_4d28y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2006607308]
+transform = Transform3D(1.3597187, 0, 0, 0, 1, 0, 0, 0, 1, 9.057486, 0, 8.104364)
+mesh = SubResource("PlaneMesh_4ak8j")
