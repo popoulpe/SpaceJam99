@@ -1,0 +1,53 @@
+extends State
+
+@export var idle_state: State
+@export var fall_state: State
+@export var jump_state: State
+@export var break_state : State
+
+@export var turnSpeed :float=1
+@export var turnAcceleration :float=5
+@export var deceleration :float = 10
+
+func enter() -> void :
+	pass
+
+func exit() -> void:
+	pass
+
+func process_input(event:InputEvent) -> State:
+	if Input.is_action_pressed("Backward") :
+		return break_state
+	if !Input.is_action_pressed("Forward") :
+		return idle_state
+	if Input.is_action_pressed("Jump") && parent.is_on_floor():
+		return jump_state
+	return null
+
+func process_frame(delta:float) -> State:
+	return null
+
+func process_physics(delta:float) -> State:
+	
+	parent.velocity = forwardMovement(delta)
+	parent.velocity = apply_forward_deceleration(delta, deceleration)
+	parent.rotation.y = apply_turn_movement(delta, turnSpeed)
+	parent.velocity = gain_turn_speed(delta, turnSpeed, turnAcceleration)
+	parent.velocity = apply_slope_slide(delta)
+	
+	if !parent.is_on_floor():
+		return fall_state
+	return null
+
+
+func forwardMovement(delta: float) ->Vector3 :
+	var forwardVelocity :Vector3= Vector3(parent.velocity.x, 0,parent.velocity.z) 
+	
+	if parent.canPush && parent.velocity.length()<pushMaxSpeed:
+		forwardVelocity +=(parent.basis.x * pushAcceleration)
+		parent.canPush = false
+		parent.pushTimer.start()
+	
+	forwardVelocity.y = parent.velocity.y
+	
+	return forwardVelocity

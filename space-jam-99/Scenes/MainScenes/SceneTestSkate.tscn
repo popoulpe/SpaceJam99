@@ -1,29 +1,124 @@
 [gd_scene format=3 uid="uid://c4auicf67w3w0"]
 
-[ext_resource type="PackedScene" uid="uid://h1ie5l1rdwd5" path="res://Scenes/PrefabScene/player.tscn" id="1_mp6fv"]
+[ext_resource type="Texture2D" uid="uid://b8cm5qecvp1hn" path="res://Assets/Prototypage/Dark/texture_08.png" id="1_kwkfq"]
+[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/player.tscn" id="1_mp6fv"]
+[ext_resource type="Texture2D" uid="uid://x6a8o6sss7vp" path="res://Assets/Prototypage/Orange/texture_08.png" id="2_8gp4t"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_mp6fv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ew7vi"]
+albedo_texture = ExtResource("2_8gp4t")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mp6fv"]
-albedo_color = Color(0.12156863, 0.101960786, 0.14901961, 1)
+[sub_resource type="PrismMesh" id="PrismMesh_gs7mn"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_6i62q"]
-size = Vector2(20, 20)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aqaha"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcc03"]
+size = Vector3(500, 0.1, 500)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41k57"]
+albedo_texture = ExtResource("1_kwkfq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1b2qt"]
+size = Vector2(500, 500)
 
 [node name="Node3D" type="Node3D" unique_id=158570227]
-
-[node name="Ground" type="StaticBody3D" parent="." unique_id=436877336]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1641532606]
-shape = SubResource("WorldBoundaryShape3D_mp6fv")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=409672549]
-material_override = SubResource("StandardMaterial3D_mp6fv")
-mesh = SubResource("PlaneMesh_6i62q")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1160791285]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.153059, 0)
 light_angular_distance = 57.03
 
+[node name="Ground" type="Node3D" parent="." unique_id=1344500902]
+
+[node name="grande pente" type="StaticBody3D" parent="Ground" unique_id=403910724]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, 33.613396, 14.785833, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/grande pente" unique_id=767311687]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/grande pente" unique_id=1265667181]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="FlatGround" type="StaticBody3D" parent="Ground" unique_id=436877336]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/FlatGround" unique_id=1641532606]
+shape = SubResource("BoxShape3D_gcc03")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/FlatGround" unique_id=409672549]
+material_override = SubResource("StandardMaterial3D_41k57")
+mesh = SubResource("PlaneMesh_1b2qt")
+
+[node name="Triangle" type="StaticBody3D" parent="Ground" unique_id=656041483]
+transform = Transform3D(2.28, 0, 0, 0, 1, 0, 0, 0, 2.66, -2.9560494, 0.23888636, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/Triangle" unique_id=1055717775]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Triangle" unique_id=76244158]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="suite de pentes" type="Node3D" parent="Ground" unique_id=1294820742]
+
+[node name="grande pente" type="StaticBody3D" parent="Ground/suite de pentes" unique_id=1827500682]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, 179.96439, 14.785833, 79.65256)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/suite de pentes/grande pente" unique_id=76776074]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/suite de pentes/grande pente" unique_id=726017288]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="grande pente2" type="StaticBody3D" parent="Ground/suite de pentes" unique_id=1458817738]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, 107.03379, 14.785833, 79.93637)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/suite de pentes/grande pente2" unique_id=1711922238]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/suite de pentes/grande pente2" unique_id=1661146400]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="grande pente3" type="StaticBody3D" parent="Ground/suite de pentes" unique_id=304144915]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, 33.613396, 14.785833, 81.50967)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/suite de pentes/grande pente3" unique_id=701061754]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/suite de pentes/grande pente3" unique_id=2124869944]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="grande pente4" type="StaticBody3D" parent="Ground/suite de pentes" unique_id=1743872156]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, -33.9349, 14.785833, 81.55459)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/suite de pentes/grande pente4" unique_id=819378966]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/suite de pentes/grande pente4" unique_id=484372931]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="grande pente5" type="StaticBody3D" parent="Ground/suite de pentes" unique_id=998828290]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, -107.49464, 14.785833, 81.948586)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/suite de pentes/grande pente5" unique_id=715359568]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/suite de pentes/grande pente5" unique_id=2066468527]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
+[node name="grande pente6" type="StaticBody3D" parent="Ground/suite de pentes" unique_id=385373616]
+transform = Transform3D(60, 0, 0, 0, 30.045, 0, 0, 0, 30.045, -170.63153, 14.785833, 83.38213)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/suite de pentes/grande pente6" unique_id=1407525339]
+material_override = SubResource("StandardMaterial3D_ew7vi")
+mesh = SubResource("PrismMesh_gs7mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/suite de pentes/grande pente6" unique_id=994323419]
+shape = SubResource("ConvexPolygonShape3D_aqaha")
+
 [node name="Player" parent="." unique_id=2002350393 instance=ExtResource("1_mp6fv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.070906, 0)
+transform = Transform3D(0.9988467, 0, 0.048013102, 0, 1, 0, -0.048013102, 0, 0.9988467, 1.9869318, 2.0808377, 0.05090046)

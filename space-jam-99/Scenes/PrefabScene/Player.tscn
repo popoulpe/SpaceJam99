@@ -1,9 +1,17 @@
-[gd_scene format=3 uid="uid://h1ie5l1rdwd5"]
+[gd_scene format=3 uid="uid://dn01o5fyvd8p5"]
 
 [ext_resource type="Script" uid="uid://ylt23iw2ykxd" path="res://Scripts/Character/Player.gd" id="1_yucit"]
 [ext_resource type="Script" uid="uid://bqc8yxoweiqbl" path="res://Scripts/Character/playerController.gd" id="2_dbo68"]
 [ext_resource type="Script" uid="uid://dtmu6cvkg03uj" path="res://Scripts/Character/PlayerVisual.gd" id="3_4bud8"]
+[ext_resource type="Script" uid="uid://c0pt6w6tv4rj5" path="res://Scripts/Character/to_delete_speed.gd" id="3_g6jha"]
 [ext_resource type="Script" uid="uid://bmxxf5jnyyw83" path="res://Scripts/Character/PlayerCamera.gd" id="4_0x3iv"]
+[ext_resource type="Script" uid="uid://cxjurc35oqbtg" path="res://Scripts/Character/States/StateMachine.gd" id="4_dbo68"]
+[ext_resource type="Script" uid="uid://mj25t4sr13b4" path="res://Scripts/Character/States/IdleState.gd" id="5_0x3iv"]
+[ext_resource type="Script" uid="uid://ou675xit6hcn" path="res://Scripts/Character/States/MoveState.gd" id="6_qaqhs"]
+[ext_resource type="Script" uid="uid://b6obnjfa7mdge" path="res://Scripts/Character/States/FallState.gd" id="7_qaqhs"]
+[ext_resource type="Script" uid="uid://b0qcgyhl0k0ik" path="res://Scripts/Character/States/JumpState.gd" id="8_kfjcm"]
+[ext_resource type="Script" uid="uid://cyr1tqkk3buti" path="res://Scripts/Character/States/LandState.gd" id="9_g6jha"]
+[ext_resource type="Script" uid="uid://bun5r5eowybfj" path="res://Scripts/Character/States/BreakState.gd" id="12_dsmn0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lw5so"]
 
@@ -25,17 +33,49 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_33snw"]
 size = Vector3(2, 0.15, 0.8)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6jha"]
+transparency = 1
+albedo_color = Color(1, 0, 0.011764706, 0.48235294)
+
+[sub_resource type="SphereMesh" id="SphereMesh_dsmn0"]
+material = SubResource("StandardMaterial3D_g6jha")
+radius = 0.1
+height = 0.2
+
 [node name="Player" type="Node3D" unique_id=2002350393]
 script = ExtResource("1_yucit")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1186776535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+floor_constant_speed = true
 script = ExtResource("2_dbo68")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=595510102 node_paths=PackedStringArray("camera_follow_point", "character_body_3d")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.2129595, 1.1535258, 1.6652347)
+fov = 100.0
+script = ExtResource("4_0x3iv")
+camera_follow_point = NodePath("../CameraFollowPoint")
+character_body_3d = NodePath("..")
+
+[node name="to delete" type="Control" parent="CharacterBody3D" unique_id=1886726726]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_g6jha")
+
+[node name="Label" type="Label" parent="CharacterBody3D/to delete" unique_id=552680825]
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 47.0
+text = "90"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1513453063]
 shape = SubResource("CapsuleShape3D_lw5so")
 
-[node name="Mesh" type="Node3D" parent="CharacterBody3D" unique_id=1870025486]
+[node name="Mesh" type="Node3D" parent="CharacterBody3D" unique_id=1870025486 node_paths=PackedStringArray("playerController")]
 script = ExtResource("3_4bud8")
+playerController = NodePath("..")
 
 [node name="Body" type="MeshInstance3D" parent="CharacterBody3D/Mesh" unique_id=1038807568]
 material_override = SubResource("StandardMaterial3D_a0i86")
@@ -53,13 +93,53 @@ mesh = SubResource("BoxMesh_33snw")
 
 [node name="PushTimer" type="Timer" parent="CharacterBody3D" unique_id=2045653735]
 process_callback = 0
+wait_time = 0.75
 one_shot = true
 
-[node name="Camera" type="Node3D" parent="." unique_id=820782626]
-script = ExtResource("4_0x3iv")
+[node name="StateMachine" type="Node" parent="CharacterBody3D" unique_id=1321114857 node_paths=PackedStringArray("starting_state")]
+script = ExtResource("4_dbo68")
+starting_state = NodePath("Idle")
 
-[node name="Camera3D" type="Camera3D" parent="Camera" unique_id=595510102]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.6292502, 0.49172783, 0.3729782)
-fov = 100.0
+[node name="Idle" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1000041527 node_paths=PackedStringArray("move_state", "fall_state", "jump_state", "break_state")]
+script = ExtResource("5_0x3iv")
+move_state = NodePath("../Move")
+fall_state = NodePath("../Fall")
+jump_state = NodePath("../Jump")
+break_state = NodePath("../Break")
+turnSpeed = 0.25
+
+[node name="Move" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1516954293 node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "break_state")]
+script = ExtResource("6_qaqhs")
+idle_state = NodePath("../Idle")
+fall_state = NodePath("../Fall")
+jump_state = NodePath("../Jump")
+break_state = NodePath("../Break")
+turnSpeed = 0.25
+
+[node name="Fall" type="Node" parent="CharacterBody3D/StateMachine" unique_id=662319048 node_paths=PackedStringArray("idle_state", "move_state")]
+script = ExtResource("7_qaqhs")
+idle_state = NodePath("../Idle")
+move_state = NodePath("../Move")
+turnSpeed = 3.0
+
+[node name="Jump" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1880933946 node_paths=PackedStringArray("fall_state")]
+script = ExtResource("8_kfjcm")
+fall_state = NodePath("../Fall")
+
+[node name="Land" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1807008406 node_paths=PackedStringArray("idle_state")]
+script = ExtResource("9_g6jha")
+idle_state = NodePath("../Idle")
+
+[node name="Break" type="Node" parent="CharacterBody3D/StateMachine" unique_id=662966191 node_paths=PackedStringArray("idle_state", "jump_state", "fall_state")]
+script = ExtResource("12_dsmn0")
+idle_state = NodePath("../Idle")
+jump_state = NodePath("../Jump")
+fall_state = NodePath("../Fall")
+
+[node name="CameraFollowPoint" type="Node3D" parent="CharacterBody3D" unique_id=1496072441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1717676, 0.5539298, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CameraFollowPoint" unique_id=1316331839]
+mesh = SubResource("SphereMesh_dsmn0")
 
 [connection signal="timeout" from="CharacterBody3D/PushTimer" to="CharacterBody3D" method="_on_push_timer_timeout"]
