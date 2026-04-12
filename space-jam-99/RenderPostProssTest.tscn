@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://buivys841eua8" path="res://PostProssfr1.gdshader" id="1_4wkif"]
 [ext_resource type="PackedScene" uid="uid://dj21aelpqhw17" path="res://its_a_butiful_world.tscn" id="1_ejyuv"]
-[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/EarthRender.tres" id="3_7ecto"]
+[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/farfaline/EarthRender.tres" id="3_7ecto"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ecto"]
 shader = ExtResource("1_4wkif")

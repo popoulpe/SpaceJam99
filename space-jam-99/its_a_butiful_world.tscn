@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dj21aelpqhw17"]
 
 [ext_resource type="Script" uid="uid://dx60118m0y52k" path="res://addons/cesium_godot/scripts/georeference_camera_controller.gd" id="1_s6jqd"]
-[ext_resource type="PackedScene" uid="uid://b3lwwea8rwu32" path="res://Assets/Perso_principal_idle_V1.fbx" id="2_ihrw0"]
+[ext_resource type="PackedScene" uid="uid://b3lwwea8rwu32" path="res://Assets/farfaline/Perso_principal_idle_V1.fbx" id="2_ihrw0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihrw0"]
 transparency = 3

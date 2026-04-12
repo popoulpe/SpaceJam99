@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://cf5kbbbyaojrc"]
 
-[ext_resource type="Shader" uid="uid://cu1h2dye2ons" path="res://Assets/RGBTestMoove.gdshader" id="1_xmkne"]
-[ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/SM_Satelifeet.fbx" id="2_2kr1e"]
-[ext_resource type="Texture2D" uid="uid://dy3fwkwr6fa24" path="res://Assets/rainbow-gradient-line.jpg" id="2_jc3le"]
-[ext_resource type="Material" uid="uid://dbyakhpgiql0d" path="res://Assets/MainChara.tres" id="4_xmkne"]
-[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/EarthRender.tres" id="5_f48s1"]
+[ext_resource type="Shader" uid="uid://cu1h2dye2ons" path="res://Assets/farfaline/RGBTestMoove.gdshader" id="1_xmkne"]
+[ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/farfaline/SM_Satelifeet.fbx" id="2_2kr1e"]
+[ext_resource type="Texture2D" uid="uid://dy3fwkwr6fa24" path="res://Assets/farfaline/rainbow-gradient-line.jpg" id="2_jc3le"]
+[ext_resource type="Material" uid="uid://dbyakhpgiql0d" path="res://Assets/farfaline/MainChara.tres" id="4_xmkne"]
+[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/farfaline/EarthRender.tres" id="5_f48s1"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2kr1e"]
 
