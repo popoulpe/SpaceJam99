@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dd6vht2m2k8gn"]
 
 [ext_resource type="Script" uid="uid://rvb5waeq6ts4" path="res://Scripts/UI/mainMenu2D.gd" id="1_uimbt"]
-[ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Art/UI/fonts/Astron Boy Video.otf" id="2_jwy2b"]
-[ext_resource type="Script" uid="uid://3w36qcdvdxwk" path="res://Scenes/MainScenes/colorbutton.gd" id="3_3r7xn"]
+[ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="2_jwy2b"]
+[ext_resource type="Script" uid="uid://3w36qcdvdxwk" path="res://Scripts/UI/colorbutton.gd" id="3_3r7xn"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="3_jwy2b"]
-[ext_resource type="Texture2D" uid="uid://coob4py1mel12" path="res://Art/UI/ui_button_grey_test_3.png" id="7_x475w"]
-[ext_resource type="Texture2D" uid="uid://0oiurt7xifx1" path="res://Art/UI/ui_button_grey_hover_3.png" id="8_alnlg"]
+[ext_resource type="Texture2D" uid="uid://coob4py1mel12" path="res://Assets/UI/ui_button_grey_test_3.png" id="7_x475w"]
+[ext_resource type="Texture2D" uid="uid://0oiurt7xifx1" path="res://Assets/UI/ui_button_grey_hover_3.png" id="8_alnlg"]
 
 [sub_resource type="GDScript" id="GDScript_u7qd6"]
 script/source = "@tool

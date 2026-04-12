@@ -15,7 +15,7 @@ func enter() -> void :
 func exit() -> void:
 	pass
 
-func process_input(event:InputEvent) -> State:
+func process_input(_event:InputEvent) -> State:
 	if Input.is_action_pressed("Backward") :
 		return break_state
 	if !Input.is_action_pressed("Forward") :
@@ -24,7 +24,7 @@ func process_input(event:InputEvent) -> State:
 		return jump_state
 	return null
 
-func process_frame(delta:float) -> State:
+func process_frame(_delta:float) -> State:
 	return null
 
 func process_physics(delta:float) -> State:
@@ -32,7 +32,7 @@ func process_physics(delta:float) -> State:
 	parent.velocity = forwardMovement(delta)
 	parent.velocity = apply_forward_deceleration(delta, deceleration)
 	parent.rotation.y = apply_turn_movement(delta, turnSpeed)
-	parent.velocity = gain_turn_speed(delta, turnSpeed, turnAcceleration)
+	parent.velocity = gain_turn_speed(delta, turnAcceleration)
 	parent.velocity = apply_slope_slide(delta)
 	
 	if !parent.is_on_floor():
@@ -40,7 +40,7 @@ func process_physics(delta:float) -> State:
 	return null
 
 
-func forwardMovement(delta: float) ->Vector3 :
+func forwardMovement(_delta: float) ->Vector3 :
 	var forwardVelocity :Vector3= Vector3(parent.velocity.x, 0,parent.velocity.z) 
 	
 	if parent.canPush && parent.velocity.length()<pushMaxSpeed:
