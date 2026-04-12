@@ -70,6 +70,8 @@ var _last_text: String = ""
 
 
 func _ready() -> void:
+	#$".".modulate = Color(1, 1, 1)
+	#print($".".modulate)
 	# TODO: change defaults instead of hard-setting!
 	force_default_settings()
 
