@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b2ga1fv652pob"]
+
+[ext_resource type="Texture2D" uid="uid://blygbgeppfpob" path="res://Assets/Prototypage/fioles/fiole.png" id="1_dpefp"]
+[ext_resource type="Script" uid="uid://ckfgrcm8pmwon" path="res://Scripts/FioleMG/fioleFeelings.gd" id="2_c2jfo"]
+[ext_resource type="Texture2D" uid="uid://dk5mfi366mn2c" path="res://Assets/Prototypage/fioles/frame.png" id="3_72jsb"]
+[ext_resource type="Texture2D" uid="uid://od51ho42sjrm" path="res://Assets/Prototypage/fioles/check.png" id="3_kqx3r"]
+[ext_resource type="Texture2D" uid="uid://c1ojvwprdeg7r" path="res://Assets/Prototypage/fioles/cross.png" id="4_kqx3r"]
+
+[node name="TextureRect" type="TextureButton" unique_id=1819222098]
+offset_right = 10.0
+offset_bottom = 50.0
+texture_normal = ExtResource("1_dpefp")
+script = ExtResource("2_c2jfo")
+check = ExtResource("3_kqx3r")
+cross = ExtResource("4_kqx3r")
+fioleBottomPos = Vector2(0, 50)
+fioleTopPos = Vector2(0, 3)
+maxQtt = 4
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1406632974]
+layout_mode = 0
+offset_left = 1.5
+offset_top = 51.0
+offset_right = 8.5
+offset_bottom = 58.0
+texture = ExtResource("3_72jsb")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=279481496]
+layout_mode = 0
+offset_left = -0.5
+offset_right = 6.5
+offset_bottom = 7.0
+texture = ExtResource("4_kqx3r")
+expand_mode = 1

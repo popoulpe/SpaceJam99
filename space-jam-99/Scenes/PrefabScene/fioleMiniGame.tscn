@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cfnosvgfqqkcn"]
+
+[ext_resource type="PackedScene" uid="uid://b2ga1fv652pob" path="res://Scenes/PrefabScene/fiole.tscn" id="1_gysgh"]
+[ext_resource type="Script" uid="uid://mtflrlh4nenl" path="res://Scripts/FioleMG/fiole_mini_game.gd" id="1_nepyk"]
+
+[node name="FioleMiniGame" type="Control" unique_id=1608111177 node_paths=PackedStringArray("fioles")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nepyk")
+fioles = [NodePath("TextureRect"), NodePath("TextureRect2"), NodePath("TextureRect3"), NodePath("TextureRect4")]
+
+[node name="TextureRect" parent="." unique_id=1819222098 instance=ExtResource("1_gysgh")]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 300.0
+offset_right = 410.0
+offset_bottom = 350.0
+scale = Vector2(5, 5)
+
+[node name="TextureRect2" parent="." unique_id=1936685959 instance=ExtResource("1_gysgh")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 300.0
+offset_right = 510.0
+offset_bottom = 350.0
+scale = Vector2(5, 5)
+
+[node name="TextureRect3" parent="." unique_id=1842795399 instance=ExtResource("1_gysgh")]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 300.0
+offset_right = 610.0
+offset_bottom = 350.0
+scale = Vector2(5, 5)
+
+[node name="TextureRect4" parent="." unique_id=689035016 instance=ExtResource("1_gysgh")]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 300.0
+offset_right = 710.0
+offset_bottom = 350.0
+scale = Vector2(5, 5)
+
+[connection signal="button_down" from="TextureRect" to="." method="_on_texture_rect_button_down" binds= [0]]
+[connection signal="button_down" from="TextureRect2" to="." method="_on_texture_rect_button_down" binds= [1]]
+[connection signal="button_down" from="TextureRect3" to="." method="_on_texture_rect_button_down" binds= [2]]
+[connection signal="button_down" from="TextureRect4" to="." method="_on_texture_rect_button_down" binds= [3]]
