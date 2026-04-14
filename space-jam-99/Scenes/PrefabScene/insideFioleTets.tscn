@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://7byfg5oabxf6"]
+
+[ext_resource type="Texture2D" uid="uid://buhpnc4sp8p5y" path="res://Assets/Prototypage/fioles/liquid.png" id="1_isi8h"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1514499596]
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 49.0
+texture = ExtResource("1_isi8h")
+expand_mode = 3
+stretch_mode = 6

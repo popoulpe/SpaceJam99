@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4auicf67w3w0"]
 
-[ext_resource type="Texture2D" uid="uid://b8cm5qecvp1hn" path="res://Assets/Prototypage/Dark/texture_08.png" id="1_kwkfq"]
-[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/player.tscn" id="1_mp6fv"]
-[ext_resource type="Texture2D" uid="uid://x6a8o6sss7vp" path="res://Assets/Prototypage/Orange/texture_08.png" id="2_8gp4t"]
+[ext_resource type="Texture2D" uid="uid://b8cm5qecvp1hn" path="res://Assets/Prototypage/material/Dark/texture_08.png" id="1_kwkfq"]
+[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/Player.tscn" id="1_mp6fv"]
+[ext_resource type="Texture2D" uid="uid://x6a8o6sss7vp" path="res://Assets/Prototypage/material/Orange/texture_08.png" id="2_8gp4t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ew7vi"]
 albedo_texture = ExtResource("2_8gp4t")
