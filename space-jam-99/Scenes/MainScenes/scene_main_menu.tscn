@@ -39,9 +39,12 @@ static func locale_chaged() -> void:
 
 [node name="script_MainMenu" type="Control" parent="." unique_id=714102044]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_uimbt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="script_MainMenu" unique_id=941420194]
@@ -56,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = SubResource("GDScript_u7qd6")
