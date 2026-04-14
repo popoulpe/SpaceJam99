@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfnosvgfqqkcn"]
 
-[ext_resource type="PackedScene" uid="uid://b2ga1fv652pob" path="res://Scenes/PrefabScene/fiole.tscn" id="1_gysgh"]
+[ext_resource type="PackedScene" uid="uid://b2ga1fv652pob" path="res://Scenes/PrefabScene/fioles/fiole.tscn" id="1_gysgh"]
 [ext_resource type="Script" uid="uid://mtflrlh4nenl" path="res://Scripts/FioleMG/fiole_mini_game.gd" id="1_nepyk"]
 
 [node name="FioleMiniGame" type="Control" unique_id=1608111177 node_paths=PackedStringArray("fioles")]
