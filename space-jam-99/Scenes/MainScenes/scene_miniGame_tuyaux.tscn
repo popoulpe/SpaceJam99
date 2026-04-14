@@ -13,7 +13,6 @@
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="10_jqu2h"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
-load_path = "res://.godot/imported/Rectangle 69.png-0df58910adc515e3044aadbb7e8907d9.ctex"
 
 [node name="SceneMiniGameTuyaux" type="Control" unique_id=372449213]
 layout_mode = 3
@@ -354,19 +353,29 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="TextureButton" type="TextureButton" parent="TextRect_Background" unique_id=2135464990]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="TextRect_Background/TextureButton" unique_id=1784194755]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3
 anchor_top = 0.15
 anchor_right = 0.7
 anchor_bottom = 0.85
-scale = Vector2(1e-05, 1e-05)
-pivot_offset_ratio = Vector2(0.5, 0.5)
-texture_normal = ExtResource("8_dp7fk")
-ignore_texture_size = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_dp7fk")
+expand_mode = 1
 stretch_mode = 5
 
-[node name="AutoSizeLabel" type="Label" parent="TextRect_Background/TextureButton" unique_id=1390367012]
+[node name="AutoSizeLabel" type="Label" parent="TextRect_Background/TextureButton/TextureRect" unique_id=1390367012]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.32700002
@@ -376,7 +385,7 @@ anchor_bottom = 0.47700003
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.9411765, 0.6392157, 0.13333334, 1)
 theme_override_fonts/font = ExtResource("9_r8xam")
-theme_override_font_sizes/font_size = 54
+theme_override_font_sizes/font_size = 59
 text = "Super!"
 horizontal_alignment = 1
 vertical_alignment = 1
