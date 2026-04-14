@@ -1,0 +1,406 @@
+[gd_scene format=3 uid="uid://bgniu4h5ico0d"]
+
+[ext_resource type="Script" uid="uid://dmvq37bwkngrp" path="res://Scripts/UI/levelTuyaux/tuyaux_manager.gd" id="1_xgaw8"]
+[ext_resource type="Texture2D" uid="uid://b41qm6guigg2n" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_0.png" id="2_odukx"]
+[ext_resource type="Texture2D" uid="uid://bstkip5a4pkhy" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_1.png" id="3_ixbs2"]
+[ext_resource type="Texture2D" uid="uid://pjtrltbkul2d" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_2.png" id="4_01it8"]
+[ext_resource type="Texture2D" uid="uid://cuyrem737ln5l" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_3.png" id="5_dp7fk"]
+[ext_resource type="Script" uid="uid://cimqnji4ue4ms" path="res://Scripts/UI/levelTuyaux/Button_tuyaux.gd" id="6_arckk"]
+[ext_resource type="Texture2D" uid="uid://bnv7po8nhxhof" path="res://Assets/UI/buttonTuyaux/ui_thermometre.png" id="7_ixbs2"]
+[ext_resource type="Texture2D" uid="uid://bw3f2exn254m0" path="res://Assets/UI/buttonTuyaux/ui_thermometre_2.png" id="8_dp7fk"]
+[ext_resource type="Texture2D" uid="uid://bwurr8iqsw02t" path="res://Assets/UI/buttonTuyaux/ui_thermometre_fin.png" id="8_r8xam"]
+[ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="9_r8xam"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="10_jqu2h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
+load_path = "res://.godot/imported/Rectangle 69.png-0df58910adc515e3044aadbb7e8907d9.ctex"
+
+[node name="SceneMiniGameTuyaux" type="Control" unique_id=372449213]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TextRect_Background" type="TextureRect" parent="." unique_id=1872152568]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+expand_mode = 2
+
+[node name="all_buttons" type="Control" parent="TextRect_Background" unique_id=1570857268 node_paths=PackedStringArray("all_buttons")]
+layout_mode = 1
+anchor_left = 0.27
+anchor_top = 0.1
+anchor_right = 0.73
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_xgaw8")
+all_buttons = [NodePath("TextureButton"), NodePath("TextureButton2"), NodePath("TextureButton3"), NodePath("TextureButton4"), NodePath("TextureButton5"), NodePath("TextureButton6"), NodePath("TextureButton7"), NodePath("TextureButton8"), NodePath("TextureButton9"), NodePath("TextureButton10"), NodePath("TextureButton11"), NodePath("TextureButton12"), NodePath("TextureButton13"), NodePath("TextureButton14"), NodePath("TextureButton15"), NodePath("TextureButton16")]
+i_LevelPipes = {
+0: Array[Vector2]([Vector2(0, 4), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0), Vector2(0, 3), Vector2(0, 0), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0), Vector2(0, 2), Vector2(2, 3), Vector2(1, 1), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0)]),
+1: [Vector2(0, 1), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0), Vector2(0, 2), Vector2(1, 0), Vector2(0, 0), Vector2(1, 0), Vector2(3, 0), Vector2(3, 0), Vector2(0, 3), Vector2(1, 0), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0)],
+2: [Vector2(2, 2), Vector2(2, 0), Vector2(1, 0), Vector2(3, 0), Vector2(0, 3), Vector2(0, 1), Vector2(0, 0), Vector2(0, 1), Vector2(0, 2), Vector2(0, 3), Vector2(1, 0), Vector2(2, 1), Vector2(3, 0), Vector2(0, 2), Vector2(1, 0), Vector2(3, 0)],
+3: [Vector2(0, 0), Vector2(3, 0), Vector2(3, 0), Vector2(0, 1), Vector2(2, 2), Vector2(0, 0), Vector2(0, 0), Vector2(2, 1), Vector2(0, 2), Vector2(1, 0), Vector2(0, 2), Vector2(0, 0), Vector2(0, 3), Vector2(1, 0), Vector2(1, 0), Vector2(0, 2)]
+}
+i_RightLevelPipes = {
+0: [Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(1, 1), Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(1, 1), Vector2(1, 3), Vector2(1, 1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1)],
+1: [Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(1, 1), Vector2(1, 1), Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1)],
+2: [Vector2(0, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(1, 1), Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(1, 1), Vector2(1, 1), Vector2(3, 1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1)],
+3: [Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(2, 0), Vector2(-1, -1), Vector2(2, 2), Vector2(0, 3), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1)]
+}
+spritePipes = Array[Texture2D]([ExtResource("2_odukx"), ExtResource("3_ixbs2"), ExtResource("4_01it8"), ExtResource("5_dp7fk")])
+
+[node name="TextureButton" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=161848883 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.25
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_odukx")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton2" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=79483277 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton3" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=576752069 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.75
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton4" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1330878770 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton5" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1955621830 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.25
+anchor_right = 0.25
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton6" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=896753085 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton7" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=2004750207 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton8" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=285156729 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton9" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1741698155 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.25
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton10" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1823701922 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton11" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=187743596 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.75
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton12" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1001605556 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.75
+rotation = 3.1415927
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_odukx")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton13" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=2046348973 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 0.25
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton14" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1159307985 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.75
+anchor_right = 0.5
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton15" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=1922812291 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.75
+anchor_right = 0.75
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="TextureButton16" type="TextureButton" parent="TextRect_Background/all_buttons" unique_id=632646633 node_paths=PackedStringArray("tuyauxManager")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("CompressedTexture2D_jqu2h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_arckk")
+tuyauxManager = NodePath("..")
+
+[node name="StartTuyau" type="TextureRect" parent="TextRect_Background" unique_id=1944775221]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.074
+anchor_top = 0.020000001
+anchor_right = 0.284
+anchor_bottom = 0.30200002
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("7_ixbs2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="TextRect_Background/StartTuyau" unique_id=1207936908]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21900001
+anchor_top = 0.37
+anchor_right = 0.573
+anchor_bottom = 0.609
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.9411765, 0.6392157, 0.13333334, 1)
+theme_override_fonts/font = ExtResource("9_r8xam")
+theme_override_font_sizes/font_size = 36
+text = "Error"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("10_jqu2h")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="EndTuyau" type="TextureRect" parent="TextRect_Background" unique_id=1155584045]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71300006
+anchor_top = 0.47100002
+anchor_right = 0.95600003
+anchor_bottom = 0.823
+offset_left = 5.7599487
+rotation = 0.25307274
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("8_r8xam")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="TextRect_Background" unique_id=2135464990]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.15
+anchor_right = 0.7
+anchor_bottom = 0.85
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_dp7fk")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="TextRect_Background/TextureButton" unique_id=1390367012]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32700002
+anchor_top = 0.305
+anchor_right = 0.679
+anchor_bottom = 0.47700003
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.9411765, 0.6392157, 0.13333334, 1)
+theme_override_fonts/font = ExtResource("9_r8xam")
+theme_override_font_sizes/font_size = 54
+text = "Super!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("10_jqu2h")
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton" to="TextRect_Background/all_buttons/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton2" to="TextRect_Background/all_buttons/TextureButton2" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton3" to="TextRect_Background/all_buttons/TextureButton3" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton4" to="TextRect_Background/all_buttons/TextureButton4" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton5" to="TextRect_Background/all_buttons/TextureButton5" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton6" to="TextRect_Background/all_buttons/TextureButton6" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton7" to="TextRect_Background/all_buttons/TextureButton7" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton8" to="TextRect_Background/all_buttons/TextureButton8" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton9" to="TextRect_Background/all_buttons/TextureButton9" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton10" to="TextRect_Background/all_buttons/TextureButton10" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton11" to="TextRect_Background/all_buttons/TextureButton11" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton12" to="TextRect_Background/all_buttons/TextureButton12" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton13" to="TextRect_Background/all_buttons/TextureButton13" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton14" to="TextRect_Background/all_buttons/TextureButton14" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton15" to="TextRect_Background/all_buttons/TextureButton15" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/all_buttons/TextureButton16" to="TextRect_Background/all_buttons/TextureButton16" method="_on_pressed"]
+[connection signal="pressed" from="TextRect_Background/TextureButton" to="TextRect_Background/all_buttons" method="_on_texture_button_pressed"]
