@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b6xga100qpewd"]
+
+[ext_resource type="Material" uid="uid://btuk02yi406vu" path="res://Assets/farfaline/RGBRoadMap.tres" id="1_frneb"]
+[ext_resource type="ArrayMesh" uid="uid://cnnua5mbxccyh" path="res://Assets/Tileset3D/SM_BumpyRamp.obj" id="2_64vhc"]
+[ext_resource type="ArrayMesh" uid="uid://v7vdqm3bmafb" path="res://Assets/Tileset3D/SM_BumpyUniformDownRamp.obj" id="3_sswqr"]
+[ext_resource type="ArrayMesh" uid="uid://bb8bt6170or14" path="res://Assets/Tileset3D/SM_BumpyUniformUpRamp.obj" id="4_gvx3l"]
+[ext_resource type="ArrayMesh" uid="uid://bp7fgwfywaus1" path="res://Assets/Tileset3D/SM_DownRamp.obj" id="5_evwwq"]
+[ext_resource type="ArrayMesh" uid="uid://8k5sp1he5emu" path="res://Assets/Tileset3D/SM_LHoleRamp.obj" id="6_d53cd"]
+[ext_resource type="ArrayMesh" uid="uid://cfd34xvy4pjso" path="res://Assets/Tileset3D/SM_RHoleRamp.obj" id="7_tblpu"]
+[ext_resource type="ArrayMesh" uid="uid://bbaew78dcsqnw" path="res://Assets/Tileset3D/SM_SteepOneWayRamp.obj" id="8_rcojj"]
+[ext_resource type="ArrayMesh" uid="uid://ml4en3tuh6kr" path="res://Assets/Tileset3D/SM_SteepRamp.obj" id="9_5mynd"]
+[ext_resource type="ArrayMesh" uid="uid://bdkflkdk8l7ev" path="res://Assets/Tileset3D/SM_UpRamp.obj" id="10_0mk85"]
+
+[node name="Tilz" type="Node3D" unique_id=271292621]
+
+[node name="SmBumpyRamp" type="MeshInstance3D" parent="." unique_id=1173004099]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("2_64vhc")
+
+[node name="SmBumpyUniformDownRamp" type="MeshInstance3D" parent="." unique_id=113082846]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("3_sswqr")
+
+[node name="SmBumpyUniformUpRamp" type="MeshInstance3D" parent="." unique_id=1398549891]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("4_gvx3l")
+
+[node name="SmDownRamp" type="MeshInstance3D" parent="." unique_id=2070505600]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("5_evwwq")
+
+[node name="SmLHoleRamp" type="MeshInstance3D" parent="." unique_id=1184905806]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("6_d53cd")
+
+[node name="SmRHoleRamp" type="MeshInstance3D" parent="." unique_id=830363562]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("7_tblpu")
+
+[node name="SmSteepOneWayRamp" type="MeshInstance3D" parent="." unique_id=852924811]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("8_rcojj")
+
+[node name="SmSteepRamp" type="MeshInstance3D" parent="." unique_id=895322803]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("9_5mynd")
+
+[node name="SmUpRamp" type="MeshInstance3D" parent="." unique_id=1503944910]
+material_override = ExtResource("1_frneb")
+mesh = ExtResource("10_0mk85")
+surface_material_override/0 = ExtResource("1_frneb")

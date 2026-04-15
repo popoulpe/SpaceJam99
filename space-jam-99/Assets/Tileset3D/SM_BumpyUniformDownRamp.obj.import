@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://v7vdqm3bmafb"
+path="res://.godot/imported/SM_BumpyUniformDownRamp.obj-d71efdfb1fb91292ebbf14c491af00d7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_BumpyUniformDownRamp.obj-d71efdfb1fb91292ebbf14c491af00d7.mesh"]
+
+source_file="res://Assets/Tileset3D/SM_BumpyUniformDownRamp.obj"
+dest_files=["res://.godot/imported/SM_BumpyUniformDownRamp.obj-d71efdfb1fb91292ebbf14c491af00d7.mesh", "res://.godot/imported/SM_BumpyUniformDownRamp.obj-d71efdfb1fb91292ebbf14c491af00d7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(0.01, 0.01, 0.01)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
