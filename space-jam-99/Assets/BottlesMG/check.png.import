@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhpnc4sp8p5y"
-path="res://.godot/imported/liquid.png-367d025211f81238f84e72b3a1ee69cf.ctex"
+uid="uid://od51ho42sjrm"
+path="res://.godot/imported/check.png-ebd5e1e469110a03056d2171a4b0334e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototypage/fioles/liquid.png"
-dest_files=["res://.godot/imported/liquid.png-367d025211f81238f84e72b3a1ee69cf.ctex"]
+source_file="res://Assets/BottlesMG/check.png"
+dest_files=["res://.godot/imported/check.png-ebd5e1e469110a03056d2171a4b0334e.ctex"]
 
 [params]
 

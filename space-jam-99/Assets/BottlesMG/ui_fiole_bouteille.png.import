@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://od51ho42sjrm"
-path="res://.godot/imported/check.png-5caa71b3cdee8219859fd9cda355f204.ctex"
+uid="uid://b4l1pkteo6bda"
+path="res://.godot/imported/ui_fiole_bouteille.png-cb4284c11e9c6db50514d066421c26fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototypage/fioles/check.png"
-dest_files=["res://.godot/imported/check.png-5caa71b3cdee8219859fd9cda355f204.ctex"]
+source_file="res://Assets/BottlesMG/ui_fiole_bouteille.png"
+dest_files=["res://.godot/imported/ui_fiole_bouteille.png-cb4284c11e9c6db50514d066421c26fd.ctex"]
 
 [params]
 
