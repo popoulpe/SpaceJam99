@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/cesium_godot/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
