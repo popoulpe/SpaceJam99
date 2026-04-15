@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dj21aelpqhw17"]
 
-[ext_resource type="Script" uid="uid://dx60118m0y52k" path="res://addons/cesium_godot/scripts/georeference_camera_controller.gd" id="1_s6jqd"]
 [ext_resource type="PackedScene" uid="uid://b3lwwea8rwu32" path="res://Assets/farfaline/Perso_principal_idle_V1.fbx" id="2_ihrw0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihrw0"]
@@ -84,30 +83,8 @@ fog_depth_end = 100000.0
 
 [node name="ItsAButifulWorld" type="Node3D" unique_id=1254952831]
 
-[node name="CesiumGeoreference2" type="CesiumGeoreference" parent="." unique_id=1439904893]
-ecefX = 5681976.71660583
-ecefY = 227715.11512632537
-ecefZ = 6476975.74115487
-latitude = 48.8590006392789
-longitude = 2.2949999999999995
-altitude = 2253000.9680756954
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-
-[node name="Cesium3DTileset" type="Cesium3DTileset" parent="CesiumGeoreference2" unique_id=863337459]
-forbid_holes = true
-generate_missing_normals_smooth = true
-ion_asset_id = 1
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="CesiumIonRasterOverlay" type="CesiumIonRasterOverlay" parent="CesiumGeoreference2/Cesium3DTileset" unique_id=1812912999]
-asset_id = 2
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=191273420 node_paths=PackedStringArray("globe_node", "tilesets")]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=191273420]
 near = 0.01
-script = ExtResource("1_s6jqd")
-globe_node = NodePath("../CesiumGeoreference2")
-tilesets = [NodePath("../CesiumGeoreference2/Cesium3DTileset")]
-render_atmosphere = true
 
 [node name="Perso_principal_idle_V1" parent="Camera3D" unique_id=1670086212 instance=ExtResource("2_ihrw0")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, -4.0160346, -20.520956)
@@ -176,9 +153,6 @@ color_ramp = SubResource("Gradient_nfo2m")
 hue_variation_min = -1.0
 hue_variation_max = 1.0
 hue_variation_curve = SubResource("Curve_oww37")
-
-[node name="CesiumGeoreference" type="CesiumGeoreference" parent="." unique_id=399919813]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=479463131]
 environment = SubResource("Environment_s6jqd")
