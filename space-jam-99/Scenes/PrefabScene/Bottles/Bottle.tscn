@@ -13,7 +13,7 @@ anchor_right = 0.051000003
 anchor_bottom = 0.347
 offset_right = 0.24799728
 offset_bottom = 0.14399719
-pivot_offset_ratio = Vector2(0.5, 0)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_3sul2")
 liquidsList = [NodePath("BottleInterior/TextureRect"), NodePath("BottleInterior/TextureRect2"), NodePath("BottleInterior/TextureRect3"), NodePath("BottleInterior/TextureRect4")]
 

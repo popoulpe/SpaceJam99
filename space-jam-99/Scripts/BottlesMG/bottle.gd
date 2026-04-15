@@ -1,13 +1,11 @@
 extends TextureButton
 class_name Bottle
 
-
 const MAX_LIQUID :int=4
 
 @export var actualLiquid : TextureRect
-@export var liquidsList_:Array[ColorRect]
 @export var liquidsList:Array[TextureRect]
-@export var colorPreset:Array[Color]
+@export var colorPreset:Dictionary
 
 var actualLiquids:Array[Color]=[]
 var actualQtt :int=0
@@ -16,12 +14,18 @@ var actualQtt :int=0
 var hue: float = 0.0
 @export
 var isSelected : bool = false
-var _success:bool = false
+@export var _success:bool = false
 
-func _ready():
-	for i in range(colorPreset.size()):
+func now_ready():
+	_success=false
+	isSelected=false
+	actualLiquids=[]
+	actualQtt=0
+	for y in liquidsList:
+		y.visible = false
+	for i in range(colorPreset[$"../..".iLevel].size()):
 		if !actualQtt >= MAX_LIQUID:
-			fill(colorPreset[i])
+			fill(colorPreset[$"../..".iLevel][i])
 
 func fill(col:Color) -> void:
 	liquidsList[actualQtt].self_modulate = col
@@ -58,7 +62,7 @@ func notSelected()->void:
 func _process(delta: float) -> void:
 	if(isSelected):
 		selected(delta)
-	elif(_success):
+	elif(_success && actualQtt>0):
 		successfull(delta)
 	if(!_success):
 		$BottleInterior.self_modulate= Color(1, 1, 1)
@@ -80,8 +84,8 @@ func successfull(f:float):
 	for i in liquidsList:
 		i.self_modulate = Color(r, g, b)
 	$BottleInterior.self_modulate= Color(r, g, b)
-	$".".scale = Vector2((1+r/10),1+r/10)
-	$".".rotation = 0.1*cos(angle)
+	$".".scale = Vector2((1+r/20),1+r/20)
+	$".".rotation = 0.05*cos(angle)
 
 func selected(f:float):
 	hue += 0.8 * f

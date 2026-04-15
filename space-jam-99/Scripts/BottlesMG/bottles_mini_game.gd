@@ -4,6 +4,11 @@ extends Control
 var lastSelected:int=-1
 var selected:int=-1
 var hue:float=0.0
+@export var iLevel:int=0
+
+func _ready():
+	for i in bottleList:
+		i.now_ready()
 
 func _process(delta: float) -> void:
 	hue += 0.7*delta
@@ -25,6 +30,7 @@ func bottle_selection(id:int):
 		lastSelected = selected
 		check_end()
 	else:
+		bottleList[lastSelected].notSelected()
 		selected = -1
 
 func check_end():
@@ -34,4 +40,16 @@ func check_end():
 			finished = false
 	
 	if finished:
-		print("YOUPIIIII")
+		$TextureButton.wakeup()
+
+func next_level():
+	$TextureButton.sleep()
+	iLevel+=1
+	if(iLevel>=3):
+		print("YAHOO")
+	else:
+		for i in bottleList:
+			i.now_ready()
+
+func _on_texture_button_pressed() -> void:
+	next_level()

@@ -56,7 +56,10 @@ func newLevel()->void:
 	$"../TextureButton".disabled=true
 	$"../TextureButton".visible=false
 	iLevel+=1
-	placementLevel(iLevel)
+	if(iLevel>=4):
+		print("YAHOO")
+	else:
+		placementLevel(iLevel)
 
 func placementLevel(y:int)->void:
 	var z:float = 0
