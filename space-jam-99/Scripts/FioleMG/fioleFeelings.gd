@@ -4,7 +4,7 @@ class_name fioleFeelings
 @export var check :Texture
 @export var cross :Texture  
 
-@onready var fillPrefab :=preload("uid://7byfg5oabxf6")
+@export var fillPrefab :PackedScene
 @onready var texture_rect = $TextureRect/TextureRect
 
 
