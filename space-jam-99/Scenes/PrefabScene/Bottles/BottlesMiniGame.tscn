@@ -35,6 +35,7 @@ offset_left = 0.25598145
 offset_top = -0.23200989
 offset_right = 0.5039673
 offset_bottom = -0.088012695
+colorPreset = Array[Color]([Color(1, 0, 0, 1), Color(0, 0, 1, 1), Color(0, 0.9843137, 0, 1)])
 
 [node name="Bottle2" parent="." unique_id=1054123377 instance=ExtResource("2_6la7u")]
 layout_mode = 1
@@ -46,7 +47,7 @@ offset_left = 0.49597168
 offset_top = -0.23200989
 offset_right = -0.40808105
 offset_bottom = -0.088012695
-colorPreset = Array[Color]([Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(1, 0, 0, 1)])
+colorPreset = Array[Color]([Color(1, 0, 0, 1), Color(0, 0, 1, 1), Color(0, 0.9843137, 0, 1)])
 
 [node name="Bottle3" parent="." unique_id=20575574 instance=ExtResource("2_6la7u")]
 layout_mode = 1

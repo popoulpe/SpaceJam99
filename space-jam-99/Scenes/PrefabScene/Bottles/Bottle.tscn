@@ -1,104 +1,77 @@
 [gd_scene format=3 uid="uid://d2u43g63usqse"]
 
 [ext_resource type="Script" uid="uid://c01kk8l53gmlk" path="res://Scripts/BottlesMG/bottle.gd" id="1_3sul2"]
-[ext_resource type="Texture2D" uid="uid://b4l1pkteo6bda" path="res://Assets/BottlesMG/ui_fiole_bouteille.png" id="1_fl68p"]
-[ext_resource type="Texture2D" uid="uid://od51ho42sjrm" path="res://Assets/BottlesMG/check.png" id="2_jw6qp"]
-[ext_resource type="Texture2D" uid="uid://dk5mfi366mn2c" path="res://Assets/BottlesMG/frame.png" id="3_226is"]
-[ext_resource type="Texture2D" uid="uid://c1ojvwprdeg7r" path="res://Assets/BottlesMG/cross.png" id="4_jw6qp"]
+[ext_resource type="Texture2D" uid="uid://cwx2xsf3dll5u" path="res://Assets/UI/fioles/ui_fiole_bouteille.png" id="4_2i4s2"]
+[ext_resource type="Texture2D" uid="uid://cywr0es36on0e" path="res://Assets/UI/fioles/ui_fiole_bouteille_0.png" id="5_ngokm"]
+[ext_resource type="Texture2D" uid="uid://bmaoxkd00b8sd" path="res://Assets/UI/fioles/ui_fiole_bouteille_1.png" id="6_jiidm"]
+[ext_resource type="Texture2D" uid="uid://bvje47nb3x358" path="res://Assets/UI/fioles/ui_fiole_bouteille_2.png" id="7_36iv3"]
+[ext_resource type="Texture2D" uid="uid://bwxi7ls8e2ddv" path="res://Assets/UI/fioles/ui_fiole_bouteille_3.png" id="8_ducry"]
 
-[node name="Bottle" type="TextureButton" unique_id=1668002927 node_paths=PackedStringArray("validationBox", "liquidsList")]
+[node name="Bottle" type="TextureButton" unique_id=1668002927 node_paths=PackedStringArray("liquidsList")]
 anchors_preset = -1
 anchor_right = 0.051000003
 anchor_bottom = 0.347
 offset_right = 0.24799728
 offset_bottom = 0.14399719
+pivot_offset_ratio = Vector2(0.5, 0)
 script = ExtResource("1_3sul2")
-check = ExtResource("2_jw6qp")
-cross = ExtResource("4_jw6qp")
-validationBox = NodePath("TextureRect/validationBox")
-liquidsList = [NodePath("BottleInterior/Fill0"), NodePath("BottleInterior/Fill1"), NodePath("BottleInterior/Fill2"), NodePath("BottleInterior/Fill3")]
+liquidsList = [NodePath("BottleInterior/TextureRect"), NodePath("BottleInterior/TextureRect2"), NodePath("BottleInterior/TextureRect3"), NodePath("BottleInterior/TextureRect4")]
 
 [node name="BottleInterior" type="TextureRect" parent="." unique_id=1484529787]
-clip_children = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.77800006
 offset_bottom = -0.05001831
-texture = ExtResource("1_fl68p")
-expand_mode = 4
-flip_h = true
-
-[node name="Fill0" type="ColorRect" parent="BottleInterior" unique_id=427216187]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.79600006
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -0.06695557
-offset_bottom = 0.4329834
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 1
-
-[node name="Fill1" type="ColorRect" parent="BottleInterior" unique_id=1149781648]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.59000003
-anchor_right = 1.0
-anchor_bottom = 0.796
-offset_top = 0.016448975
-offset_bottom = -0.06694031
-mouse_filter = 1
-color = Color(0, 0.022420406, 1, 1)
-
-[node name="Fill2" type="ColorRect" parent="BottleInterior" unique_id=87604474]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.384
-anchor_right = 1.0
-anchor_bottom = 0.59
-offset_top = 0.099861145
-offset_bottom = 0.016479492
-mouse_filter = 1
-color = Color(1, 0, 0.72779655, 1)
-
-[node name="Fill3" type="ColorRect" parent="BottleInterior" unique_id=614877179]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.179
-anchor_right = 1.0
-anchor_bottom = 0.384
-offset_top = -0.10840225
-offset_bottom = 0.099861145
-mouse_filter = 1
-color = Color(1, 0.49734092, 0, 1)
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1575413088]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.83000004
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("3_226is")
+texture = ExtResource("4_2i4s2")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="validationBox" type="TextureRect" parent="TextureRect" unique_id=115498399]
+[node name="TextureRect" type="TextureRect" parent="BottleInterior" unique_id=806727205]
+visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.1
-anchor_right = 0.9
-anchor_bottom = 0.9
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("4_jw6qp")
+texture = ExtResource("5_ngokm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="BottleInterior" unique_id=539550169]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("6_jiidm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="BottleInterior" unique_id=1021620697]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("7_36iv3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="BottleInterior" unique_id=999933131]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.25
+offset_top = -0.10840225
+offset_bottom = -0.10839844
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("8_ducry")
 expand_mode = 1
 stretch_mode = 5

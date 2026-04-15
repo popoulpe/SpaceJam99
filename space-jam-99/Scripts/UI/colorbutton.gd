@@ -46,4 +46,3 @@ func _on_timer_timeout(f:float):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	_on_timer_timeout(delta)
-	pass
