@@ -1,6 +1,8 @@
 shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
 
+const vec3 ign = vec3(0.06711056f, 0.00583715f, 52.9829189f);
+uniform float alpha : hint_range(0,1);
 uniform vec4 albedo : source_color;
 uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
 uniform vec2 Speed;
@@ -43,6 +45,9 @@ void fragment() {
 
 	vec4 albedo_tex = texture(texture_albedo, base_uv);
 	ALBEDO = shift_hue(albedo,TIME*SpeedHueShift).rgb * albedo_tex.rgb;
+	if (alpha < 0.001 || alpha < fract(ign.z * fract(dot(FRAGCOORD.xy, ign.xy * (sin(TIME*Speed.g)*0.012+1.0))))) {
+		discard;
+}
 
 	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
 	METALLIC = metallic_tex * metallic;

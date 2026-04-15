@@ -5,4 +5,8 @@ viewport_path = NodePath("SubViewport")
 
 [resource]
 resource_local_to_scene = true
+transparency = 3
+alpha_hash_scale = 2.0
+alpha_antialiasing_mode = 0
+blend_mode = 4
 albedo_texture = SubResource("ViewportTexture_4wkif")
