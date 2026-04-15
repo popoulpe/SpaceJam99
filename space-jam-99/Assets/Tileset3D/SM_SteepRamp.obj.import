@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ml4en3tuh6kr"
+path="res://.godot/imported/SM_SteepRamp.obj-d60735d23e58fac0640100700b18c322.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_SteepRamp.obj-d60735d23e58fac0640100700b18c322.mesh"]
+
+source_file="res://Assets/Tileset3D/SM_SteepRamp.obj"
+dest_files=["res://.godot/imported/SM_SteepRamp.obj-d60735d23e58fac0640100700b18c322.mesh", "res://.godot/imported/SM_SteepRamp.obj-d60735d23e58fac0640100700b18c322.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(0.01, 0.01, 0.01)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

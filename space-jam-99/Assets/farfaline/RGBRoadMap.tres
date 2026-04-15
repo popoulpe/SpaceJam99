@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://btuk02yi406vu"]
+
+[ext_resource type="Shader" uid="uid://cu1h2dye2ons" path="res://Assets/farfaline/RGBTestMoove.gdshader" id="1_he4ed"]
+[ext_resource type="Texture2D" uid="uid://dy3fwkwr6fa24" path="res://Assets/farfaline/rainbow-gradient-line.jpg" id="2_wapvb"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_he4ed")
+shader_parameter/albedo = Color(0.6242933, 0.81223893, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_wapvb")
+shader_parameter/Speed = Vector2(0, 0.3)
+shader_parameter/SpeedHueShift = 0.30000000447036
+shader_parameter/point_size = 0.10000000149012
+shader_parameter/roughness = 0.8330000395675
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/hue_shift = 0.0
