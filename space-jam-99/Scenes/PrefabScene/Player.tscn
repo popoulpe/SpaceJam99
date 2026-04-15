@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dn01o5fyvd8p5"]
 
-[ext_resource type="Script" uid="uid://ylt23iw2ykxd" path="res://Scripts/Character/Player.gd" id="1_yucit"]
+[ext_resource type="Script" uid="uid://ylt23iw2ykxd" path="res://Scripts/Character/player.gd" id="1_yucit"]
 [ext_resource type="Script" uid="uid://bqc8yxoweiqbl" path="res://Scripts/Character/playerController.gd" id="2_dbo68"]
 [ext_resource type="Script" uid="uid://dtmu6cvkg03uj" path="res://Scripts/Character/PlayerVisual.gd" id="3_4bud8"]
 [ext_resource type="Script" uid="uid://c0pt6w6tv4rj5" path="res://Scripts/Character/to_delete_speed.gd" id="3_g6jha"]
@@ -42,11 +42,13 @@ material = SubResource("StandardMaterial3D_g6jha")
 radius = 0.1
 height = 0.2
 
-[node name="Player" type="Node3D" unique_id=2002350393]
+[node name="Player" type="Node3D" unique_id=2002350393 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_yucit")
+hud = NodePath("CharacterBody3D/to delete")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1186776535]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_mask = 3
 floor_constant_speed = true
 script = ExtResource("2_dbo68")
 
@@ -60,12 +62,23 @@ character_body_3d = NodePath("..")
 [node name="to delete" type="Control" parent="CharacterBody3D" unique_id=1886726726]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("3_g6jha")
 
-[node name="Label" type="Label" parent="CharacterBody3D/to delete" unique_id=552680825]
-layout_mode = 0
+[node name="Temps" type="Label" parent="CharacterBody3D/to delete" unique_id=602558795]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "12.24"
+
+[node name="Vitesse" type="Label" parent="CharacterBody3D/to delete" unique_id=552680825]
+layout_mode = 1
 offset_right = 145.0
 offset_bottom = 47.0
 text = "90"
@@ -94,6 +107,10 @@ mesh = SubResource("BoxMesh_33snw")
 [node name="PushTimer" type="Timer" parent="CharacterBody3D" unique_id=2045653735]
 process_callback = 0
 wait_time = 0.75
+one_shot = true
+
+[node name="InvinsibilityTimer" type="Timer" parent="CharacterBody3D" unique_id=1478110766]
+wait_time = 2.0
 one_shot = true
 
 [node name="StateMachine" type="Node" parent="CharacterBody3D" unique_id=1321114857 node_paths=PackedStringArray("starting_state")]
@@ -143,3 +160,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1717676, 0.5539298, 0)
 mesh = SubResource("SphereMesh_dsmn0")
 
 [connection signal="timeout" from="CharacterBody3D/PushTimer" to="CharacterBody3D" method="_on_push_timer_timeout"]
+[connection signal="timeout" from="CharacterBody3D/InvinsibilityTimer" to="CharacterBody3D" method="_on_invinsibility_timer_timeout"]
