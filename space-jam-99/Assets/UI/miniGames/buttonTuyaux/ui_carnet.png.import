@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b41qm6guigg2n"
-path="res://.godot/imported/ui_tuyaux_0.png-43e15b22f31e64d97d2ea3470719a2ce.ctex"
+uid="uid://0yef6qco0qhy"
+path="res://.godot/imported/ui_carnet.png-5363405e4c353b203aaacc4e9ba84db0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/buttonTuyaux/ui_tuyaux_0.png"
-dest_files=["res://.godot/imported/ui_tuyaux_0.png-43e15b22f31e64d97d2ea3470719a2ce.ctex"]
+source_file="res://Assets/UI/miniGames/buttonTuyaux/ui_carnet.png"
+dest_files=["res://.godot/imported/ui_carnet.png-5363405e4c353b203aaacc4e9ba84db0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwx2xsf3dll5u"
-path="res://.godot/imported/ui_fiole_bouteille.png-60c1a48e6f83e59d62ea57ec19246236.ctex"
+uid="uid://bw3f2exn254m0"
+path="res://.godot/imported/ui_thermometre_2.png-2ebefc223f03aeb7778422476c2386c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/fioles/ui_fiole_bouteille.png"
-dest_files=["res://.godot/imported/ui_fiole_bouteille.png-60c1a48e6f83e59d62ea57ec19246236.ctex"]
+source_file="res://Assets/UI/miniGames/buttonTuyaux/ui_thermometre_2.png"
+dest_files=["res://.godot/imported/ui_thermometre_2.png-2ebefc223f03aeb7778422476c2386c7.ctex"]
 
 [params]
 

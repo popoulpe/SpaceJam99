@@ -13,13 +13,18 @@ var f: float = 0.0
 var buttonRotating:bool=false
 var hue: float = 0.0
 
+@export
+var progressBar: TextureProgressBar
 var iLevel:int = 0
+var bProgressingBar:bool=false
+var progressTint : Color
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$"../TextureButton".scale = Vector2(0,0)
 	$"../TextureButton".disabled=true
 	$"../TextureButton".visible=false
+	progressTint = progressBar.tint_progress
 	placementLevel(0)
 
 
@@ -29,6 +34,7 @@ func _process(delta: float) -> void:
 	if hue >= 1.0:
 		hue = 0.0
 	if(buttonRotating):
+		progressedBar(delta)
 		f += 0.7 * delta
 		if f >= 1.0:
 			f = 0.0
@@ -39,13 +45,30 @@ func _process(delta: float) -> void:
 		var g:float = (sin(angle2 + TAU /3)*0.5)+0.5
 		var b: float = (sin(angle2 + TAU *2/3)*0.5)+0.5
 		$"../EndTuyau".self_modulate = Color(r, g, b)
+		if(bProgressingBar):
+			progressBar.tint_progress=Color(r, g, b)
 
 func endLevel()->void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($"../TextureButton", "scale", Vector2(1,1), 1.2).set_trans(Tween.TRANS_ELASTIC)
 	buttonRotating=true
+	$"../Background0".bTransitionning=true
 	$"../TextureButton".disabled=false
 	$"../TextureButton".visible=true
+	bProgressingBar=true
+
+func progressedBar(f:float)->void:
+	if(bProgressingBar):
+		progressBar.value+=f
+		if(progressBar.value>=iLevel+1):
+			bProgressingBar=false
+			progressBar.tint_progress =progressTint
+			endProgressingBar()
+
+func endProgressingBar()->void:
+	var tween = get_tree().create_tween()
+	tween.tween_property(progressBar, "scale", Vector2(1.2,1.2), 1.2).set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(progressBar, "scale", Vector2(1,1), 0.45).set_trans(Tween.TRANS_ELASTIC)
 
 func newLevel()->void:
 	for i in all_buttons:

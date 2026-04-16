@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwurr8iqsw02t"
-path="res://.godot/imported/ui_thermometre_fin.png-c7c81679080ad740f2f21cfd22b2312c.ctex"
+uid="uid://pjtrltbkul2d"
+path="res://.godot/imported/ui_tuyaux_2.png-d85fe5536cc54fb53c52f3df70e16baf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/buttonTuyaux/ui_thermometre_fin.png"
-dest_files=["res://.godot/imported/ui_thermometre_fin.png-c7c81679080ad740f2f21cfd22b2312c.ctex"]
+source_file="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_2.png"
+dest_files=["res://.godot/imported/ui_tuyaux_2.png-d85fe5536cc54fb53c52f3df70e16baf.ctex"]
 
 [params]
 

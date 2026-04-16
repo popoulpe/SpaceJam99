@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnv7po8nhxhof"
-path="res://.godot/imported/ui_thermometre.png-89a97600d09fe2f2e6606c32c4c82440.ctex"
+uid="uid://c2m67r4ova8hh"
+path="res://.godot/imported/ui_tuyaux_jour_bg_nuage_1.png-9d0228be1ca5799fc136a3024c17e10d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/buttonTuyaux/ui_thermometre.png"
-dest_files=["res://.godot/imported/ui_thermometre.png-89a97600d09fe2f2e6606c32c4c82440.ctex"]
+source_file="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_1.png"
+dest_files=["res://.godot/imported/ui_tuyaux_jour_bg_nuage_1.png-9d0228be1ca5799fc136a3024c17e10d.ctex"]
 
 [params]
 

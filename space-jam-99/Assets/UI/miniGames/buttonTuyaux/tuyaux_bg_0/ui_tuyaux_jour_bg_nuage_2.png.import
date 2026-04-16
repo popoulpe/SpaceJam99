@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3mmp7qrjiapg"
-path="res://.godot/imported/ui_tuyaux_jour_bg_3.png-e9f69c105b45274a38bda61f61552a67.ctex"
+uid="uid://bg3lds8dol2fc"
+path="res://.godot/imported/ui_tuyaux_jour_bg_nuage_2.png-ff311549d9cbb2441eecbcdf3ebcd9b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_3.png"
-dest_files=["res://.godot/imported/ui_tuyaux_jour_bg_3.png-e9f69c105b45274a38bda61f61552a67.ctex"]
+source_file="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_2.png"
+dest_files=["res://.godot/imported/ui_tuyaux_jour_bg_nuage_2.png-ff311549d9cbb2441eecbcdf3ebcd9b7.ctex"]
 
 [params]
 

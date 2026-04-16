@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://d2u43g63usqse"]
 
 [ext_resource type="Script" uid="uid://c01kk8l53gmlk" path="res://Scripts/BottlesMG/bottle.gd" id="1_3sul2"]
-[ext_resource type="Texture2D" uid="uid://cwx2xsf3dll5u" path="res://Assets/UI/fioles/ui_fiole_bouteille.png" id="4_2i4s2"]
-[ext_resource type="Texture2D" uid="uid://cywr0es36on0e" path="res://Assets/UI/fioles/ui_fiole_bouteille_0.png" id="5_ngokm"]
-[ext_resource type="Texture2D" uid="uid://bmaoxkd00b8sd" path="res://Assets/UI/fioles/ui_fiole_bouteille_1.png" id="6_jiidm"]
-[ext_resource type="Texture2D" uid="uid://bvje47nb3x358" path="res://Assets/UI/fioles/ui_fiole_bouteille_2.png" id="7_36iv3"]
-[ext_resource type="Texture2D" uid="uid://bwxi7ls8e2ddv" path="res://Assets/UI/fioles/ui_fiole_bouteille_3.png" id="8_ducry"]
+[ext_resource type="Texture2D" uid="uid://cwx2xsf3dll5u" path="res://Assets/UI/miniGames/fioles/ui_fiole_bouteille.png" id="4_2i4s2"]
+[ext_resource type="Texture2D" uid="uid://cywr0es36on0e" path="res://Assets/UI/miniGames/fioles/ui_fiole_bouteille_0.png" id="5_ngokm"]
+[ext_resource type="Texture2D" uid="uid://bmaoxkd00b8sd" path="res://Assets/UI/miniGames/fioles/ui_fiole_bouteille_1.png" id="6_jiidm"]
+[ext_resource type="Texture2D" uid="uid://bvje47nb3x358" path="res://Assets/UI/miniGames/fioles/ui_fiole_bouteille_2.png" id="7_36iv3"]
+[ext_resource type="Texture2D" uid="uid://bwxi7ls8e2ddv" path="res://Assets/UI/miniGames/fioles/ui_fiole_bouteille_3.png" id="8_ducry"]
 
 [node name="Bottle" type="TextureButton" unique_id=1668002927 node_paths=PackedStringArray("liquidsList")]
 anchors_preset = -1

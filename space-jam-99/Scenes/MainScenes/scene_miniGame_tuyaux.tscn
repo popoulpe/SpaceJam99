@@ -1,26 +1,27 @@
 [gd_scene format=3 uid="uid://bgniu4h5ico0d"]
 
-[ext_resource type="Texture2D" uid="uid://3mmp7qrjiapg" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_3.png" id="1_3s42e"]
+[ext_resource type="Texture2D" uid="uid://3mmp7qrjiapg" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_3.png" id="1_3s42e"]
 [ext_resource type="Script" uid="uid://dmvq37bwkngrp" path="res://Scripts/UI/levelTuyaux/tuyaux_manager.gd" id="1_xgaw8"]
-[ext_resource type="Texture2D" uid="uid://cmiwbcnsjm0kd" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_2.png" id="2_3sujs"]
+[ext_resource type="Texture2D" uid="uid://cmiwbcnsjm0kd" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_2.png" id="2_3sujs"]
 [ext_resource type="Script" uid="uid://dul123bynm7ym" path="res://Scenes/MainScenes/backgroundChangingTuyaux.gd" id="2_kt2xj"]
-[ext_resource type="Texture2D" uid="uid://b41qm6guigg2n" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_0.png" id="2_odukx"]
-[ext_resource type="Texture2D" uid="uid://bstkip5a4pkhy" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_1.png" id="3_ixbs2"]
-[ext_resource type="Texture2D" uid="uid://86x7528fj8ie" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_0.png" id="3_kt2xj"]
-[ext_resource type="Texture2D" uid="uid://pjtrltbkul2d" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_2.png" id="4_01it8"]
-[ext_resource type="Texture2D" uid="uid://c2m67r4ova8hh" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_1.png" id="4_bpvyt"]
-[ext_resource type="Texture2D" uid="uid://cuyrem737ln5l" path="res://Assets/UI/buttonTuyaux/ui_tuyaux_3.png" id="5_dp7fk"]
-[ext_resource type="Texture2D" uid="uid://bg3lds8dol2fc" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_2.png" id="5_i70bm"]
+[ext_resource type="Texture2D" uid="uid://b41qm6guigg2n" path="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_0.png" id="2_odukx"]
+[ext_resource type="Texture2D" uid="uid://bstkip5a4pkhy" path="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_1.png" id="3_ixbs2"]
+[ext_resource type="Texture2D" uid="uid://86x7528fj8ie" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_0.png" id="3_kt2xj"]
+[ext_resource type="Texture2D" uid="uid://pjtrltbkul2d" path="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_2.png" id="4_01it8"]
+[ext_resource type="Texture2D" uid="uid://c2m67r4ova8hh" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_1.png" id="4_bpvyt"]
+[ext_resource type="Texture2D" uid="uid://cuyrem737ln5l" path="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_3.png" id="5_dp7fk"]
+[ext_resource type="Texture2D" uid="uid://bg3lds8dol2fc" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_2.png" id="5_i70bm"]
 [ext_resource type="Script" uid="uid://cimqnji4ue4ms" path="res://Scripts/UI/levelTuyaux/Button_tuyaux.gd" id="6_arckk"]
-[ext_resource type="Texture2D" uid="uid://cfcb5xac7iqjr" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_1.png" id="6_k1ae6"]
-[ext_resource type="Texture2D" uid="uid://bnv7po8nhxhof" path="res://Assets/UI/buttonTuyaux/ui_thermometre.png" id="7_ixbs2"]
-[ext_resource type="Texture2D" uid="uid://5pldymsugdu1" path="res://Assets/UI/buttonTuyaux/ui_dashed_rectangle.png" id="7_jqu2h"]
-[ext_resource type="Texture2D" uid="uid://dfnwutrfn1rnr" path="res://Assets/UI/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_0.png" id="7_vx851"]
-[ext_resource type="Texture2D" uid="uid://bw3f2exn254m0" path="res://Assets/UI/buttonTuyaux/ui_thermometre_2.png" id="8_dp7fk"]
-[ext_resource type="Texture2D" uid="uid://bwurr8iqsw02t" path="res://Assets/UI/buttonTuyaux/ui_thermometre_fin.png" id="8_r8xam"]
+[ext_resource type="Texture2D" uid="uid://cfcb5xac7iqjr" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_1.png" id="6_k1ae6"]
+[ext_resource type="Texture2D" uid="uid://bnv7po8nhxhof" path="res://Assets/UI/miniGames/buttonTuyaux/ui_thermometre.png" id="7_ixbs2"]
+[ext_resource type="Texture2D" uid="uid://5pldymsugdu1" path="res://Assets/UI/miniGames/buttonTuyaux/ui_dashed_rectangle.png" id="7_jqu2h"]
+[ext_resource type="Texture2D" uid="uid://dfnwutrfn1rnr" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_0.png" id="7_vx851"]
+[ext_resource type="Texture2D" uid="uid://bw3f2exn254m0" path="res://Assets/UI/miniGames/buttonTuyaux/ui_thermometre_2.png" id="8_dp7fk"]
+[ext_resource type="Texture2D" uid="uid://bwurr8iqsw02t" path="res://Assets/UI/miniGames/buttonTuyaux/ui_thermometre_fin.png" id="8_r8xam"]
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="9_r8xam"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="10_jqu2h"]
-[ext_resource type="Script" uid="uid://eil2m803qew7" path="res://Scenes/PrefabScene/Bottles/AutoTippingText.gd" id="20_kt2xj"]
+[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/buttonTuyaux/ui_carnet.png" id="20_i70bm"]
+[ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="21_bpvyt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
 
@@ -33,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="Background0" type="TextureRect" parent="." unique_id=1944179968]
+[node name="Background0" type="TextureRect" parent="." unique_id=1944179968 node_paths=PackedStringArray("movingBackgrounds", "movingClouds")]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -43,6 +44,9 @@ texture = ExtResource("1_3s42e")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("2_kt2xj")
+movingBackgrounds = [NodePath("Background"), NodePath("Background2")]
+movingClouds = [NodePath("AllNuages/TextureRect"), NodePath("AllNuages/TextureRect2"), NodePath("AllNuages/TextureRect3")]
+_colors = Array[Color]([Color(1, 1, 1, 1), Color(0.7529412, 0.7529412, 0.7529412, 1), Color(0.8117647, 0.5921569, 0.64705884, 1), Color(0.71821725, 0.40398088, 0.5400852, 1), Color(0.62822694, 0.2904385, 0.44926023, 1)])
 
 [node name="Background" type="TextureRect" parent="Background0" unique_id=1578968430]
 layout_mode = 1
@@ -54,7 +58,7 @@ texture = ExtResource("2_3sujs")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="AllNuages" type="Control" parent="Background0/Background" unique_id=1523749633]
+[node name="AllNuages" type="Control" parent="Background0" unique_id=1523749633]
 layout_mode = 1
 anchor_left = 0.01
 anchor_top = 0.02
@@ -62,41 +66,43 @@ anchor_right = 0.99
 anchor_bottom = 0.25
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TextureRect" type="TextureRect" parent="Background0/Background/AllNuages" unique_id=946567216]
+[node name="TextureRect" type="TextureRect" parent="Background0/AllNuages" unique_id=946567216]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.2
-anchor_bottom = 1.0
+anchor_bottom = 0.749
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("3_kt2xj")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Background0/Background/AllNuages" unique_id=44716166]
+[node name="TextureRect2" type="TextureRect" parent="Background0/AllNuages" unique_id=44716166]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.231
-anchor_top = 0.35900003
+anchor_top = 0.238
 anchor_right = 0.36400002
-anchor_bottom = 0.84800005
+anchor_bottom = 0.70100003
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("4_bpvyt")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="Background0/Background/AllNuages" unique_id=824796042]
+[node name="TextureRect3" type="TextureRect" parent="Background0/AllNuages" unique_id=824796042]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.87600005
-anchor_top = 0.22100002
+anchor_top = 0.141
 anchor_right = 0.97900003
-anchor_bottom = 0.60300004
+anchor_bottom = 0.5
+offset_top = 0.025362015
+offset_right = 0.22814941
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("5_i70bm")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Background" type="TextureRect" parent="Background0/Background" unique_id=1852833695]
+[node name="Background2" type="TextureRect" parent="Background0" unique_id=1852833695]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -106,7 +112,7 @@ texture = ExtResource("6_k1ae6")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Background" type="TextureRect" parent="Background0/Background/Background" unique_id=202397782]
+[node name="Background3" type="TextureRect" parent="Background0" unique_id=202397782]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -116,7 +122,7 @@ texture = ExtResource("7_vx851")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="all_buttons" type="Control" parent="." unique_id=1570857268 node_paths=PackedStringArray("all_buttons")]
+[node name="all_buttons" type="Control" parent="." unique_id=1570857268 node_paths=PackedStringArray("all_buttons", "progressBar")]
 layout_mode = 1
 anchor_left = 0.27
 anchor_top = 0.15
@@ -139,6 +145,7 @@ i_RightLevelPipes = {
 3: [Vector2(3, 3), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(2, 0), Vector2(-1, -1), Vector2(2, 2), Vector2(0, 3), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1), Vector2(-1, -1)]
 }
 spritePipes = Array[Texture2D]([ExtResource("2_odukx"), ExtResource("3_ixbs2"), ExtResource("4_01it8"), ExtResource("5_dp7fk")])
+progressBar = NodePath("../Carnet/TextureProgressBar")
 
 [node name="TextureButton" type="TextureButton" parent="all_buttons" unique_id=161848883 node_paths=PackedStringArray("tuyauxManager")]
 layout_mode = 1
@@ -675,33 +682,43 @@ texture = ExtResource("8_r8xam")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=240070679 node_paths=PackedStringArray("label_full_text", "_text")]
+[node name="Carnet" type="Control" parent="." unique_id=114101866]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.423
-anchor_right = 0.216
+anchor_top = 0.35000002
+anchor_right = 0.24300002
 anchor_bottom = 1.0
+offset_top = -1.5258789e-05
 pivot_offset_ratio = Vector2(0.5, 0.5)
-script = ExtResource("20_kt2xj")
-full_text = "Let's take those temperatures before it gets too cold..."
-label_full_text = NodePath("AutoSizeLabel")
-onStart = true
-_text = NodePath("AutoSizeLabel")
 
-[node name="AutoSizeLabel" type="Label" parent="TextureRect" unique_id=431398584]
+[node name="TextureRect" type="TextureRect" parent="Carnet" unique_id=240070679]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.1
-anchor_right = 0.9
-anchor_bottom = 0.5
+anchor_left = -0.026
+anchor_top = -0.0050000004
+anchor_right = 1.065
+anchor_bottom = 1.0
+rotation = 0.017453292
 pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("20_i70bm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="Carnet" unique_id=431398584]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.08800001
+anchor_right = 0.96400005
+anchor_bottom = 0.298
+offset_right = -0.27990723
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_r8xam")
-theme_override_font_sizes/font_size = 25
-text = "Prenons ces temperatures avant qu'il ne gèle."
+theme_override_font_sizes/font_size = 24
+text = "Mesurons ces temperatures avant qu'il ne gèle trop ! "
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 3
+autowrap_mode = 2
 clip_text = true
 text_overrun_behavior = 3
 script = ExtResource("10_jqu2h")
@@ -709,14 +726,38 @@ min_font_size = 7
 max_font_size = 96
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
-[node name="AutoSizeLabel2" type="Label" parent="TextureRect" unique_id=1761642040]
+[node name="AutoSizeLabel3" type="Label" parent="Carnet" unique_id=283720336]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.6
+anchor_left = 0.134
+anchor_top = 0.298
+anchor_right = 0.96400005
+anchor_bottom = 0.582
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.6924728, 0.46334553, 0.056018114, 1)
 theme_override_fonts/font = ExtResource("9_r8xam")
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 26
+text = "Encore faut-il relier le cable du thermomètre à la sonde..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("10_jqu2h")
+min_font_size = 7
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Carnet" unique_id=1761642040]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.7
+rotation = 0.017453292
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_r8xam")
+theme_override_font_sizes/font_size = 38
 text = "Progrès :"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -726,22 +767,22 @@ text_overrun_behavior = 3
 script = ExtResource("10_jqu2h")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
-[node name="BackgroundSlider" type="TextureButton" parent="TextureRect" unique_id=79375307]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Carnet" unique_id=1821025126]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.7
-anchor_right = 0.95
+anchor_left = 0.113000005
+anchor_top = 0.73
+anchor_right = 0.96300006
 anchor_bottom = 0.8
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="BackgroundSlider" type="TextureButton" parent="TextureRect/BackgroundSlider" unique_id=935208068]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-stretch_mode = 0
+rotation = 0.017453292
+pivot_offset_ratio = Vector2(0, 0.5)
+max_value = 4.0
+step = 0.01
+nine_patch_stretch = true
+texture_under = ExtResource("21_bpvyt")
+texture_progress = ExtResource("21_bpvyt")
+tint_under = Color(0.20392157, 0.21176471, 0.22745098, 1)
+tint_progress = Color(0.9411765, 0.6392157, 0.13333334, 1)
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=2135464990]
 layout_mode = 1

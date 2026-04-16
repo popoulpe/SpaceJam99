@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yr5e1vqugna6"
-path="res://.godot/imported/ui_button_next_fiole.png-92799f89605cbe51178eadc84cf7edb4.ctex"
+uid="uid://5pldymsugdu1"
+path="res://.godot/imported/ui_dashed_rectangle.png-54044ec001e6c23dc011fdf8aeba1c33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/fioles/ui_button_next_fiole.png"
-dest_files=["res://.godot/imported/ui_button_next_fiole.png-92799f89605cbe51178eadc84cf7edb4.ctex"]
+source_file="res://Assets/UI/miniGames/buttonTuyaux/ui_dashed_rectangle.png"
+dest_files=["res://.godot/imported/ui_dashed_rectangle.png-54044ec001e6c23dc011fdf8aeba1c33.ctex"]
 
 [params]
 
