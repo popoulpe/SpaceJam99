@@ -2,8 +2,6 @@ extends State
 
 @export var idle_state : State
 
-@export var turnSpeed :float=1
-
 func enter() -> void :
 	pass
 
@@ -17,8 +15,7 @@ func process_frame(_delta:float) -> State:
 	return null
 
 func process_physics(delta:float) -> State:
-	
+	floor_snap_adaptation()
 	parent.velocity = apply_forward_deceleration(delta)
-	parent.rotation.y = apply_turn_movement(delta, turnSpeed)
 	
 	return idle_state

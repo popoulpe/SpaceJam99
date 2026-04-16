@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name PlayerController
 
-@onready var player = $".."
+@onready var player :Player= $".."
 
 @onready var pushTimer := $PushTimer
 @onready var invinsibility_timer = $InvinsibilityTimer

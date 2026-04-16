@@ -1,9 +1,11 @@
 extends State
 
-@export var fall_jump_state : State
 
-@export var turnSpeed :float=0.25
+@export var idle_state : State
+@export var move_state : State
 
+@export var turnSpeed :float=3
+@export var deceleration :float = 10
 
 func enter() -> void :
 	pass
@@ -19,9 +21,10 @@ func process_frame(_delta:float) -> State:
 
 func process_physics(delta:float) -> State:
 	floor_snap_adaptation()
-	parent.velocity.y += jumpForce # *parent.get_floor_normal() 
-	
-	parent.velocity = apply_forward_deceleration(delta)
+	apply_gravity(delta)
+	parent.velocity = apply_forward_deceleration(delta, deceleration)
 	parent.rotation.y = apply_turn_movement(delta, turnSpeed)
-	
-	return fall_jump_state
+
+	if parent.is_on_floor():
+		return idle_state
+	return null

@@ -4,10 +4,11 @@ extends State
 @export var fall_state : State
 @export var jump_state : State
 @export var break_state : State
+@export var heavy_state : State
 
-@export var turnSpeed :float=1
+@export var turnSpeed :float=0.25
 @export var turnAcceleration :float=5
-@export var deceleration :float = 15
+@export var deceleration :float = 10
 
 func enter() -> void :
 	pass
@@ -18,6 +19,8 @@ func exit() -> void:
 func process_input(_event:InputEvent) -> State:
 	if Input.is_action_pressed("Backward") :
 		return break_state
+	if Input.is_action_pressed("FallFaster"):
+		return heavy_state
 	if Input.is_action_pressed("Forward") :
 		return move_state
 	if Input.is_action_pressed("Jump") && parent.is_on_floor():
@@ -25,7 +28,7 @@ func process_input(_event:InputEvent) -> State:
 	return null
 
 func process_physics(delta:float) -> State:
-	
+	floor_snap_adaptation()
 	parent.velocity = apply_forward_deceleration(delta, deceleration)
 	parent.rotation.y = apply_turn_movement(delta, turnSpeed)
 	parent.velocity = gain_turn_speed(delta, turnAcceleration)

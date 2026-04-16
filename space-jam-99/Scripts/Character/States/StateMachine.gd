@@ -9,7 +9,6 @@ func init (parent: PlayerController) -> void:
 	for child in get_children():
 		child.parent = parent
 	
-	parent.floor_snap_length = 10
 	change_state(starting_state)
 	
 func change_state(new_state : State) -> void:

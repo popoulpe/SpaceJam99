@@ -14,7 +14,6 @@
 [ext_resource type="Script" uid="uid://cyr1tqkk3buti" path="res://Scripts/Character/States/LandState.gd" id="9_g6jha"]
 [ext_resource type="Script" uid="uid://bun5r5eowybfj" path="res://Scripts/Character/States/BreakState.gd" id="12_dsmn0"]
 [ext_resource type="Script" uid="uid://bl7a3x7frfjqw" path="res://Scripts/Character/States/FallJumpState.gd" id="14_xcy2a"]
-[ext_resource type="Script" uid="uid://dsbduexd4h3qy" path="res://Scripts/Character/States/HeavyState.gd" id="15_onb1c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lw5so"]
 
@@ -153,31 +152,31 @@ one_shot = true
 script = ExtResource("4_dbo68")
 starting_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1000041527 node_paths=PackedStringArray("move_state", "fall_state", "jump_state", "break_state", "heavy_state")]
+[node name="Idle" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1000041527 node_paths=PackedStringArray("move_state", "fall_state", "jump_state", "break_state")]
 script = ExtResource("5_0x3iv")
 move_state = NodePath("../Move")
 fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
 break_state = NodePath("../Break")
-heavy_state = NodePath("../Heavy")
+turnSpeed = 0.25
+deceleration = 10.0
 
-[node name="Move" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1516954293 node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "break_state", "heavy_state")]
+[node name="Move" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1516954293 node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "break_state")]
 script = ExtResource("6_qaqhs")
 idle_state = NodePath("../Idle")
 fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
 break_state = NodePath("../Break")
-heavy_state = NodePath("../Heavy")
+turnSpeed = 0.25
 
-[node name="Fall" type="Node" parent="CharacterBody3D/StateMachine" unique_id=662319048 node_paths=PackedStringArray("idle_state", "move_state", "heavy_state")]
+[node name="Fall" type="Node" parent="CharacterBody3D/StateMachine" unique_id=662319048 node_paths=PackedStringArray("idle_state", "move_state")]
 script = ExtResource("7_qaqhs")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
-heavy_state = NodePath("../Heavy")
+turnSpeed = 3.0
 
-[node name="Jump" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1880933946 node_paths=PackedStringArray("fall_jump_state")]
+[node name="Jump" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1880933946]
 script = ExtResource("8_kfjcm")
-fall_jump_state = NodePath("../FallJump")
 
 [node name="Land" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1807008406 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("9_g6jha")
@@ -193,11 +192,7 @@ fall_state = NodePath("../Fall")
 script = ExtResource("14_xcy2a")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
-
-[node name="Heavy" type="Node" parent="CharacterBody3D/StateMachine" unique_id=753114941 node_paths=PackedStringArray("idle_state", "jump_state")]
-script = ExtResource("15_onb1c")
-idle_state = NodePath("../Idle")
-jump_state = NodePath("../Jump")
+turnSpeed = 0.25
 
 [node name="CameraFollowPoint" type="Node3D" parent="CharacterBody3D" unique_id=1496072441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1717676, 0.5539298, 0)

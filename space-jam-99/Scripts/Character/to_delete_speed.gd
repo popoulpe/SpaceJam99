@@ -4,6 +4,7 @@ class_name hud
 @onready var character_body_3d = $".."
 @onready var temps = $Temps
 @onready var vitesse = $Vitesse
+@onready var interactPanel = $Panel
 
 var timeColor : Color
 
@@ -21,3 +22,9 @@ func time_update(time:float, gotHit:bool):
 	if gotHit:
 		timeColor = Color.RED
 		temps.add_theme_color_override("font_color", timeColor)
+
+func show_interact_ui():
+	interactPanel.visible = true
+
+func hide_interact_ui():
+	interactPanel.visible = false
