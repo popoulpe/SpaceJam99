@@ -2,13 +2,18 @@
 
 [ext_resource type="Script" uid="uid://83mlehhpvo2o" path="res://Scripts/BottlesMG/bottles_mini_game.gd" id="1_vkamk"]
 [ext_resource type="PackedScene" uid="uid://d2u43g63usqse" path="res://Scenes/PrefabScene/Bottles/Bottle.tscn" id="2_6la7u"]
-[ext_resource type="Texture2D" uid="uid://cvughis3i04q3" path="res://Assets/UI/button/ui_box.png" id="3_ldc6v"]
-[ext_resource type="Script" uid="uid://eil2m803qew7" path="res://Scenes/PrefabScene/Bottles/AutoTippingText.gd" id="4_j03n1"]
+[ext_resource type="Texture2D" uid="uid://df3xm1ip8uflh" path="res://Assets/UI/miniGames/fioles/ui_fiole_background_0.png" id="2_kvqvj"]
+[ext_resource type="Script" uid="uid://bh108v4crgvrv" path="res://Scenes/PrefabScene/Bottles/bottle_movingBackground.gd" id="3_lv2ow"]
+[ext_resource type="Texture2D" uid="uid://b5u6ig8feea40" path="res://Assets/UI/miniGames/fioles/ui_fiole_background_1.png" id="3_ts43d"]
+[ext_resource type="Texture2D" uid="uid://cuucn6k38j2t7" path="res://Assets/UI/miniGames/fioles/ui_fiole_background_2.png" id="4_56nbn"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="4_kpjnf"]
+[ext_resource type="Texture2D" uid="uid://j4c5fnsccxl5" path="res://Assets/UI/miniGames/fioles/ui_fiole_background_3.png" id="5_56nbn"]
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="5_j03n1"]
 [ext_resource type="FontFile" uid="uid://ctwjii5557xrf" path="res://Assets/UI/fonts/Astron Boy Wonder.otf" id="5_kpjnf"]
 [ext_resource type="Script" uid="uid://jyqxihwdmk4c" path="res://Scenes/PrefabScene/Bottles/next_button_bottles.gd" id="5_wjevd"]
+[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/buttonTuyaux/ui_carnet.png" id="8_ts43d"]
 [ext_resource type="Texture2D" uid="uid://yr5e1vqugna6" path="res://Assets/UI/miniGames/fioles/ui_button_next_fiole.png" id="8_whwrf"]
+[ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="9_56nbn"]
 
 [node name="BottlesMiniGame" type="Control" unique_id=1232818989 node_paths=PackedStringArray("bottleList")]
 layout_mode = 3
@@ -21,12 +26,63 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_vkamk")
 bottleList = [NodePath("AllBottles/Bottle0"), NodePath("AllBottles/Bottle1"), NodePath("AllBottles/Bottle2"), NodePath("AllBottles/Bottle3")]
 
+[node name="Background" type="TextureRect" parent="." unique_id=1891416002 node_paths=PackedStringArray("movingBackgrounds")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_kvqvj")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_lv2ow")
+movingBackgrounds = [NodePath("TextureRect"), NodePath("TextureRect2")]
+_colors = Array[Color]([Color(1, 1, 1, 1), Color(0.7529412, 0.7529412, 0.7529412, 1), Color(0.8117647, 0.5921569, 0.64705884, 1), Color(0.7176471, 0.40392157, 0.5411765, 1), Color(0.627451, 0.2901961, 0.4509804, 1)])
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1001256076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_ts43d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=590206861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("4_56nbn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Background" unique_id=2143024294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("5_56nbn")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="AllBottles" type="Control" parent="." unique_id=302655537]
 layout_mode = 1
-anchor_left = 0.2
-anchor_top = 0.3
-anchor_right = 0.8
-anchor_bottom = 0.85
+anchor_left = 0.36900002
+anchor_top = 0.21100001
+anchor_right = 0.91400003
+anchor_bottom = 0.75500005
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="Bottle0" parent="AllBottles" unique_id=1668002927 instance=ExtResource("2_6la7u")]
@@ -80,46 +136,82 @@ colorPreset = {
 2: [Color(1, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 0, 0, 1), Color(1, 0.40784314, 0, 1)]
 }
 
-[node name="TutoPannel" type="Control" parent="." unique_id=2011848085]
+[node name="Carnet" type="Control" parent="." unique_id=1589567587]
 layout_mode = 1
-anchor_right = 1.0
-anchor_bottom = 0.25
+anchor_top = 0.35000002
+anchor_right = 0.24300002
+anchor_bottom = 1.0
+offset_top = -1.5258789e-05
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TextureRect" type="TextureRect" parent="TutoPannel" unique_id=926318108 node_paths=PackedStringArray("label_full_text", "_text")]
+[node name="TextureRect" type="TextureRect" parent="Carnet" unique_id=1856289631]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.1
-anchor_right = 0.95
-anchor_bottom = 0.9
+anchor_left = -0.026
+anchor_top = -0.0050000004
+anchor_right = 1.065
+anchor_bottom = 1.0
+rotation = 0.017453292
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("3_ldc6v")
+texture = ExtResource("8_ts43d")
 expand_mode = 1
 stretch_mode = 5
-script = ExtResource("4_j03n1")
-full_text = "Pour mieux différencier les éléments chimiques présents dans l'eau, on les a colorés. Reste-t-il à les trier..."
-label_full_text = NodePath("AutoSizeLabel")
-typing_speed = 0.02
-space_speed = 0.08
-punctuation_speed = 0.4
-onStart = true
-_text = NodePath("AutoSizeLabel")
 
-[node name="AutoSizeLabel" type="Label" parent="TutoPannel/TextureRect" unique_id=1580529702]
-modulate = Color(0, 0, 0, 1)
+[node name="AutoSizeLabel" type="Label" parent="Carnet" unique_id=1248490073]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.1
-anchor_right = 0.95
-anchor_bottom = 0.9
-grow_horizontal = 2
-grow_vertical = 2
+anchor_left = 0.14
+anchor_top = 0.08800001
+anchor_right = 0.96300006
+anchor_bottom = 0.45
 pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_j03n1")
-theme_override_font_sizes/font_size = 34
-text = "Pour mieux différencier les éléments chimiques présents dans l'eau, on les a colorés. Reste-t-il à les trier..."
+theme_override_font_sizes/font_size = 23
+text = "Pour mieux différencier les éléments chimiques présents dans l'eau, on les a colorés."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("4_kpjnf")
+min_font_size = 7
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel3" type="Label" parent="Carnet" unique_id=1278886035]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.134
+anchor_top = 0.45
+anchor_right = 0.96400005
+anchor_bottom = 0.582
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.6924728, 0.46334553, 0.056018114, 1)
+theme_override_fonts/font = ExtResource("5_j03n1")
+theme_override_font_sizes/font_size = 25
+text = "Reste-t-il à les trier..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("4_kpjnf")
+min_font_size = 7
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Carnet" unique_id=665476090]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.7
+rotation = 0.017453292
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_j03n1")
+theme_override_font_sizes/font_size = 38
+text = "Progrès :"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -128,7 +220,24 @@ text_overrun_behavior = 3
 script = ExtResource("4_kpjnf")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=615555475]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Carnet" unique_id=157009361]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113000005
+anchor_top = 0.73
+anchor_right = 0.96300006
+anchor_bottom = 0.8
+rotation = 0.017453292
+pivot_offset_ratio = Vector2(0, 0.5)
+max_value = 3.0
+step = 0.01
+nine_patch_stretch = true
+texture_under = ExtResource("9_56nbn")
+texture_progress = ExtResource("9_56nbn")
+tint_under = Color(0.20392157, 0.21176471, 0.22745098, 1)
+tint_progress = Color(0.9411765, 0.6392157, 0.13333334, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=615555475 node_paths=PackedStringArray("progressBar")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -139,14 +248,15 @@ scale = Vector2(1e-05, 1e-05)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 disabled = true
 script = ExtResource("5_wjevd")
+progressBar = NodePath("../Carnet/TextureProgressBar")
 
 [node name="TextureRect" type="TextureRect" parent="TextureButton" unique_id=1782938082]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.15
-anchor_top = 0.25
-anchor_right = 0.85
-anchor_bottom = 0.75
+anchor_left = 0.3
+anchor_top = 0.4
+anchor_right = 0.7
+anchor_bottom = 0.6
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("8_whwrf")
 expand_mode = 1
@@ -156,13 +266,13 @@ stretch_mode = 5
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
-anchor_top = 0.35
+anchor_top = 0.25
 anchor_right = 0.95
-anchor_bottom = 0.68
+anchor_bottom = 0.8
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_kpjnf")
-theme_override_font_sizes/font_size = 88
+theme_override_font_sizes/font_size = 60
 text = "Super!"
 horizontal_alignment = 1
 vertical_alignment = 1

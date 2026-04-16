@@ -3,6 +3,14 @@ var wakeuped:bool=false
 var _wakeuped:bool=false
 var hue:float=0.0
 var timer:float=0.0
+@export
+var progressBar: TextureProgressBar
+var bProgressingBar:bool=false
+var progressTint : Color
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	progressTint = progressBar.tint_progress
 
 func wakeup()->void:
 	_wakeuped = true
@@ -26,6 +34,20 @@ func _process(delta: float) -> void:
 			timer=0.0
 	if(wakeuped):
 		_on_timer_timeout(delta)
+		progressedBar(delta)
+
+func progressedBar(f:float)->void:
+	if(bProgressingBar):
+		progressBar.value+=f
+		if(progressBar.value>=$"..".iLevel+1):
+			bProgressingBar=false
+			progressBar.tint_progress =progressTint
+			endProgressingBar()
+
+func endProgressingBar()->void:
+	var tween = get_tree().create_tween()
+	tween.tween_property(progressBar, "scale", Vector2(1.2,1.2), 1.2).set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(progressBar, "scale", Vector2(1,1), 0.45).set_trans(Tween.TRANS_ELASTIC)
 
 func _on_timer_timeout(f:float):
 	hue += 0.7*f

@@ -14,6 +14,12 @@ func _process(delta: float) -> void:
 	hue += 0.7*delta
 	if hue >= 1.0:
 		hue = 0.0
+	var angle: float = hue * TAU
+	var r: float = (sin(angle)*0.5)+0.5
+	var g:float = (sin(angle + TAU /3)*0.5)+0.5
+	var b: float = (sin(angle + TAU *2/3)*0.5)+0.5
+	if($TextureButton.bProgressingBar):
+		$TextureButton.progressBar.tint_progress=Color(r, g, b)
 
 func bottle_selection(id:int):
 	for i in bottleList:
@@ -40,10 +46,14 @@ func check_end():
 			finished = false
 	
 	if finished:
+		$TextureButton.visible=true
 		$TextureButton.wakeup()
+		$Background.bTransitionning=true
+		$TextureButton.bProgressingBar=true
 
 func next_level():
 	$TextureButton.sleep()
+	$TextureButton.visible=false
 	iLevel+=1
 	if(iLevel>=3):
 		print("YAHOO")
