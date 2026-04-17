@@ -20,7 +20,7 @@ func _process(delta):
 		print('YOU LOSE !')
 	
 	if canInteract && Input.is_action_just_pressed("Interact"):
-		lastInteractableObject.Interact()
+		lastInteractableObject.Interact(self)
 
 func get_hit():
 	if time <=0:
