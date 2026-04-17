@@ -2,6 +2,7 @@ extends Node
 class_name State
 
 @export_group("chara properties")
+@export_group("chara properties")
 @export var pushMaxSpeed :float= 20
 @export var decelerationDefault :float = 10
 
