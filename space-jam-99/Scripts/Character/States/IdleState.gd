@@ -11,6 +11,7 @@ extends State
 @export var deceleration :float = 10
 
 func enter() -> void :
+	super()
 	pass
 
 func exit() -> void:

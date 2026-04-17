@@ -1,10 +1,14 @@
 extends Node3D
-
+class_name player_visual
 @export var playerController :PlayerController
 
 @export var slopeOrientationSpeed :float= 10
 
+
 func _process(delta):
+	charaFollowingSlope(delta)
+	
+func charaFollowingSlope(delta : float) -> void:
 	if !playerController.is_on_floor():
 		return
 	

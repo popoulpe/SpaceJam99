@@ -6,6 +6,7 @@ extends State
 
 
 func enter() -> void :
+	super()
 	pass
 
 func exit() -> void:

@@ -3,6 +3,7 @@ extends State
 @export var idle_state : State
 
 func enter() -> void :
+	super()
 	pass
 
 func exit() -> void:

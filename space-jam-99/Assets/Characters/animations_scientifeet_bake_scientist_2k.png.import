@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvgai246mmgpt"
-path.s3tc="res://.godot/imported/bake_scientist_2k.png-84850dd0be7a844f5a9d997dcba906aa.s3tc.ctex"
+uid="uid://cqnpvrje0mcv6"
+path.s3tc="res://.godot/imported/animations_scientifeet_bake_scientist_2k.png-888da4485dc55c344f431b014a33b56b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "e5e895cf7d128e4af3102d4af29a60ed"
+}
 
 [deps]
 
-source_file="res://Assets/Characters/textures/bake_scientist_2k.png"
-dest_files=["res://.godot/imported/bake_scientist_2k.png-84850dd0be7a844f5a9d997dcba906aa.s3tc.ctex"]
+source_file="res://Assets/Characters/animations_scientifeet_bake_scientist_2k.png"
+dest_files=["res://.godot/imported/animations_scientifeet_bake_scientist_2k.png-888da4485dc55c344f431b014a33b56b.s3tc.ctex"]
 
 [params]
 

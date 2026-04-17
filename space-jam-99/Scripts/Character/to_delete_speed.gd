@@ -1,5 +1,5 @@
 extends Control
-class_name hud
+class_name ToDeleteHud
 
 @onready var character_body_3d = $".."
 @onready var temps = $Temps

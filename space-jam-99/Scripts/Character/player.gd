@@ -3,7 +3,7 @@ class_name Player
 
 
 @onready var character_body_3d = $CharacterBody3D
-@export var hud:hud
+@export var hud:ToDeleteHud
 @export var time :float = 60
 @export var timePenality :float = 5
 @export var invulnerabilityDuration:float=2 

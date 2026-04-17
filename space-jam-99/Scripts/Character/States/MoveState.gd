@@ -13,6 +13,7 @@ extends State
 @export var pushAcceleration :float= 15
 
 func enter() -> void :
+	super()
 	pass
 
 func exit() -> void:
@@ -33,6 +34,7 @@ func process_frame(_delta:float) -> State:
 	return null
 
 func process_physics(delta:float) -> State:
+	parent.pushing = false
 	floor_snap_adaptation()
 	parent.velocity = forwardMovement(delta)
 	parent.velocity = apply_forward_deceleration(delta, deceleration)
@@ -51,6 +53,7 @@ func forwardMovement(_delta: float) ->Vector3 :
 	if parent.canPush && parent.velocity.length()<pushMaxSpeed:
 		forwardVelocity +=(parent.basis.x.slide(parent.get_floor_normal()) * pushAcceleration)
 		parent.canPush = false
+		parent.pushing = true
 		parent.pushTimer.start()
 	
 	forwardVelocity.y = parent.velocity.y
