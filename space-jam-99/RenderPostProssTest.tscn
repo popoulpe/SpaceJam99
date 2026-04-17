@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://k6e7keoaooql"]
 
 [ext_resource type="Shader" uid="uid://buivys841eua8" path="res://PostProssfr1.gdshader" id="1_4wkif"]
-[ext_resource type="PackedScene" uid="uid://dj21aelpqhw17" path="res://its_a_butiful_world.tscn" id="1_ejyuv"]
-[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/farfaline/EarthRender.tres" id="3_7ecto"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ecto"]
 shader = ExtResource("1_4wkif")
@@ -12,9 +10,6 @@ shader_parameter/dithering = true
 shader_parameter/scale_resolution = true
 shader_parameter/target_resolution_scale = 3
 shader_parameter/enable_recolor = false
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_7ecto"]
-material = ExtResource("3_7ecto")
 
 [node name="SubViewportContainer" type="SubViewportContainer" unique_id=1428557112]
 material = SubResource("ShaderMaterial_7ecto")
@@ -30,10 +25,4 @@ handle_input_locally = false
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="ItsAButifulWorld" parent="SubViewport" unique_id=1254952831 instance=ExtResource("1_ejyuv")]
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=223786742]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1992434445]
-transform = Transform3D(1.3597187, 0, 0, 0, 1, 0, 0, 0, 1, 4.833759, 0, 3.911724)
-mesh = SubResource("PlaneMesh_7ecto")
