@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dtmu6cvkg03uj" path="res://Scripts/Character/PlayerVisual.gd" id="3_4bud8"]
 [ext_resource type="Script" uid="uid://bmxxf5jnyyw83" path="res://Scripts/Character/PlayerCamera.gd" id="4_0x3iv"]
 [ext_resource type="Script" uid="uid://cxjurc35oqbtg" path="res://Scripts/Character/States/StateMachine.gd" id="4_dbo68"]
-[ext_resource type="PackedScene" uid="uid://b8m5httlm1u3r" path="res://Scenes/PrefabScene/Hud.tscn" id="4_fijso"]
+[ext_resource type="PackedScene" uid="uid://b8m5httlm1u3r" path="res://Scenes/PrefabScene/Hud_scientifeet.tscn" id="4_fijso"]
 [ext_resource type="Script" uid="uid://mj25t4sr13b4" path="res://Scripts/Character/States/IdleState.gd" id="5_0x3iv"]
 [ext_resource type="Script" uid="uid://ou675xit6hcn" path="res://Scripts/Character/States/MoveState.gd" id="6_qaqhs"]
 [ext_resource type="Script" uid="uid://b6obnjfa7mdge" path="res://Scripts/Character/States/FallState.gd" id="7_qaqhs"]

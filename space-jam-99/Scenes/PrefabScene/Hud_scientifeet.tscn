@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b8m5httlm1u3r"]
+
+[ext_resource type="Script" uid="uid://c0pt6w6tv4rj5" path="res://Scripts/ui_hud_scientifeet.gd" id="1_yxf2a"]
+[ext_resource type="Texture2D" uid="uid://cqnpvrje0mcv6" path="res://Assets/Characters/animations_scientifeet_bake_scientist_2k.png" id="2_d82cj"]
+
+[node name="ui_hud_scientifeet" type="Control" unique_id=1951736353]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_yxf2a")
+
+[node name="Panel" type="Panel" parent="." unique_id=622912986]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.85
+anchor_right = 0.6
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1613262970]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.344
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "F to interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1484791680]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.33900002
+anchor_bottom = 1.0
+texture = ExtResource("2_d82cj")
+expand_mode = 1
+
+[node name="panel du scientifeet" type="Panel" parent="." unique_id=188424606]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.6
+anchor_right = 0.6
+anchor_bottom = 0.8
+
+[node name="Label" type="Label" parent="panel du scientifeet" unique_id=1852118494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ceci est un texte de scientifeet du style :
+ \"j'adore les pieds miam\""
+autowrap_mode = 2
