@@ -3,8 +3,6 @@
 [ext_resource type="Material" uid="uid://btuk02yi406vu" path="res://Assets/farfaline/RGBRoadMap.tres" id="1_f48s1"]
 [ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/farfaline/SM_Satelifeet.fbx" id="2_2kr1e"]
 [ext_resource type="MeshLibrary" uid="uid://cr13vydtxhosd" path="res://Assets/farfaline/TileSetv2.meshlib" id="3_f48s1"]
-[ext_resource type="Material" uid="uid://d1nl0tfflal8t" path="res://Assets/farfaline/EarthRender.tres" id="5_f48s1"]
-[ext_resource type="PackedScene" uid="uid://b3lwwea8rwu32" path="res://Assets/farfaline/Perso_principal_idle_V1.fbx" id="5_wmmd0"]
 [ext_resource type="Shader" uid="uid://76okb2e6qtwc" path="res://Assets/farfaline/VisualFeet.tres" id="6_4ak8j"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2kr1e"]
@@ -145,16 +143,12 @@ cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(0, 65533, 0, 65535, 65533, 1, 65534, 65533, 3, 65533, 65533, 2, 65532, 65533, 5, 65531, 65533, 4, 65530, 65533, 6, 131065, 65533, 7, 131064, 65533, 6, 196599, 65533, 5)
+"cells": PackedInt32Array(0, 65533, 0, 65535, 65533, 1, 65534, 65533, 3, 65533, 65533, 2, 65532, 65533, 5, 65531, 65533, 4, 65530, 65533, 6, 131065, 65533, 7, 131064, 65533, 6, 196599, 65533, 5, 65535, 65531, 524292)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=785027793]
 mesh = SubResource("PrismMesh_4ak8j")
-surface_material_override/0 = ExtResource("5_f48s1")
-
-[node name="Perso_principal_idle_V1" parent="." unique_id=281350365 instance=ExtResource("5_wmmd0")]
-transform = Transform3D(-0.022530347, 0, -0.99974614, 0, 1, 0, 0.99974614, 0, -0.022530347, -4.6124983, 2.2353094, -50.626556)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=14074430]
 transform = Transform3D(-0.02064985, 0.5811107, 2.9431078, 0.004077171, 2.9431803, -0.5810964, -2.999926, 0, -0.021048507, -39.928017, -4.8353996, -94.27388)
