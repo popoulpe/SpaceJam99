@@ -11,4 +11,5 @@ func _on_body_exited(body):
 
 
 func Interact() -> void:
-	print("Ineraction completed")
+	print("Interaction completed")
+	
