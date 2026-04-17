@@ -11,9 +11,11 @@
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="5_j03n1"]
 [ext_resource type="FontFile" uid="uid://ctwjii5557xrf" path="res://Assets/UI/fonts/Astron Boy Wonder.otf" id="5_kpjnf"]
 [ext_resource type="Script" uid="uid://jyqxihwdmk4c" path="res://Scenes/PrefabScene/Bottles/next_button_bottles.gd" id="5_wjevd"]
-[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/buttonTuyaux/ui_carnet.png" id="8_ts43d"]
+[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/ui_carnet.png" id="8_ts43d"]
 [ext_resource type="Texture2D" uid="uid://yr5e1vqugna6" path="res://Assets/UI/miniGames/fioles/ui_button_next_fiole.png" id="8_whwrf"]
 [ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="9_56nbn"]
+[ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="15_yy2ge"]
+[ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="16_t8qgd"]
 
 [node name="BottlesMiniGame" type="Control" unique_id=1232818989 node_paths=PackedStringArray("bottleList")]
 layout_mode = 3
@@ -274,6 +276,41 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_kpjnf")
 theme_override_font_sizes/font_size = 60
 text = "Super!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("4_kpjnf")
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="TextureRect2" type="TextureRect" parent="TextureButton" unique_id=1873548114]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("15_yy2ge")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel2" type="Label" parent="TextureButton/TextureRect2" unique_id=1314353559]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.3
+anchor_right = 0.9
+anchor_bottom = 0.7
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_t8qgd")
+theme_override_font_sizes/font_size = 56
+text = "Ces résultats sont un peu étranges...
+Ils ne présagent rien de bon."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

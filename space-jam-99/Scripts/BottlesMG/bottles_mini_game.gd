@@ -50,6 +50,9 @@ func check_end():
 		$TextureButton.wakeup()
 		$Background.bTransitionning=true
 		$TextureButton.bProgressingBar=true
+		if(iLevel+1>=3):
+			$TextureButton/TextureRect.visible=false
+			$TextureButton/TextureRect2.visible=true
 
 func next_level():
 	$TextureButton.sleep()

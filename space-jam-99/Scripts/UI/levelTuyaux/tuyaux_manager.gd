@@ -39,7 +39,10 @@ func _process(delta: float) -> void:
 		if f >= 1.0:
 			f = 0.0
 		var angle: float = f * TAU
-		$"../TextureButton".rotation = 0.1*cos(angle)
+		if(iLevel+1>=4):
+			$"../TextureButton".rotation = 0.01*cos(angle)
+		else:
+			$"../TextureButton".rotation = 0.1*cos(angle)
 		var angle2: float = hue * TAU
 		var r: float = (sin(angle2)*0.5)+0.5
 		var g:float = (sin(angle2 + TAU /3)*0.5)+0.5
@@ -56,6 +59,9 @@ func endLevel()->void:
 	$"../TextureButton".disabled=false
 	$"../TextureButton".visible=true
 	bProgressingBar=true
+	if(iLevel+1>=4):
+		$"../TextureButton/TextureRect".visible=false
+		$"../TextureButton/TextureRect2".visible=true
 
 func progressedBar(f:float)->void:
 	if(bProgressingBar):
