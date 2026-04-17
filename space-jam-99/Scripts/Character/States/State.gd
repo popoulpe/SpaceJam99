@@ -1,16 +1,20 @@
 extends Node
 class_name State
 
-
+@export_group("chara properties")
+@export_group("chara properties")
 @export var pushMaxSpeed :float= 20
 @export var decelerationDefault :float = 10
 
+@export_subgroup("air")
 @export var jumpForce :float= 10
 @export var gravity :float= -25
 
+@export_subgroup("slope accceleration")
 @export var slopeDownAcceleration :float = 50
 @export var slopeUpAcceleration :float = 1
 
+@export_subgroup("snap")
 @export var down_slope_snap :float=1
 @export var slow_ground_snap :float=0.3
 @export var fast_ground_snap :float=0.1
@@ -19,7 +23,6 @@ class_name State
 var parent : PlayerController
 
 func enter() -> void :
-	
 	pass
 
 func exit() -> void:

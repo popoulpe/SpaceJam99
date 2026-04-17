@@ -2,12 +2,14 @@ extends CharacterBody3D
 class_name PlayerController
 
 @onready var player :Player= $".."
+@onready var playerVisual :player_visual= $Mesh
 
 @onready var pushTimer := $PushTimer
 @onready var invinsibility_timer = $InvinsibilityTimer
 
 @onready var state_machine = $StateMachine
 
+var pushing:bool = false
 
 var canPush :bool = true
 var horizontalDir :int=0
@@ -39,6 +41,8 @@ func checkCollisions():
 			set_collision_mask_value(2, false)
 			invinsibility_timer.start(player.invulnerabilityDuration)
 			player.get_hit()
+
+
 
 
 func _on_invinsibility_timer_timeout():

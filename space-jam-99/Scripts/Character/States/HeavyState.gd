@@ -8,6 +8,7 @@ extends State
 @export var deceleration :float=30
 
 func enter() -> void :
+	super()
 	pass
 
 func exit() -> void:
@@ -26,7 +27,7 @@ func process_frame(_delta:float) -> State:
 func process_physics(delta:float) -> State:
 	floor_snap_adaptation()
 	apply_gravity(delta, gravityMult)
-	parent.velocity = apply_forward_deceleration(delta, deceleration)
+	#parent.velocity = apply_forward_deceleration(delta, deceleration)
 	parent.velocity = apply_slope_slide(delta, slopeAccelerationMult)
 	
 	return null

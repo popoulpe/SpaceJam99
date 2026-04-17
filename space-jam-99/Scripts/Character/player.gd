@@ -3,7 +3,7 @@ class_name Player
 
 
 @onready var character_body_3d = $CharacterBody3D
-@export var hud:hud
+@export var hud:ToDeleteHud
 @export var time :float = 60
 @export var timePenality :float = 5
 @export var invulnerabilityDuration:float=2 
@@ -20,7 +20,7 @@ func _process(delta):
 		print('YOU LOSE !')
 	
 	if canInteract && Input.is_action_just_pressed("Interact"):
-		lastInteractableObject.Interact()
+		lastInteractableObject.Interact(self)
 
 func get_hit():
 	if time <=0:

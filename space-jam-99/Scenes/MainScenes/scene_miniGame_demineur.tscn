@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cuhfn8ekyr7c"]
 
 [ext_resource type="Texture2D" uid="uid://3to5k7beio83" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_full3.png" id="1_gbmwc"]
-[ext_resource type="Script" uid="uid://uipkxkye4vbv" path="res://Scenes/MainScenes/MiniGame_Carotte_Demineur_Manager.gd" id="1_hbc8p"]
+[ext_resource type="Script" uid="uid://uipkxkye4vbv" path="res://Scripts/MiniGame_Carotte_Demineur_Manager.gd" id="1_hbc8p"]
 [ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/ui_carnet.png" id="1_wvnkv"]
 [ext_resource type="Texture2D" uid="uid://h5l2w1rquwk7" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2.png" id="2_a0wc0"]
 [ext_resource type="Script" uid="uid://b0ax3k82j456g" path="res://Scripts/UI/levelCarotte/MiniGame_Carotte_Demineur_Boutton.gd" id="2_ryvp4"]
