@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0yef6qco0qhy"
-path="res://.godot/imported/ui_carnet.png-5363405e4c353b203aaacc4e9ba84db0.ctex"
+uid="uid://bv18pr6ag8irc"
+path="res://.godot/imported/ui_minigame_demineur_case_carotte_pourrie.png-264ca1a22b7bf6adfb14092674fe2524.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/miniGames/buttonTuyaux/ui_carnet.png"
-dest_files=["res://.godot/imported/ui_carnet.png-5363405e4c353b203aaacc4e9ba84db0.ctex"]
+source_file="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_carotte_pourrie.png"
+dest_files=["res://.godot/imported/ui_minigame_demineur_case_carotte_pourrie.png-264ca1a22b7bf6adfb14092674fe2524.ctex"]
 
 [params]
 

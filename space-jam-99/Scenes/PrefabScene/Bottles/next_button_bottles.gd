@@ -55,5 +55,9 @@ func _on_timer_timeout(f:float):
 		hue = 0.0
 	var angle: float = hue * TAU
 	var r: float = (sin(angle)*0.5)+0.5
-	$".".scale = Vector2((1+r/10),1+r/10)
-	$".".rotation = 0.1*cos(angle)
+	if($"..".iLevel+1>=3):
+		$".".scale = Vector2((1+r/20),1+r/20)
+		$".".rotation = 0.01*cos(angle)
+	else:
+		$".".scale = Vector2((1+r/10),1+r/10)
+		$".".rotation = 0.1*cos(angle)

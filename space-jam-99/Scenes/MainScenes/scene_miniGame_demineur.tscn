@@ -1,0 +1,2081 @@
+[gd_scene format=3 uid="uid://cuhfn8ekyr7c"]
+
+[ext_resource type="Texture2D" uid="uid://3to5k7beio83" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_full3.png" id="1_gbmwc"]
+[ext_resource type="Script" uid="uid://uipkxkye4vbv" path="res://Scenes/MainScenes/MiniGame_Carotte_Demineur_Manager.gd" id="1_hbc8p"]
+[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/ui_carnet.png" id="1_wvnkv"]
+[ext_resource type="Texture2D" uid="uid://h5l2w1rquwk7" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2.png" id="2_a0wc0"]
+[ext_resource type="Script" uid="uid://b0ax3k82j456g" path="res://Scripts/UI/levelCarotte/MiniGame_Carotte_Demineur_Boutton.gd" id="2_ryvp4"]
+[ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="2_sm1l7"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="3_4lp2e"]
+[ext_resource type="Texture2D" uid="uid://c7t58sspih8kc" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2_1.png" id="3_y8khl"]
+[ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="4_gbmwc"]
+[ext_resource type="Texture2D" uid="uid://dg7tmo066are4" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2_2.png" id="4_omxxq"]
+[ext_resource type="Texture2D" uid="uid://dgwa7dnncptx1" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2_3.png" id="5_o0yh5"]
+[ext_resource type="Texture2D" uid="uid://1v47ay07ox8l" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2_4.png" id="6_7k5mi"]
+[ext_resource type="Texture2D" uid="uid://bv18pr6ag8irc" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_carotte_pourrie.png" id="7_21l8i"]
+[ext_resource type="Texture2D" uid="uid://iw2jm551hdhb" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_carotte_bonne.png" id="8_y8khl"]
+[ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="17_7k5mi"]
+[ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="17_o0yh5"]
+
+[node name="SceneMiniGameDemineur" type="Control" unique_id=1808526161 node_paths=PackedStringArray("all_buttons", "_progressBar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hbc8p")
+all_buttons = [NodePath("DemineurJeu/TextureButton"), NodePath("DemineurJeu/TextureButton2"), NodePath("DemineurJeu/TextureButton3"), NodePath("DemineurJeu/TextureButton4"), NodePath("DemineurJeu/TextureButton5"), NodePath("DemineurJeu/TextureButton6"), NodePath("DemineurJeu/TextureButton7"), NodePath("DemineurJeu/TextureButton8"), NodePath("DemineurJeu/TextureButton9"), NodePath("DemineurJeu/TextureButton10"), NodePath("DemineurJeu/TextureButton11"), NodePath("DemineurJeu/TextureButton12"), NodePath("DemineurJeu/TextureButton13"), NodePath("DemineurJeu/TextureButton14"), NodePath("DemineurJeu/TextureButton15"), NodePath("DemineurJeu/TextureButton16"), NodePath("DemineurJeu/TextureButton17"), NodePath("DemineurJeu/TextureButton18"), NodePath("DemineurJeu/TextureButton19"), NodePath("DemineurJeu/TextureButton20"), NodePath("DemineurJeu/TextureButton21"), NodePath("DemineurJeu/TextureButton22"), NodePath("DemineurJeu/TextureButton23"), NodePath("DemineurJeu/TextureButton24"), NodePath("DemineurJeu/TextureButton25"), NodePath("DemineurJeu/TextureButton26"), NodePath("DemineurJeu/TextureButton27"), NodePath("DemineurJeu/TextureButton28"), NodePath("DemineurJeu/TextureButton29"), NodePath("DemineurJeu/TextureButton30"), NodePath("DemineurJeu/TextureButton31"), NodePath("DemineurJeu/TextureButton32"), NodePath("DemineurJeu/TextureButton33"), NodePath("DemineurJeu/TextureButton34"), NodePath("DemineurJeu/TextureButton35"), NodePath("DemineurJeu/TextureButton36"), NodePath("DemineurJeu/TextureButton37"), NodePath("DemineurJeu/TextureButton38"), NodePath("DemineurJeu/TextureButton39"), NodePath("DemineurJeu/TextureButton40"), NodePath("DemineurJeu/TextureButton41"), NodePath("DemineurJeu/TextureButton42"), NodePath("DemineurJeu/TextureButton43"), NodePath("DemineurJeu/TextureButton44"), NodePath("DemineurJeu/TextureButton45"), NodePath("DemineurJeu/TextureButton46"), NodePath("DemineurJeu/TextureButton47"), NodePath("DemineurJeu/TextureButton48"), NodePath("DemineurJeu/TextureButton49"), NodePath("DemineurJeu/TextureButton50"), NodePath("DemineurJeu/TextureButton51"), NodePath("DemineurJeu/TextureButton52"), NodePath("DemineurJeu/TextureButton53"), NodePath("DemineurJeu/TextureButton54"), NodePath("DemineurJeu/TextureButton55"), NodePath("DemineurJeu/TextureButton56"), NodePath("DemineurJeu/TextureButton57"), NodePath("DemineurJeu/TextureButton58"), NodePath("DemineurJeu/TextureButton59"), NodePath("DemineurJeu/TextureButton60"), NodePath("DemineurJeu/TextureButton61"), NodePath("DemineurJeu/TextureButton62"), NodePath("DemineurJeu/TextureButton63"), NodePath("DemineurJeu/TextureButton64")]
+levels_ = {
+0: [Vector2(1, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(5, 0), Vector2(2, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 2), Vector2(2, 0), Vector2(5, 0), Vector2(3, 0), Vector2(2, 1), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 2), Vector2(1, 2), Vector2(2, 0), Vector2(5, 0), Vector2(5, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(2, 0), Vector2(2, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(2, 0), Vector2(3, 0), Vector2(2, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 2), Vector2(1, 2), Vector2(2, 0), Vector2(5, 0), Vector2(5, 0), Vector2(5, 0), Vector2(2, 0), Vector2(1, 1), Vector2(0, 2), Vector2(2, 2), Vector2(5, 0), Vector2(3, 0), Vector2(3, 0), Vector2(3, 0), Vector2(5, 0), Vector2(1, 0)],
+1: [Vector2(5, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(1, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 0), Vector2(1, 0), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 0), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(2, 1), Vector2(2, 1), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(3, 0), Vector2(2, 0), Vector2(5, 0), Vector2(5, 0), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(3, 0), Vector2(5, 0), Vector2(5, 0), Vector2(4, 0), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(3, 0), Vector2(5, 0), Vector2(5, 0), Vector2(2, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 0)],
+2: [Vector2(1, 0), Vector2(5, 0), Vector2(5, 0), Vector2(5, 0), Vector2(2, 0), Vector2(1, 0), Vector2(1, 1), Vector2(0, 1), Vector2(2, 0), Vector2(3, 0), Vector2(3, 2), Vector2(2, 2), Vector2(2, 0), Vector2(5, 0), Vector2(1, 1), Vector2(0, 1), Vector2(5, 0), Vector2(1, 2), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(2, 0), Vector2(2, 0), Vector2(1, 1), Vector2(1, 2), Vector2(1, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(5, 0), Vector2(2, 0), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(2, 0), Vector2(4, 0), Vector2(5, 0), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(5, 0), Vector2(3, 0), Vector2(5, 0), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(1, 2), Vector2(3, 0), Vector2(2, 0), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(1, 2), Vector2(5, 0)],
+3: [Vector2(5, 0), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(1, 0), Vector2(1, 0), Vector2(5, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(2, 1), Vector2(2, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(2, 1), Vector2(3, 0), Vector2(5, 0), Vector2(5, 0), Vector2(2, 0), Vector2(2, 0), Vector2(5, 0), Vector2(2, 0), Vector2(5, 0), Vector2(5, 0), Vector2(4, 0), Vector2(5, 0), Vector2(2, 0), Vector2(2, 0), Vector2(5, 0), Vector2(2, 0)],
+4: [Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(2, 0), Vector2(5, 0), Vector2(5, 0), Vector2(1, 0), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(3, 0), Vector2(3, 0), Vector2(4, 0), Vector2(2, 0), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(5, 0), Vector2(2, 0), Vector2(5, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(2, 1), Vector2(1, 1), Vector2(5, 0), Vector2(2, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(5, 0), Vector2(3, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(5, 0), Vector2(3, 0), Vector2(1, 1), Vector2(1, 0), Vector2(5, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1), Vector2(2, 0), Vector2(5, 0), Vector2(1, 0), Vector2(1, 0), Vector2(1, 0), Vector2(1, 1), Vector2(0, 1), Vector2(0, 1)]
+}
+_images = Array[Texture]([ExtResource("2_a0wc0"), ExtResource("3_y8khl"), ExtResource("4_omxxq"), ExtResource("5_o0yh5"), ExtResource("6_7k5mi"), ExtResource("7_21l8i"), ExtResource("8_y8khl")])
+_base_image = ExtResource("1_gbmwc")
+_progressBar = NodePath("Carnet/TextureProgressBar")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1257520272]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="DemineurJeu" type="TextureRect" parent="." unique_id=187843997]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38
+anchor_top = 0.1
+anchor_right = 0.85
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TextureButton" type="TextureButton" parent="DemineurJeu" unique_id=516691058]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.125
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton" unique_id=1618341524]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="DemineurJeu" unique_id=1830466495]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_right = 0.25
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton2" unique_id=822391933]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="DemineurJeu" unique_id=987784518]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_right = 0.375
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton3" unique_id=782395227]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="DemineurJeu" unique_id=1477223784]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_right = 0.5
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton4" unique_id=1358067284]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="DemineurJeu" unique_id=1409850851]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.625
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton5" unique_id=1057621788]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="DemineurJeu" unique_id=255559088]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_right = 0.75
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton6" unique_id=377742575]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton7" type="TextureButton" parent="DemineurJeu" unique_id=210813570]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 0.875
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton7" unique_id=762954707]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton8" type="TextureButton" parent="DemineurJeu" unique_id=1300656822]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_right = 1.0
+anchor_bottom = 0.125
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton8" unique_id=487393948]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton9" type="TextureButton" parent="DemineurJeu" unique_id=851699910]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.125
+anchor_right = 0.125
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton9" unique_id=2131302941]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton10" type="TextureButton" parent="DemineurJeu" unique_id=279424429]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.25
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton10" unique_id=1280072636]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton11" type="TextureButton" parent="DemineurJeu" unique_id=1682175409]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.125
+anchor_right = 0.375
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton11" unique_id=2002910137]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton12" type="TextureButton" parent="DemineurJeu" unique_id=392871729]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.125
+anchor_right = 0.5
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton12" unique_id=1351901281]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton13" type="TextureButton" parent="DemineurJeu" unique_id=836510451]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.125
+anchor_right = 0.625
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton13" unique_id=1502102541]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton14" type="TextureButton" parent="DemineurJeu" unique_id=1009853187]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.125
+anchor_right = 0.75
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton14" unique_id=1799476536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton15" type="TextureButton" parent="DemineurJeu" unique_id=205263278]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton15" unique_id=1281669570]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton16" type="TextureButton" parent="DemineurJeu" unique_id=1444987207]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.125
+anchor_right = 1.0
+anchor_bottom = 0.25
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton16" unique_id=139605750]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton17" type="TextureButton" parent="DemineurJeu" unique_id=2074785745]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.25
+anchor_right = 0.125
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton17" unique_id=601673571]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton18" type="TextureButton" parent="DemineurJeu" unique_id=257886875]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.25
+anchor_right = 0.25
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton18" unique_id=1240197545]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton19" type="TextureButton" parent="DemineurJeu" unique_id=1290286693]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.375
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton19" unique_id=290112412]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton20" type="TextureButton" parent="DemineurJeu" unique_id=431887214]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton20" unique_id=497564053]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton21" type="TextureButton" parent="DemineurJeu" unique_id=527897779]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.625
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton21" unique_id=17705705]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton22" type="TextureButton" parent="DemineurJeu" unique_id=815052120]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton22" unique_id=939176233]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton23" type="TextureButton" parent="DemineurJeu" unique_id=646240964]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.25
+anchor_right = 0.875
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton23" unique_id=732042080]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton24" type="TextureButton" parent="DemineurJeu" unique_id=1790054663]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.375
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton24" unique_id=571623778]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton25" type="TextureButton" parent="DemineurJeu" unique_id=384358624]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.375
+anchor_right = 0.125
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton25" unique_id=76168440]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton26" type="TextureButton" parent="DemineurJeu" unique_id=1641958997]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.375
+anchor_right = 0.25
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton26" unique_id=846166814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton27" type="TextureButton" parent="DemineurJeu" unique_id=599271230]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.375
+anchor_right = 0.375
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton27" unique_id=1691764074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton28" type="TextureButton" parent="DemineurJeu" unique_id=702692534]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.375
+anchor_right = 0.5
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton28" unique_id=728856891]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton29" type="TextureButton" parent="DemineurJeu" unique_id=684339853]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.375
+anchor_right = 0.625
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton29" unique_id=892098835]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton30" type="TextureButton" parent="DemineurJeu" unique_id=103808703]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.375
+anchor_right = 0.75
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton30" unique_id=1529768212]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton31" type="TextureButton" parent="DemineurJeu" unique_id=2062064318]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.375
+anchor_right = 0.875
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton31" unique_id=918799878]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton32" type="TextureButton" parent="DemineurJeu" unique_id=1200867584]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.375
+anchor_right = 1.0
+anchor_bottom = 0.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton32" unique_id=302021816]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton33" type="TextureButton" parent="DemineurJeu" unique_id=471575976]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.125
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton33" unique_id=741020093]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton34" type="TextureButton" parent="DemineurJeu" unique_id=299498931]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.5
+anchor_right = 0.25
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton34" unique_id=484678535]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton35" type="TextureButton" parent="DemineurJeu" unique_id=2072907155]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.5
+anchor_right = 0.375
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton35" unique_id=1276960130]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton36" type="TextureButton" parent="DemineurJeu" unique_id=1712350070]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton36" unique_id=1111994187]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton37" type="TextureButton" parent="DemineurJeu" unique_id=1392125181]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.625
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton37" unique_id=2085229848]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton38" type="TextureButton" parent="DemineurJeu" unique_id=1402950845]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.5
+anchor_right = 0.75
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton38" unique_id=2010406948]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton39" type="TextureButton" parent="DemineurJeu" unique_id=1331932692]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.5
+anchor_right = 0.875
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton39" unique_id=1985640376]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton40" type="TextureButton" parent="DemineurJeu" unique_id=1561947764]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.625
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton40" unique_id=1010148747]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton41" type="TextureButton" parent="DemineurJeu" unique_id=1623975297]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.625
+anchor_right = 0.125
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton41" unique_id=1532738937]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton42" type="TextureButton" parent="DemineurJeu" unique_id=1493744281]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.625
+anchor_right = 0.25
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton42" unique_id=1611642864]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton43" type="TextureButton" parent="DemineurJeu" unique_id=558073165]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.625
+anchor_right = 0.375
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton43" unique_id=665949943]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton44" type="TextureButton" parent="DemineurJeu" unique_id=628396133]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.625
+anchor_right = 0.5
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton44" unique_id=1267812025]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton45" type="TextureButton" parent="DemineurJeu" unique_id=1378153862]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.625
+anchor_right = 0.625
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton45" unique_id=2014250381]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton46" type="TextureButton" parent="DemineurJeu" unique_id=1619721009]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.625
+anchor_right = 0.75
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton46" unique_id=767065312]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton47" type="TextureButton" parent="DemineurJeu" unique_id=2055112547]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.625
+anchor_right = 0.875
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton47" unique_id=1031236270]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton48" type="TextureButton" parent="DemineurJeu" unique_id=1630483954]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.625
+anchor_right = 1.0
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton48" unique_id=1922605329]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton49" type="TextureButton" parent="DemineurJeu" unique_id=723417882]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 0.125
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton49" unique_id=858746896]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton50" type="TextureButton" parent="DemineurJeu" unique_id=659948917]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.75
+anchor_right = 0.25
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton50" unique_id=742400195]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton51" type="TextureButton" parent="DemineurJeu" unique_id=1900326415]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.75
+anchor_right = 0.375
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton51" unique_id=156470505]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton52" type="TextureButton" parent="DemineurJeu" unique_id=821272117]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.75
+anchor_right = 0.5
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton52" unique_id=562189518]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton53" type="TextureButton" parent="DemineurJeu" unique_id=1010456468]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.75
+anchor_right = 0.625
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton53" unique_id=1117159237]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton54" type="TextureButton" parent="DemineurJeu" unique_id=62094249]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.75
+anchor_right = 0.75
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton54" unique_id=1190795878]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton55" type="TextureButton" parent="DemineurJeu" unique_id=1799926667]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.75
+anchor_right = 0.875
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton55" unique_id=1047639283]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton56" type="TextureButton" parent="DemineurJeu" unique_id=1748708977]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 0.875
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton56" unique_id=145134267]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton57" type="TextureButton" parent="DemineurJeu" unique_id=1428370761]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.875
+anchor_right = 0.125
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton57" unique_id=749759659]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton58" type="TextureButton" parent="DemineurJeu" unique_id=130277465]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.875
+anchor_right = 0.25
+anchor_bottom = 1.0
+offset_right = -1.5258789e-05
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton58" unique_id=1329207786]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton59" type="TextureButton" parent="DemineurJeu" unique_id=1192948975]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.875
+anchor_right = 0.375
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton59" unique_id=744911137]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton60" type="TextureButton" parent="DemineurJeu" unique_id=252043296]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.875
+anchor_right = 0.5
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton60" unique_id=1199720801]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton61" type="TextureButton" parent="DemineurJeu" unique_id=862484751]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.875
+anchor_right = 0.625
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton61" unique_id=998731534]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton62" type="TextureButton" parent="DemineurJeu" unique_id=2033486007]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.875
+anchor_right = 0.75
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton62" unique_id=249150455]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton63" type="TextureButton" parent="DemineurJeu" unique_id=1205252484 node_paths=PackedStringArray("_thisText")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.875
+anchor_right = 0.875
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+_thisText = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton63" unique_id=130548539]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureButton64" type="TextureButton" parent="DemineurJeu" unique_id=1607083671 node_paths=PackedStringArray("_thisText")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.875
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_ryvp4")
+_thisText = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="DemineurJeu/TextureButton64" unique_id=1285302897]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_gbmwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Carnet" type="Control" parent="." unique_id=1861314565]
+layout_mode = 1
+anchor_top = 0.35000002
+anchor_right = 0.24300002
+anchor_bottom = 1.0
+offset_top = -1.5258789e-05
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="Carnet" unique_id=406830140]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.026
+anchor_top = -0.0050000004
+anchor_right = 1.065
+anchor_bottom = 1.0
+rotation = 0.017453292
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_wvnkv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="Carnet" unique_id=1208265343]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.08800001
+anchor_right = 0.96300006
+anchor_bottom = 0.351
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sm1l7")
+theme_override_font_sizes/font_size = 25
+text = "Retirons peu à peu la terre autour des carottes."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_4lp2e")
+min_font_size = 7
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel3" type="Label" parent="Carnet" unique_id=1452411064]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.134
+anchor_top = 0.374
+anchor_right = 0.96400005
+anchor_bottom = 0.582
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.6924728, 0.46334553, 0.056018114, 1)
+theme_override_fonts/font = ExtResource("2_sm1l7")
+theme_override_font_sizes/font_size = 26
+text = "Attention à ne pas les toucher avec la pelle..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_4lp2e")
+min_font_size = 7
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Carnet" unique_id=1358867264]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.7
+rotation = 0.017453292
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sm1l7")
+theme_override_font_sizes/font_size = 38
+text = "Progrès :"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_4lp2e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Carnet" unique_id=1942440921]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113000005
+anchor_top = 0.73
+anchor_right = 0.96300006
+anchor_bottom = 0.8
+rotation = 0.017453292
+pivot_offset_ratio = Vector2(0, 0.5)
+max_value = 64.0
+step = 0.01
+nine_patch_stretch = true
+texture_under = ExtResource("4_gbmwc")
+texture_progress = ExtResource("4_gbmwc")
+tint_under = Color(0.20392157, 0.21176471, 0.22745098, 1)
+tint_progress = Color(0.9411765, 0.6392157, 0.13333334, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=936160444]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TextureButton" unique_id=2029479459]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("17_7k5mi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel2" type="Label" parent="TextureButton/TextureRect" unique_id=252300141]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.3
+anchor_right = 0.9
+anchor_bottom = 0.7
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_o0yh5")
+theme_override_font_sizes/font_size = 56
+text = "Une carotte a été endommagée, il va falloir recommencer..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_4lp2e")
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="TextureRect2" type="TextureRect" parent="TextureButton" unique_id=1050195161]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("17_7k5mi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel2" type="Label" parent="TextureButton/TextureRect2" unique_id=1088246200]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.3
+anchor_right = 0.9
+anchor_bottom = 0.7
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_o0yh5")
+theme_override_font_sizes/font_size = 56
+text = "Ces résultats sont un peu étranges...
+Ils ne présagent rien de bon."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_4lp2e")
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton" to="DemineurJeu/TextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton" to="DemineurJeu/TextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton" to="DemineurJeu/TextureButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton2" to="DemineurJeu/TextureButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton2" to="DemineurJeu/TextureButton2" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton2" to="DemineurJeu/TextureButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton3" to="DemineurJeu/TextureButton3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton3" to="DemineurJeu/TextureButton3" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton3" to="DemineurJeu/TextureButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton4" to="DemineurJeu/TextureButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton4" to="DemineurJeu/TextureButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton4" to="DemineurJeu/TextureButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton5" to="DemineurJeu/TextureButton5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton5" to="DemineurJeu/TextureButton5" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton5" to="DemineurJeu/TextureButton5" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton6" to="DemineurJeu/TextureButton6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton6" to="DemineurJeu/TextureButton6" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton6" to="DemineurJeu/TextureButton6" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton7" to="DemineurJeu/TextureButton7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton7" to="DemineurJeu/TextureButton7" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton7" to="DemineurJeu/TextureButton7" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton8" to="DemineurJeu/TextureButton8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton8" to="DemineurJeu/TextureButton8" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton8" to="DemineurJeu/TextureButton8" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton9" to="DemineurJeu/TextureButton9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton9" to="DemineurJeu/TextureButton9" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton9" to="DemineurJeu/TextureButton9" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton10" to="DemineurJeu/TextureButton10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton10" to="DemineurJeu/TextureButton10" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton10" to="DemineurJeu/TextureButton10" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton11" to="DemineurJeu/TextureButton11" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton11" to="DemineurJeu/TextureButton11" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton11" to="DemineurJeu/TextureButton11" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton12" to="DemineurJeu/TextureButton12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton12" to="DemineurJeu/TextureButton12" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton12" to="DemineurJeu/TextureButton12" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton13" to="DemineurJeu/TextureButton13" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton13" to="DemineurJeu/TextureButton13" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton13" to="DemineurJeu/TextureButton13" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton14" to="DemineurJeu/TextureButton14" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton14" to="DemineurJeu/TextureButton14" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton14" to="DemineurJeu/TextureButton14" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton15" to="DemineurJeu/TextureButton15" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton15" to="DemineurJeu/TextureButton15" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton15" to="DemineurJeu/TextureButton15" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton16" to="DemineurJeu/TextureButton16" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton16" to="DemineurJeu/TextureButton16" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton16" to="DemineurJeu/TextureButton16" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton17" to="DemineurJeu/TextureButton17" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton17" to="DemineurJeu/TextureButton17" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton17" to="DemineurJeu/TextureButton17" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton18" to="DemineurJeu/TextureButton18" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton18" to="DemineurJeu/TextureButton18" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton18" to="DemineurJeu/TextureButton18" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton19" to="DemineurJeu/TextureButton19" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton19" to="DemineurJeu/TextureButton19" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton19" to="DemineurJeu/TextureButton19" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton20" to="DemineurJeu/TextureButton20" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton20" to="DemineurJeu/TextureButton20" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton20" to="DemineurJeu/TextureButton20" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton21" to="DemineurJeu/TextureButton21" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton21" to="DemineurJeu/TextureButton21" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton21" to="DemineurJeu/TextureButton21" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton22" to="DemineurJeu/TextureButton22" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton22" to="DemineurJeu/TextureButton22" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton22" to="DemineurJeu/TextureButton22" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton23" to="DemineurJeu/TextureButton23" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton23" to="DemineurJeu/TextureButton23" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton23" to="DemineurJeu/TextureButton23" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton24" to="DemineurJeu/TextureButton24" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton24" to="DemineurJeu/TextureButton24" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton24" to="DemineurJeu/TextureButton24" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton25" to="DemineurJeu/TextureButton25" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton25" to="DemineurJeu/TextureButton25" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton25" to="DemineurJeu/TextureButton25" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton26" to="DemineurJeu/TextureButton26" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton26" to="DemineurJeu/TextureButton26" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton26" to="DemineurJeu/TextureButton26" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton27" to="DemineurJeu/TextureButton27" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton27" to="DemineurJeu/TextureButton27" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton27" to="DemineurJeu/TextureButton27" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton28" to="DemineurJeu/TextureButton28" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton28" to="DemineurJeu/TextureButton28" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton28" to="DemineurJeu/TextureButton28" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton29" to="DemineurJeu/TextureButton29" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton29" to="DemineurJeu/TextureButton29" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton29" to="DemineurJeu/TextureButton29" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton30" to="DemineurJeu/TextureButton30" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton30" to="DemineurJeu/TextureButton30" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton30" to="DemineurJeu/TextureButton30" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton31" to="DemineurJeu/TextureButton31" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton31" to="DemineurJeu/TextureButton31" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton31" to="DemineurJeu/TextureButton31" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton32" to="DemineurJeu/TextureButton32" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton32" to="DemineurJeu/TextureButton32" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton32" to="DemineurJeu/TextureButton32" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton33" to="DemineurJeu/TextureButton33" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton33" to="DemineurJeu/TextureButton33" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton33" to="DemineurJeu/TextureButton33" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton34" to="DemineurJeu/TextureButton34" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton34" to="DemineurJeu/TextureButton34" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton34" to="DemineurJeu/TextureButton34" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton35" to="DemineurJeu/TextureButton35" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton35" to="DemineurJeu/TextureButton35" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton35" to="DemineurJeu/TextureButton35" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton36" to="DemineurJeu/TextureButton36" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton36" to="DemineurJeu/TextureButton36" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton36" to="DemineurJeu/TextureButton36" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton37" to="DemineurJeu/TextureButton37" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton37" to="DemineurJeu/TextureButton37" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton37" to="DemineurJeu/TextureButton37" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton38" to="DemineurJeu/TextureButton38" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton38" to="DemineurJeu/TextureButton38" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton38" to="DemineurJeu/TextureButton38" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton39" to="DemineurJeu/TextureButton39" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton39" to="DemineurJeu/TextureButton39" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton39" to="DemineurJeu/TextureButton39" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton40" to="DemineurJeu/TextureButton40" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton40" to="DemineurJeu/TextureButton40" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton40" to="DemineurJeu/TextureButton40" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton41" to="DemineurJeu/TextureButton41" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton41" to="DemineurJeu/TextureButton41" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton41" to="DemineurJeu/TextureButton41" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton42" to="DemineurJeu/TextureButton42" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton42" to="DemineurJeu/TextureButton42" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton42" to="DemineurJeu/TextureButton42" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton43" to="DemineurJeu/TextureButton43" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton43" to="DemineurJeu/TextureButton43" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton43" to="DemineurJeu/TextureButton43" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton44" to="DemineurJeu/TextureButton44" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton44" to="DemineurJeu/TextureButton44" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton44" to="DemineurJeu/TextureButton44" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton45" to="DemineurJeu/TextureButton45" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton45" to="DemineurJeu/TextureButton45" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton45" to="DemineurJeu/TextureButton45" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton46" to="DemineurJeu/TextureButton46" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton46" to="DemineurJeu/TextureButton46" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton46" to="DemineurJeu/TextureButton46" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton47" to="DemineurJeu/TextureButton47" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton47" to="DemineurJeu/TextureButton47" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton47" to="DemineurJeu/TextureButton47" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton48" to="DemineurJeu/TextureButton48" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton48" to="DemineurJeu/TextureButton48" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton48" to="DemineurJeu/TextureButton48" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton49" to="DemineurJeu/TextureButton49" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton49" to="DemineurJeu/TextureButton49" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton49" to="DemineurJeu/TextureButton49" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton50" to="DemineurJeu/TextureButton50" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton50" to="DemineurJeu/TextureButton50" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton50" to="DemineurJeu/TextureButton50" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton51" to="DemineurJeu/TextureButton51" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton51" to="DemineurJeu/TextureButton51" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton51" to="DemineurJeu/TextureButton51" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton52" to="DemineurJeu/TextureButton52" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton52" to="DemineurJeu/TextureButton52" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton52" to="DemineurJeu/TextureButton52" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton53" to="DemineurJeu/TextureButton53" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton53" to="DemineurJeu/TextureButton53" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton53" to="DemineurJeu/TextureButton53" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton54" to="DemineurJeu/TextureButton54" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton54" to="DemineurJeu/TextureButton54" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton54" to="DemineurJeu/TextureButton54" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton55" to="DemineurJeu/TextureButton55" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton55" to="DemineurJeu/TextureButton55" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton55" to="DemineurJeu/TextureButton55" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton56" to="DemineurJeu/TextureButton56" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton56" to="DemineurJeu/TextureButton56" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton56" to="DemineurJeu/TextureButton56" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton57" to="DemineurJeu/TextureButton57" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton57" to="DemineurJeu/TextureButton57" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton57" to="DemineurJeu/TextureButton57" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton58" to="DemineurJeu/TextureButton58" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton58" to="DemineurJeu/TextureButton58" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton58" to="DemineurJeu/TextureButton58" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton59" to="DemineurJeu/TextureButton59" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton59" to="DemineurJeu/TextureButton59" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton59" to="DemineurJeu/TextureButton59" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton60" to="DemineurJeu/TextureButton60" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton60" to="DemineurJeu/TextureButton60" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton60" to="DemineurJeu/TextureButton60" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton61" to="DemineurJeu/TextureButton61" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton61" to="DemineurJeu/TextureButton61" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton61" to="DemineurJeu/TextureButton61" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton62" to="DemineurJeu/TextureButton62" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton62" to="DemineurJeu/TextureButton62" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton62" to="DemineurJeu/TextureButton62" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton63" to="DemineurJeu/TextureButton63" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton63" to="DemineurJeu/TextureButton63" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton63" to="DemineurJeu/TextureButton63" method="_on_pressed"]
+[connection signal="mouse_entered" from="DemineurJeu/TextureButton64" to="DemineurJeu/TextureButton64" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DemineurJeu/TextureButton64" to="DemineurJeu/TextureButton64" method="_on_mouse_exited"]
+[connection signal="pressed" from="DemineurJeu/TextureButton64" to="DemineurJeu/TextureButton64" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

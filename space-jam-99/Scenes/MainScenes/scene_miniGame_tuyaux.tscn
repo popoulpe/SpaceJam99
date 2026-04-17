@@ -20,8 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bwurr8iqsw02t" path="res://Assets/UI/miniGames/buttonTuyaux/ui_thermometre_fin.png" id="8_r8xam"]
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="9_r8xam"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="10_jqu2h"]
-[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/buttonTuyaux/ui_carnet.png" id="20_i70bm"]
+[ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/ui_carnet.png" id="20_i70bm"]
 [ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="21_bpvyt"]
+[ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="23_k1ae6"]
+[ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="24_vx851"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
 
@@ -817,6 +819,41 @@ theme_override_colors/font_color = Color(0.9411765, 0.6392157, 0.13333334, 1)
 theme_override_fonts/font = ExtResource("9_r8xam")
 theme_override_font_sizes/font_size = 54
 text = "Super!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("10_jqu2h")
+max_font_size = 96
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="TextureRect2" type="TextureRect" parent="TextureButton" unique_id=699015522]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("23_k1ae6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel2" type="Label" parent="TextureButton/TextureRect2" unique_id=782557523]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.3
+anchor_right = 0.9
+anchor_bottom = 0.7
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_vx851")
+theme_override_font_sizes/font_size = 56
+text = "Ces résultats sont un peu étranges...
+Ils ne présagent rien de bon."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
