@@ -141,7 +141,7 @@ shape = SubResource("ConvexPolygonShape3D_aqaha")
 [node name="Obstacles" type="Node3D" parent="." unique_id=1718282571]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Obstacles" unique_id=1078014477]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4515004, -15.606855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4515004, -20.013767)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacles/StaticBody3D" unique_id=919798373]
@@ -163,7 +163,7 @@ mesh = SubResource("BoxMesh_ew7vi")
 shape = SubResource("BoxShape3D_gs7mn")
 
 [node name="Player" parent="." unique_id=2002350393 instance=ExtResource("4_gcc03")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.225519, -0.35339475, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.225519, -0.35339475, 7.1474066)
 
 [node name="GridMap" type="GridMap" parent="." unique_id=282917728]
 mesh_library = ExtResource("5_gcc03")
