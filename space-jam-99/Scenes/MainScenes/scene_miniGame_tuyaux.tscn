@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://3mmp7qrjiapg" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_3.png" id="1_3s42e"]
 [ext_resource type="Script" uid="uid://dmvq37bwkngrp" path="res://Scripts/UI/levelTuyaux/tuyaux_manager.gd" id="1_xgaw8"]
 [ext_resource type="Texture2D" uid="uid://cmiwbcnsjm0kd" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_2.png" id="2_3sujs"]
-[ext_resource type="Script" uid="uid://dul123bynm7ym" path="res://Scenes/MainScenes/backgroundChangingTuyaux.gd" id="2_kt2xj"]
+[ext_resource type="Script" uid="uid://dul123bynm7ym" path="res://Scripts/backgroundChangingTuyaux.gd" id="2_kt2xj"]
 [ext_resource type="Texture2D" uid="uid://b41qm6guigg2n" path="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_0.png" id="2_odukx"]
 [ext_resource type="Texture2D" uid="uid://bstkip5a4pkhy" path="res://Assets/UI/miniGames/buttonTuyaux/ui_tuyaux_1.png" id="3_ixbs2"]
 [ext_resource type="Texture2D" uid="uid://86x7528fj8ie" path="res://Assets/UI/miniGames/buttonTuyaux/tuyaux_bg_0/ui_tuyaux_jour_bg_nuage_0.png" id="3_kt2xj"]
@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="21_bpvyt"]
 [ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="23_k1ae6"]
 [ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="24_vx851"]
-[ext_resource type="AudioStream" uid="uid://cp32fwycollkh" path="res://Themes/Main Sound 3.mp3" id="23_i70bm"]
+[ext_resource type="AudioStream" uid="uid://cp32fwycollkh" path="res://Assets/Themes/Main Sound 3.mp3" id="23_i70bm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
 
