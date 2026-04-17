@@ -14,8 +14,20 @@
 [ext_resource type="Texture2D" uid="uid://1v47ay07ox8l" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_empty2_4.png" id="6_7k5mi"]
 [ext_resource type="Texture2D" uid="uid://bv18pr6ag8irc" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_carotte_pourrie.png" id="7_21l8i"]
 [ext_resource type="Texture2D" uid="uid://iw2jm551hdhb" path="res://Assets/UI/miniGames/demineur/ui_minigame_demineur_case_carotte_bonne.png" id="8_y8khl"]
+[ext_resource type="Texture2D" uid="uid://cpk6tdjd8ujry" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg5.png" id="10_7k5mi"]
+[ext_resource type="Texture2D" uid="uid://3re7fgvpf386" path="res://Assets/UI/miniGames/demineur/ui_cadre.png" id="10_omxxq"]
+[ext_resource type="Texture2D" uid="uid://cf8hbjokyukgq" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg1.png" id="11_2ggi8"]
+[ext_resource type="Script" uid="uid://bnu768sc1o3rs" path="res://Scripts/UI/levelCarotte/background_carotte.gd" id="11_3vl60"]
+[ext_resource type="Texture2D" uid="uid://bge7js5q2dd8j" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg0.png" id="12_3vl60"]
+[ext_resource type="Texture2D" uid="uid://ep08borv5a6e" path="res://Assets/UI/miniGames/demineur/ui_cadreHerbe.png" id="12_o0yh5"]
+[ext_resource type="Texture2D" uid="uid://c23rr73ky4ite" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg2.png" id="13_5salm"]
+[ext_resource type="Texture2D" uid="uid://co3s0msy864v8" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg3.png" id="14_tlkio"]
+[ext_resource type="Texture2D" uid="uid://bt48gjabg4ncs" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg4.png" id="15_1cawt"]
+[ext_resource type="Texture2D" uid="uid://cy4crdfxhl7hr" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg0_0_1.png" id="16_2u21x"]
 [ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="17_7k5mi"]
+[ext_resource type="Texture2D" uid="uid://cyror5ehvhixj" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg0_0_3.png" id="17_b552o"]
 [ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="17_o0yh5"]
+[ext_resource type="Texture2D" uid="uid://buaxk8tio76os" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg0_1.png" id="18_aow8g"]
 
 [node name="SceneMiniGameDemineur" type="Control" unique_id=1808526161 node_paths=PackedStringArray("all_buttons", "_progressBar")]
 layout_mode = 3
@@ -37,7 +49,7 @@ _images = Array[Texture]([ExtResource("2_a0wc0"), ExtResource("3_y8khl"), ExtRes
 _base_image = ExtResource("1_gbmwc")
 _progressBar = NodePath("Carnet/TextureProgressBar")
 
-[node name="Background" type="TextureRect" parent="." unique_id=1257520272]
+[node name="Background" type="TextureRect" parent="." unique_id=1257520272 node_paths=PackedStringArray("movingBackgrounds", "movingClouds")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,14 +57,142 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("10_7k5mi")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("11_3vl60")
+movingBackgrounds = [NodePath("Background5"), NodePath("Background4"), NodePath("Background3")]
+movingClouds = [NodePath("Control/Background"), NodePath("Control/Background2")]
+_colors = Array[Color]([Color(1, 1, 1, 1), Color(0.49411765, 0.2627451, 0.4627451, 1)])
+
+[node name="Background5" type="TextureRect" parent="Background" unique_id=1469244387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("11_2ggi8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background4" type="TextureRect" parent="Background" unique_id=919758942]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("12_3vl60")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background3" type="TextureRect" parent="Background" unique_id=1992263210]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("13_5salm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background2" type="TextureRect" parent="Background" unique_id=2097509208]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("14_tlkio")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="Background" unique_id=2078048237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("15_1cawt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="Background" unique_id=2094420997]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.33800003
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Background" type="TextureRect" parent="Background/Control" unique_id=203165509]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.162
+anchor_right = 0.40600002
+anchor_bottom = 0.79200006
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("16_2u21x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background2" type="TextureRect" parent="Background/Control" unique_id=1697178217]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81700003
+anchor_top = 0.162
+anchor_right = 1.0
+anchor_bottom = 0.79200006
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("17_b552o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background6" type="TextureRect" parent="Background" unique_id=1936048079]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("18_aow8g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackgroundDemineur" type="TextureRect" parent="." unique_id=463498493]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32
+anchor_top = 0.02
+anchor_right = 0.91
+anchor_bottom = 0.98
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("10_omxxq")
+expand_mode = 1
 
 [node name="DemineurJeu" type="TextureRect" parent="." unique_id=187843997]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.38
-anchor_top = 0.1
-anchor_right = 0.85
-anchor_bottom = 0.9
+anchor_left = 0.39
+anchor_top = 0.12
+anchor_right = 0.84
+anchor_bottom = 0.88
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="TextureButton" type="TextureButton" parent="DemineurJeu" unique_id=516691058]
@@ -1706,6 +1846,20 @@ texture = ExtResource("1_gbmwc")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="ForGroundDemineur" type="TextureRect" parent="." unique_id=1596341755]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32
+anchor_top = 0.02
+anchor_right = 0.91
+anchor_bottom = 0.98
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("12_o0yh5")
+expand_mode = 1
+
 [node name="Carnet" type="Control" parent="." unique_id=1861314565]
 layout_mode = 1
 anchor_top = 0.35000002
@@ -1840,7 +1994,7 @@ anchor_bottom = 0.7
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("17_o0yh5")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 66
 text = "Une carotte a été endommagée, il va falloir recommencer..."
 horizontal_alignment = 1
 vertical_alignment = 1

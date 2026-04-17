@@ -22,6 +22,7 @@ func _ready() -> void:
 	awaken()
 
 func awaken()->void:
+	$Background.restart()
 	bSuccess=false
 	_thisLevel_group_1.clear()
 	_thisLevel_group_2.clear()
