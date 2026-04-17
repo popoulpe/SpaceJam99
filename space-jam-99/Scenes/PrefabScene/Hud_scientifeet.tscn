@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://b8m5httlm1u3r"]
 
 [ext_resource type="Script" uid="uid://c0pt6w6tv4rj5" path="res://Scripts/ui_hud_scientifeet.gd" id="1_yxf2a"]
-[ext_resource type="Texture2D" uid="uid://cqnpvrje0mcv6" path="res://Assets/Characters/animations_scientifeet_bake_scientist_2k.png" id="2_d82cj"]
+[ext_resource type="Texture2D" uid="uid://nf26jk2jgfdf" path="res://Assets/UI/hud/interaction/ui_interaction.png" id="2_7w1d6"]
+[ext_resource type="FontFile" uid="uid://bm7oo6qp1ovv1" path="res://Assets/UI/fonts/Oxanium-Bold.ttf" id="3_25p2y"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="4_a6kgx"]
+[ext_resource type="Texture2D" uid="uid://cvughis3i04q3" path="res://Assets/UI/button/ui_box.png" id="5_25p2y"]
+[ext_resource type="Texture2D" uid="uid://b6prcplhmbp4a" path="res://Assets/UI/hud/interaction/ui_pieds_pp.png" id="5_lblgt"]
+[ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="6_t5yqj"]
+[ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="7_bijbu"]
+[ext_resource type="FontFile" uid="uid://drq0ofhej1d14" path="res://Assets/UI/fonts/Oxanium-ExtraLight.ttf" id="8_lblgt"]
+[ext_resource type="Script" uid="uid://khk86ybiil8f" path="res://Scripts/UI/autoSize/autoTippingRich.gd" id="9_bijbu"]
 
 [node name="ui_hud_scientifeet" type="Control" unique_id=1951736353]
 layout_mode = 3
@@ -13,53 +21,94 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_yxf2a")
 
-[node name="Panel" type="Panel" parent="." unique_id=622912986]
-visible = false
+[node name="interaction" type="TextureRect" parent="." unique_id=1484791680]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.4
-anchor_top = 0.85
-anchor_right = 0.6
+anchor_left = 0.45
+anchor_top = 0.8
+anchor_right = 0.55
 anchor_bottom = 0.95
-grow_horizontal = 2
-grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_7w1d6")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="Label" type="Label" parent="Panel" unique_id=1613262970]
+[node name="AutoSizeLabel" type="Label" parent="interaction" unique_id=232729414]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.344
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "F to interact"
+anchor_left = 0.1
+anchor_top = 0.15
+anchor_right = 0.90000004
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.96474224, 0.96474224, 0.9647421, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_25p2y")
+theme_override_font_sizes/font_size = 72
+text = "F"
 horizontal_alignment = 1
 vertical_alignment = 1
-uppercase = true
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("4_a6kgx")
+max_font_size = 128
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
-[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1484791680]
+[node name="Dialogue" type="Control" parent="." unique_id=418823361]
+visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.33900002
-anchor_bottom = 1.0
-texture = ExtResource("2_d82cj")
-expand_mode = 1
-
-[node name="panel du scientifeet" type="Panel" parent="." unique_id=188424606]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.4
 anchor_top = 0.6
-anchor_right = 0.6
-anchor_bottom = 0.8
-
-[node name="Label" type="Label" parent="panel du scientifeet" unique_id=1852118494]
-layout_mode = 1
-anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 0.98
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="pieds" type="TextureRect" parent="Dialogue" unique_id=1200779304]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_right = 0.25
 anchor_bottom = 1.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("5_lblgt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Blabla" type="TextureRect" parent="Dialogue" unique_id=115386923]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.5
+anchor_right = 0.98
+anchor_bottom = 0.95
 grow_horizontal = 2
 grow_vertical = 2
-text = "ceci est un texte de scientifeet du style :
- \"j'adore les pieds miam\""
-autowrap_mode = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("5_25p2y")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue/Blabla" unique_id=910390308]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.05
+anchor_right = 0.96
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_t5yqj")
+theme_override_fonts/bold_font = ExtResource("3_25p2y")
+theme_override_fonts/bold_italics_font = ExtResource("7_bijbu")
+theme_override_fonts/italics_font = ExtResource("8_lblgt")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+scroll_following = true
+scroll_following_visible_characters = true
+vertical_alignment = 1
+script = ExtResource("9_bijbu")
+full_text = "Hello, c'est moi pieds. Je suis le pieds hyper galactique de la galaxie lointaine du lointain. Je suis un scientifeet très renommé et très smart qui avance toujours droit dans le bon chemin. Parfois je pleure, mais c'est parce que j'ai les pieds poites, et ce n'est vraiment pas agréable. la vie c'est dur... même en étant un pieds."
+fade_in_duration = 0.2
+is_autostart = true
