@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmx4wg5csr550"]
+
+[ext_resource type="Texture2D" uid="uid://c7jjqdgnlf0h2" path="res://Assets/Enviro/enviro_ile.png" id="1_5bxqv"]
+[ext_resource type="Shader" uid="uid://b5n7o8o8l8qab" path="res://Assets/farfaline/OutlineBeter.gdshader" id="2_vwill"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ciowo"]
+render_priority = 0
+shader = ExtResource("2_vwill")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_ciowo")
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_5bxqv")
+metallic_specular = 0.14
+roughness = 0.0
+stencil_flags = 2
+stencil_outline_thickness = 0.028

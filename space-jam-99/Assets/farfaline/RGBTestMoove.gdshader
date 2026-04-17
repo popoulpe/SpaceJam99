@@ -1,6 +1,6 @@
 shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_burley, specular_schlick_ggx;
-
+//cull_disabled
 const vec3 ign = vec3(0.06711056f, 0.00583715f, 52.9829189f);
 uniform float alpha : hint_range(0,1);
 uniform vec4 albedo : source_color;

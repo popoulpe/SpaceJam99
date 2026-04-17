@@ -186,10 +186,10 @@ shape = SubResource("CapsuleShape3D_gfilx")
 
 [node name="animations_scientifeet" parent="Interactable/StaticBody3D" unique_id=632991482 instance=ExtResource("7_1b2qt")]
 
-[node name="Main" parent="Interactable/StaticBody3D/animations_scientifeet" index="0" unique_id=455851315]
+[node name="Main" parent="Interactable/StaticBody3D/animations_scientifeet" index="0" unique_id=2028192545]
 transform = Transform3D(-0.9943128, 0.05498181, 0.091208, 0.049131036, 0.996662, -0.06519887, -0.09448831, -0.060346935, -0.99369514, -0.26101583, 0.02559723, 1.2313865)
 
-[node name="Skeleton3D" parent="Interactable/StaticBody3D/animations_scientifeet/Main" index="0" unique_id=1671109613]
+[node name="Skeleton3D" parent="Interactable/StaticBody3D/animations_scientifeet/Main" index="0" unique_id=1016497852]
 bones/0/rotation = Quaternion(0, 0.9974141, -0.07186991, 5.884183e-15)
 bones/1/rotation = Quaternion(-0.028562183, 0.014291199, 0.017823672, 0.9993309)
 bones/2/rotation = Quaternion(-0.005621175, 0.0029100506, 0.013543671, 0.9998883)
