@@ -163,7 +163,7 @@ mesh = SubResource("BoxMesh_ew7vi")
 shape = SubResource("BoxShape3D_gs7mn")
 
 [node name="Player" parent="." unique_id=2002350393 instance=ExtResource("4_gcc03")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.225519, -0.35339475, 7.1474066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.225519, -0.35339475, 3.2177649)
 
 [node name="GridMap" type="GridMap" parent="." unique_id=282917728]
 mesh_library = ExtResource("5_gcc03")
