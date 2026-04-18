@@ -127,6 +127,7 @@ surface_material_override/0 = ExtResource("1_frneb")
 shape = SubResource("ConcavePolygonShape3D_5mynd")
 
 [node name="SmDown" type="MeshInstance3D" parent="." unique_id=2044691715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.96, 0, 0, 0)
 mesh = ExtResource("11_sswqr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SmDown" unique_id=1896532727]
@@ -135,6 +136,7 @@ mesh = ExtResource("11_sswqr")
 shape = SubResource("ConcavePolygonShape3D_tblpu")
 
 [node name="SmUp" type="MeshInstance3D" parent="." unique_id=761081914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.96, 0, 0, 0)
 mesh = ExtResource("12_gvx3l")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SmUp" unique_id=1018699231]
@@ -143,6 +145,7 @@ mesh = ExtResource("12_gvx3l")
 shape = SubResource("ConcavePolygonShape3D_0mk85")
 
 [node name="SmSuperFlat" type="MeshInstance3D" parent="." unique_id=217175865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.96, 0, 0, 0)
 mesh = ExtResource("12_sswqr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SmSuperFlat" unique_id=1129388245]
@@ -151,6 +154,7 @@ mesh = ExtResource("12_sswqr")
 shape = SubResource("ConcavePolygonShape3D_3mri4")
 
 [node name="SmSteepDown" type="MeshInstance3D" parent="." unique_id=866977879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.96, 0, 0, 0)
 mesh = ExtResource("13_gvx3l")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SmSteepDown" unique_id=1243144001]

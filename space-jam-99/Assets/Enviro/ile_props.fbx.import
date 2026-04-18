@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cwiaerkpupvjy"
-path="res://.godot/imported/animations_perso_princ_V2.glb-5b3907f0b620ce50ba2f75380517f5bf.scn"
+uid="uid://16f55ev4q0ie"
+path="res://.godot/imported/ile_props.fbx-5318309e5f5a7d185f28b8f7c061986c.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/animations_perso_princ_V2.glb"
-dest_files=["res://.godot/imported/animations_perso_princ_V2.glb-5b3907f0b620ce50ba2f75380517f5bf.scn"]
+source_file="res://Assets/Enviro/ile_props.fbx"
+dest_files=["res://.godot/imported/ile_props.fbx-5318309e5f5a7d185f28b8f7c061986c.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -39,12 +39,14 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"bake.011": {
+"bake": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/farfaline/MainChara.tres",
-"use_external/path": "uid://dbyakhpgiql0d"
+"use_external/fallback_path": "res://Assets/farfaline/Iland1.tres",
+"use_external/path": "uid://dmx4wg5csr550"
 }
 }
 }
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2
