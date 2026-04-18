@@ -1,3 +1,46 @@
 [gd_scene format=3 uid="uid://7sok01gc7psg"]
 
+[ext_resource type="PackedScene" uid="uid://coujq0gmxslvd" path="res://Assets/Enviro/environment_ile.fbx" id="1_1ryw4"]
+[ext_resource type="Texture2D" uid="uid://5gawvfvx1kuc" path="res://Assets/Enviro/sky_42_2k.png" id="2_xm0lr"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_suw4n"]
+panorama = ExtResource("2_xm0lr")
+
+[sub_resource type="Sky" id="Sky_c4olg"]
+sky_material = SubResource("PanoramaSkyMaterial_suw4n")
+
+[sub_resource type="Environment" id="Environment_3b504"]
+background_mode = 2
+sky = SubResource("Sky_c4olg")
+reflected_light_source = 1
+glow_enabled = true
+glow_intensity = 1.14
+glow_bloom = 0.39
+glow_hdr_scale = 1.15
+glow_hdr_luminance_cap = 3.29
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.27063334, 0.5851519, 0.7717755, 1)
+fog_density = 1.0
+fog_sky_affect = 0.88
+fog_depth_begin = 50.0
+fog_depth_end = 250.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_d8aga"]
+
+[sub_resource type="Compositor" id="Compositor_lq5cv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xm0lr"]
+
 [node name="PoleIle" type="Node3D" unique_id=31217378]
+
+[node name="environment_ile" parent="." unique_id=249804446 instance=ExtResource("1_1ryw4")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="environment_ile" unique_id=668468859]
+environment = SubResource("Environment_3b504")
+camera_attributes = SubResource("CameraAttributesPractical_d8aga")
+compositor = SubResource("Compositor_lq5cv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment_ile/WorldEnvironment" unique_id=753494150]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+mesh = SubResource("PlaneMesh_xm0lr")

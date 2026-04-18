@@ -1,3 +1,106 @@
 [gd_scene format=3 uid="uid://bpcp0e8qwe1av"]
 
+[ext_resource type="MeshLibrary" uid="uid://bbbabourpy08s" path="res://Assets/Tileset3D/TiesRoadv3.meshlib" id="1_6s5j8"]
+[ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="2_rau6o"]
+[ext_resource type="Texture2D" uid="uid://ikexfqc4tbkt" path="res://Assets/Enviro/1521434-astronomy-outer-space-space-universe-sky-stars-448260758.jpg" id="3_oehp6"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_libju"]
+panorama = ExtResource("3_oehp6")
+
+[sub_resource type="Sky" id="Sky_l5uwb"]
+sky_material = SubResource("PanoramaSkyMaterial_libju")
+
+[sub_resource type="Environment" id="Environment_jlo2o"]
+background_mode = 2
+background_energy_multiplier = 1.11
+sky = SubResource("Sky_l5uwb")
+glow_intensity = 1.5
+glow_bloom = 0.2
+fog_enabled = true
+fog_light_color = Color(0.3572174, 0.5212969, 0.9005034, 1)
+fog_light_energy = 0.65
+fog_aerial_perspective = 0.215
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xf2qs"]
+
+[sub_resource type="Compositor" id="Compositor_qkq78"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f48s1"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1.6938539, 1.6938539, 1.6938539, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rau6o"]
+material = SubResource("StandardMaterial3D_f48s1")
+radius = 0.1
+height = 3.0
+radial_segments = 6
+rings = 0
+
+[sub_resource type="Curve" id="Curve_oehp6"]
+_data = [Vector2(0, 0.17655987), 0.0, 0.033431467, 0, 0, Vector2(0.9951377, 0.9235729), 1.0840355, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_libju"]
+colors = PackedColorArray(0.9181119, 0.8098738, 1.540184e-06, 1, 1.6416155, 1.6416155, 1.6416155, 1)
+
+[sub_resource type="Curve" id="Curve_l5uwb"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0.012965966, -0.37568736), 0.0, 0.0, 0, 0, Vector2(0.9902755, 0.5956761), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Road1" type="Node3D" unique_id=1631416252]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=2078228994]
+transform = Transform3D(1.5, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 0, 0)
+mesh_library = ExtResource("1_6s5j8")
+cell_size = Vector3(60, 20, 30)
+data = {
+"cells": PackedInt32Array(65535, 65535, 1, 65535, 65534, 1, 65534, 65535, 0, 65534, 65534, 2, 65533, 65534, 3, 65533, 65535, 6, 65532, 65535, 7, 65532, 65534, 9, 65531, 65535, 9, 131067, 65534, 10, 131066, 65535, 7, 131066, 65534, 11, 131065, 65535, 11, 131065, 65534, 5, 131064, 65535, 8, 131064, 65534, 8, 65527, 65534, 8, 65527, 65535, 8, -10, 65534, 2, -10, 65535, 11, -11, 65534, 10, -11, 65535, 2, -12, 65534, 1, -12, 65535, 11, -13, 65535, 4, -13, 65534, 5, -14, 65534, 5, -14, 65535, 4, -15, 65534, 1, -15, 65535, 6, -16, 65535, 10, -16, 65534, 10, -17, 65535, 8, -17, 65534, 8, -65554, 65535, 8, -65554, 65534, 8, -131091, 65534, 3, -131091, 65535, 3)
+}
+metadata/_editor_floor_ = Vector3(0, -3, 0)
+
+[node name="planete_mesh" parent="." unique_id=1689343277 instance=ExtResource("2_rau6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2080.3708, -68.99943, -48.703426)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1484371666]
+environment = SubResource("Environment_jlo2o")
+camera_attributes = SubResource("CameraAttributesPractical_xf2qs")
+compositor = SubResource("Compositor_qkq78")
+
+[node name="SpeedCameraParticle" type="CPUParticles3D" parent="WorldEnvironment" unique_id=1417121477]
+transform = Transform3D(0.034672648, 0, 0.99939865, 0, 1, 0, -0.99939865, 0, 0.034672648, 11.279465, -2048.3787, -51.04963)
+amount = 12
+lifetime = 0.68
+preprocess = 0.53
+explosiveness = 0.19
+randomness = 0.31
+lifetime_randomness = 0.19
+local_coords = true
+mesh = SubResource("CapsuleMesh_rau6o")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 3.0
+emission_ring_radius = 4.55
+emission_ring_inner_radius = 2.2
+emission_ring_cone_angle = 90.0
+particle_flag_align_y = true
+direction = Vector3(0, 0.2, 1)
+spread = 5.0
+flatness = 0.56
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+angular_velocity_min = -1.0
+angular_velocity_max = 1.0
+damping_min = 5.0
+damping_max = 20.0
+scale_amount_min = 0.2
+scale_amount_max = 2.82
+scale_amount_curve = SubResource("Curve_oehp6")
+color = Color(1.732707e-06, 0.88104254, 0.8333159, 1)
+color_ramp = SubResource("Gradient_libju")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_l5uwb")
