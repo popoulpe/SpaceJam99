@@ -3,14 +3,14 @@ class_name PlayerWithoutSkate
 
 
 @onready var character_body_3d = $CharacterBody3D
-@export var hud:ToDeleteHud
+@export var hud:ui_hud_scientifeet
 
 var canInteract :bool = false
 var lastInteractableObject :Interactable
 
 func _process(_delta):
 	if canInteract && Input.is_action_just_pressed("Interact"):
-		lastInteractableObject.InteractWithoutSkate(self)
+		lastInteractableObject.Interact(self)
 
 func start_detection_interact(interactable: Interactable) -> void:
 	lastInteractableObject = interactable

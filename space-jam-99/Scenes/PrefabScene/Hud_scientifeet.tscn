@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://khk86ybiil8f" path="res://Scripts/UI/autoSize/autoTippingRich.gd" id="9_bijbu"]
 
 [node name="ui_hud_scientifeet" type="Control" unique_id=1951736353]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
 script = ExtResource("1_yxf2a")
 
 [node name="interaction" type="TextureRect" parent="." unique_id=1484791680]

@@ -1,8 +1,8 @@
 extends CharacterBody3D
 class_name PlayerControllerWithoutSkate
 
-@onready var player :Player= $".."
-@onready var playerVisual :player_visual= $Mesh
+@onready var player :PlayerWithoutSkate= $".."
+@onready var playerVisual :player_visualWithoutSkate= $Mesh
 
 @onready var state_machine = $StateMachine
 

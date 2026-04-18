@@ -1,13 +1,13 @@
-extends State
+extends StateWithoutSkate
 
 @export var _camera:Camera3D
 
-@export var idle_state : State
-@export var jump_state : State
+@export var idle_state : StateWithoutSkate
+@export var jump_state : StateWithoutSkate
 
 @export var speed :float=1
 
-func process_input(_event:InputEvent) -> State:
+func process_input(_event:InputEvent) -> StateWithoutSkate:
 	if !(Input.is_action_pressed("Forward") ||
 		Input.is_action_pressed("Backward") ||
 		Input.is_action_pressed("Left") ||
@@ -17,7 +17,7 @@ func process_input(_event:InputEvent) -> State:
 		return jump_state
 	return null
 
-func process_physics(delta:float) -> State:
+func process_physics(delta:float) -> StateWithoutSkate:
 	basic_mouvement(delta)
 	apply_gravity(delta)
 	return null

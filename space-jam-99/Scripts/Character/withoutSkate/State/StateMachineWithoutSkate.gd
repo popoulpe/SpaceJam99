@@ -1,0 +1,38 @@
+extends Node
+
+
+@export var starting_state :StateWithoutSkate
+
+var current_state :StateWithoutSkate
+var current_state_name:String
+
+func init (parent: PlayerControllerWithoutSkate) -> void:
+	for child in get_children():
+		child.parent = parent
+	
+	change_state(starting_state)
+	
+func change_state(new_state : StateWithoutSkate) -> void:
+	if current_state:
+		current_state.exit()
+	
+	current_state = new_state
+	current_state_name = new_state.name
+	current_state.enter()
+	
+func process_physics(delta: float)-> void:
+	var new_state = current_state.process_physics(delta)
+	if new_state:
+		change_state(new_state)
+	#print("current State", current_state)
+
+
+func process_input(event: InputEvent) -> void :
+	var new_state = current_state.process_input(event)
+	if new_state:
+		change_state(new_state)
+
+func process_frame(delta: float) -> void :
+	var new_state = current_state.process_frame(delta)
+	if new_state:
+		change_state(new_state)

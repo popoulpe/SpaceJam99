@@ -1,5 +1,4 @@
 extends Control
-@export var input_action_name: String
 var paused = false
 
 @export var _movingControl : Control
@@ -14,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed(input_action_name, false):
+	if Input.is_action_just_pressed("pause"):
 		_pauseMenu()
 	_on_timer_timeout(delta)
 

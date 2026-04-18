@@ -1,15 +1,15 @@
-extends State
+extends StateWithoutSkate
 
 @export var _camera:Camera3D
 
-@export var walk_state : State
-@export var idle_state : State
+@export var walk_state : StateWithoutSkate
+@export var idle_state : StateWithoutSkate
 
 @export var speed :float=1
 @export var jumpHeight :float=13
 
 
-func process_input(_event:InputEvent) -> State:
+func process_input(_event:InputEvent) -> StateWithoutSkate:
 	if (parent.is_on_floor() &&
 		(Input.is_action_pressed("Forward") ||
 		Input.is_action_pressed("Backward") ||
@@ -19,7 +19,7 @@ func process_input(_event:InputEvent) -> State:
 	
 	return null
 
-func process_physics(delta:float) -> State:
+func process_physics(delta:float) -> StateWithoutSkate:
 	if Input.is_action_pressed("Jump") && parent.is_on_floor():
 		parent.velocity.y = jumpHeight
 		

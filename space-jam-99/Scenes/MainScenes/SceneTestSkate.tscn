@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://b8cm5qecvp1hn" path="res://Assets/Prototypage/material/Dark/texture_08.png" id="1_kwkfq"]
 [ext_resource type="Texture2D" uid="uid://x6a8o6sss7vp" path="res://Assets/Prototypage/material/Orange/texture_08.png" id="2_8gp4t"]
 [ext_resource type="Texture2D" uid="uid://dwk07suol4kwr" path="res://Assets/Prototypage/material/Red/texture_01.png" id="3_8gp4t"]
-[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/Player.tscn" id="4_gcc03"]
 [ext_resource type="MeshLibrary" uid="uid://cr13vydtxhosd" path="res://Assets/farfaline/TileSetv2.meshlib" id="5_gcc03"]
 [ext_resource type="Script" uid="uid://sh724mxmhlcr" path="res://Scripts/Interactibles/Discussion.gd" id="6_1b2qt"]
 [ext_resource type="PackedScene" uid="uid://c2avhcu2owvvo" path="res://Assets/Characters/animations_scientifeet.glb" id="7_1b2qt"]
+[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/Player.tscn" id="7_ew7vi"]
 
 [sub_resource type="Environment" id="Environment_1b2qt"]
 ambient_light_source = 3
@@ -177,7 +177,7 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="StaticBody3D" type="Area3D" parent="Interactable" unique_id=529395971]
 transform = Transform3D(-0.99999255, 0, -0.003857277, 0, 1, 0, 0.003857277, 0, -0.99999255, -7.6334887, -0.052863836, -16.040142)
-collision_mask = 4
+collision_mask = 8
 script = ExtResource("6_1b2qt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/StaticBody3D" unique_id=862979703]
@@ -245,8 +245,8 @@ bones/64/rotation = Quaternion(-0.8216405, 0.19604197, 0.23194163, 0.48236662)
 bones/65/rotation = Quaternion(0.0442966, 0.92583185, -0.37274897, -0.043948364)
 bones/66/rotation = Quaternion(-0.60748625, 0.72133076, -0.21832316, -0.25095314)
 
-[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("4_gcc03")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.200556, 0.049999237, -6.165727)
+[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("7_ew7vi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.982813, 0.050001144, -2.4919875)
 
 [connection signal="body_entered" from="Interactable/StaticBody3D" to="Interactable/StaticBody3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Interactable/StaticBody3D" to="Interactable/StaticBody3D" method="_on_body_exited"]

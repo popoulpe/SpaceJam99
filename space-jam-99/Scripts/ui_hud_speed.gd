@@ -2,10 +2,10 @@ extends Control
 class_name ui_hud_speed
 
 @onready var character_body_3d = $".."
-@onready var temps = $Temps_
+@onready var temps = $Temps_/temps_label
 @onready var vitesse_big = $Vitesse_/big_numbers
 @onready var vitesse_little = $Vitesse_/little_numbers
-@onready var vitess_progressBar : ProgressBar = $Vitesse_/TextureProgressBar
+@onready var vitess_progressBar  = $Vitesse_/TextureProgressBar
 @onready var timeColor_wanted : Color
 var fVitesseDeFou: float = 0.0
 var vectorVitesseTexture:Vector2

@@ -10,9 +10,5 @@ func _on_body_exited(body):
 	body.player.end_detection_interact()
 
 
-func Interact(player:Player) -> void:
-	print("Interaction completed")
-	
-
-func InteractWithoutSkate(player:PlayerWithoutSkate) -> void:
+func Interact(_player:PlayerWithoutSkate) -> void:
 	print("Interaction completed")

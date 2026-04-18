@@ -50,8 +50,8 @@ func start_typing():
 	fade_timer.stop()
 	timer.start()
 
-func start_dialogue(text: String):
-	full_text = text
+func start_dialogue(newText: String):
+	full_text = newText
 	start_typing()
 
 func _on_typing_timeout():
@@ -92,7 +92,7 @@ func _on_fade_tick():
 	for i in range(char_animation_state.size()):
 		var state = char_animation_state[i]
 		var elapsed = (now - state.start_time) / 1000.0
-		var char = full_text[i]
+		var _char = full_text[i]
 
 		if elapsed < fade_in_duration:
 			all_done = false
@@ -102,10 +102,10 @@ func _on_fade_tick():
 			
 			var color_hex = "%02x%02x%02x%02x" % [0, 0, 0, current_alpha]
 			
-			var bbcode = "[font_size=%d][color=#%s]%s[/color][/font_size]" % [NORMAL_SIZE, color_hex, char]
+			var bbcode = "[font_size=%d][color=#%s]%s[/color][/font_size]" % [NORMAL_SIZE, color_hex, _char]
 			new_text += bbcode
 		else:
-			var bbcode = "[font_size=%d][color=#000000]%s[/color][/font_size]" % [NORMAL_SIZE, char]
+			var bbcode = "[font_size=%d][color=#000000]%s[/color][/font_size]" % [NORMAL_SIZE, _char]
 			new_text += bbcode
 
 	text = new_text
