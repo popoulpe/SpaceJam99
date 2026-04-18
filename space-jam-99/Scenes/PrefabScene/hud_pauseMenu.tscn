@@ -1,9 +1,121 @@
 [gd_scene format=3 uid="uid://6rydvfedl73x"]
 
-[node name="HudPauseMenu" type="Control" unique_id=3991799]
+[ext_resource type="Script" uid="uid://dwkea3r3jln3d" path="res://Scripts/UI/script_pause_menu.gd" id="1_fx2et"]
+[ext_resource type="Texture2D" uid="uid://pyokm5u20upj" path="res://Assets/UI/hud/ui_hud_pause_pannel.png" id="1_od536"]
+[ext_resource type="Texture2D" uid="uid://coob4py1mel12" path="res://Assets/UI/button/ui_button_grey_test_3.png" id="2_v4qc6"]
+[ext_resource type="Texture2D" uid="uid://0oiurt7xifx1" path="res://Assets/UI/button/ui_button_grey_hover_3.png" id="3_fx2et"]
+[ext_resource type="Script" uid="uid://3w36qcdvdxwk" path="res://Scripts/UI/colorbutton.gd" id="4_4wjug"]
+[ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="5_yw8l3"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="6_crq0y"]
+
+[node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("_movingControl")]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_fx2et")
+_movingControl = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=100157588]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_od536")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StartTextureButton" type="TextureButton" parent="TextureRect" unique_id=1587160105]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.091000006
+anchor_top = 0.63900006
+anchor_right = 0.68200004
+anchor_bottom = 0.82800007
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_v4qc6")
+texture_hover = ExtResource("3_fx2et")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_4wjug")
+
+[node name="Label" type="Label" parent="TextureRect/StartTextureButton" unique_id=2145975881]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.25
+anchor_right = 0.8
+anchor_bottom = 0.85
+offset_right = 3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("5_yw8l3")
+theme_override_font_sizes/font_size = 55
+text = "Reprendre"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 2
+max_font_size = 92
+
+[node name="QuitTextureButton" type="TextureButton" parent="TextureRect" unique_id=1208715510]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.559
+anchor_top = 0.33600003
+anchor_right = 0.808
+anchor_bottom = 0.437
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_v4qc6")
+texture_hover = ExtResource("3_fx2et")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_4wjug")
+
+[node name="Label" type="Label" parent="TextureRect/QuitTextureButton" unique_id=1089741630]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.25
+anchor_right = 0.8
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_yw8l3")
+theme_override_font_sizes/font_size = 30
+text = "Partir"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 2
+max_font_size = 78
+
+[connection signal="mouse_entered" from="TextureRect/StartTextureButton" to="TextureRect/StartTextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/StartTextureButton" to="TextureRect/StartTextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureRect/StartTextureButton" to="." method="_on_start_texture_button_pressed"]
+[connection signal="mouse_entered" from="TextureRect/QuitTextureButton" to="TextureRect/QuitTextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/QuitTextureButton" to="TextureRect/QuitTextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureRect/QuitTextureButton" to="." method="_on_quit_texture_button_pressed"]
