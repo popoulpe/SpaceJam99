@@ -1,3 +1,112 @@
 [gd_scene format=3 uid="uid://bvltjbclu328x"]
 
+[ext_resource type="Texture2D" uid="uid://dvliin5whrxu3" path="res://Assets/Enviro/SpaceTest2.2.png" id="1_ed5jw"]
+[ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="2_lutho"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1nla2"]
+panorama = ExtResource("1_ed5jw")
+
+[sub_resource type="Sky" id="Sky_l5uwb"]
+sky_material = SubResource("PanoramaSkyMaterial_1nla2")
+
+[sub_resource type="Environment" id="Environment_rhwl7"]
+background_mode = 2
+background_energy_multiplier = 1.22
+sky = SubResource("Sky_l5uwb")
+ambient_light_source = 3
+reflected_light_source = 1
+glow_enabled = true
+glow_intensity = 1.39
+glow_bloom = 0.33
+glow_hdr_threshold = 2.0
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.36078432, 0.5372549, 0.9372549, 1)
+fog_light_energy = 0.8
+fog_density = 1.1
+fog_aerial_perspective = 0.528
+fog_sky_affect = 0.299
+fog_depth_curve = 0.6372803
+fog_depth_begin = 50.0
+fog_depth_end = 500.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_j3jhd"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 30.0
+dof_blur_far_transition = 10.0
+dof_blur_amount = 1.0
+
+[sub_resource type="Compositor" id="Compositor_txjhk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f48s1"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1.6938539, 1.6938539, 1.6938539, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_icyiy"]
+material = SubResource("StandardMaterial3D_f48s1")
+radius = 0.1
+height = 3.0
+radial_segments = 6
+rings = 0
+
+[sub_resource type="Curve" id="Curve_lw5aq"]
+_data = [Vector2(0, 0.17655987), 0.0, 0.033431467, 0, 0, Vector2(0.9951377, 0.9235729), 1.0840355, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_rbj3i"]
+colors = PackedColorArray(0.9181119, 0.8098738, 1.540184e-06, 1, 1.6416155, 1.6416155, 1.6416155, 1)
+
+[sub_resource type="Curve" id="Curve_plwlu"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0.012965966, -0.37568736), 0.0, 0.0, 0, 0, Vector2(0.9902755, 0.5956761), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Road1" type="Node3D" unique_id=1631416252]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=790118371]
+environment = SubResource("Environment_rhwl7")
+camera_attributes = SubResource("CameraAttributesPractical_j3jhd")
+compositor = SubResource("Compositor_txjhk")
+
+[node name="SpeedCameraParticle" type="CPUParticles3D" parent="WorldEnvironment" unique_id=601748664]
+transform = Transform3D(0.034672648, 0, 0.99939865, 0, 1, 0, -0.99939865, 0, 0.034672648, 11.279465, -2048.3787, -51.04963)
+amount = 12
+lifetime = 0.68
+preprocess = 0.53
+explosiveness = 0.19
+randomness = 0.31
+lifetime_randomness = 0.19
+local_coords = true
+mesh = SubResource("CapsuleMesh_icyiy")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 3.0
+emission_ring_radius = 4.55
+emission_ring_inner_radius = 2.2
+emission_ring_cone_angle = 90.0
+particle_flag_align_y = true
+direction = Vector3(0, 0.2, 1)
+spread = 5.0
+flatness = 0.56
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+angular_velocity_min = -1.0
+angular_velocity_max = 1.0
+damping_min = 5.0
+damping_max = 20.0
+scale_amount_min = 0.2
+scale_amount_max = 2.82
+scale_amount_curve = SubResource("Curve_lw5aq")
+color = Color(1.732707e-06, 0.88104254, 0.8333159, 1)
+color_ramp = SubResource("Gradient_rbj3i")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_plwlu")
+
+[node name="planete_mesh" parent="WorldEnvironment" unique_id=1689343277 instance=ExtResource("2_lutho")]
+transform = Transform3D(4.814977, -0.86266387, 1.035282, 1.2951565, 1.901324, -4.439317, 0.3722458, 4.543212, 2.0544236, -2115.312, -677.7748, -47.000244)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1367141]
