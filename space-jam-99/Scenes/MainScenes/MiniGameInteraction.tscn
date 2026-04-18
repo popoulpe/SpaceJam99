@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qroh0v3nwgds"]
 
 [ext_resource type="Script" uid="uid://00tae10mmhn0" path="res://Scripts/Interactibles/MiniGameInteraction.gd" id="1_3kd1e"]
+[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Themes/696408__bloodpixelhero__adventure-theme-9.wav" id="2_4hvue"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4hvue"]
 size = Vector3(7.6362915, 4.9192505, 5.6049194)
@@ -17,6 +18,11 @@ shape = SubResource("BoxShape3D_4hvue")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=633444171]
 mesh = SubResource("CylinderMesh_3kd1e")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2771166]
+stream = ExtResource("2_4hvue")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

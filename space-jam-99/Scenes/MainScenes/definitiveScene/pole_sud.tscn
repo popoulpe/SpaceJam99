@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://c5uq4wqnkslob"]
 
+[ext_resource type="AudioStream" uid="uid://dph8wy4vxudul" path="res://Assets/Themes/PoleSud.wav" id="1_x0nb4"]
+
 [node name="PoleSud" type="Node3D" unique_id=1387756561]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=940906613]
+stream = ExtResource("1_x0nb4")
+volume_db = -5.0
+autoplay = true

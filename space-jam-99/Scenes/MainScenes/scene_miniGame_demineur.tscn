@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cyror5ehvhixj" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg0_0_3.png" id="17_b552o"]
 [ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="17_o0yh5"]
 [ext_resource type="Texture2D" uid="uid://buaxk8tio76os" path="res://Assets/UI/miniGames/demineur/background/ui_carotte_bg0_1.png" id="18_aow8g"]
+[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Themes/696408__bloodpixelhero__adventure-theme-9.wav" id="29_5salm"]
 
 [node name="SceneMiniGameDemineur" type="Control" unique_id=1808526161 node_paths=PackedStringArray("all_buttons", "_progressBar")]
 layout_mode = 3
@@ -2039,6 +2040,11 @@ text_overrun_behavior = 3
 script = ExtResource("3_4lp2e")
 max_font_size = 96
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=51390934]
+stream = ExtResource("29_5salm")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="mouse_entered" from="DemineurJeu/TextureButton" to="DemineurJeu/TextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DemineurJeu/TextureButton" to="DemineurJeu/TextureButton" method="_on_mouse_exited"]
