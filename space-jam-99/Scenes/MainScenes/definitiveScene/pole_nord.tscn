@@ -1,3 +1,86 @@
 [gd_scene format=3 uid="uid://dnvs4t2hffp5"]
 
+[ext_resource type="PackedScene" uid="uid://xo6hxjnujsfc" path="res://Assets/Enviro/pole_nord_ground.fbx" id="1_x20cm"]
+[ext_resource type="PackedScene" uid="uid://bmf8wi7xvnuvs" path="res://Assets/Enviro/pole_nord_props.fbx" id="2_px6pa"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x20cm"]
+load_path = "res://.godot/imported/sky_42_2k.png-4a3aa95eda9daf3229241788ebd0110c.s3tc.ctex"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_px6pa"]
+panorama = SubResource("CompressedTexture2D_x20cm")
+
+[sub_resource type="Sky" id="Sky_yvt0x"]
+sky_material = SubResource("PanoramaSkyMaterial_px6pa")
+
+[sub_resource type="Environment" id="Environment_4lw3x"]
+background_mode = 2
+sky = SubResource("Sky_yvt0x")
+sky_rotation = Vector3(0, -3.2672563, -0.12566371)
+ambient_light_source = 3
+ambient_light_color = Color(0.47141588, 0.56694734, 0.86395925, 1)
+ambient_light_sky_contribution = 0.75
+ambient_light_energy = 3.45
+reflected_light_source = 1
+glow_enabled = true
+glow_intensity = 0.81
+glow_bloom = 0.58
+glow_hdr_threshold = 1.75
+glow_hdr_scale = 1.15
+glow_hdr_luminance_cap = 3.29
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.8062292, 0.8338803, 0.9634177, 1)
+fog_density = 0.5
+fog_sky_affect = 0.8
+fog_depth_begin = 60.0
+fog_depth_end = 450.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_01c45"]
+
+[sub_resource type="Compositor" id="Compositor_aek02"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x20cm"]
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_x20cm"]
+material = SubResource("StandardMaterial3D_x20cm")
+orientation = 0
+
+[sub_resource type="Curve" id="Curve_x20cm"]
+_data = [Vector2(0.024169177, 0.06076324), 0.0, 6.3771777, 0, 0, Vector2(0.49244708, 0.96146715), -0.36791387, -0.36791387, 0, 0, Vector2(0.6827794, 0.26787704), 0.0, 0.0, 0, 0, Vector2(1, 0.041496873), -2.6824627, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_px6pa"]
+offsets = PackedFloat32Array(0, 0.4573379, 0.9931741)
+colors = PackedColorArray(0.3372549, 0.4509804, 1, 1, 0.84791225, 0.878654, 0.9999977, 1, 0.30406708, 0.5586812, 1, 1)
+
 [node name="PoleNord" type="Node3D" unique_id=1427161973]
+
+[node name="pole_nord_ground" parent="." unique_id=631646103 instance=ExtResource("1_x20cm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09506822, 0, -0.74939513)
+
+[node name="pole_nord_props" parent="." unique_id=119432054 instance=ExtResource("2_px6pa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09506822, 0, -0.74939513)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=70018010]
+environment = SubResource("Environment_4lw3x")
+camera_attributes = SubResource("CameraAttributesPractical_01c45")
+compositor = SubResource("Compositor_aek02")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1217630487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12086487, 13.619946, -3.5440445)
+amount = 9
+lifetime = 4.0
+explosiveness = 0.01
+randomness = 1.0
+mesh = SubResource("PlaneMesh_x20cm")
+emission_shape = 3
+emission_box_extents = Vector3(40, 3, 40)
+particle_flag_align_y = true
+gravity = Vector3(0, -4, 0)
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_curve = SubResource("Curve_x20cm")
+color_ramp = SubResource("Gradient_px6pa")
