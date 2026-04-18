@@ -8,6 +8,8 @@ extends StateWithoutSkate
 @export var speed :float=1
 
 func process_input(_event:InputEvent) -> StateWithoutSkate:
+	if !GlobalScript.canMove:
+		return idle_state
 	if !(Input.is_action_pressed("Forward") ||
 		Input.is_action_pressed("Backward") ||
 		Input.is_action_pressed("Left") ||
@@ -18,6 +20,8 @@ func process_input(_event:InputEvent) -> StateWithoutSkate:
 	return null
 
 func process_physics(delta:float) -> StateWithoutSkate:
+	if !GlobalScript.canMove:
+		return idle_state
 	basic_mouvement(delta)
 	apply_gravity(delta)
 	return null

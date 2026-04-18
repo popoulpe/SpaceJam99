@@ -1,4 +1,7 @@
 extends Control
+
+@onready var scene_mini_game_tuyaux = $".."
+
 @export
 var all_buttons: Array[TextureButton]
 @export 
@@ -86,6 +89,9 @@ func newLevel()->void:
 	$"../TextureButton".visible=false
 	iLevel+=1
 	if(iLevel>=4):
+		GlobalScript.asFinishedLevelTask = true
+		GlobalScript.canMove = true
+		scene_mini_game_tuyaux.visible = false
 		print("YAHOO")
 	else:
 		placementLevel(iLevel)

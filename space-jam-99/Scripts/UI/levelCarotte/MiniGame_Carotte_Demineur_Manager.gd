@@ -67,6 +67,9 @@ func endButton()->void:
 
 func _on_texture_button_pressed() -> void:
 	if(bSuccess):
+		GlobalScript.asFinishedLevelTask = true
+		GlobalScript.canMove = true
+		visible = false
 		print("YOUPI")
 	else:
 		var tween = get_tree().create_tween()

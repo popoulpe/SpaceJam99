@@ -10,6 +10,8 @@ extends StateWithoutSkate
 
 
 func process_input(_event:InputEvent) -> StateWithoutSkate:
+	if !GlobalScript.canMove:
+		return idle_state
 	if (parent.is_on_floor() &&
 		(Input.is_action_pressed("Forward") ||
 		Input.is_action_pressed("Backward") ||
@@ -20,6 +22,8 @@ func process_input(_event:InputEvent) -> StateWithoutSkate:
 	return null
 
 func process_physics(delta:float) -> StateWithoutSkate:
+	if !GlobalScript.canMove:
+		return idle_state
 	if Input.is_action_pressed("Jump") && parent.is_on_floor():
 		parent.velocity.y = jumpHeight
 		

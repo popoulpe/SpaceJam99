@@ -14,6 +14,10 @@ config/name="space jam 99"
 run/main_scene="uid://dd6vht2m2k8gn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+GlobalScript="*uid://d2o5c6nce0bge"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
