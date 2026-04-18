@@ -1,0 +1,320 @@
+[gd_scene format=3 uid="uid://bwgfvspt5nbnk"]
+
+[ext_resource type="FontFile" uid="uid://vpicagbvokkw" path="res://Assets/UI/fonts/Astron Boy.otf" id="1_2bwpg"]
+[ext_resource type="Texture2D" uid="uid://coob4py1mel12" path="res://Assets/UI/button/ui_button_grey_test_3.png" id="1_bsw0x"]
+[ext_resource type="Script" uid="uid://cxn0x37560p6j" path="res://Scripts/UI/script_credits.gd" id="1_y17dc"]
+[ext_resource type="Texture2D" uid="uid://0oiurt7xifx1" path="res://Assets/UI/button/ui_button_grey_hover_3.png" id="2_2bwpg"]
+[ext_resource type="Script" uid="uid://3w36qcdvdxwk" path="res://Scripts/UI/colorbutton.gd" id="3_46rxl"]
+[ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="3_y17dc"]
+[ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="4_y17dc"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="5_xpf4e"]
+
+[node name="SceneCredits" type="Control" unique_id=647363157 node_paths=PackedStringArray("_movingControls")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_y17dc")
+_movingControls = [NodePath("Credits/Credit1"), NodePath("Credits/Credit2"), NodePath("Credits/Credit3"), NodePath("Credits/Credit4"), NodePath("Credits/Credit5")]
+
+[node name="Credits" type="Control" parent="." unique_id=1798272798]
+layout_mode = 1
+anchor_left = 0.6
+anchor_top = 0.12
+anchor_right = 0.95
+anchor_bottom = 0.88000005
+offset_bottom = -6.1035156e-05
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Credit1" type="Control" parent="Credits" unique_id=169660038]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.15
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Credits/Credit1" unique_id=708679554]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_2bwpg")
+theme_override_font_sizes/font_size = 37
+text = "Popoulpe"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Credits/Credit1" unique_id=1747422090]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0.62820196, 0.13293543, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_y17dc")
+theme_override_font_sizes/font_size = 29
+text = "Gameplay Programmer"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Credit2" type="Control" parent="Credits" unique_id=1460948912]
+layout_mode = 1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.35
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Credits/Credit2" unique_id=453781061]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_2bwpg")
+theme_override_font_sizes/font_size = 37
+text = "Dany"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Credits/Credit2" unique_id=2122667645]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0.62820196, 0.13293543, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_y17dc")
+theme_override_font_sizes/font_size = 29
+text = "Sound Designer"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Credit3" type="Control" parent="Credits" unique_id=137871556]
+layout_mode = 1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.55
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Credits/Credit3" unique_id=340048077]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_2bwpg")
+theme_override_font_sizes/font_size = 37
+text = "Farfaline"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Credits/Credit3" unique_id=1844816743]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0.62820196, 0.13293543, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_y17dc")
+theme_override_font_sizes/font_size = 29
+text = "Tech Artist"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Credit4" type="Control" parent="Credits" unique_id=1663165305]
+layout_mode = 1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.75
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Credits/Credit4" unique_id=869144017]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_2bwpg")
+theme_override_font_sizes/font_size = 37
+text = "Nakitoka"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Credits/Credit4" unique_id=1520735926]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0.62820196, 0.13293543, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_y17dc")
+theme_override_font_sizes/font_size = 29
+text = "3D Artist, 3D Animator"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Credit5" type="Control" parent="Credits" unique_id=1812329174]
+layout_mode = 1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 0.95
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Credits/Credit5" unique_id=707886478]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_2bwpg")
+theme_override_font_sizes/font_size = 37
+text = "Dialme"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Credits/Credit5" unique_id=598755574]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0.62820196, 0.13293543, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_y17dc")
+theme_override_font_sizes/font_size = 26
+text = "UI/UX, 2D Artist, 2D Programmer"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="StartTextureButton" type="TextureButton" parent="." unique_id=1777172411]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.85
+anchor_right = 0.3
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_bsw0x")
+texture_hover = ExtResource("2_2bwpg")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_46rxl")
+
+[node name="Label" type="Label" parent="StartTextureButton" unique_id=871283582]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.25
+anchor_right = 0.8
+anchor_bottom = 0.85
+offset_right = 3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_y17dc")
+theme_override_font_sizes/font_size = 32
+text = "Retour"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_xpf4e")
+min_font_size = 2
+max_font_size = 92
+
+[connection signal="mouse_entered" from="StartTextureButton" to="StartTextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StartTextureButton" to="StartTextureButton" method="_on_mouse_exited"]

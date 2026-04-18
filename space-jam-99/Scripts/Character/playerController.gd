@@ -23,7 +23,6 @@ func _unhandled_input(event):
 
 func _physics_process(delta: float) ->void:
 	state_machine.process_physics(delta)
-	#print("velocity: ", velocity.length(), " real velocity:", get_real_velocity().length())
 	
 	checkCollisions()
 	move_and_slide()

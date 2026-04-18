@@ -1,4 +1,5 @@
 extends Interactable
-func Interact(player:Player) -> void:
-	player.hud.interact()
+
+func Interact(player:PlayerWithoutSkate) -> void:
+	player.hud.interact("ceci est un test")
 	

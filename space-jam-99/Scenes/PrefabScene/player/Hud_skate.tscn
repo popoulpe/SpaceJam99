@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://qf324vib4sut"]
+
+[ext_resource type="Script" uid="uid://boa01nij53u5e" path="res://Scripts/ui_hud_speed.gd" id="1_h1osn"]
+[ext_resource type="Texture2D" uid="uid://14veoxfkx2nj" path="res://Assets/UI/hud/skate/ui_hud_vitesse.png" id="2_6ngag"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="3_5bgcb"]
+[ext_resource type="Texture2D" uid="uid://c7jmvj3fwxqco" path="res://Assets/UI/hud/skate/ui_vitesse_rainbow.png" id="3_qxg4h"]
+[ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="5_h1osn"]
+[ext_resource type="Texture2D" uid="uid://dvytpp8wx8el7" path="res://Assets/UI/hud/skate/ui_hud_box_temps.png" id="5_qxg4h"]
+[ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="6_rlo2f"]
+
+[node name="ui_hud_skate" type="Control" unique_id=1951736353]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+script = ExtResource("1_h1osn")
+
+[node name="Vitesse_" type="Control" parent="." unique_id=1110491498]
+layout_mode = 1
+anchor_left = 0.02
+anchor_top = 0.68
+anchor_right = 0.18
+anchor_bottom = 0.95
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Vitesse_" unique_id=853748849]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+pivot_offset_ratio = Vector2(0.5, 0.5)
+step = 0.1
+fill_mode = 4
+radial_initial_angle = 220.0
+radial_fill_degrees = 280.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_6ngag")
+texture_progress = ExtResource("3_qxg4h")
+
+[node name="big_numbers" type="Label" parent="Vitesse_" unique_id=163175513]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.101
+anchor_top = 0.25100002
+anchor_right = 0.896
+anchor_bottom = 0.75000006
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("5_h1osn")
+theme_override_font_sizes/font_size = 72
+text = "90"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_5bgcb")
+max_font_size = 128
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="little_numbers" type="Label" parent="Vitesse_" unique_id=218356898]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.624
+anchor_right = 1.0
+anchor_bottom = 0.91700006
+offset_top = -2.2888184e-05
+offset_bottom = -3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("5_h1osn")
+theme_override_font_sizes/font_size = 42
+text = "90"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_5bgcb")
+max_font_size = 128
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AutoSizeLabel2" type="Label" parent="Vitesse_" unique_id=46534641]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.85200006
+anchor_right = 1.0
+anchor_bottom = 1.0200001
+offset_bottom = 0.009719849
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("5_h1osn")
+theme_override_font_sizes/font_size = 25
+text = "pieds.lumière"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_5bgcb")
+max_font_size = 128
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Temps_" type="Control" parent="." unique_id=1666209699]
+layout_mode = 1
+anchor_left = 0.36
+anchor_top = 0.05
+anchor_right = 0.64
+anchor_bottom = 0.12
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="Temps_" unique_id=594698474]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("5_qxg4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="temps_label" type="Label" parent="Temps_" unique_id=466898608]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.22
+anchor_right = 0.8
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rlo2f")
+theme_override_font_sizes/font_size = 28
+text = "12.24"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("3_5bgcb")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"

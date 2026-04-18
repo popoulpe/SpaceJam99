@@ -1,0 +1,45 @@
+extends Control
+var paused = false
+
+@export var _movingControl : Control
+var hue : float = 0.0
+@export var _position : Vector2
+@export var fspeed:float=5.0
+
+func _ready() -> void:
+	_position = _movingControl.position
+	hide()
+	paused = false
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("pause"):
+		_pauseMenu()
+	_on_timer_timeout(delta)
+
+func _pauseMenu()->void:
+	if(paused):
+		get_tree().paused = false
+		hide()
+	else:
+		get_tree().paused = true
+		show()
+	paused=!paused
+	print(paused)
+
+func _on_start_texture_button_pressed() -> void:
+	_pauseMenu()
+
+func _on_quit_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/MainScenes/scene_main_menu.tscn")
+
+func _on_timer_timeout(f:float):
+	hue += 0.7 * f
+	if hue >= 1.0:
+		hue = 0.0
+	var angle: float = hue * TAU
+	var r: float = (sin(angle)*0.5)+0.5
+	var g:float = (sin(angle + TAU /3)*0.5)+0.5
+	
+	_movingControl.scale = Vector2(1+r/30,1+r/30)
+	_movingControl.position = _position + Vector2(r,g)*fspeed
