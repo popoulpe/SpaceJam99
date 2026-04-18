@@ -10,7 +10,7 @@ class_name State
 @export var jumpForce :float= 10
 @export var gravity :float= -25
 
-@export_subgroup("slope accceleration")
+@export_subgroup("slope acceleration")
 @export var slopeDownAcceleration :float = 50
 @export var slopeUpAcceleration :float = 1
 

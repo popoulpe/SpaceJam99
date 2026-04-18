@@ -13,3 +13,6 @@ func _on_body_exited(body):
 func Interact(player:Player) -> void:
 	print("Interaction completed")
 	
+
+func InteractWithoutSkate(player:PlayerWithoutSkate) -> void:
+	print("Interaction completed")

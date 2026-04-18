@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yhw7k6ivuyui"
-path.s3tc="res://.godot/imported/skate_anim_bake_skate.png-0df84a8dfedd6a60cd49d9405fe65d0d.s3tc.ctex"
+uid="uid://rqqmi7ltyid8"
+path.s3tc="res://.godot/imported/chara_without_skate_diffuse_map_V1_2k.png-bd2ab4f983a717c8f9dd054629035435.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "97a092f38bf2759aafeb3336c5504984"
+"md5": "4a0be0204572e7de12a1528ed1052653"
 }
 
 [deps]
 
-source_file="res://Assets/Characters/skate_anim_bake_skate.png"
-dest_files=["res://.godot/imported/skate_anim_bake_skate.png-0df84a8dfedd6a60cd49d9405fe65d0d.s3tc.ctex"]
+source_file="res://Assets/Characters/chara_without_skate_diffuse_map_V1_2k.png"
+dest_files=["res://.godot/imported/chara_without_skate_diffuse_map_V1_2k.png-bd2ab4f983a717c8f9dd054629035435.s3tc.ctex"]
 
 [params]
 

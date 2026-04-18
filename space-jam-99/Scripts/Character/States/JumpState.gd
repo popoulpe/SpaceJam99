@@ -3,7 +3,6 @@ extends State
 @export var fall_jump_state : State
 
 @export var turnSpeed :float=0.25
-@onready var Saut: AudioStreamPlayer = $Saut
 
 func enter() -> void :
 	super()
