@@ -7,9 +7,9 @@
 render_priority = 0
 shader = ExtResource("1_he4ed")
 shader_parameter/alpha = 0.682000032395
-shader_parameter/albedo = Color(5.035, 6.447, 7.859, 1)
+shader_parameter/albedo = Color(2.2756286, 3.1674602, 3.8147569, 1)
 shader_parameter/texture_albedo = ExtResource("2_wapvb")
-shader_parameter/Speed = Vector2(0.07, 0.35)
+shader_parameter/Speed = Vector2(0.07, 0.5)
 shader_parameter/SpeedHueShift = 0.30000000447036
 shader_parameter/point_size = 0.10000000149012
 shader_parameter/roughness = 0.8330000395675

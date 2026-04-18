@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ikexfqc4tbkt"
-path.s3tc="res://.godot/imported/1521434-astronomy-outer-space-space-universe-sky-stars-448260758.jpg-35f161154ebcff23579c88798455f432.s3tc.ctex"
+uid="uid://dk1y55ev1mb0t"
+path.s3tc="res://.godot/imported/SpaceTest2.png-e50324b0655da65312e7fef761f296ee.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Enviro/1521434-astronomy-outer-space-space-universe-sky-stars-448260758.jpg"
-dest_files=["res://.godot/imported/1521434-astronomy-outer-space-space-universe-sky-stars-448260758.jpg-35f161154ebcff23579c88798455f432.s3tc.ctex"]
+source_file="res://Assets/Enviro/SpaceTest2.png"
+dest_files=["res://.godot/imported/SpaceTest2.png-e50324b0655da65312e7fef761f296ee.s3tc.ctex"]
 
 [params]
 

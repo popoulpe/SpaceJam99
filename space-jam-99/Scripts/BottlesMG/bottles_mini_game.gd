@@ -59,6 +59,9 @@ func next_level():
 	$TextureButton.visible=false
 	iLevel+=1
 	if(iLevel>=3):
+		GlobalScript.asFinishedLevelTask = true
+		GlobalScript.canMove = true
+		visible = false
 		print("YAHOO")
 	else:
 		for i in bottleList:
