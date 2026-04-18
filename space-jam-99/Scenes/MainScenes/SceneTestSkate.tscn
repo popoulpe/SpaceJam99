@@ -3,10 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://b8cm5qecvp1hn" path="res://Assets/Prototypage/material/Dark/texture_08.png" id="1_kwkfq"]
 [ext_resource type="Texture2D" uid="uid://x6a8o6sss7vp" path="res://Assets/Prototypage/material/Orange/texture_08.png" id="2_8gp4t"]
 [ext_resource type="Texture2D" uid="uid://dwk07suol4kwr" path="res://Assets/Prototypage/material/Red/texture_01.png" id="3_8gp4t"]
+[ext_resource type="PackedScene" uid="uid://c6xpdfw3dxiim" path="res://Scenes/PrefabScene/Scientifeet/scientifeetDefault.tscn" id="5_41k57"]
 [ext_resource type="MeshLibrary" uid="uid://cr13vydtxhosd" path="res://Assets/farfaline/TileSetv2.meshlib" id="5_gcc03"]
-[ext_resource type="Script" uid="uid://sh724mxmhlcr" path="res://Scripts/Interactibles/Discussion.gd" id="6_1b2qt"]
-[ext_resource type="PackedScene" uid="uid://c2avhcu2owvvo" path="res://Assets/Characters/animations_scientifeet.glb" id="7_1b2qt"]
-[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/Player.tscn" id="7_ew7vi"]
+[ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="6_1b2qt"]
+[ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="6_ew7vi"]
+[ext_resource type="PackedScene" uid="uid://qroh0v3nwgds" path="res://Scenes/MainScenes/MiniGameInteraction.tscn" id="6_gs7mn"]
 
 [sub_resource type="Environment" id="Environment_1b2qt"]
 ambient_light_source = 3
@@ -37,10 +38,6 @@ size = Vector3(5, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gs7mn"]
 size = Vector3(5, 5, 1)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfilx"]
-radius = 0.039281093
-height = 0.078562185
 
 [node name="Node3D" type="Node3D" unique_id=158570227]
 
@@ -175,80 +172,16 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Interactable" type="Node3D" parent="." unique_id=876455705]
 
-[node name="StaticBody3D" type="Area3D" parent="Interactable" unique_id=529395971]
-transform = Transform3D(-0.99999255, 0, -0.003857277, 0, 1, 0, 0.003857277, 0, -0.99999255, -7.6334887, -0.052863836, -16.040142)
-collision_mask = 8
-script = ExtResource("6_1b2qt")
+[node name="Scientifeet" parent="Interactable" unique_id=1396396552 instance=ExtResource("5_41k57")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -7.4682693, 0, -22.722973)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/StaticBody3D" unique_id=862979703]
-transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 3.7947958, 0.39713392)
-shape = SubResource("CapsuleShape3D_gfilx")
+[node name="MiniGameInteraction" parent="Interactable" unique_id=260612951 instance=ExtResource("6_gs7mn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.080994, 0.99282885, 0.23513937)
+miniJeuSceneName = "res://Scenes/PrefabScene/Bottles/BottlesMiniGame.tscn"
 
-[node name="animations_scientifeet" parent="Interactable/StaticBody3D" unique_id=632991482 instance=ExtResource("7_1b2qt")]
+[node name="SceneSwitchSkate" parent="Interactable" unique_id=423912757 instance=ExtResource("6_ew7vi")]
+transform = Transform3D(-0.16909152, 0, 0.98560035, 0, 1, 0, -0.98560035, 0, -0.16909152, -20.152681, 0, -22.175451)
+nextLevelScene = "res://Scenes/MainScenes/scene_main_menu.tscn"
 
-[node name="Main" parent="Interactable/StaticBody3D/animations_scientifeet" index="0" unique_id=455851315]
-transform = Transform3D(-0.8279395, 0.4046781, 0.38826752, 0.20598784, 0.8633684, -0.46061236, -0.5216177, -0.3013808, -0.79817563, -1.8109028, -0.00920639, 1.7742325)
-
-[node name="Skeleton3D" parent="Interactable/StaticBody3D/animations_scientifeet/Main" index="0" unique_id=1671109613]
-bones/0/rotation = Quaternion(0, 0.9974141, -0.07186991, 5.884183e-15)
-bones/1/rotation = Quaternion(0.062323812, 0.09581918, -0.023099994, 0.9931772)
-bones/2/rotation = Quaternion(-0.0037472155, 0.024853753, 0.0012398687, 0.9996833)
-bones/3/rotation = Quaternion(0.055668768, 0.024644097, 0.00028795598, 0.99814516)
-bones/4/rotation = Quaternion(0.23981489, -0.015770698, 0.0062758713, 0.9706702)
-bones/5/rotation = Quaternion(0.6866898, -0.0036007152, 0.016448976, 0.72675556)
-bones/6/rotation = Quaternion(-0.81635165, 6.262615e-08, -2.0874515e-07, 0.57755536)
-bones/7/rotation = Quaternion(-0.58230454, -0.4096832, -0.26119995, 0.6518096)
-bones/8/rotation = Quaternion(-0.15512602, 0.8458491, -0.1200365, 0.49605083)
-bones/9/rotation = Quaternion(0.35517272, -0.0049480447, 0.017646872, 0.934621)
-bones/10/rotation = Quaternion(0.028071731, 0.0260718, -0.20455477, 0.97810507)
-bones/12/rotation = Quaternion(-0.05195566, 0.043795474, -0.012281807, 0.9976131)
-bones/13/rotation = Quaternion(0.26602864, 0.11896692, -0.024518028, 0.9562816)
-bones/14/rotation = Quaternion(0.12743229, -0.08485961, 0.032757293, 0.9876674)
-bones/16/rotation = Quaternion(0.060080595, -0.09891661, -0.4544277, 0.8832335)
-bones/17/rotation = Quaternion(0.075292386, 0.35486826, -0.05789768, 0.9300793)
-bones/19/rotation = Quaternion(0.07384558, 0.015420472, 0.012532404, 0.99707174)
-bones/20/rotation = Quaternion(0.21636485, -0.048299886, -0.06619743, 0.97286755)
-bones/21/rotation = Quaternion(0.15233475, -0.046097554, -0.021362126, 0.9870222)
-bones/23/rotation = Quaternion(0.130267, -0.052443206, -0.01042055, 0.99003625)
-bones/24/rotation = Quaternion(0.18250428, -0.02000532, -0.09443662, 0.97845477)
-bones/25/rotation = Quaternion(0.16917202, -0.056996908, -0.051832255, 0.98257095)
-bones/26/rotation = Quaternion(-0.009525307, 0.6944231, -0.12249027, 0.7090007)
-bones/27/rotation = Quaternion(0.20499927, -0.09817854, -0.088148534, 0.9698279)
-bones/28/rotation = Quaternion(0.19296023, -0.018725358, -0.11207428, 0.97460514)
-bones/29/rotation = Quaternion(0.17464757, -0.044815615, -0.082583874, 0.9801376)
-bones/30/rotation = Quaternion(-0.51418394, 0.50071514, 0.3068727, 0.6250827)
-bones/31/rotation = Quaternion(-0.0377592, -0.86995333, 0.16688842, 0.4624973)
-bones/32/rotation = Quaternion(0.37949085, 0.0048968797, -0.018854959, 0.9249904)
-bones/33/rotation = Quaternion(-0.13539954, -0.13450843, 0.34573284, 0.91871834)
-bones/35/rotation = Quaternion(-0.058693033, -0.04449307, 0.009830031, 0.9972357)
-bones/36/rotation = Quaternion(0.26648173, -0.11896675, 0.0189691, 0.95628166)
-bones/37/rotation = Quaternion(0.12743175, 0.08485933, -0.03275714, 0.98766744)
-bones/39/rotation = Quaternion(0.04897891, 0.09785716, 0.4406375, 0.8909903)
-bones/40/rotation = Quaternion(0.075292505, -0.3548691, 0.05789696, 0.93007904)
-bones/42/rotation = Quaternion(0.06804256, -0.015759861, -0.01739583, 0.99740624)
-bones/43/rotation = Quaternion(0.21769679, 0.048301097, 0.06167502, 0.9728676)
-bones/44/rotation = Quaternion(0.15233517, 0.046097677, 0.021362478, 0.9870221)
-bones/46/rotation = Quaternion(0.12646554, 0.052652743, 0.004153561, 0.990564)
-bones/47/rotation = Quaternion(0.18443236, 0.020005072, 0.09061354, 0.9784548)
-bones/48/rotation = Quaternion(0.16917104, 0.056996703, 0.051831756, 0.9825711)
-bones/49/rotation = Quaternion(-0.0070110844, -0.6947378, 0.11663173, 0.7097093)
-bones/50/rotation = Quaternion(0.20679116, 0.09817834, 0.08385816, 0.969828)
-bones/51/rotation = Quaternion(0.1952536, 0.018725429, 0.10802962, 0.9746051)
-bones/52/rotation = Quaternion(0.17464668, 0.04481555, 0.08258405, 0.98013777)
-bones/57/rotation = Quaternion(0.90069824, -0.15193015, -0.012249319, 0.40682912)
-bones/58/rotation = Quaternion(0.42785135, 0.2525475, 0.07336711, 0.8647429)
-bones/59/rotation = Quaternion(-0.1065602, -0.22455625, -0.29581162, 0.9223421)
-bones/60/rotation = Quaternion(-0.044296008, 0.92583203, -0.3727485, 0.043948382)
-bones/62/rotation = Quaternion(0.95819765, -0.20022708, 0.1283477, -0.15903859)
-bones/63/rotation = Quaternion(0.77372015, -0.20203967, -0.48376465, 0.35568088)
-bones/64/rotation = Quaternion(-0.8216405, 0.19604197, 0.23194163, 0.48236662)
-bones/65/rotation = Quaternion(0.0442966, 0.92583185, -0.37274897, -0.043948364)
-bones/66/rotation = Quaternion(-0.60748625, 0.72133076, -0.21832316, -0.25095314)
-
-[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("7_ew7vi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.982813, 0.050001144, -2.4919875)
-
-[connection signal="body_entered" from="Interactable/StaticBody3D" to="Interactable/StaticBody3D" method="_on_body_entered"]
-[connection signal="body_exited" from="Interactable/StaticBody3D" to="Interactable/StaticBody3D" method="_on_body_exited"]
-
-[editable path="Interactable/StaticBody3D/animations_scientifeet"]
+[node name="Player2" parent="." unique_id=2002350393 instance=ExtResource("6_1b2qt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.493323, 1.2461188, -5.6874537)

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cb7t6quslua1k"]
+
+[ext_resource type="Script" uid="uid://bquv1iyagusay" path="res://Scripts/ui_hud_minijeux.gd" id="1_gvlvg"]
+[ext_resource type="Texture2D" uid="uid://nf26jk2jgfdf" path="res://Assets/UI/hud/interaction/ui_interaction.png" id="2_lwa1m"]
+[ext_resource type="FontFile" uid="uid://bm7oo6qp1ovv1" path="res://Assets/UI/fonts/Oxanium-Bold.ttf" id="3_kdgwo"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="4_8w11y"]
+[ext_resource type="Script" uid="uid://csvf5whbx252a" path="res://Scripts/UI/mini_jeux_player.gd" id="5_kdgwo"]
+
+[node name="ui_hud_minijeux" type="Control" unique_id=383752429]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_gvlvg")
+
+[node name="interaction" type="TextureRect" parent="." unique_id=449320077]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.8
+anchor_right = 0.55
+anchor_bottom = 0.95
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_lwa1m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="interaction" unique_id=358271008]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.15
+anchor_right = 0.90000004
+anchor_bottom = 0.9
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.96474224, 0.96474224, 0.9647421, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_kdgwo")
+theme_override_font_sizes/font_size = 72
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("4_8w11y")
+max_font_size = 128
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="MiniJeux" type="Control" parent="." unique_id=455341903]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_kdgwo")
