@@ -22,9 +22,9 @@
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="10_jqu2h"]
 [ext_resource type="Texture2D" uid="uid://0yef6qco0qhy" path="res://Assets/UI/miniGames/ui_carnet.png" id="20_i70bm"]
 [ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="21_bpvyt"]
-[ext_resource type="AudioStream" uid="uid://cp32fwycollkh" path="res://Assets/Themes/Main Sound 3.mp3" id="23_i70bm"]
 [ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="23_k1ae6"]
 [ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="24_vx851"]
+[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Themes/696408__bloodpixelhero__adventure-theme-9.wav" id="25_vx851"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
 
@@ -866,10 +866,9 @@ metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1798296017]
 process_mode = 3
-stream = ExtResource("23_i70bm")
+stream = ExtResource("25_vx851")
 volume_db = -10.0
 autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="all_buttons/TextureButton" to="all_buttons/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="all_buttons/TextureButton2" to="all_buttons/TextureButton2" method="_on_pressed"]

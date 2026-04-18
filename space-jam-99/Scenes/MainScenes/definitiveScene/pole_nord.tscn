@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://dnvs4t2hffp5"]
 
+[ext_resource type="AudioStream" uid="uid://bl2c81qnsxfi8" path="res://Assets/Themes/PoleNord.wav" id="1_1gk3e"]
+
 [node name="PoleNord" type="Node3D" unique_id=1427161973]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=759227887]
+stream = ExtResource("1_1gk3e")
+volume_db = -5.0
+autoplay = true

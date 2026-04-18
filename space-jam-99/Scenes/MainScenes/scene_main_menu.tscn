@@ -217,6 +217,7 @@ stretch_mode = 5
 stream = ExtResource("9_qjtga")
 volume_db = -20.0
 autoplay = true
+parameters/looping = true
 
 [connection signal="mouse_entered" from="script_MainMenu/CanvasLayer/ButtonManager/StartTextureButton" to="script_MainMenu/CanvasLayer/ButtonManager/StartTextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="script_MainMenu/CanvasLayer/ButtonManager/StartTextureButton" to="script_MainMenu/CanvasLayer/ButtonManager/StartTextureButton" method="_on_mouse_exited"]

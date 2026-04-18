@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="6_1b2qt"]
 [ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="6_ew7vi"]
 [ext_resource type="PackedScene" uid="uid://qroh0v3nwgds" path="res://Scenes/MainScenes/MiniGameInteraction.tscn" id="6_gs7mn"]
+[ext_resource type="AudioStream" uid="uid://cfhtl0cn674am" path="res://Assets/Themes/819267__johnmode__160bpm-retro-game-square-wave-song-mysterious-exploration.wav" id="9_gs7mn"]
 
 [sub_resource type="Environment" id="Environment_1b2qt"]
 ambient_light_source = 3
@@ -185,3 +186,8 @@ nextLevelScene = "res://Scenes/MainScenes/scene_main_menu.tscn"
 
 [node name="Player2" parent="." unique_id=2002350393 instance=ExtResource("6_1b2qt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.493323, 1.2461188, -5.6874537)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1743886130]
+stream = ExtResource("9_gs7mn")
+volume_db = -10.0
+autoplay = true
