@@ -318,3 +318,4 @@ max_font_size = 92
 
 [connection signal="mouse_entered" from="StartTextureButton" to="StartTextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StartTextureButton" to="StartTextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="StartTextureButton" to="." method="_on_start_texture_button_pressed"]

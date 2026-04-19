@@ -24,5 +24,3 @@ func get_hit():
 	time += timePenality
 	hud.time_update(time, true)
 	particle_explozion.emitting=true;
-	var iInt: int = randi() % 10
-	hud_pause_menu.AudioManager.play_ui_sfx(hud_pause_menu.AudioManager._sfx_vox_degat[iInt])

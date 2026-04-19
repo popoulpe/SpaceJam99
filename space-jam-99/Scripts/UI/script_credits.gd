@@ -36,3 +36,7 @@ func _on_timer_timeout(f:float):
 	_movingControls[3].position =  _position[3] + Vector2(u,v)*fspeed
 	_movingControls[4].scale = Vector2(1+v/20,1+v/20)
 	_movingControls[4].position =  _position[4] + Vector2(v,u)*fspeed
+
+
+func _on_start_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/MainScenes/scene_main_menu.tscn")

@@ -1,7 +1,6 @@
 extends Control
 class_name ui_hud_speed
 
-@export var player : Control
 @onready var character_body_3d = $".."
 @onready var temps = $Temps_/temps_label
 @onready var vitesse_big = $Vitesse_/big_numbers
@@ -32,7 +31,6 @@ func _process(delta):
 	
 	if(!bOnce):
 		if(vitess_progressBar.value>=80):
-			yeay()
 			bOnce=true
 	else:
 		if(vitess_progressBar.value<=40):
@@ -46,11 +44,6 @@ func _process(delta):
 	var r: float = sin(angle)
 	var g:float = cos(angle)
 	vitesse_big.position = Vector2(vectorVitesseText.x+r,vectorVitesseText.y+g)
-
-func yeay()->void:
-	if(player!=null):
-		var iInt: int = randi() % 4
-		player.hud_pause_menu.AudioManager.play_ui_sfx(player.hud_pause_menu.AudioManager._sfx_vox_vitesse[iInt])
 
 func time_update(time:float, gotHit:bool):
 	var snapped_time = snapped(time, 0.01)
