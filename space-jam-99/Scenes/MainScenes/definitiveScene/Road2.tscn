@@ -43,15 +43,6 @@ dof_blur_amount = 1.0
 
 [sub_resource type="Compositor" id="Compositor_txjhk"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rhwl7"]
-render_priority = 0
-shader = ExtResource("4_1nla2")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_j3jhd"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_txjhk"]
-size = Vector3(1.375, 1.2680722, 1.7453613)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_tw10i"]
 _surfaces = [{
 "aabb": AABB(-0.6868298, -0.5288024, -0.09121451, 1.3736596, 1.0576048, 0.92749214),
@@ -209,6 +200,15 @@ shadow_mesh = SubResource("ArrayMesh_qkq78")
 [sub_resource type="BoxShape3D" id="BoxShape3D_icyiy"]
 size = Vector3(1.2413641, 4.178474, 2.9297943)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rhwl7"]
+render_priority = 0
+shader = ExtResource("4_1nla2")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j3jhd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_txjhk"]
+size = Vector3(1.375, 1.2680722, 1.7453613)
+
 [node name="Road1" type="Node3D" unique_id=1631416252]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=790118371]
@@ -227,114 +227,6 @@ data = {
 "cells": PackedInt32Array(327679, 65535, 11, 327679, 0, 11, 327678, 0, 7, 327678, 65535, 7, 327677, 65535, 8, 327677, 0, 8, 262140, 65535, 3, 262140, 0, 5, 262139, 0, 4, 262139, 65535, 5, 262138, 0, 5, 262138, 65535, 4, 262137, 0, 8, 262137, 65535, 11, 262136, 65535, 2, 262135, 65535, 0, 262134, 65535, 8, 196600, 0, 3, 196599, 0, 4, 196598, 0, 5, 196597, 65535, 10, 196597, 0, 10, 196596, 65535, 2, 196596, 0, 1, 196595, 0, 8, 196595, 65535, 8, 131058, 65535, 8, 131058, 0, 1, 131057, 0, 11, 131056, 0, 8, 65521, 65535, 8, 65519, 0, 8, -16, 65535, 3, -17, 65535, 3, -18, 0, 0, -18, 65535, 5, -19, 0, 4, -19, 65535, 5, -20, 65535, 8, -20, 0, 8, -65557, 0, 6, -65557, 65535, 1, -65558, 0, 8, -65558, 65535, 8, -131095, 0, 4, -131095, 65535, 5, -131096, 65535, 5, -131096, 0, 4, -131097, 0, 8, -131097, 65535, 8, -196634, 0, 8, -196634, 65535, 8, -262171, 65535, 11, -262171, 0, 11, -262172, 65535, 8, -262172, 0, 8)
 }
 metadata/_editor_floor_ = Vector3(0, -6, 0)
-
-[node name="SpeedPad" type="MeshInstance3D" parent="." unique_id=812599734]
-transform = Transform3D(-4.0724973e-07, -3.6328378, 9.316787, -1.5879642e-07, 9.316787, 3.6328378, -10.000001, -1.6886486e-14, -4.3711404e-07, 310.9814, 94.05356, -17.908684)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad" unique_id=1885484033]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad/StaticBody3D" unique_id=2079328937]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPad2" type="MeshInstance3D" parent="." unique_id=1475018854]
-transform = Transform3D(-4.3613366e-07, 0.6693568, 9.977573, 2.9258493e-08, 9.977573, -0.6693568, -10.000001, -1.6886486e-14, -4.3711404e-07, 36.03501, 79.955864, -16.48721)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad2" unique_id=555170340]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad2/StaticBody3D" unique_id=2106980595]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPad3" type="MeshInstance3D" parent="." unique_id=1587232857]
-transform = Transform3D(-4.371139e-07, 0, 10.000002, 0, 10.000002, 0, -10, 0, -4.3711395e-07, -339.7282, 50.0019, -16.48721)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad3" unique_id=361518667]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad3/StaticBody3D" unique_id=1016041759]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPadUP" type="MeshInstance3D" parent="." unique_id=76016797]
-transform = Transform3D(-4.335446e-07, -1.8520359, -9.827004, 5.5746032e-08, 9.827004, -1.8520359, 9.999999, -1.3507567e-07, -4.1572014e-07, -688.8228, -5.5788026, -41.75427)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP" unique_id=2046709091]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP/StaticBody3D" unique_id=4311949]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPadUP2" type="MeshInstance3D" parent="." unique_id=559268817]
-transform = Transform3D(-4.335446e-07, -1.8520359, -9.827004, 5.5746032e-08, 9.827004, -1.8520359, 9.999999, -1.3507567e-07, -4.1572014e-07, -609.3885, 14.426294, -27.055283)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP2" unique_id=1380297769]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP2/StaticBody3D" unique_id=2070965775]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPadUP3" type="MeshInstance3D" parent="." unique_id=1916224292]
-transform = Transform3D(-4.335446e-07, -1.8520359, -9.827004, 5.5746032e-08, 9.827004, -1.8520359, 9.999999, -1.3507567e-07, -4.1572014e-07, -881.85767, -13.19109, -4.9419365)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP3" unique_id=554348983]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP3/StaticBody3D" unique_id=1853177504]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPadUP4" type="MeshInstance3D" parent="." unique_id=423740221]
-transform = Transform3D(-4.3709295e-07, -3.182976, -9.479911, -4.272183e-09, 9.479911, -3.182976, 9.999999, -1.3507565e-07, -4.157201e-07, -804.8659, 4.428193, 9.75705)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP4" unique_id=1297759651]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP4/StaticBody3D" unique_id=1737513796]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPadUP5" type="MeshInstance3D" parent="." unique_id=480806928]
-transform = Transform3D(-4.353444e-07, -2.2228029, -9.749829, 3.9290097e-08, 9.749829, -2.2228029, 9.999998, -1.3507564e-07, -4.1572008e-07, -1237.3367, -45.696877, -14.288208)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP5" unique_id=1043984923]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP5/StaticBody3D" unique_id=1898442669]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
-
-[node name="SpeedPadUP6" type="MeshInstance3D" parent="." unique_id=1454592795]
-transform = Transform3D(-4.353444e-07, -2.2228029, -9.749829, 3.9290097e-08, 9.749829, -2.2228029, 9.999998, -1.3507564e-07, -4.1572008e-07, -1537.7261, -83.69035, -14.288208)
-material_override = SubResource("ShaderMaterial_rhwl7")
-mesh = SubResource("PlaneMesh_j3jhd")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP6" unique_id=539306410]
-collision_layer = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP6/StaticBody3D" unique_id=816542825]
-transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
-shape = SubResource("BoxShape3D_txjhk")
 
 [node name="SM_Satelifeet3" type="Node3D" parent="." unique_id=1725485815]
 transform = Transform3D(1.5253131, 1.4322507, 1.3682389, -1.1735212, 2.0446367, -0.83205116, -1.5957031, -0.13460755, 1.919795, 228.93167, 89.65427, -17.696352)
@@ -566,3 +458,115 @@ collision_layer = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Satelifeet5/Object002/StaticBody3D" unique_id=669871114]
 transform = Transform3D(1.0000026, -1.3261294e-08, 2.3006535e-08, 4.1630187e-08, 1, 0, 1.4890697e-06, 5.9604645e-08, 1, 0.0033607483, -0.023803711, 0)
 shape = SubResource("BoxShape3D_icyiy")
+
+[node name="SpeedPads" type="Node3D" parent="." unique_id=673615346]
+
+[node name="SpeedPadUP" type="MeshInstance3D" parent="SpeedPads" unique_id=76016797]
+transform = Transform3D(-4.335446e-07, -1.8520359, -9.827004, 5.5746032e-08, 9.827004, -1.8520359, 9.999999, -1.3507567e-07, -4.1572014e-07, -688.8228, -5.5788026, -41.75427)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP" unique_id=2046709091]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP/StaticBody3D" unique_id=4311949]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPadUP2" type="MeshInstance3D" parent="SpeedPads" unique_id=559268817]
+transform = Transform3D(-4.335446e-07, -1.8520359, -9.827004, 5.5746032e-08, 9.827004, -1.8520359, 9.999999, -1.3507567e-07, -4.1572014e-07, -609.3885, 14.426294, -27.055283)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP2" unique_id=1380297769]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP2/StaticBody3D" unique_id=2070965775]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPadUP3" type="MeshInstance3D" parent="SpeedPads" unique_id=1916224292]
+transform = Transform3D(-4.335446e-07, -1.8520359, -9.827004, 5.5746032e-08, 9.827004, -1.8520359, 9.999999, -1.3507567e-07, -4.1572014e-07, -881.85767, -13.19109, -4.9419365)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP3" unique_id=554348983]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP3/StaticBody3D" unique_id=1853177504]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPadUP4" type="MeshInstance3D" parent="SpeedPads" unique_id=423740221]
+transform = Transform3D(-4.3709295e-07, -3.182976, -9.479911, -4.272183e-09, 9.479911, -3.182976, 9.999999, -1.3507565e-07, -4.157201e-07, -804.8659, 4.428193, 9.75705)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP4" unique_id=1297759651]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP4/StaticBody3D" unique_id=1737513796]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPadUP5" type="MeshInstance3D" parent="SpeedPads" unique_id=480806928]
+transform = Transform3D(-4.353444e-07, -2.2228029, -9.749829, 3.9290097e-08, 9.749829, -2.2228029, 9.999998, -1.3507564e-07, -4.1572008e-07, -1237.3367, -45.696877, -14.288208)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP5" unique_id=1043984923]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP5/StaticBody3D" unique_id=1898442669]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPadUP6" type="MeshInstance3D" parent="SpeedPads" unique_id=1454592795]
+transform = Transform3D(-4.353444e-07, -2.2228029, -9.749829, 3.9290097e-08, 9.749829, -2.2228029, 9.999998, -1.3507564e-07, -4.1572008e-07, -1537.7261, -83.69035, -14.288208)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP6" unique_id=539306410]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP6/StaticBody3D" unique_id=816542825]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPadFirst" type="Node3D" parent="." unique_id=667142067]
+
+[node name="SpeedPad" type="MeshInstance3D" parent="SpeedPadFirst" unique_id=812599734]
+transform = Transform3D(-4.0724973e-07, -3.6328378, 9.316787, -1.5879642e-07, 9.316787, 3.6328378, -10.000001, -1.6886486e-14, -4.3711404e-07, 310.9814, 94.05356, -17.908684)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadFirst/SpeedPad" unique_id=1885484033]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadFirst/SpeedPad/StaticBody3D" unique_id=2079328937]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPad2" type="MeshInstance3D" parent="SpeedPadFirst" unique_id=1475018854]
+transform = Transform3D(-4.3613366e-07, 0.6693568, 9.977573, 2.9258493e-08, 9.977573, -0.6693568, -10.000001, -1.6886486e-14, -4.3711404e-07, 36.03501, 79.955864, -16.48721)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadFirst/SpeedPad2" unique_id=555170340]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadFirst/SpeedPad2/StaticBody3D" unique_id=2106980595]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
+
+[node name="SpeedPad3" type="MeshInstance3D" parent="SpeedPadFirst" unique_id=1587232857]
+transform = Transform3D(-4.371139e-07, 0, 10.000002, 0, 10.000002, 0, -10, 0, -4.3711395e-07, -339.7282, 50.0019, -16.48721)
+material_override = SubResource("ShaderMaterial_rhwl7")
+mesh = SubResource("PlaneMesh_j3jhd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadFirst/SpeedPad3" unique_id=361518667]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadFirst/SpeedPad3/StaticBody3D" unique_id=1016041759]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
+shape = SubResource("BoxShape3D_txjhk")
