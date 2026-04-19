@@ -1,6 +1,44 @@
 [gd_scene format=3 uid="uid://b6eudaugck8no"]
 
 [ext_resource type="AudioStream" uid="uid://b58umf2g436st" path="res://Assets/Themes/Main Sound 2.mp3" id="1_48xn0"]
+[ext_resource type="Texture2D" uid="uid://dvliin5whrxu3" path="res://Assets/Enviro/SpaceTest2.2.png" id="2_cshxj"]
+[ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="3_8x0vo"]
+[ext_resource type="MeshLibrary" uid="uid://d4fn5k0v2jfsw" path="res://Assets/Tileset3D/TiesRoadv3.2.meshlib" id="4_8x0vo"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_87xx4"]
+panorama = ExtResource("2_cshxj")
+
+[sub_resource type="Sky" id="Sky_l5uwb"]
+sky_material = SubResource("PanoramaSkyMaterial_87xx4")
+
+[sub_resource type="Environment" id="Environment_g0m66"]
+background_mode = 2
+background_energy_multiplier = 1.22
+sky = SubResource("Sky_l5uwb")
+ambient_light_source = 3
+reflected_light_source = 1
+glow_enabled = true
+glow_intensity = 1.39
+glow_bloom = 0.33
+glow_hdr_threshold = 2.0
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.36078432, 0.5372549, 0.9372549, 1)
+fog_light_energy = 0.8
+fog_density = 1.1
+fog_aerial_perspective = 0.528
+fog_sky_affect = 0.299
+fog_depth_curve = 0.6372803
+fog_depth_begin = 50.0
+fog_depth_end = 500.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vuxwu"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 30.0
+dof_blur_far_transition = 10.0
+dof_blur_amount = 1.0
+
+[sub_resource type="Compositor" id="Compositor_83drr"]
 
 [node name="Road1" type="Node3D" unique_id=1631416252]
 
@@ -9,3 +47,20 @@ stream = ExtResource("1_48xn0")
 volume_db = 10.0
 autoplay = true
 parameters/looping = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=531223413]
+environment = SubResource("Environment_g0m66")
+camera_attributes = SubResource("CameraAttributesPractical_vuxwu")
+compositor = SubResource("Compositor_83drr")
+
+[node name="planete_mesh" parent="WorldEnvironment" unique_id=1689343277 instance=ExtResource("3_8x0vo")]
+transform = Transform3D(-3.2766159, 1.7757478, -3.3332431, -3.7583535, -1.0981534, 3.109475, 0.37224567, 4.5432124, 2.0544238, -2006.9427, 877.575, -47.000183)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=329932106]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
+mesh_library = ExtResource("4_8x0vo")
+cell_size = Vector3(60, 20, 30)
+data = {
+"cells": PackedInt32Array(1245182, 1, 7, 1245182, 0, 7, 1245181, 0, 9, 1245181, 1, 9, 1310716, 0, 8, 1310716, 1, 8, 1245183, 1, 0, 1245183, 0, 3, 1245179, 1, 3, 1245178, 1, 8, 1245179, 0, 8, 1179642, 0, 8, 1179641, 1, 8, 1114105, 0, 10, 1114104, 0, 5, 1114104, 1, 3, 1114103, 0, 8, 1114103, 1, 4, 1114102, 1, 8, 1048566, 0, 9, 1048565, 1, 8, 1114101, 0, 5, 1114100, 0, 8, 1048563, 0, 3, 983028, 1, 11, 983027, 1, 9, 1048562, 1, 9, 1114097, 1, 7, 1114096, 1, 6, 1114095, 1, 8, 1048558, 1, 0, 1048562, 0, 0, 1048561, 0, 4, 1048560, 0, 8, 983023, 0, 1, 983022, 0, 9, 1048557, 0, 5, 1048557, 1, 4, 1048556, 0, 4, 1048556, 1, 5, 1048555, 0, 8, 1048555, 1, 8, 983018, 1, 9, 983018, 0, 9, 1245184, 1, 8, 1245184, 0, 8, 1310721, 1, 8, 1310721, 0, 8, 1310722, 1, 2, 1310722, 0, 2, 1310723, 1, 7, 1310723, 0, 4, 1310724, 1, 4, 1310724, 0, 3, 1310725, 1, 11, 1310725, 0, 6, 1310726, 1, 6, 1310726, 0, 7, 1376263, 0, 8, 1376263, 1, 8)
+}
+metadata/_editor_floor_ = Vector3(0, 21, 0)
