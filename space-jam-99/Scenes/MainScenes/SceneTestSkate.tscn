@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="6_ew7vi"]
 [ext_resource type="PackedScene" uid="uid://qroh0v3nwgds" path="res://Scenes/MainScenes/MiniGameInteraction.tscn" id="6_gs7mn"]
 [ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/player/Player.tscn" id="9_aqaha"]
-[ext_resource type="AudioStream" uid="uid://cfhtl0cn674am" path="res://Assets/Themes/819267__johnmode__160bpm-retro-game-square-wave-song-mysterious-exploration.wav" id="9_gs7mn"]
+[ext_resource type="AudioStream" uid="uid://cfhtl0cn674am" path="res://Assets/Audio/Music/819267__johnmode__160bpm-retro-game-square-wave-song-mysterious-exploration.wav" id="9_gs7mn"]
 
 [sub_resource type="Environment" id="Environment_1b2qt"]
 ambient_light_source = 3

@@ -4,6 +4,7 @@ var isFromEarth :bool = false
 var asFinishedLevelTask :bool = false
 var canMove :bool= true
 
+var windowMode
 var ScientifeetDialogStep :int=0
 
 var AllScientifeetDialog: Array[String]=[
@@ -21,12 +22,25 @@ var AllRoadsScenes: Array[String]=[
 ]
 
 var AllPoleScene: Array[String]=[
-	"res://Scenes/MainScenes/definitiveScene/pole_ile.tscn",
 	"res://Scenes/MainScenes/definitiveScene/pole_nord.tscn",
+	"res://Scenes/MainScenes/definitiveScene/pole_ile.tscn",
 	"res://Scenes/MainScenes/definitiveScene/pole_sud.tscn"
 ]
+
+func showMouse():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func hideMouse():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func changeSceneToRoad(fromEarth:bool):
 	GlobalScript.asFinishedLevelTask=false
 	isFromEarth = fromEarth
 	get_tree().change_scene_to_file(AllRoadsScenes[ScientifeetDialogStep])
+
+func _on_toggled(toggled_on):
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		windowMode = DisplayServer.window_get_mode()
+	else:
+		DisplayServer.window_set_mode(windowMode)

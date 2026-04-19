@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qroh0v3nwgds"]
 
-[ext_resource type="Script" uid="uid://00tae10mmhn0" path="res://Scripts/Interactibles/MiniGameInteraction.gd" id="1_3kd1e"]
-[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Themes/696408__bloodpixelhero__adventure-theme-9.wav" id="2_4hvue"]
+[ext_resource type="Script" path="res://Scripts/Interactibles/MiniGameInteraction.gd" id="1_3kd1e"]
+[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Audio/Music/696408__bloodpixelhero__adventure-theme-9.wav" id="2_4hvue"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4hvue"]
 size = Vector3(7.6362915, 4.9192505, 5.6049194)

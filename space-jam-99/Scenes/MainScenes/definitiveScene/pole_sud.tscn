@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c5uq4wqnkslob"]
 
-[ext_resource type="AudioStream" uid="uid://dph8wy4vxudul" path="res://Assets/Themes/PoleSud.wav" id="1_x0nb4"]
+[ext_resource type="AudioStream" uid="uid://dph8wy4vxudul" path="res://Assets/Audio/Music/PoleSud.wav" id="1_x0nb4"]
 [ext_resource type="Material" uid="uid://cmrw4021oecqd" path="res://Assets/farfaline/PolSud.tres" id="2_n7hxy"]
 [ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="3_ea2je"]
 [ext_resource type="PackedScene" uid="uid://chcla7l5vg3nd" path="res://Assets/Enviro/pole_sud_props.fbx" id="3_n7hxy"]

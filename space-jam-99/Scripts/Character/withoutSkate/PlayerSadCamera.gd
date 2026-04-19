@@ -5,7 +5,7 @@ extends SpringArm3D
 var _camera_input_direction := Vector2.ZERO
 
 func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	GlobalScript.hideMouse()
 	
 
 func _unhandled_input(event : InputEvent) -> void:

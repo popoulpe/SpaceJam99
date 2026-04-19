@@ -45,6 +45,7 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	bIsBig=!bIsBig
+	GlobalScript._on_toggled(bIsBig)
 	if(bIsBig):
 		$".".texture_normal = _sprites[0]
 	else:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dciysrbfpasrc"
+path="res://.godot/imported/Main Sound.mp3-be42711895c3b2f61d30a810b8e4a190.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Main Sound.mp3"
+dest_files=["res://.godot/imported/Main Sound.mp3-be42711895c3b2f61d30a810b8e4a190.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

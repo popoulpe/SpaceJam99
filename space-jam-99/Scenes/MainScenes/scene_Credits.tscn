@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="3_y17dc"]
 [ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="4_y17dc"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="5_xpf4e"]
-[ext_resource type="AudioStream" uid="uid://btss8rtkgk8i0" path="res://Assets/Themes/Main Sound 4.mp3" id="9_xpf4e"]
+[ext_resource type="AudioStream" uid="uid://btss8rtkgk8i0" path="res://Assets/Audio/Music/Main Sound 4.mp3" id="9_xpf4e"]
 
 [node name="SceneCredits" type="Control" unique_id=647363157 node_paths=PackedStringArray("_movingControls")]
 layout_mode = 3
@@ -264,7 +264,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 0.62820196, 0.13293543, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_y17dc")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 29
 text = "UI/UX, 2D Artist/Programmer"
 horizontal_alignment = 1
 vertical_alignment = 1

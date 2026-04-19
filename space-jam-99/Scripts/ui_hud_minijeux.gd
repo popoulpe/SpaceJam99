@@ -6,12 +6,10 @@ class_name ui_hud_minijeux
 
 func show_interact_ui():
 	visible = true
-	if mini_jeux.visible:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func hide_interact_ui():
 	visible = false
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	GlobalScript.hideMouse()
 
 func interact(MiniJeuxName:String) -> void:
 	var tween = get_tree().create_tween()
@@ -22,5 +20,5 @@ func interact(MiniJeuxName:String) -> void:
 		panel_interact.visible = false
 		mini_jeux.visible = true
 		GlobalScript.canMove = false
-		Input.mouse_mode =Input.MOUSE_MODE_VISIBLE
+		GlobalScript.showMouse()
 		mini_jeux.start_miniJeux(MiniJeuxName))
