@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cuj8xpgi3nem7"]
+
+[ext_resource type="Texture2D" uid="uid://kbbd2buhlxxl" path="res://Assets/farfaline/vaisseau.png" id="1_td2oc"]
+[ext_resource type="Shader" uid="uid://b5n7o8o8l8qab" path="res://Assets/farfaline/OutlineBeter.gdshader" id="2_qcs54"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ciowo"]
+render_priority = 0
+shader = ExtResource("2_qcs54")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_ciowo")
+shading_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1.4369954, 1.4369954, 1.4369954, 1)
+albedo_texture = ExtResource("1_td2oc")
+metallic = 0.24
+metallic_specular = 0.0
+roughness = 0.0
+stencil_flags = 2
+stencil_outline_thickness = 0.028

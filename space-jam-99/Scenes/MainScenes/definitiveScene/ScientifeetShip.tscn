@@ -4,10 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://borlh0p6lg8no" path="res://Assets/Enviro/V2_vaisseau_fenetres.fbx" id="3_7m7bv"]
 [ext_resource type="Texture2D" uid="uid://ds37ldi5tsx81" path="res://Assets/Enviro/poster_1.png" id="3_iyy5o"]
 [ext_resource type="Texture2D" uid="uid://b6nsbvymswbxt" path="res://Assets/Enviro/sofa_vaisseau.png" id="4_83gqo"]
-[ext_resource type="Texture2D" uid="uid://p8rgcpvh5uy5" path="res://Assets/Enviro/vaisseau.png" id="5_7m7bv"]
 [ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="6_imsxu"]
 [ext_resource type="PackedScene" uid="uid://c6xpdfw3dxiim" path="res://Scenes/PrefabScene/Scientifeet/scientifeetDefault.tscn" id="7_7ivks"]
+[ext_resource type="Material" uid="uid://cuj8xpgi3nem7" path="res://Assets/farfaline/SpaceShip1.tres" id="7_83gqo"]
 [ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="7_iyy5o"]
+[ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="10_imsxu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_imsxu"]
 albedo_texture = ExtResource("2_7ivks")
@@ -17,9 +18,6 @@ albedo_texture = ExtResource("3_iyy5o")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2c3rp"]
 albedo_texture = ExtResource("4_83gqo")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37dwb"]
-albedo_texture = ExtResource("5_7m7bv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tp6w"]
 transparency = 1
@@ -49,6 +47,47 @@ size = Vector3(9.700081, 14.636338, 27.117989)
 [sub_resource type="BoxShape3D" id="BoxShape3D_m4x57"]
 size = Vector3(9.036076, 27.243038, 27.117989)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_83gqo"]
+load_path = "res://.godot/imported/SpaceTest2.2.png-1a9baf970d991f2c9fb6c76730f26de6.s3tc.ctex"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7m7bv"]
+panorama = SubResource("CompressedTexture2D_83gqo")
+energy_multiplier = 1.4
+
+[sub_resource type="Sky" id="Sky_imsxu"]
+sky_material = SubResource("PanoramaSkyMaterial_7m7bv")
+
+[sub_resource type="Environment" id="Environment_ishq2"]
+background_mode = 2
+background_energy_multiplier = 1.22
+sky = SubResource("Sky_imsxu")
+sky_custom_fov = 82.2
+sky_rotation = Vector3(0, -3.9357173, 0)
+ambient_light_source = 3
+reflected_light_source = 1
+glow_enabled = true
+glow_intensity = 1.86
+glow_bloom = 0.28
+glow_hdr_threshold = 1.85
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.36078432, 0.5372549, 0.9372549, 1)
+fog_light_energy = 0.8
+fog_density = 1.1
+fog_aerial_perspective = 0.528
+fog_sky_affect = 0.299
+fog_depth_curve = 0.61557233
+fog_depth_begin = 80.0
+fog_depth_end = 4000.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_mt3r3"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 30.0
+dof_blur_far_transition = 10.0
+dof_blur_amount = 1.0
+
+[sub_resource type="Compositor" id="Compositor_n0jym"]
+
 [node name="ScientifeetShip" type="Node3D" unique_id=875076472]
 
 [node name="Player" parent="." unique_id=2002350393 instance=ExtResource("6_imsxu")]
@@ -62,11 +101,12 @@ transform = Transform3D(0.7347133, 0.26433292, -0.6247595, 0.1178806, 0.85720295
 [node name="V2_vaisseau_fenetres" parent="StaticBody3D" unique_id=1072591383 instance=ExtResource("3_7m7bv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, 0, -0.578)
 
-[node name="poster_2" parent="StaticBody3D/V2_vaisseau_fenetres" index="0" unique_id=439413787]
+[node name="poster_2" parent="StaticBody3D/V2_vaisseau_fenetres" index="0" unique_id=270612345]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.6143842, 14.219234, -21.117237)
 surface_material_override/0 = SubResource("StandardMaterial3D_imsxu")
 surface_material_override/1 = SubResource("StandardMaterial3D_ishq2")
 surface_material_override/2 = SubResource("StandardMaterial3D_2c3rp")
-surface_material_override/3 = SubResource("StandardMaterial3D_37dwb")
+surface_material_override/3 = ExtResource("7_83gqo")
 surface_material_override/4 = SubResource("StandardMaterial3D_1tp6w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=695224812]
@@ -113,17 +153,13 @@ shape = SubResource("BoxShape3D_ishq2")
 transform = Transform3D(-4.3711385e-08, 0.9999999, -4.3711385e-08, 0, -4.3711385e-08, -0.9999999, -0.9999999, -4.3711385e-08, 1.9106853e-15, -7.6320376, 12.894804, -20.154074)
 shape = SubResource("BoxShape3D_m4x57")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=583325326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.707617, 0)
-omni_range = 439.214
-
 [node name="Scientifeet" parent="." unique_id=1396396552 instance=ExtResource("7_7ivks")]
 transform = Transform3D(0.13763456, 0, 0.99048305, 0, 1, 0, -0.99048305, 0, 0.13763456, -15.831639, -0.258559, -9.36962)
 
-[node name="Main" parent="Scientifeet/animations_scientifeet" parent_id_path=PackedInt32Array(1396396552, 632991482) index="0" unique_id=455851315]
+[node name="Main" parent="Scientifeet/animations_scientifeet" parent_id_path=PackedInt32Array(1396396552, 632991482) index="0" unique_id=2028192545]
 transform = Transform3D(-0.9999658, 0.007528918, 0.0033959644, 0.007630956, 0.9994867, 0.031107241, -0.003160018, 0.031132089, -0.99951017, -0.28474796, -0.08076965, 1.1567001)
 
-[node name="Skeleton3D" parent="Scientifeet/animations_scientifeet/Main" index="0" unique_id=1671109613]
+[node name="Skeleton3D" parent="Scientifeet/animations_scientifeet/Main" index="0" unique_id=1016497852]
 bones/1/rotation = Quaternion(-0.057631038, 0.0018955548, 0.0021163383, 0.9983339)
 bones/2/rotation = Quaternion(-0.015582758, 0.0033794255, 0.004447224, 0.999863)
 bones/3/rotation = Quaternion(0.043703713, 0.0035025142, 0.004350947, 0.999029)
@@ -177,6 +213,14 @@ bones/63/rotation = Quaternion(0.23332447, -0.29357767, -0.017262245, 0.9268625)
 bones/64/rotation = Quaternion(-0.5115715, 0.33900183, 0.16476405, 0.7721561)
 bones/65/rotation = Quaternion(0.044296585, 0.92583185, -0.37274897, -0.04394837)
 bones/66/rotation = Quaternion(-0.60748625, 0.72133076, -0.21832314, -0.2509532)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=753384304]
+environment = SubResource("Environment_ishq2")
+camera_attributes = SubResource("CameraAttributesPractical_mt3r3")
+compositor = SubResource("Compositor_n0jym")
+
+[node name="planete_mesh" parent="WorldEnvironment" unique_id=1689343277 instance=ExtResource("10_imsxu")]
+transform = Transform3D(0.9629954, -0.17253259, 0.20705642, 0.25903127, 0.3802649, -0.8878634, 0.07444909, 0.90864253, 0.41088468, -628.03845, -71.57659, -49.247555)
 
 [editable path="StaticBody3D/V2_vaisseau_fenetres"]
 [editable path="Scientifeet"]

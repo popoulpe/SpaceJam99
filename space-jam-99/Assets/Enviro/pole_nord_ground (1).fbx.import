@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://h3jlninj5kqy"
-path="res://.godot/imported/pole_sud_ground.fbx-1be9fec6220594a88aae178726208346.scn"
+uid="uid://6oyhyod3mkul"
+path="res://.godot/imported/pole_nord_ground (1).fbx-39de6817c88da13b271eb9ad83fba78c.scn"
 
 [deps]
 
-source_file="res://Assets/Enviro/pole_sud_ground.fbx"
-dest_files=["res://.godot/imported/pole_sud_ground.fbx-1be9fec6220594a88aae178726208346.scn"]
+source_file="res://Assets/Enviro/pole_nord_ground (1).fbx"
+dest_files=["res://.godot/imported/pole_nord_ground (1).fbx-39de6817c88da13b271eb9ad83fba78c.scn"]
 
 [params]
 
@@ -39,10 +39,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Material.048": {
+"Material.001": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/farfaline/PolSud.tres",
-"use_external/path": "uid://cmrw4021oecqd"
+"use_external/fallback_path": "res://Assets/farfaline/PoleNord.tres",
+"use_external/path": "uid://b8qmfuuiu65f4"
 }
 }
 }
