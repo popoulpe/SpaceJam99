@@ -1,6 +1,7 @@
 extends Control
 class_name ui_hud_speed
 
+@export var hud : ui_hud_pause
 @onready var character_body_3d = $".."
 @onready var temps = $Temps_/temps_label
 @onready var vitesse_big = $Vitesse_/big_numbers
@@ -30,7 +31,9 @@ func _process(delta):
 		timeColor = lerp(timeColor, timeColor_wanted, 2 * delta)
 	
 	if(!bOnce):
-		if(vitess_progressBar.value>=80):
+		if(vitess_progressBar.value>=60):
+			var iInt: int = randi() % 4
+			hud.AudioManager.play_ui_sfx(hud.AudioManager._sfx_vox_vitesse[iInt])
 			bOnce=true
 	else:
 		if(vitess_progressBar.value<=40):

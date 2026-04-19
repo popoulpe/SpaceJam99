@@ -517,9 +517,10 @@ colors = PackedColorArray(0.9999998, 0.90371025, 0.5217282, 1, 0.99999994, 0.751
 [sub_resource type="BoxShape3D" id="BoxShape3D_oifln"]
 size = Vector3(5.2805176, 1, 2.1253052)
 
-[node name="Player" type="Node3D" unique_id=2002350393 node_paths=PackedStringArray("hud")]
+[node name="Player" type="Node3D" unique_id=2002350393 node_paths=PackedStringArray("hud", "hud_pause")]
 script = ExtResource("1_yucit")
 hud = NodePath("CharacterBody3D/ui_hud_skate")
+hud_pause = NodePath("CharacterBody3D/HudPauseMenu")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1186776535]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -528,7 +529,8 @@ collision_mask = 3
 floor_constant_speed = true
 script = ExtResource("2_dbo68")
 
-[node name="ui_hud_skate" parent="CharacterBody3D" unique_id=1951736353 instance=ExtResource("3_fijso")]
+[node name="ui_hud_skate" parent="CharacterBody3D" unique_id=1951736353 node_paths=PackedStringArray("hud") instance=ExtResource("3_fijso")]
+hud = NodePath("../HudPauseMenu")
 
 [node name="HudPauseMenu" parent="CharacterBody3D" unique_id=3991799 instance=ExtResource("4_w7myw")]
 

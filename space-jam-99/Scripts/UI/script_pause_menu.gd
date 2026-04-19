@@ -1,4 +1,5 @@
 extends Control
+class_name ui_hud_pause
 var paused = false
 
 @export var AudioManager : Node

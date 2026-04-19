@@ -44,10 +44,6 @@ func checkCollisions():
 			invinsibility_timer.start(player.invulnerabilityDuration)
 			player.get_hit()
 
-
-
-
-
 func _on_invinsibility_timer_timeout():
 	set_collision_mask_value(2, true)
 

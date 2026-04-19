@@ -14,6 +14,10 @@ func show_interact_ui():
 func hide_interact_ui():
 	visible = false
 
+func hideScientifeet():
+	panel_scientifeet.hide()
+	panel_interact.show()
+
 func interact(text:String) -> void:
 	if(!bInteracted):
 		var tween = get_tree().create_tween()
@@ -21,6 +25,7 @@ func interact(text:String) -> void:
 		tween.tween_property(panel_interact, "scale", Vector2(1.05,1.05), 0.2).set_trans(Tween.TRANS_ELASTIC)
 		tween.tween_property(panel_interact, "scale", Vector2(1,1), 0.1).set_trans(Tween.TRANS_ELASTIC)
 		tween.tween_callback(func():
+			panel_scientifeet.show()
 			panel_interact.visible = false
 			panel_scientifeet.visible = true
 			label_scientifeet.start_dialogue(text)

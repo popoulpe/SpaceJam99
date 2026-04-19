@@ -25,7 +25,6 @@ var listAnimName:Array[String]=[
 	"goofy dance",
 	"kick_double"
 ]
-
 func _ready():
 	TextFile = GlobalScript.AllScientifeetDialog[GlobalScript.ScientifeetDialogStep]
 	file = FileAccess.open(TextFile, FileAccess.READ)
@@ -39,6 +38,8 @@ func Interact(player:PlayerWithoutSkate) -> void:
 		player.hud.interact(NextLine)
 		if(!player.hud.label_scientifeet.is_typing):
 			getNextLine()
+	elif(!player.hud.label_scientifeet.is_typing):
+		player.hud.hideScientifeet()
 
 func getNextLine() -> void:
 	if file.eof_reached():
@@ -62,7 +63,7 @@ func getNextLine() -> void:
 
 
 func _on_random_animation_timer_timeout():
-	var nb : int = rng.randi_range(0,randomAnimationOneChanceOn)
+	var nb : int = rng.randi_range(0,randomAnimationOneChanceOn-1)
 	if nb == 0:
 		animation_player.play(listAnimName[rng.randi_range(0, listAnimName.size())])
 	else:
