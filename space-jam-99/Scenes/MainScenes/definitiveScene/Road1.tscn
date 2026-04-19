@@ -182,9 +182,10 @@ shader = ExtResource("9_qkq78")
 [sub_resource type="BoxShape3D" id="BoxShape3D_3m0nj"]
 size = Vector3(1.375, 1.2680722, 1.7453613)
 
-[node name="Road1" type="Node3D" unique_id=1631416252 node_paths=PackedStringArray("SpeedPads", "OzoneCollision", "ShipCollision", "player")]
+[node name="Road1" type="Node3D" unique_id=1631416252 node_paths=PackedStringArray("ToDeleteEarth", "ToDeleteShip", "OzoneCollision", "ShipCollision", "player")]
 script = ExtResource("1_libju")
-SpeedPads = NodePath("SpeedPads")
+ToDeleteEarth = NodePath("SpeedPadFirst")
+ToDeleteShip = NodePath("SpeedPads")
 OzoneCollision = NodePath("coucheOzoneCollision")
 ShipCollision = NodePath("ShipCollision")
 player = NodePath("Player")

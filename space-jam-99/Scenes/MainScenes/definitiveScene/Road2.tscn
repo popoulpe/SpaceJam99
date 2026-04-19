@@ -1,12 +1,14 @@
 [gd_scene format=4 uid="uid://bvltjbclu328x"]
 
 [ext_resource type="Texture2D" uid="uid://dvliin5whrxu3" path="res://Assets/Enviro/SpaceTest2.2.png" id="1_ed5jw"]
+[ext_resource type="Script" uid="uid://ci8ftrvyxk04" path="res://Scripts/GameManager/RoadGameManager.gd" id="1_lw5aq"]
 [ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="2_lutho"]
 [ext_resource type="MeshLibrary" uid="uid://d4fn5k0v2jfsw" path="res://Assets/Tileset3D/TiesRoadv3.2.meshlib" id="3_lutho"]
 [ext_resource type="Shader" uid="uid://76okb2e6qtwc" path="res://Assets/farfaline/VisualFeet.tres" id="4_1nla2"]
 [ext_resource type="Material" uid="uid://bfi4k1e44534h" path="res://Assets/farfaline/SatelitoesBody.tres" id="5_txjhk"]
 [ext_resource type="Material" uid="uid://hi4j3nygouwj" path="res://Assets/farfaline/Feetelite.tres" id="6_icyiy"]
 [ext_resource type="Material" uid="uid://duwvbxc1bayeb" path="res://Assets/farfaline/Parabolo.tres" id="7_lw5aq"]
+[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/player/Player.tscn" id="9_rbj3i"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1nla2"]
 panorama = ExtResource("1_ed5jw")
@@ -209,7 +211,24 @@ shader = ExtResource("4_1nla2")
 [sub_resource type="BoxShape3D" id="BoxShape3D_txjhk"]
 size = Vector3(1.375, 1.2680722, 1.7453613)
 
-[node name="Road1" type="Node3D" unique_id=1631416252]
+[sub_resource type="BoxShape3D" id="BoxShape3D_n1rc1"]
+size = Vector3(2, 135.53683, 304.21912)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lw5aq"]
+size = Vector3(2, 206.207, 304.219)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_dklie"]
+
+[node name="Road1" type="Node3D" unique_id=1631416252 node_paths=PackedStringArray("ToDeleteEarth", "ToDeleteShip", "OzoneCollision", "ShipCollision", "player")]
+script = ExtResource("1_lw5aq")
+ToDeleteEarth = NodePath("SpeedPadFirst")
+ToDeleteShip = NodePath("SpeedPads")
+OzoneCollision = NodePath("coucheOzoneCollision")
+ShipCollision = NodePath("ShipCollision")
+player = NodePath("Player")
+earthSpawnPos = Vector3(-1690, -90, -17)
+shipSpawnPos = Vector3(450, 100, -17)
+shipSpawnRot = Vector3(0, 180, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=790118371]
 environment = SubResource("Environment_rhwl7")
@@ -570,3 +589,33 @@ collision_layer = 16
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadFirst/SpeedPad3/StaticBody3D" unique_id=1016041759]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_txjhk")
+
+[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("9_rbj3i")]
+
+[node name="coucheOzoneCollision" type="Area3D" parent="." unique_id=1589457154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1888.8887, -33.454, -37.24)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coucheOzoneCollision" unique_id=2108405555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.73853, -1.6523285, -3.121399)
+shape = SubResource("BoxShape3D_n1rc1")
+
+[node name="ShipCollision" type="Area3D" parent="." unique_id=1578085651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 478.9348, 116.14525, -37.24044)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShipCollision" unique_id=704023172]
+shape = SubResource("BoxShape3D_lw5aq")
+
+[node name="WordBottom" type="Area3D" parent="." unique_id=170402336]
+transform = Transform3D(11.453067, 0, 0, 0, 1, 0, 0, 0, 3.4267676, 0, -585.90125, 0)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WordBottom" unique_id=215355399]
+transform = Transform3D(41.855, 0, 0, 0, 1, 0, 0, 0, 41.855, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_dklie")
+
+[connection signal="body_entered" from="coucheOzoneCollision" to="." method="coucheOzoneAtteinte"]
+[connection signal="body_entered" from="ShipCollision" to="." method="VaisseauAtteint"]
+[connection signal="body_entered" from="WordBottom" to="." method="OutOfMap"]

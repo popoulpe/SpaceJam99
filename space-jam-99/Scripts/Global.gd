@@ -1,6 +1,7 @@
 extends Node
 
 var isFromEarth :bool = false
+
 var asFinishedLevelTask :bool = false
 var canMove :bool= true
 
@@ -22,6 +23,7 @@ var AllRoadsScenes: Array[String]=[
 ]
 
 var AllPoleScene: Array[String]=[
+	"ne rien mettre ici, le code est un peu degueu",
 	"res://Scenes/MainScenes/definitiveScene/pole_nord.tscn",
 	"res://Scenes/MainScenes/definitiveScene/pole_ile.tscn",
 	"res://Scenes/MainScenes/definitiveScene/pole_sud.tscn"

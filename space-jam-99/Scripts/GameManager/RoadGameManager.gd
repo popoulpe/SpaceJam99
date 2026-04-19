@@ -2,12 +2,12 @@ extends Node3D
 
 
 @export_group("Level Data")
-@export var SpeedPads:Node3D
+@export var ToDeleteEarth:Node3D
+@export var ToDeleteShip:Node3D
 @export var OzoneCollision:Area3D
 @export var ShipCollision:Area3D
 
 @export_group("Scenes Names")
-@export var earthPlaceScene:String = "res://Scenes/MainScenes/definitiveScene/pole_ile.tscn"
 @export var shipScene:String = "res://Scenes/MainScenes/definitiveScene/ScientifeetShip.tscn"
 
 @export_group("Player Data")
@@ -26,17 +26,19 @@ func _ready():
 	isFromEarth = GlobalScript.isFromEarth
 	if isFromEarth:
 		OzoneCollision.queue_free()
+		ToDeleteEarth.queue_free()
 		player.character_body_3d.position = earthSpawnPos
 		player.character_body_3d.rotation = earthSpawnRot
 	else:
-		SpeedPads.queue_free()
+		ToDeleteShip.queue_free()
 		ShipCollision.queue_free()
 		player.character_body_3d.position = shipSpawnPos
 		player.character_body_3d.rotation = shipSpawnRot
 
 
+
 func coucheOzoneAtteinte(_body:Node3D) -> void:
-	get_tree().change_scene_to_file(earthPlaceScene)
+	get_tree().change_scene_to_file(GlobalScript.AllPoleScene[GlobalScript.ScientifeetDialogStep])
 
 func VaisseauAtteint(_body:Node3D) -> void:
 	get_tree().change_scene_to_file(shipScene)
