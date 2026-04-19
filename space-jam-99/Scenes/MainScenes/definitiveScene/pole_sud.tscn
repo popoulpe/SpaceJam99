@@ -2,8 +2,11 @@
 
 [ext_resource type="AudioStream" uid="uid://dph8wy4vxudul" path="res://Assets/Themes/PoleSud.wav" id="1_x0nb4"]
 [ext_resource type="Material" uid="uid://cmrw4021oecqd" path="res://Assets/farfaline/PolSud.tres" id="2_n7hxy"]
+[ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="3_ea2je"]
 [ext_resource type="PackedScene" uid="uid://chcla7l5vg3nd" path="res://Assets/Enviro/pole_sud_props.fbx" id="3_n7hxy"]
 [ext_resource type="Texture2D" uid="uid://3q2t7rowu63f" path="res://Assets/Enviro/sky_46_2k.png" id="4_n7hxy"]
+[ext_resource type="PackedScene" uid="uid://qroh0v3nwgds" path="res://Scenes/MainScenes/MiniGameInteraction.tscn" id="6_8bk5q"]
+[ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="7_fum47"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cltus"]
 _surfaces = [{
@@ -90,6 +93,9 @@ size = Vector3(11.890436, 33.077515, 12.520948)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ea2je"]
 size = Vector3(132.3707, 45.8927, 3.1746216)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8bk5q"]
+size = Vector3(12, 5, 10)
+
 [node name="PoleSud" type="Node3D" unique_id=1387756561]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=940906613]
@@ -107,6 +113,9 @@ mesh = SubResource("ArrayMesh_21smb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pole_sud_ground/Plane_001/StaticBody3D" unique_id=159244140]
 shape = SubResource("ConcavePolygonShape3D_70dbd")
+
+[node name="Player" parent="pole_sud_ground/Plane_001/StaticBody3D" unique_id=2002350393 instance=ExtResource("3_ea2je")]
+transform = Transform3D(0.010000001, 0, 0, 0, -1.1920932e-09, -0.010000002, 0, 0.010000002, -1.1920932e-09, 0.30056554, 0.00089108944, 0.03199396)
 
 [node name="pole_sud_props" parent="." unique_id=1721165858 instance=ExtResource("3_n7hxy")]
 
@@ -198,3 +207,18 @@ transform = Transform3D(0.9926945, 0, -0.12065653, 0, 1, 0, 0.12065653, 0, 0.992
 transform = Transform3D(1.0000085, 0, 4.1909516e-08, 0, 1, 0, -4.1909516e-08, 0, 1.0000085, 6.861652, 14.778381, -1.5258789e-05)
 shape = SubResource("BoxShape3D_ea2je")
 debug_color = Color(0, 1.1958332, 1.4153824, 1)
+
+[node name="MiniGameInteraction" parent="." unique_id=260612951 instance=ExtResource("6_8bk5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.61152, 0.4637661, 42.033825)
+miniJeuSceneName = "res://Scenes/MainScenes/scene_miniGame_tuyaux.tscn"
+
+[node name="CollisionShape3D" parent="MiniGameInteraction" index="0" unique_id=1110458899]
+shape = SubResource("BoxShape3D_8bk5q")
+
+[node name="MeshInstance3D" parent="MiniGameInteraction" index="1" unique_id=633444171]
+visible = false
+
+[node name="SceneSwitchSkate" parent="." unique_id=423912757 instance=ExtResource("7_fum47")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.90556, -0.89734864, 24.221004)
+
+[editable path="MiniGameInteraction"]

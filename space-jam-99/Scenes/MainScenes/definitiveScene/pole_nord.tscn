@@ -2,6 +2,9 @@
 
 [ext_resource type="Material" uid="uid://b8qmfuuiu65f4" path="res://Assets/farfaline/PoleNord.tres" id="1_x20cm"]
 [ext_resource type="PackedScene" uid="uid://ceni1mcr3b8rx" path="res://Assets/Enviro/pole_nord_wall_and_props.fbx" id="2_x20cm"]
+[ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="3_px6pa"]
+[ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="4_4lw3x"]
+[ext_resource type="PackedScene" uid="uid://qroh0v3nwgds" path="res://Scenes/MainScenes/MiniGameInteraction.tscn" id="5_01c45"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x20cm"]
 load_path = "res://.godot/imported/sky_42_2k.png-4a3aa95eda9daf3229241788ebd0110c.s3tc.ctex"
@@ -211,3 +214,18 @@ mesh = SubResource("ArrayMesh_mg3da")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pole_nord_ground (1)/pole_nord_001/StaticBody3D" unique_id=1669331031]
 shape = SubResource("ConcavePolygonShape3D_x20cm")
+
+[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("3_px6pa")]
+transform = Transform3D(-0.86253136, 0, 0.5060036, 0, 1, 0, -0.5060036, 0, -0.86253136, 21.714106, -14.481182, -3.8630087)
+
+[node name="SceneSwitchSkate" parent="." unique_id=423912757 instance=ExtResource("4_4lw3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.591486, -15.712877, -3.0012448)
+
+[node name="MiniGameInteraction" parent="." unique_id=260612951 instance=ExtResource("5_01c45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.590614, -14.468777, 2.9221997)
+miniJeuSceneName = "res://Scenes/PrefabScene/Bottles/BottlesMiniGame.tscn"
+
+[node name="MeshInstance3D" parent="MiniGameInteraction" index="1" unique_id=633444171]
+visible = false
+
+[editable path="MiniGameInteraction"]
