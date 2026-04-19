@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1l4kaxxq3tue"
-path="res://.godot/imported/SM_Satelifeet.fbx-e20b71787ed10f5478e1ca20109e3ace.scn"
+uid="uid://cxg5ckybuwkrp"
+path="res://.godot/imported/SM_Asteromoche.fbx-ac56f6f1fd8603d1311955db4123941a.scn"
 
 [deps]
 
-source_file="res://Assets/farfaline/SM_Satelifeet.fbx"
-dest_files=["res://.godot/imported/SM_Satelifeet.fbx-e20b71787ed10f5478e1ca20109e3ace.scn"]
+source_file="res://Assets/Obstacles/SM_Asteromoche.fbx"
+dest_files=["res://.godot/imported/SM_Asteromoche.fbx-ac56f6f1fd8603d1311955db4123941a.scn"]
 
 [params]
 
@@ -41,13 +41,8 @@ _subresources={
 "materials": {
 "01 - Default": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/farfaline/SatelitoesBody.tres",
-"use_external/path": "uid://bfi4k1e44534h"
-},
-"02 - Default": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/farfaline/Feetelite.tres",
-"use_external/path": "uid://hi4j3nygouwj"
+"use_external/fallback_path": "res://Assets/farfaline/Asteroid.tres",
+"use_external/path": "uid://clu4jtbrim6rl"
 }
 }
 }

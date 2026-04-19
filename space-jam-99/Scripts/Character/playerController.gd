@@ -13,6 +13,9 @@ var pushing:bool = false
 
 var canPush :bool = true
 var horizontalDir :int=0
+var shouldDash:bool=false
+
+var lastDashUsed : Node3D = null
 
 func _ready() -> void:
 	state_machine.init(self)
@@ -44,5 +47,12 @@ func checkCollisions():
 
 
 
+
 func _on_invinsibility_timer_timeout():
 	set_collision_mask_value(2, true)
+
+
+func _boostDetected(body: Node3D):
+	if lastDashUsed == null || body != lastDashUsed:
+		shouldDash = true
+		lastDashUsed = body

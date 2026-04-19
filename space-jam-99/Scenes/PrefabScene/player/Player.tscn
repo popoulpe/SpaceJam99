@@ -266,9 +266,6 @@ priority = 0
 advance_mode = 2
 advance_expression = "state_machine.current_state_name == \"FallJump\""
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bfa6r"]
-advance_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d0vox"]
 xfade_time = 0.2
 priority = 2
@@ -330,13 +327,7 @@ advance_expression = "state_machine.current_state_name == \"FallJump\""
 break_loop_at_end = true
 priority = 0
 advance_mode = 2
-advance_expression = "state_machine.current_state_name == \"FallJump\""
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_svh1q"]
-break_loop_at_end = true
-priority = 0
-advance_mode = 2
-advance_expression = "state_machine.current_state_name == \"FallJump\""
+advance_expression = "state_machine.current_state_name == \"FallJump\" && !is_on_floor()"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tqvgl"]
 xfade_time = 0.1
@@ -362,8 +353,11 @@ break_loop_at_end = true
 advance_mode = 2
 advance_expression = "state_machine.current_state_name == \"Break\""
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_svh1q"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_d0vox"]
-states/Start/position = Vector2(5, 87)
+states/Start/position = Vector2(-157, 123)
 states/acceleration_idle/node = SubResource("AnimationNodeAnimation_xkeas")
 states/acceleration_idle/position = Vector2(460, -35.092026)
 states/debut_saut_rapide/node = SubResource("AnimationNodeAnimation_w7myw")
@@ -380,8 +374,8 @@ states/slow_skate_idle/node = SubResource("AnimationNodeAnimation_j73u0")
 states/slow_skate_idle/position = Vector2(173, 165)
 states/superfast_skate_idle/node = SubResource("AnimationNodeAnimation_py54s")
 states/superfast_skate_idle/position = Vector2(599, 87)
-transitions = ["debut_saut_rapide", "saut_idle", SubResource("AnimationNodeStateMachineTransition_xkeas"), "saut_idle", "fin_saut", SubResource("AnimationNodeStateMachineTransition_py54s"), "fin_saut", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_nm08v"), "slow_skate_idle", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_mu6kn"), "slow_skate_idle", "freinage", SubResource("AnimationNodeStateMachineTransition_tra2l"), "freinage", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_p3own"), "push", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_bdujg"), "slow_skate_idle", "push", SubResource("AnimationNodeStateMachineTransition_py35y"), "push", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_a2trf"), "Start", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_bfa6r"), "slow_skate_idle", "superfast_skate_idle", SubResource("AnimationNodeStateMachineTransition_d0vox"), "superfast_skate_idle", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_40elf"), "slow_skate_idle", "acceleration_idle", SubResource("AnimationNodeStateMachineTransition_jdmhh"), "acceleration_idle", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_jol2t"), "push", "superfast_skate_idle", SubResource("AnimationNodeStateMachineTransition_w7myw"), "superfast_skate_idle", "push", SubResource("AnimationNodeStateMachineTransition_qev7l"), "superfast_skate_idle", "acceleration_idle", SubResource("AnimationNodeStateMachineTransition_tiq5q"), "acceleration_idle", "superfast_skate_idle", SubResource("AnimationNodeStateMachineTransition_vj1nd"), "freinage", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_jce4d"), "superfast_skate_idle", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_j73u0"), "fin_saut", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_oifln"), "saut_idle", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_svh1q"), "fin_saut", "push", SubResource("AnimationNodeStateMachineTransition_tqvgl"), "acceleration_idle", "freinage", SubResource("AnimationNodeStateMachineTransition_pnt5l"), "superfast_skate_idle", "freinage", SubResource("AnimationNodeStateMachineTransition_ctudi"), "push", "freinage", SubResource("AnimationNodeStateMachineTransition_ogq0c")]
-graph_offset = Vector2(-161, -65.092026)
+transitions = ["debut_saut_rapide", "saut_idle", SubResource("AnimationNodeStateMachineTransition_xkeas"), "saut_idle", "fin_saut", SubResource("AnimationNodeStateMachineTransition_py54s"), "fin_saut", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_nm08v"), "slow_skate_idle", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_mu6kn"), "slow_skate_idle", "freinage", SubResource("AnimationNodeStateMachineTransition_tra2l"), "freinage", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_p3own"), "push", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_bdujg"), "slow_skate_idle", "push", SubResource("AnimationNodeStateMachineTransition_py35y"), "push", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_a2trf"), "slow_skate_idle", "superfast_skate_idle", SubResource("AnimationNodeStateMachineTransition_d0vox"), "superfast_skate_idle", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_40elf"), "slow_skate_idle", "acceleration_idle", SubResource("AnimationNodeStateMachineTransition_jdmhh"), "acceleration_idle", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_jol2t"), "push", "superfast_skate_idle", SubResource("AnimationNodeStateMachineTransition_w7myw"), "superfast_skate_idle", "push", SubResource("AnimationNodeStateMachineTransition_qev7l"), "superfast_skate_idle", "acceleration_idle", SubResource("AnimationNodeStateMachineTransition_tiq5q"), "acceleration_idle", "superfast_skate_idle", SubResource("AnimationNodeStateMachineTransition_vj1nd"), "freinage", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_jce4d"), "superfast_skate_idle", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_j73u0"), "fin_saut", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_oifln"), "fin_saut", "push", SubResource("AnimationNodeStateMachineTransition_tqvgl"), "acceleration_idle", "freinage", SubResource("AnimationNodeStateMachineTransition_pnt5l"), "superfast_skate_idle", "freinage", SubResource("AnimationNodeStateMachineTransition_ctudi"), "push", "freinage", SubResource("AnimationNodeStateMachineTransition_ogq0c"), "Start", "slow_skate_idle", SubResource("AnimationNodeStateMachineTransition_svh1q")]
+graph_offset = Vector2(-207, 240.90797)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nm08v"]
 animation = &"debut_saut_rapide"
@@ -413,12 +407,11 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b8ipx"]
-xfade_time = 0.1
+break_loop_at_end = true
 advance_mode = 2
 advance_expression = "is_on_floor()"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sho7m"]
-xfade_time = 0.1
 break_loop_at_end = true
 switch_mode = 2
 advance_mode = 2
@@ -445,7 +438,10 @@ states/idle_ground/position = Vector2(457, 100)
 states/idle_saut/node = SubResource("AnimationNodeAnimation_p3own")
 states/idle_saut/position = Vector2(489, 18)
 transitions = ["Start", "idle_ground", SubResource("AnimationNodeStateMachineTransition_73khh"), "idle_ground", "debut_saut_rapide", SubResource("AnimationNodeStateMachineTransition_p850t"), "debut_saut_rapide", "idle_saut", SubResource("AnimationNodeStateMachineTransition_dnc6a"), "idle_saut", "fin_saut", SubResource("AnimationNodeStateMachineTransition_b8ipx"), "fin_saut", "idle_ground", SubResource("AnimationNodeStateMachineTransition_sho7m"), "idle_ground", "freinage", SubResource("AnimationNodeStateMachineTransition_dgofd"), "freinage", "idle_ground", SubResource("AnimationNodeStateMachineTransition_sy8ta")]
-graph_offset = Vector2(14, -89)
+graph_offset = Vector2(36, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oifln"]
+size = Vector3(5.2805176, 1, 2.1253052)
 
 [node name="Player" type="Node3D" unique_id=2002350393 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_yucit")
@@ -487,7 +483,7 @@ playerController = NodePath("..")
 [node name="animations_perso_princ_V2" parent="CharacterBody3D/Mesh" unique_id=1460162433 instance=ExtResource("6_fijso")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="Skeleton3D" parent="CharacterBody3D/Mesh/animations_perso_princ_V2/metarig" parent_id_path=PackedInt32Array(1460162433, 1178975798) index="0" unique_id=1078385133]
+[node name="Skeleton3D" parent="CharacterBody3D/Mesh/animations_perso_princ_V2/metarig" parent_id_path=PackedInt32Array(1460162433, 638507159) index="0" unique_id=69270242]
 bones/0/position = Vector3(-0.35332674, 3.2480962, 0.018961143)
 bones/0/rotation = Quaternion(0.08334408, 0.8733721, -0.0897248, 0.47140682)
 bones/1/rotation = Quaternion(-0.057670306, -1.650883e-07, -9.4214165e-09, 0.9983357)
@@ -640,6 +636,7 @@ fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
 break_state = NodePath("../Break")
 heavy_state = NodePath("../Heavy")
+turnSpeed = 0.5
 
 [node name="Move" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1516954293 node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "break_state", "heavy_state")]
 script = ExtResource("6_qaqhs")
@@ -648,16 +645,20 @@ fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
 break_state = NodePath("../Break")
 heavy_state = NodePath("../Heavy")
+turnSpeed = 0.5
+pushAcceleration = 20.0
 
 [node name="Fall" type="Node" parent="CharacterBody3D/StateMachine" unique_id=662319048 node_paths=PackedStringArray("idle_state", "move_state", "heavy_state")]
 script = ExtResource("7_qaqhs")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
 heavy_state = NodePath("../Heavy")
+turnSpeed = 1.0
 
 [node name="Jump" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1880933946 node_paths=PackedStringArray("fall_jump_state")]
 script = ExtResource("8_kfjcm")
 fall_jump_state = NodePath("../FallJump")
+jumpForce = 20.0
 
 [node name="Land" type="Node" parent="CharacterBody3D/StateMachine" unique_id=1807008406 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("9_g6jha")
@@ -678,8 +679,19 @@ move_state = NodePath("../Move")
 script = ExtResource("15_onb1c")
 idle_state = NodePath("../Idle")
 jump_state = NodePath("../Jump")
+gravityMult = 3.0
+deceleration = 15.0
+
+[node name="Area3D" type="Area3D" parent="CharacterBody3D" unique_id=1413213268]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Area3D" unique_id=1155823627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048950195, 0, -0.087249756)
+shape = SubResource("BoxShape3D_oifln")
 
 [connection signal="timeout" from="CharacterBody3D/PushTimer" to="CharacterBody3D" method="_on_push_timer_timeout"]
 [connection signal="timeout" from="CharacterBody3D/InvinsibilityTimer" to="CharacterBody3D" method="_on_invinsibility_timer_timeout"]
+[connection signal="body_entered" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_boostDetected"]
 
 [editable path="CharacterBody3D/Mesh/animations_perso_princ_V2"]

@@ -36,6 +36,7 @@ operator = 2
 
 [resource]
 nodes/vertex/0/position = Vector2(773.3333, 200)
+nodes/fragment/0/position = Vector2(480, 146.66667)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_2ahhg")
 nodes/fragment/2/position = Vector2(-280, 706.6667)
 nodes/fragment/3/node = SubResource("VisualShaderNodeUVFunc_jokr8")
@@ -54,4 +55,4 @@ nodes/fragment/9/node = SubResource("VisualShaderNodeVectorOp_usodj")
 nodes/fragment/9/position = Vector2(-120, -120)
 nodes/fragment/10/node = SubResource("VisualShaderNodeColorConstant_2ahhg")
 nodes/fragment/10/position = Vector2(-386.66666, -93.333336)
-nodes/fragment/connections = PackedInt32Array(3, 0, 7, 0, 6, 0, 3, 2, 4, 0, 6, 1, 5, 0, 6, 0, 2, 4, 0, 1, 2, 0, 8, 0, 8, 0, 0, 0, 7, 0, 9, 0, 9, 0, 8, 1, 10, 0, 9, 1)
+nodes/fragment/connections = PackedInt32Array(3, 0, 7, 0, 6, 0, 3, 2, 4, 0, 6, 1, 5, 0, 6, 0, 2, 4, 0, 1, 2, 0, 8, 0, 8, 0, 0, 0, 7, 0, 9, 0, 9, 0, 8, 1, 10, 0, 9, 1, 8, 0, 0, 5)

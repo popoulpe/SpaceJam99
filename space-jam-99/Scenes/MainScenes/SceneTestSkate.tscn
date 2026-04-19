@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://b8cm5qecvp1hn" path="res://Assets/Prototypage/material/Dark/texture_08.png" id="1_kwkfq"]
 [ext_resource type="Texture2D" uid="uid://x6a8o6sss7vp" path="res://Assets/Prototypage/material/Orange/texture_08.png" id="2_8gp4t"]
 [ext_resource type="Texture2D" uid="uid://dwk07suol4kwr" path="res://Assets/Prototypage/material/Red/texture_01.png" id="3_8gp4t"]
+[ext_resource type="Texture2D" uid="uid://duu7yyo266oc6" path="res://Assets/Prototypage/material/Green/texture_05.png" id="4_aqaha"]
 [ext_resource type="PackedScene" uid="uid://c6xpdfw3dxiim" path="res://Scenes/PrefabScene/Scientifeet/scientifeetDefault.tscn" id="5_41k57"]
 [ext_resource type="MeshLibrary" uid="uid://cr13vydtxhosd" path="res://Assets/farfaline/TileSetv2.meshlib" id="5_gcc03"]
-[ext_resource type="PackedScene" uid="uid://dol870dmqdx65" path="res://Scenes/PrefabScene/player/PlayerWithoutSkate.tscn" id="6_1b2qt"]
 [ext_resource type="PackedScene" uid="uid://bue57pdl304pr" path="res://Scenes/PrefabScene/scene_switch_skate.tscn" id="6_ew7vi"]
 [ext_resource type="PackedScene" uid="uid://qroh0v3nwgds" path="res://Scenes/MainScenes/MiniGameInteraction.tscn" id="6_gs7mn"]
+[ext_resource type="PackedScene" uid="uid://dn01o5fyvd8p5" path="res://Scenes/PrefabScene/player/Player.tscn" id="9_aqaha"]
 [ext_resource type="AudioStream" uid="uid://cfhtl0cn674am" path="res://Assets/Themes/819267__johnmode__160bpm-retro-game-square-wave-song-mysterious-exploration.wav" id="9_gs7mn"]
 
 [sub_resource type="Environment" id="Environment_1b2qt"]
@@ -39,6 +40,15 @@ size = Vector3(5, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gs7mn"]
 size = Vector3(5, 5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfilx"]
+albedo_texture = ExtResource("4_aqaha")
+
+[sub_resource type="BoxMesh" id="BoxMesh_xmutr"]
+size = Vector3(7, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o78dn"]
+size = Vector3(7, 3.1254883, 5)
 
 [node name="Node3D" type="Node3D" unique_id=158570227]
 
@@ -163,13 +173,20 @@ mesh = SubResource("BoxMesh_ew7vi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/StaticBody3D2" unique_id=1218102205]
 shape = SubResource("BoxShape3D_gs7mn")
 
-[node name="GridMap" type="GridMap" parent="." unique_id=282917728]
-mesh_library = ExtResource("5_gcc03")
-cell_size = Vector3(60, 20, 30)
-data = {
-"cells": PackedInt32Array(-2, 65533, 655360, -2, 65532, 655360, -2, 65531, 655360, -2, 65530, 655360, -2, 65529, 655360, -2, 65528, 655360, -2, 65527, 655360, -2, 65526, 655360, -2, 65525, 655360, -2, 65524, 655360, -2, 65523, 655360, -1, 65533, 655361, -1, 65532, 655362, -1, 65531, 655363, -1, 65530, 655364, -1, 65529, 655365, -1, 65528, 655366, -1, 65527, 655367, -1, 65526, 655368, -65536, 65533, 655360, -65536, 65532, 655360, -65536, 65531, 655360, -65536, 65530, 655360, -65536, 65529, 655360, -65536, 65528, 655360, -65536, 65527, 655360, -65536, 65526, 655360, -65535, 65533, 655363, -65534, 65533, 655363, -65534, 65534, 655363, -65535, 65534, 655363)
-}
-metadata/_editor_floor_ = Vector3(0, -1, 0)
+[node name="Boost" type="Node3D" parent="." unique_id=1063728631]
+
+[node name="Area3D" type="StaticBody3D" parent="Boost" unique_id=1962506864]
+collision_layer = 16
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Boost/Area3D" unique_id=1759241068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.76726, 0, 16.746628)
+material_override = SubResource("StandardMaterial3D_gfilx")
+mesh = SubResource("BoxMesh_xmutr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boost/Area3D" unique_id=465475960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.76726, 1.0627441, 16.746628)
+shape = SubResource("BoxShape3D_o78dn")
 
 [node name="Interactable" type="Node3D" parent="." unique_id=876455705]
 
@@ -182,12 +199,19 @@ miniJeuSceneName = "res://Scenes/PrefabScene/Bottles/BottlesMiniGame.tscn"
 
 [node name="SceneSwitchSkate" parent="Interactable" unique_id=423912757 instance=ExtResource("6_ew7vi")]
 transform = Transform3D(-0.16909152, 0, 0.98560035, 0, 1, 0, -0.98560035, 0, -0.16909152, -20.152681, 0, -22.175451)
-nextLevelScene = "res://Scenes/MainScenes/scene_main_menu.tscn"
 
-[node name="Player2" parent="." unique_id=2002350393 instance=ExtResource("6_1b2qt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.493323, 1.2461188, -5.6874537)
+[node name="GridMap" type="GridMap" parent="." unique_id=282917728]
+mesh_library = ExtResource("5_gcc03")
+cell_size = Vector3(60, 20, 30)
+data = {
+"cells": PackedInt32Array(-2, 65533, 655360, -2, 65532, 655360, -2, 65531, 655360, -2, 65530, 655360, -2, 65529, 655360, -2, 65528, 655360, -2, 65527, 655360, -2, 65526, 655360, -2, 65525, 655360, -2, 65524, 655360, -2, 65523, 655360, -1, 65533, 655361, -1, 65532, 655362, -1, 65531, 655363, -1, 65530, 655364, -1, 65529, 655365, -1, 65528, 655366, -1, 65527, 655367, -1, 65526, 655368, -65536, 65533, 655360, -65536, 65532, 655360, -65536, 65531, 655360, -65536, 65530, 655360, -65536, 65529, 655360, -65536, 65528, 655360, -65536, 65527, 655360, -65536, 65526, 655360, -65535, 65533, 655363, -65534, 65533, 655363, -65534, 65534, 655363, -65535, 65534, 655363)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1743886130]
 stream = ExtResource("9_gs7mn")
 volume_db = -10.0
 autoplay = true
+
+[node name="Player" parent="." unique_id=2002350393 instance=ExtResource("9_aqaha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.731876, 0.049999237, 1.9616666)

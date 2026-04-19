@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://duwvbxc1bayeb"]
+
+[ext_resource type="Texture2D" uid="uid://cs5tkhpl5ql3d" path="res://Assets/farfaline/parabole_diffuse.png" id="1_xsxwh"]
+[ext_resource type="Shader" uid="uid://b5n7o8o8l8qab" path="res://Assets/farfaline/OutlineBeter.gdshader" id="2_fn4jo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ciowo"]
+render_priority = 0
+shader = ExtResource("2_fn4jo")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_ciowo")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
+albedo_texture = ExtResource("1_xsxwh")
+metallic = 0.6
+roughness = 0.01
+stencil_flags = 2
+stencil_outline_thickness = 0.028

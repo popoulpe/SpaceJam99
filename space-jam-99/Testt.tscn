@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cf5kbbbyaojrc"]
 
 [ext_resource type="Material" uid="uid://btuk02yi406vu" path="res://Assets/farfaline/RGBRoadMap.tres" id="1_f48s1"]
-[ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/farfaline/SM_Satelifeet.fbx" id="2_2kr1e"]
+[ext_resource type="PackedScene" uid="uid://c1l4kaxxq3tue" path="res://Assets/Obstacles/SM_Satelifeet.fbx" id="2_2kr1e"]
 [ext_resource type="MeshLibrary" uid="uid://cr13vydtxhosd" path="res://Assets/farfaline/TileSetv2.meshlib" id="3_f48s1"]
+[ext_resource type="PackedScene" uid="uid://mbfufmog5ch0" path="res://Assets/Obstacles/fusee_obstacle.fbx" id="5_4ak8j"]
 [ext_resource type="Shader" uid="uid://76okb2e6qtwc" path="res://Assets/farfaline/VisualFeet.tres" id="6_4ak8j"]
+[ext_resource type="PackedScene" uid="uid://g41u3scmj1t6" path="res://Assets/Obstacles/parabole_obstacle.fbx" id="6_wmmd0"]
+[ext_resource type="PackedScene" uid="uid://cxg5ckybuwkrp" path="res://Assets/Obstacles/SM_Asteromoche.fbx" id="7_wmmd0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2kr1e"]
 
@@ -66,7 +69,7 @@ transform = Transform3D(1.666634, 0.0021668437, -0.0039077634, -0.0036103274, 0.
 mesh = SubResource("PlaneMesh_2kr1e")
 surface_material_override/0 = ExtResource("1_f48s1")
 
-[node name="SM_Satelifeet" parent="." unique_id=2101774618 instance=ExtResource("2_2kr1e")]
+[node name="SM_Satelifeet" parent="." unique_id=433518961 instance=ExtResource("2_2kr1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.556669, 0.6229838, 0.49240446)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1979866140]
@@ -154,3 +157,15 @@ mesh = SubResource("PrismMesh_4ak8j")
 transform = Transform3D(-0.02064985, 0.5811107, 2.9431078, 0.004077171, 2.9431803, -0.5810964, -2.999926, 0, -0.021048507, -39.928017, -4.8353996, -94.27388)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
+
+[node name="fusee_obstacle" parent="." unique_id=1486103951 instance=ExtResource("5_4ak8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.916172, 36.782085, -100.34127)
+
+[node name="parabole_obstacle" parent="." unique_id=602783519 instance=ExtResource("6_wmmd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.322178, 35.859123, -95.66566)
+
+[node name="SM_Satelifeet2" parent="." unique_id=297650071 instance=ExtResource("2_2kr1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.924225, 38.78748, -92.85875)
+
+[node name="SM_Asteromoche" parent="." unique_id=1878781895 instance=ExtResource("7_wmmd0")]
+transform = Transform3D(1, 0, 0, 0, 0.99999905, 0.0013613563, 0, -0.0013613563, 0.99999905, 46.035057, 39.16833, -93.46669)
