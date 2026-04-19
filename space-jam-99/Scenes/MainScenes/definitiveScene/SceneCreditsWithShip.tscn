@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://ds37ldi5tsx81" path="res://Assets/Enviro/poster_1.png" id="5_ge4qx"]
 [ext_resource type="Texture2D" uid="uid://b6nsbvymswbxt" path="res://Assets/Enviro/sofa_vaisseau.png" id="6_0hquj"]
 [ext_resource type="Material" uid="uid://cuj8xpgi3nem7" path="res://Assets/farfaline/SpaceShip1.tres" id="7_23jsp"]
-[ext_resource type="PackedScene" uid="uid://c6xpdfw3dxiim" path="res://Scenes/PrefabScene/Scientifeet/scientifeetDefault.tscn" id="8_traxj"]
 [ext_resource type="PackedScene" uid="uid://bwgfvspt5nbnk" path="res://Scenes/MainScenes/scene_Credits.tscn" id="9_2ktur"]
 [ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="9_jfoqt"]
 [ext_resource type="Script" uid="uid://ce0rxnsbeg7br" path="res://Scripts/credits_mooving_camera.gd" id="9_qbqit"]
@@ -100,7 +99,7 @@ isFromEarth = false
 [node name="V2_vaisseau_fenetres" parent="StaticBody3D" unique_id=1072591383 instance=ExtResource("3_rsu0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, 0, -0.578)
 
-[node name="poster_2" parent="StaticBody3D/V2_vaisseau_fenetres" index="0" unique_id=439413787]
+[node name="poster_2" parent="StaticBody3D/V2_vaisseau_fenetres" index="0" unique_id=2066700705]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.6143842, 14.219234, -21.117237)
 surface_material_override/0 = SubResource("StandardMaterial3D_imsxu")
 surface_material_override/1 = SubResource("StandardMaterial3D_ishq2")
@@ -152,68 +151,6 @@ shape = SubResource("BoxShape3D_ishq2")
 transform = Transform3D(-4.3711385e-08, 0.9999999, -4.3711385e-08, 0, -4.3711385e-08, -0.9999999, -0.9999999, -4.3711385e-08, 1.9106853e-15, -7.6320376, 12.894804, -20.154074)
 shape = SubResource("BoxShape3D_m4x57")
 
-[node name="Scientifeet" parent="." unique_id=1396396552 instance=ExtResource("8_traxj")]
-transform = Transform3D(0.13763456, 0, 0.99048305, 0, 1, 0, -0.99048305, 0, 0.13763456, -15.831639, -0.258559, -9.36962)
-randomAnimationOneChanceOn = 0
-
-[node name="Main" parent="Scientifeet/animations_scientifeet" parent_id_path=PackedInt32Array(1396396552, 632991482) index="0" unique_id=457592830]
-transform = Transform3D(-0.9999658, 0.007528918, 0.0033959644, 0.007630956, 0.9994867, 0.031107241, -0.003160018, 0.031132089, -0.99951017, -0.28474796, -0.08076965, 1.1567001)
-
-[node name="Skeleton3D" parent="Scientifeet/animations_scientifeet/Main" index="0" unique_id=641727910]
-bones/1/rotation = Quaternion(-0.057631038, 0.0018955548, 0.0021163383, 0.9983339)
-bones/2/rotation = Quaternion(-0.015582758, 0.0033794255, 0.004447224, 0.999863)
-bones/3/rotation = Quaternion(0.043703713, 0.0035025142, 0.004350947, 0.999029)
-bones/4/rotation = Quaternion(0.24800798, 0.006059954, -0.009678478, 0.96869075)
-bones/5/rotation = Quaternion(0.6927903, -0.0042263344, -0.010608204, 0.7210487)
-bones/6/rotation = Quaternion(-0.81635165, 6.055735e-08, -2.1247266e-07, 0.57755536)
-bones/7/rotation = Quaternion(-0.5472288, -0.44060397, -0.35050073, 0.6193207)
-bones/8/rotation = Quaternion(-0.12691288, 0.72224706, -0.6567812, 0.17575826)
-bones/9/rotation = Quaternion(0.22005819, -0.03232123, 0.013646097, 0.97485566)
-bones/10/rotation = Quaternion(-0.031994097, -0.21221936, -0.02160372, 0.9764592)
-bones/12/rotation = Quaternion(0.0805029, -0.035296112, -0.12069602, 0.9887902)
-bones/13/rotation = Quaternion(0.2568127, 0.11957475, -0.0021105933, 0.95903325)
-bones/14/rotation = Quaternion(0.12743227, -0.08485962, 0.032757275, 0.9876674)
-bones/16/rotation = Quaternion(0.027069578, -0.0743504, -0.51315737, 0.85463965)
-bones/17/rotation = Quaternion(0.075292386, 0.35486832, -0.057897672, 0.93007934)
-bones/19/rotation = Quaternion(0.1829444, -0.039866287, -0.050318073, 0.9810251)
-bones/20/rotation = Quaternion(0.17036688, -0.04894871, -0.019354433, 0.98397386)
-bones/21/rotation = Quaternion(0.15233478, -0.04609754, -0.02136213, 0.9870222)
-bones/23/rotation = Quaternion(0.18879399, -0.11965195, 0.0058836653, 0.9746824)
-bones/24/rotation = Quaternion(0.27151558, -0.019527992, -0.08116684, 0.9588066)
-bones/25/rotation = Quaternion(0.16917202, -0.056996897, -0.05183227, 0.98257095)
-bones/26/rotation = Quaternion(0.101844266, 0.7008336, -0.03240355, 0.70527303)
-bones/27/rotation = Quaternion(0.4129928, -0.09134909, -0.07826402, 0.90275526)
-bones/28/rotation = Quaternion(-8.846454e-07, -0.019209538, 1.8929128e-07, 0.99981546)
-bones/29/rotation = Quaternion(0.17464757, -0.044815626, -0.08258386, 0.9801376)
-bones/30/rotation = Quaternion(-0.5191464, 0.4646416, 0.37168342, 0.6135526)
-bones/31/rotation = Quaternion(-0.11905232, -0.7276176, 0.64512295, 0.20053843)
-bones/32/rotation = Quaternion(0.22884797, 0.08665476, -0.034012392, 0.9690009)
-bones/33/rotation = Quaternion(-0.113987975, 0.1269349, 0.06468545, 0.9832142)
-bones/35/rotation = Quaternion(0.11379026, 0.06740935, 0.048840433, 0.9900114)
-bones/36/rotation = Quaternion(0.14938317, -0.12221199, 0.0046404074, 0.98118675)
-bones/37/rotation = Quaternion(0.12743175, 0.08485932, -0.03275716, 0.98766744)
-bones/39/rotation = Quaternion(-0.13335854, 0.17699385, 0.5048127, 0.83429784)
-bones/40/rotation = Quaternion(0.075292505, -0.3548691, 0.057896934, 0.93007904)
-bones/42/rotation = Quaternion(0.09676058, 0.019738222, -0.027310902, 0.99473715)
-bones/43/rotation = Quaternion(0.26854634, 0.047825396, 0.035891887, 0.9614091)
-bones/44/rotation = Quaternion(0.15233514, 0.04609766, 0.021362513, 0.98702216)
-bones/46/rotation = Quaternion(0.15620334, 0.17698051, -0.031070821, 0.971243)
-bones/47/rotation = Quaternion(0.331078, 0.020348558, 0.09038361, 0.9390443)
-bones/48/rotation = Quaternion(0.16917105, 0.05699671, 0.05183176, 0.9825711)
-bones/49/rotation = Quaternion(0.17988509, -0.69720364, 0.049111195, 0.69219697)
-bones/50/rotation = Quaternion(0.29677126, 0.09597974, 0.039337207, 0.9492983)
-bones/51/rotation = Quaternion(-7.7185103e-07, 0.019209603, 6.216578e-08, 0.9998155)
-bones/52/rotation = Quaternion(0.17464665, 0.04481555, 0.08258403, 0.98013777)
-bones/57/rotation = Quaternion(0.99296254, 0.037803244, 0.05571668, 0.097427204)
-bones/58/rotation = Quaternion(0.21862356, 0.2971879, 0.012951231, 0.92936295)
-bones/59/rotation = Quaternion(-0.51134276, -0.43610883, -0.17504828, 0.71951085)
-bones/60/rotation = Quaternion(-0.04429601, 0.92583203, -0.37274846, 0.04394837)
-bones/62/rotation = Quaternion(0.9828678, -0.010591814, 0.12272318, 0.1371054)
-bones/63/rotation = Quaternion(0.23332447, -0.29357767, -0.017262245, 0.9268625)
-bones/64/rotation = Quaternion(-0.5115715, 0.33900183, 0.16476405, 0.7721561)
-bones/65/rotation = Quaternion(0.044296585, 0.92583185, -0.37274897, -0.04394837)
-bones/66/rotation = Quaternion(-0.60748625, 0.72133076, -0.21832314, -0.2509532)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=753384304]
 environment = SubResource("Environment_ishq2")
 camera_attributes = SubResource("CameraAttributesPractical_mt3r3")
@@ -230,5 +167,3 @@ fVitesse = 0.15
 [node name="SceneCredits" parent="." unique_id=647363157 instance=ExtResource("9_2ktur")]
 
 [editable path="StaticBody3D/V2_vaisseau_fenetres"]
-[editable path="Scientifeet"]
-[editable path="Scientifeet/animations_scientifeet"]

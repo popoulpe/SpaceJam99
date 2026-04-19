@@ -10,7 +10,20 @@ const BUS_UI := "UI"
 
 @export var _ui_button:Array[AudioStream]
 
-@export var _all_musics:Array[AudioStream]
+@export var _sfx_vox_vitesse:Array[AudioStream]
+
+@export var _sfx_vox_degat:Array[AudioStream]
+
+@export var _sfx_saut:AudioStream
+
+@export var _sfx_explostion:AudioStream
+
+@export var _music_pole_nord:AudioStream
+@export var _music_pole_ile:AudioStream
+@export var _music_pole_sud:AudioStream
+@export var _music_gameplay:AudioStream
+@export var _music_miniGame:AudioStream
+@export var _music_credits:AudioStream
 
 func _ready() -> void:
 	if _music:
@@ -20,22 +33,33 @@ func _ready() -> void:
 		_sfx.bus = BUS_SFX
 	if _ui:
 		_ui.bus = BUS_UI
+	print(get_tree().get_current_scene().get_name())
+	_readyMusic(0.0)
 
-func play_sfx(stream: AudioStream, pitch: float = 1.0, volume_db: float = 0.0) -> void:
+func _readyMusic(f:float=1.0)->void:
+	if(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/pole_ile.tscn"):
+		play_music(_music_pole_ile, f, 1)
+	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/pole_nord.tscn"):
+		play_music(_music_pole_nord, f, 1)
+	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/pole_sud.tscn"):
+		play_music(_music_pole_sud, f, 1)
+	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/Road1.tscn"||get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/Road2.tscn"||get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/Road3.tscn"):
+		play_music(_music_gameplay, f, 1)
+	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/SceneCreditsWithShip.tscn" || get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/ScientifeetShip.tscn" ):
+		play_music(_music_credits, f, 1)
+
+func play_sfx(stream: AudioStream) -> void:
 	if not _sfx:
 		push_error("AudioStreamPlayer _sfx non assigné.")
 		return
 	_sfx.stream = stream
-	_sfx.pitch_scale = pitch
-	_sfx.volume_db = volume_db
 	_sfx.play()
 
-func play_ui_sfx(stream: AudioStream, volume_db: float = 0.0) -> void:
+func play_ui_sfx(stream: AudioStream) -> void:
 	if not _ui:
 		push_error("AudioStreamPlayer _ui non assigné.")
 		return
 	_ui.stream = stream
-	_ui.volume_db = volume_db
 	_ui.play()
 
 func play_music(stream: AudioStream, fade_out_time: float = 0.0, fade_in_time: float = 0.0) -> void:

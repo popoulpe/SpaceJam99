@@ -14,8 +14,32 @@
 [ext_resource type="PackedScene" uid="uid://bqekidcw15dne" path="res://Scenes/PrefabScene/audio_slider.tscn" id="11_o7s6o"]
 [ext_resource type="FontFile" uid="uid://bm7oo6qp1ovv1" path="res://Assets/UI/fonts/Oxanium-Bold.ttf" id="12_nxot5"]
 [ext_resource type="Script" uid="uid://042awikgpa65" path="res://Scripts/audio_manager.gd" id="13_vhywa"]
+[ext_resource type="AudioStream" uid="uid://jwkqbnbcvo6m" path="res://Assets/Audio/UI/ui_button_1.wav" id="15_7uvgq"]
+[ext_resource type="AudioStream" uid="uid://cxhkjf6nejgsv" path="res://Assets/Audio/UI/ui_button_2.wav" id="16_2jw4g"]
+[ext_resource type="AudioStream" uid="uid://b6vicwq7ihl4v" path="res://Assets/Audio/SFX/vox_chara_vitesse_1.wav" id="17_i85kp"]
+[ext_resource type="AudioStream" uid="uid://cuu6ubqdy2742" path="res://Assets/Audio/SFX/vox_chara_vitesse_2.wav" id="18_tj28a"]
+[ext_resource type="AudioStream" uid="uid://cbcdv2y8kxknu" path="res://Assets/Audio/SFX/vox_chara_vitesse_3.wav" id="19_nai0e"]
+[ext_resource type="AudioStream" uid="uid://boa7hdjkao0ds" path="res://Assets/Audio/SFX/vox_chara_vitesse_4.wav" id="20_0voiq"]
+[ext_resource type="AudioStream" uid="uid://bcx1aroa2q3gm" path="res://Assets/Audio/SFX/vox_chara_degat_1.wav" id="21_u1lhh"]
+[ext_resource type="AudioStream" uid="uid://dw71yogsspfix" path="res://Assets/Audio/SFX/vox_chara_degat_2.wav" id="22_5qx7i"]
+[ext_resource type="AudioStream" uid="uid://bw1c8s0uwywwi" path="res://Assets/Audio/SFX/vox_chara_degat_3.wav" id="23_byc5q"]
+[ext_resource type="AudioStream" uid="uid://c3olx3r07al1d" path="res://Assets/Audio/SFX/vox_chara_degat_4.wav" id="24_7lwpi"]
+[ext_resource type="AudioStream" uid="uid://cl168s8twwb5m" path="res://Assets/Audio/SFX/vox_chara_degat_5.wav" id="25_5h0jr"]
+[ext_resource type="AudioStream" uid="uid://dqpugnkvbydjs" path="res://Assets/Audio/SFX/vox_chara_degat_6.wav" id="26_x14ra"]
+[ext_resource type="AudioStream" uid="uid://cfonmlyioyqou" path="res://Assets/Audio/SFX/vox_chara_degat_7.wav" id="27_11agm"]
+[ext_resource type="AudioStream" uid="uid://lmxqho02b0aq" path="res://Assets/Audio/SFX/vox_chara_degat_8.wav" id="28_vrvu7"]
+[ext_resource type="AudioStream" uid="uid://bdks0qloyyxo4" path="res://Assets/Audio/SFX/vox_chara_degat_9.wav" id="29_ip00l"]
+[ext_resource type="AudioStream" uid="uid://pjf21icnrhpx" path="res://Assets/Audio/SFX/vox_chara_degat_10.wav" id="30_613tl"]
+[ext_resource type="AudioStream" uid="uid://d030vvym0mg2s" path="res://Assets/Audio/SFX/sfx_Jump.wav" id="31_eq1gv"]
+[ext_resource type="AudioStream" uid="uid://dgp33qfa1eohq" path="res://Assets/Audio/SFX/sfx_Explosion.wav" id="32_i6jan"]
+[ext_resource type="AudioStream" uid="uid://csm8mqb1w6gpc" path="res://Assets/Audio/Music/music_PoleNord.wav" id="33_ignas"]
+[ext_resource type="AudioStream" uid="uid://dtvnnpyy2qxmk" path="res://Assets/Audio/Music/music_Ile.wav" id="34_ifpa1"]
+[ext_resource type="AudioStream" uid="uid://bpm20e5504b2d" path="res://Assets/Audio/Music/music_PoleSud.wav" id="35_6nf6n"]
+[ext_resource type="AudioStream" uid="uid://coihonumne6jm" path="res://Assets/Audio/Music/music_miniGame.wav" id="36_cpf4b"]
+[ext_resource type="AudioStream" uid="uid://dn1vvcuxgvhsv" path="res://Assets/Audio/Music/music_gameplay.wav" id="37_2qlup"]
+[ext_resource type="AudioStream" uid="uid://50i3lc8cqyc3" path="res://Assets/Audio/Music/music_credit.wav" id="38_pgp2u"]
 
-[node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("_Audio", "_AudioSkateTexture", "_Pause")]
+[node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("AudioManager", "_Audio", "_AudioSkateTexture", "_Pause")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -25,6 +49,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_fx2et")
+AudioManager = NodePath("AudioManager")
 _Audio = NodePath("Audio")
 _AudioSkateTexture = NodePath("Audio/Control/TextureRect")
 _Pause = NodePath("Pause")
@@ -368,8 +393,22 @@ script = ExtResource("6_crq0y")
 min_font_size = 2
 max_font_size = 78
 
-[node name="AudioManager" type="Node" parent="." unique_id=719789525]
+[node name="AudioManager" type="Node" parent="." unique_id=719789525 node_paths=PackedStringArray("_music", "_sfx", "_ui")]
 script = ExtResource("13_vhywa")
+_music = NodePath("MusicStream")
+_sfx = NodePath("SFXStream")
+_ui = NodePath("UIStream")
+_ui_button = Array[AudioStream]([ExtResource("15_7uvgq"), ExtResource("16_2jw4g"), ExtResource("15_7uvgq"), ExtResource("16_2jw4g")])
+_sfx_vox_vitesse = Array[AudioStream]([ExtResource("17_i85kp"), ExtResource("18_tj28a"), ExtResource("19_nai0e"), ExtResource("20_0voiq")])
+_sfx_vox_degat = Array[AudioStream]([ExtResource("21_u1lhh"), ExtResource("22_5qx7i"), ExtResource("23_byc5q"), ExtResource("24_7lwpi"), ExtResource("25_5h0jr"), ExtResource("26_x14ra"), ExtResource("27_11agm"), ExtResource("28_vrvu7"), ExtResource("29_ip00l"), ExtResource("30_613tl")])
+_sfx_saut = ExtResource("31_eq1gv")
+_sfx_explostion = ExtResource("32_i6jan")
+_music_pole_nord = ExtResource("33_ignas")
+_music_pole_ile = ExtResource("34_ifpa1")
+_music_pole_sud = ExtResource("35_6nf6n")
+_music_gameplay = ExtResource("37_2qlup")
+_music_miniGame = ExtResource("36_cpf4b")
+_music_credits = ExtResource("38_pgp2u")
 
 [node name="MusicStream" type="AudioStreamPlayer" parent="AudioManager" unique_id=1032384253]
 bus = &"Music"

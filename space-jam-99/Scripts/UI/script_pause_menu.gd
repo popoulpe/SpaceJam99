@@ -1,6 +1,7 @@
 extends Control
 var paused = false
 
+@export var AudioManager : Node
 @export var _Audio : Control
 @export var _AudioSkateTexture : TextureRect
 @export var _Pause : Control
@@ -17,6 +18,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
+		var iInt: int = randi() % 2
+		AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
 		_pauseMenu()
 	_on_timer_timeout(delta)
 
@@ -37,9 +40,13 @@ func _pauseMenu()->void:
 	print(paused)
 
 func _on_start_texture_button_pressed() -> void:
+	var iInt: int = randi() % 2
+	AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
 	_pauseMenu()
 
 func _on_quit_texture_button_pressed() -> void:
+	var iInt: int = randi() % 2
+	AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/scene_main_menu.tscn")
 
 func _on_timer_timeout(f:float):
@@ -56,9 +63,13 @@ func _on_timer_timeout(f:float):
 	_AudioSkateTexture.position = _position[1] + Vector2(r,g)*fspeed
 
 func _on_option_button_pressed() -> void:
+	var iInt: int = randi() % 2
+	AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
 	_Pause.hide()
 	_Audio.show()
 
 func _on_back_texture_button_pressed() -> void:
+	var iInt: int = randi() % 2
+	AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
 	_Audio.hide()
 	_Pause.show()
