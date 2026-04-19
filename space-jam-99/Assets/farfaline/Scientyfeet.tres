@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rdpvju14t66v"]
+
+[ext_resource type="Texture2D" uid="uid://cqnpvrje0mcv6" path="res://Assets/Characters/animations_scientifeet_bake_scientist_2k.png" id="1_m6f7n"]
+[ext_resource type="Shader" uid="uid://b5n7o8o8l8qab" path="res://Assets/farfaline/OutlineBeter.gdshader" id="2_f8vqo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mjum"]
+render_priority = 0
+shader = ExtResource("2_f8vqo")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_5mjum")
+diffuse_mode = 3
+albedo_texture = ExtResource("1_m6f7n")
+roughness = 0.05

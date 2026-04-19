@@ -6,6 +6,8 @@ class_name Player
 @export var hud:ui_hud_speed
 @export var timePenality :float = 10
 @export var invulnerabilityDuration:float=2 
+@onready var particle_explozion: CPUParticles3D = $CharacterBody3D/Mesh/ParticleExplozion
+
 
 
 var time :float = 0
@@ -20,3 +22,4 @@ func _process(delta):
 func get_hit():
 	time += timePenality
 	hud.time_update(time, true)
+	particle_explozion.emitting=true;

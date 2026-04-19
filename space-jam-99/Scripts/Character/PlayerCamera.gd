@@ -17,6 +17,7 @@ extends Node
 @export var highSpeedValue:float= 60
 @export var lowSpeedValue:float= 25
 @export var fovAcceleration:float = 10
+@onready var speed_camera_particle: CPUParticles3D = $SpeedCameraParticle
 
 
 func _physics_process(delta):
@@ -28,8 +29,10 @@ func _physics_process(delta):
 func adapt_fov(delta :float) -> void:
 	var speed :float= character_body_3d.velocity.length()
 	if speed < lowSpeedValue:
+		speed_camera_particle.emitting=false;
 		camera.fov = lowSpeedFov
 	elif speed > highSpeedValue:
+		speed_camera_particle.emitting=true;
 		camera.fov = highSpeedFov
 	else:
 		var nextfov = lowSpeedFov + ((highSpeedFov-lowSpeedFov) * ((speed-lowSpeedValue)/(highSpeedFov-lowSpeedFov)))
