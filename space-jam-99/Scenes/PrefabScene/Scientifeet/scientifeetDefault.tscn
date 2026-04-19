@@ -78,7 +78,10 @@ bones/64/rotation = Quaternion(-0.8216405, 0.19604197, 0.23194163, 0.48236662)
 bones/65/rotation = Quaternion(0.0442966, 0.92583185, -0.37274897, -0.043948364)
 bones/66/rotation = Quaternion(-0.60748625, 0.72133076, -0.21832316, -0.25095314)
 
+[node name="RandomAnimationTimer" type="Timer" parent="." unique_id=211621757]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="RandomAnimationTimer" to="." method="_on_random_animation_timer_timeout"]
 
 [editable path="animations_scientifeet"]
