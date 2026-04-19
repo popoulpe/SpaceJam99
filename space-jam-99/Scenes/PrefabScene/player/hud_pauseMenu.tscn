@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://3w36qcdvdxwk" path="res://Scripts/UI/colorbutton.gd" id="4_4wjug"]
 [ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="5_yw8l3"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="6_crq0y"]
+[ext_resource type="Texture2D" uid="uid://bd75xd5wjv1pd" path="res://Assets/UI/button/ui_agrandir.png" id="8_mqd8b"]
+[ext_resource type="Script" uid="uid://dx3v1yfhxeu2k" path="res://Scenes/MainScenes/big_screen_button.gd" id="9_o7s6o"]
+[ext_resource type="Texture2D" uid="uid://cfj088n4onr00" path="res://Assets/UI/button/ui_diminuer.png" id="10_nxot5"]
 
 [node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("_movingControl")]
 process_mode = 3
@@ -113,9 +116,30 @@ script = ExtResource("6_crq0y")
 min_font_size = 2
 max_font_size = 78
 
+[node name="BigScreenButton" type="TextureButton" parent="TextureRect" unique_id=1638133688]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.87000006
+anchor_top = 0.155
+anchor_right = 0.94600004
+anchor_bottom = 0.291
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_mqd8b")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("9_o7s6o")
+_sprites = Array[Texture]([ExtResource("8_mqd8b"), ExtResource("10_nxot5")])
+
 [connection signal="mouse_entered" from="TextureRect/StartTextureButton" to="TextureRect/StartTextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/StartTextureButton" to="TextureRect/StartTextureButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="TextureRect/StartTextureButton" to="." method="_on_start_texture_button_pressed"]
 [connection signal="mouse_entered" from="TextureRect/QuitTextureButton" to="TextureRect/QuitTextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/QuitTextureButton" to="TextureRect/QuitTextureButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="TextureRect/QuitTextureButton" to="." method="_on_quit_texture_button_pressed"]
+[connection signal="mouse_entered" from="TextureRect/BigScreenButton" to="TextureRect/BigScreenButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/BigScreenButton" to="TextureRect/BigScreenButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureRect/BigScreenButton" to="TextureRect/BigScreenButton" method="_on_pressed"]
