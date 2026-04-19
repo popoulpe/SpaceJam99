@@ -119,7 +119,6 @@ visible = false
 
 [node name="SceneSwitchSkate" parent="." unique_id=423912757 instance=ExtResource("5_3b504")]
 transform = Transform3D(-0.18224671, -0.4330636, -0.88274693, -0.8396033, -0.3986923, 0.36893234, -0.51171535, 0.8083938, -0.29094136, -100.88269, 30.900272, -18.216785)
-nextLevelScene = "res://Scenes/MainScenes/definitiveScene/Road1.tscn"
 
 [node name="ile_props" parent="." unique_id=183121515 instance=ExtResource("5_d8aga")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.063186646, -7.6293945e-06, -0.35308838)

@@ -20,19 +20,16 @@ extends Node3D
 
 var isFromEarth:bool
 
-#debug to delete
-func _ready():
-	init(true)
+#""
 
-func init(fromEarth:bool):
-	isFromEarth = fromEarth
-	if fromEarth:
+func _ready():
+	isFromEarth = GlobalScript.isFromEarth
+	if isFromEarth:
 		player.character_body_3d.position = earthSpawnPos
 		player.character_body_3d.rotation = earthSpawnRot
 	else:
 		player.character_body_3d.position = shipSpawnPos
 		player.character_body_3d.rotation = shipSpawnRot
-		
 
 
 func coucheOzoneAtteinte(_body:Node3D) -> void:
