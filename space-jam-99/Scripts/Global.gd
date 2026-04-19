@@ -7,17 +7,17 @@ var canMove :bool= true
 var ScientifeetDialogStep :int=0
 
 var AllScientifeetDialog: Array[String]=[
-"res://Assets/ScientifeetText/dialogue1V1.txt",
-"res://Assets/ScientifeetText/dialogue1V1.txt",
-"res://Assets/ScientifeetText/dialogue1V1.txt",
-"res://Assets/ScientifeetText/dialogue1V1.txt"
+"res://Assets/ScientifeetText/dialogue1.txt",
+"res://Assets/ScientifeetText/dialogue2.txt",
+"res://Assets/ScientifeetText/dialogue3.txt",
+"res://Assets/ScientifeetText/dialogue4.txt"
 
 ]
 var AllRoadsScenes: Array[String]=[
 	"ne rien mettre ici, le code est un peu degueu",
 	"res://Scenes/MainScenes/definitiveScene/Road1.tscn",
-	"res://Scenes/MainScenes/definitiveScene/Road1.tscn",
-	"res://Scenes/MainScenes/definitiveScene/Road1.tscn"
+	"res://Scenes/MainScenes/definitiveScene/Road2.tscn",
+	"res://Scenes/MainScenes/definitiveScene/Road3.tscn"
 ]
 
 var AllPoleScene: Array[String]=[

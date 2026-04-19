@@ -182,15 +182,15 @@ shader = ExtResource("9_qkq78")
 [sub_resource type="BoxShape3D" id="BoxShape3D_3m0nj"]
 size = Vector3(1.375, 1.2680722, 1.7453613)
 
-[node name="Road1" type="Node3D" unique_id=1631416252 node_paths=PackedStringArray("player")]
+[node name="Road1" type="Node3D" unique_id=1631416252 node_paths=PackedStringArray("SpeedPads", "OzoneCollision", "ShipCollision", "player")]
 script = ExtResource("1_libju")
+SpeedPads = NodePath("SpeedPads")
+OzoneCollision = NodePath("coucheOzoneCollision")
+ShipCollision = NodePath("ShipCollision")
 player = NodePath("Player")
 earthSpawnPos = Vector3(-1720, -75, -45)
 shipSpawnPos = Vector3(-60, 18, -45)
 shipSpawnRot = Vector3(0, 180, 0)
-respawnZAxis = -45.0
-respawnHeight = 100.0
-respawnXPenality = 100.0
 
 [node name="GridMap" type="GridMap" parent="." unique_id=2078228994]
 transform = Transform3D(1.5, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 0, 0)
@@ -280,6 +280,7 @@ mesh = SubResource("ArrayMesh_5rveq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fusee_obstacle/Circle" unique_id=539573896]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00049293414, 0.00034304522, 0.0010060407)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fusee_obstacle/Circle/StaticBody3D" unique_id=1282109083]
 transform = Transform3D(1.0000005, 0, 0, 0, 1.0000007, -2.842171e-14, 0, 2.842171e-14, 1.0000007, 0, 0, 0.0005514473)
@@ -294,6 +295,7 @@ mesh = SubResource("ArrayMesh_5rveq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fusee_obstacle2/Circle" unique_id=1483797841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00049293414, 0.00034304522, 0.0010060407)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fusee_obstacle2/Circle/StaticBody3D" unique_id=1990401788]
 transform = Transform3D(1.0000005, 0, 0, 0, 1.0000007, -2.842171e-14, 0, 2.842171e-14, 1.0000007, 0, 0, 0.0005514473)
@@ -344,123 +346,125 @@ collision_layer = 2
 transform = Transform3D(1.0000026, -1.3261294e-08, 2.3006535e-08, 4.1630187e-08, 1, 0, 1.4890697e-06, 5.9604645e-08, 1, 0.0033607483, -0.023803711, 0)
 shape = SubResource("BoxShape3D_movqa")
 
-[node name="SpeedPad" type="MeshInstance3D" parent="." unique_id=1427892910]
+[node name="SpeedPads" type="Node3D" parent="." unique_id=500081699]
+
+[node name="SpeedPad" type="MeshInstance3D" parent="SpeedPads" unique_id=1427892910]
 transform = Transform3D(-4.3195436e-07, 1.5319281, 9.881963, 6.696271e-08, 9.881963, -1.5319281, -10, -3.0685962e-15, -4.3711395e-07, -214.75903, 11.407187, -34.959976)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad" unique_id=800252855]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPad" unique_id=800252855]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad/StaticBody3D" unique_id=1535270104]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPad/StaticBody3D" unique_id=1535270104]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPad2" type="MeshInstance3D" parent="." unique_id=1737745318]
+[node name="SpeedPad2" type="MeshInstance3D" parent="SpeedPads" unique_id=1737745318]
 transform = Transform3D(-4.0403594e-07, 3.8160284, 9.243263, 1.6680394e-07, 9.243263, -3.8160284, -10, -1.6900469e-14, -4.3711393e-07, -379.2751, 30.24704, -59.415672)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad2" unique_id=1005706605]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPad2" unique_id=1005706605]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad2/StaticBody3D" unique_id=2132652915]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPad2/StaticBody3D" unique_id=2132652915]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPad3" type="MeshInstance3D" parent="." unique_id=1659179797]
+[node name="SpeedPad3" type="MeshInstance3D" parent="SpeedPads" unique_id=1659179797]
 transform = Transform3D(-4.0403594e-07, 3.8160284, 9.243263, 1.6680394e-07, 9.243263, -3.8160284, -10, -1.6900469e-14, -4.3711393e-07, -661.28815, 34.40196, -34.946342)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad3" unique_id=2044673980]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPad3" unique_id=2044673980]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad3/StaticBody3D" unique_id=309392195]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPad3/StaticBody3D" unique_id=309392195]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPad4" type="MeshInstance3D" parent="." unique_id=1492227350]
+[node name="SpeedPad4" type="MeshInstance3D" parent="SpeedPads" unique_id=1492227350]
 transform = Transform3D(-4.0403594e-07, 3.8160284, 9.243263, 1.6680394e-07, 9.243263, -3.8160284, -10, -1.6900469e-14, -4.3711393e-07, -932.1741, -18.043404, -64.85094)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad4" unique_id=1641044936]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPad4" unique_id=1641044936]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad4/StaticBody3D" unique_id=1781518570]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPad4/StaticBody3D" unique_id=1781518570]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPad5" type="MeshInstance3D" parent="." unique_id=1294361663]
+[node name="SpeedPad5" type="MeshInstance3D" parent="SpeedPads" unique_id=1294361663]
 transform = Transform3D(-4.371139e-07, 0, 9.999999, 0, 9.999999, 0, -10, 0, -4.3711384e-07, -1011.9618, -12.478227, -54.91306)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad5" unique_id=158903203]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPad5" unique_id=158903203]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad5/StaticBody3D" unique_id=2048156986]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPad5/StaticBody3D" unique_id=2048156986]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPad6" type="MeshInstance3D" parent="." unique_id=2053306056]
+[node name="SpeedPad6" type="MeshInstance3D" parent="SpeedPads" unique_id=2053306056]
 transform = Transform3D(-3.5445152e-07, 5.8519835, 8.108902, 2.557984e-07, 8.108902, -5.8519835, -10, -1.9329698e-14, -4.371139e-07, -1336.9644, -3.8271208, -35.91764)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPad6" unique_id=1095805065]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPad6" unique_id=1095805065]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPad6/StaticBody3D" unique_id=1930734613]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPad6/StaticBody3D" unique_id=1930734613]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPadUP1" type="MeshInstance3D" parent="." unique_id=767874390]
+[node name="SpeedPadUP1" type="MeshInstance3D" parent="SpeedPads" unique_id=767874390]
 transform = Transform3D(-4.097734e-07, -2.6602721, -9.639657, 1.5216551e-07, 9.639657, -2.6602721, 10.000004, -2.5569318e-07, -3.5452737e-07, -1557.535, -34.501038, -61.57058)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP1" unique_id=493505392]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP1" unique_id=493505392]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP1/StaticBody3D" unique_id=1186765213]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP1/StaticBody3D" unique_id=1186765213]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPadUP2" type="MeshInstance3D" parent="." unique_id=1324116512]
+[node name="SpeedPadUP2" type="MeshInstance3D" parent="SpeedPads" unique_id=1324116512]
 transform = Transform3D(-4.097734e-07, -2.6602721, -9.639657, 1.5216551e-07, 9.639657, -2.6602721, 10.000004, -2.5569318e-07, -3.5452737e-07, -1557.535, -34.501038, -30.744835)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP2" unique_id=1316694664]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP2" unique_id=1316694664]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP2/StaticBody3D" unique_id=1627402258]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP2/StaticBody3D" unique_id=1627402258]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPadUP3" type="MeshInstance3D" parent="." unique_id=1492916437]
+[node name="SpeedPadUP3" type="MeshInstance3D" parent="SpeedPads" unique_id=1492916437]
 transform = Transform3D(-4.247625e-07, -3.7698417, -9.262199, 1.03176916e-07, 9.262199, -3.7698417, 10.000004, -2.556932e-07, -3.545274e-07, -856.8611, -13.470913, -61.57057)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP3" unique_id=1713229178]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP3" unique_id=1713229178]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP3/StaticBody3D" unique_id=185094532]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP3/StaticBody3D" unique_id=185094532]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 
-[node name="SpeedPadUP4" type="MeshInstance3D" parent="." unique_id=1658712622]
+[node name="SpeedPadUP4" type="MeshInstance3D" parent="SpeedPads" unique_id=1658712622]
 transform = Transform3D(-4.247625e-07, -3.7698417, -9.262199, 1.03176916e-07, 9.262199, -3.7698417, 10.000004, -2.556932e-07, -3.545274e-07, -856.8611, -13.470913, -30.744827)
 material_override = SubResource("ShaderMaterial_4ak8j")
 mesh = SubResource("PlaneMesh_wmmd0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPadUP4" unique_id=957340365]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpeedPads/SpeedPadUP4" unique_id=957340365]
 collision_layer = 16
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPadUP4/StaticBody3D" unique_id=1360550132]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeedPads/SpeedPadUP4/StaticBody3D" unique_id=1360550132]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.0029296877, 0.2668428, -0.05090332)
 shape = SubResource("BoxShape3D_3m0nj")
 

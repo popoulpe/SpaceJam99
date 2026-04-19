@@ -14,8 +14,8 @@ extends Node
 
 @export var highSpeedFov :float = 150
 @export var lowSpeedFov :float = 100
-@export var highSpeedValue:float= 40
-@export var lowSpeedValue:float= 15
+@export var highSpeedValue:float= 60
+@export var lowSpeedValue:float= 25
 @export var fovAcceleration:float = 10
 
 

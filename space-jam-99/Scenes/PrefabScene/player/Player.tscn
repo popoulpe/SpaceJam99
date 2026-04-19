@@ -466,7 +466,7 @@ springArm = NodePath("SpringArm3D")
 character_body_3d = NodePath("..")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/CameraFollowPoint" unique_id=1793624354]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3, 1)
+transform = Transform3D(-4.371139e-08, 0.17364818, -0.9848077, 0, 0.9848077, 0.17364818, 1, 7.590403e-09, -4.304731e-08, 0, 4, 1)
 shape = SubResource("SphereShape3D_onb1c")
 spring_length = 10.0
 
