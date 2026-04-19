@@ -17,9 +17,10 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 shape = SubResource("CapsuleShape3D_gfilx")
 
 [node name="animations_scientifeet" parent="." unique_id=632991482 instance=ExtResource("2_idoak")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
 [node name="Main" parent="animations_scientifeet" index="0" unique_id=455851315]
-transform = Transform3D(-0.8279395, 0.4046781, 0.38826752, 0.20598784, 0.8633684, -0.46061236, -0.5216177, -0.3013808, -0.79817563, -1.8109028, -0.00920639, 1.7742325)
+transform = Transform3D(-0.8279395, 0.4046781, 0.38826752, 0.20598784, 0.86336833, -0.46061236, -0.5216177, -0.30138078, -0.79817563, -1.8109028, -0.00920639, 1.7742325)
 
 [node name="Skeleton3D" parent="animations_scientifeet/Main" index="0" unique_id=1671109613]
 bones/0/rotation = Quaternion(0, 0.9974141, -0.07186991, 5.884183e-15)

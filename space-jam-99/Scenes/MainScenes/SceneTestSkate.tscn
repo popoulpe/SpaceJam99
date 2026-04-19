@@ -175,6 +175,7 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Scientifeet" parent="Interactable" unique_id=1396396552 instance=ExtResource("5_41k57")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -7.4682693, 0, -22.722973)
+TextFile = "res://Assets/ScientifeetText/dialogue1V1.txt"
 
 [node name="MiniGameInteraction" parent="Interactable" unique_id=260612951 instance=ExtResource("6_gs7mn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.080994, 0.99282885, 0.23513937)

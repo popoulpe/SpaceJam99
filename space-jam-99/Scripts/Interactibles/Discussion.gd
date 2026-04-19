@@ -1,6 +1,6 @@
 extends Interactable
 
-@export var TextFile :String= "res://Assets/ScientifeetText/ScientifeetTextExample.txt"
+var TextFile :String
 
 var file:FileAccess
 
@@ -9,6 +9,7 @@ var NextLine :String
 var fileEnded:bool=false
 
 func _ready():
+	TextFile = GlobalScript.AllScientifeetDialog[GlobalScript.ScientifeetDialogStep]
 	file = FileAccess.open(TextFile, FileAccess.READ)
 	getNextLine()
 
@@ -22,6 +23,7 @@ func Interact(player:PlayerWithoutSkate) -> void:
 func getNextLine() -> void:
 	if file.eof_reached():
 		print("End of file")
+		GlobalScript.ScientifeetDialogStep +=1
 		fileEnded = true
 		GlobalScript.asFinishedLevelTask = true
 		return
