@@ -59,7 +59,6 @@ func _on_option_button_pressed() -> void:
 	_Pause.hide()
 	_Audio.show()
 
-
 func _on_back_texture_button_pressed() -> void:
 	_Audio.hide()
 	_Pause.show()
