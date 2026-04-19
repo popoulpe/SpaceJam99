@@ -25,14 +25,14 @@ func _pauseMenu()->void:
 		get_tree().paused = false
 		hide()
 		#visible = false
-		#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+		GlobalScript.hideMouse()
 	else:
 		get_tree().paused = true
 		show()
 		_Audio.hide()
 		_Pause.show()
 		visible = true
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		GlobalScript.showMouse()
 	paused=!paused
 	print(paused)
 

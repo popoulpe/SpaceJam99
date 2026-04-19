@@ -22,10 +22,16 @@ var AllRoadsScenes: Array[String]=[
 ]
 
 var AllPoleScene: Array[String]=[
-	"res://Scenes/MainScenes/definitiveScene/pole_ile.tscn",
 	"res://Scenes/MainScenes/definitiveScene/pole_nord.tscn",
+	"res://Scenes/MainScenes/definitiveScene/pole_ile.tscn",
 	"res://Scenes/MainScenes/definitiveScene/pole_sud.tscn"
 ]
+
+func showMouse():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func hideMouse():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func changeSceneToRoad(fromEarth:bool):
 	GlobalScript.asFinishedLevelTask=false

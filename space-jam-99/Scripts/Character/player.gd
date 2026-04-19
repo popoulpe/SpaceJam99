@@ -10,6 +10,9 @@ class_name Player
 
 var time :float = 0
 
+func _ready():
+	GlobalScript.hideMouse()
+	
 func _process(delta):
 	time+=delta
 	hud.time_update(time, false)
