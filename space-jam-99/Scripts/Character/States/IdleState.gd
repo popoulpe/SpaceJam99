@@ -34,6 +34,7 @@ func process_physics(delta:float) -> State:
 	parent.rotation.y = apply_turn_movement(delta, turnSpeed)
 	parent.velocity = gain_turn_speed(delta, turnAcceleration)
 	parent.velocity = apply_slope_slide(delta)
+	parent.velocity = applyDash(delta)
 	
 	if !parent.is_on_floor():
 		return fall_state

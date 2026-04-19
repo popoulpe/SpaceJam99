@@ -2,8 +2,8 @@ extends Node
 class_name State
 
 @export_group("chara properties")
-@export_group("chara properties")
-@export var pushMaxSpeed :float= 20
+@export var boostSpeed :float= 30
+@export var pushMaxSpeed :float= 25
 @export var decelerationDefault :float = 10
 
 @export_subgroup("air")
@@ -97,4 +97,11 @@ func floor_snap_adaptation() -> void:
 		parent.floor_snap_length = fast_ground_snap
 	else:
 		parent.floor_snap_length = slow_ground_snap
-		
+
+func applyDash(delta:float) -> Vector3:
+	var forwardVelocity :Vector3= Vector3(parent.velocity.x, 0,parent.velocity.z) 
+	if parent.shouldDash:
+		forwardVelocity +=(parent.basis.x.slide(parent.get_floor_normal()) * boostSpeed)
+		parent.shouldDash = false
+	forwardVelocity.y = parent.velocity.y
+	return forwardVelocity

@@ -26,6 +26,7 @@ func process_frame(_delta:float) -> State:
 func process_physics(delta:float) -> State:
 	floor_snap_adaptation()
 	parent.velocity = apply_slope_slide(delta)
+	parent.velocity = applyDash(delta)
 	
 	if parent.velocity.length()>0:
 		parent.velocity = apply_forward_deceleration(delta, deceleration)
