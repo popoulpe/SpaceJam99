@@ -13,7 +13,7 @@ var bus_map = {
 
 func _on_h_slider_value_changed(value: float) -> void:
 	match sliderType:
-		"music", "sfx", "ui":
+		"Music", "SFX", "UI":
 			var bus_index = bus_map[sliderType]
 			AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
 			_VisualChange(value)
