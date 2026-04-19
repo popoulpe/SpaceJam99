@@ -5,6 +5,8 @@ class_name PlayerWithoutSkate
 @onready var character_body_3d = $CharacterBody3D
 @export var hud:ui_hud_scientifeet
 @export var miniJeux:ui_hud_minijeux
+@onready var hud_pause_menu: Control = $CharacterBody3D/HudPauseMenu
+
 
 var canInteract :bool = false
 var lastInteractableObject :Interactable

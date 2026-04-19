@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nf26jk2jgfdf" path="res://Assets/UI/hud/interaction/ui_interaction.png" id="2_lwa1m"]
 [ext_resource type="FontFile" uid="uid://bm7oo6qp1ovv1" path="res://Assets/UI/fonts/Oxanium-Bold.ttf" id="3_kdgwo"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="4_8w11y"]
-[ext_resource type="Script" uid="uid://csvf5whbx252a" path="res://Scripts/UI/mini_jeux_player.gd" id="5_kdgwo"]
+[ext_resource type="Script" path="res://Scripts/UI/mini_jeux_player.gd" id="5_kdgwo"]
 
 [node name="ui_hud_minijeux" type="Control" unique_id=383752429]
 visible = false

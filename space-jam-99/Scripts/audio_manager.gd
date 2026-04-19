@@ -36,15 +36,15 @@ func _ready() -> void:
 	_readyMusic(0.0)
 
 func _readyMusic(f:float=1.0)->void:
-	if(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/pole_ile.tscn"):
+	if(get_tree().get_current_scene().get_name()=="pole_ile"):
 		play_music(_music_pole_ile, f, 1)
-	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/pole_nord.tscn"):
+	elif(get_tree().get_current_scene().get_name()=="pole_nord"):
 		play_music(_music_pole_nord, f, 1)
-	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/pole_sud.tscn"):
+	elif(get_tree().get_current_scene().get_name()=="pole_sud"):
 		play_music(_music_pole_sud, f, 1)
-	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/Road1.tscn"||get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/Road2.tscn"||get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/Road3.tscn"):
+	elif(get_tree().get_current_scene().get_name()=="scene_MainMenu"||get_tree().get_current_scene().get_name()=="Road1"||get_tree().get_current_scene().get_name()=="Road2"||get_tree().get_current_scene().get_name()=="Road3"):
 		play_music(_music_gameplay, f, 1)
-	elif(get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/SceneCreditsWithShip.tscn" || get_tree().get_current_scene().get_name()=="res://Scenes/MainScenes/definitiveScene/ScientifeetShip.tscn" ):
+	elif(get_tree().get_current_scene().get_name()=="SceneCreditsWithShip" || get_tree().get_current_scene().get_name()=="ScientifeetShip"):
 		play_music(_music_credits, f, 1)
 
 func play_sfx(stream: AudioStream) -> void:

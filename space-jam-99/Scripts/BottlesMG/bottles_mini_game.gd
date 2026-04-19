@@ -1,5 +1,6 @@
 extends Control
 
+@export var player:Node3D
 @export var bottleList:Array[Bottle]
 var lastSelected:int=-1
 var selected:int=-1
@@ -62,6 +63,8 @@ func next_level():
 		GlobalScript.asFinishedLevelTask = true
 		GlobalScript.canMove = true
 		visible = false
+		if(player!=null):
+			player.hud_pause_menu.AudioManager._readyMusic
 		print("YAHOO")
 	else:
 		for i in bottleList:

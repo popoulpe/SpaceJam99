@@ -1,5 +1,6 @@
 extends Control
 
+@export var player:Node3D
 @onready var scene_mini_game_tuyaux = $".."
 
 @export
@@ -92,6 +93,8 @@ func newLevel()->void:
 		GlobalScript.asFinishedLevelTask = true
 		GlobalScript.canMove = true
 		scene_mini_game_tuyaux.visible = false
+		if(player!=null):
+			player.hud_pause_menu.AudioManager._readyMusic
 		print("YAHOO")
 	else:
 		placementLevel(iLevel)

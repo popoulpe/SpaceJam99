@@ -1,4 +1,5 @@
 extends Control
+@export var player:Node3D
 @export var all_buttons:Array[TextureButton]
 @export var levels_ : Dictionary
 @export var _images : Array[Texture]
@@ -71,6 +72,9 @@ func _on_texture_button_pressed() -> void:
 		GlobalScript.asFinishedLevelTask = true
 		GlobalScript.canMove = true
 		visible = false
+		
+		if(player!=null):
+			player.hud_pause_menu.AudioManager._readyMusic
 		print("YOUPI")
 	else:
 		var tween = get_tree().create_tween()

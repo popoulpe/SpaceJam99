@@ -7,4 +7,4 @@ func _ready():
 
 func Interact(player:PlayerWithoutSkate) -> void:
 	player.miniJeux.interact(miniJeuSceneName)
-	
+	player.hud_pause_menu.AudioManager.play_music(player.hud_pause_menu.AudioManager._music_miniGame,1,1)

@@ -17,11 +17,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pause"):
-		var iInt: int = randi() % 2
-		AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
-		_pauseMenu()
-	_on_timer_timeout(delta)
+	if(get_tree().get_current_scene().get_name()!="scene_MainMenu"):
+		if Input.is_action_just_pressed("pause"):
+			var iInt: int = randi() % 2
+			AudioManager.play_ui_sfx(AudioManager._ui_button[iInt])
+			_pauseMenu()
+		_on_timer_timeout(delta)
 
 func _pauseMenu()->void:
 	if(paused):

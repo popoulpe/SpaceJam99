@@ -8,7 +8,6 @@
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="3_y17dc"]
 [ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="4_y17dc"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="5_xpf4e"]
-[ext_resource type="AudioStream" uid="uid://btss8rtkgk8i0" path="res://Assets/Audio/Music/Main Sound 4.mp3" id="9_xpf4e"]
 
 [node name="SceneCredits" type="Control" unique_id=647363157 node_paths=PackedStringArray("_movingControls")]
 layout_mode = 3
@@ -316,11 +315,6 @@ text_overrun_behavior = 3
 script = ExtResource("5_xpf4e")
 min_font_size = 2
 max_font_size = 92
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1334199589]
-stream = ExtResource("9_xpf4e")
-autoplay = true
-parameters/looping = true
 
 [connection signal="mouse_entered" from="StartTextureButton" to="StartTextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StartTextureButton" to="StartTextureButton" method="_on_mouse_exited"]
