@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://dyk52vhycgxtr" path="res://Assets/UI/fonts/Oxanium-Medium.ttf" id="3_y17dc"]
 [ext_resource type="FontFile" uid="uid://dnies45qfxdqx" path="res://Assets/UI/fonts/Astron Boy Video.otf" id="4_y17dc"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="5_xpf4e"]
-[ext_resource type="AudioStream" uid="uid://btss8rtkgk8i0" path="res://Assets/Music/Main Sound 4.mp3" id="9_xpf4e"]
+[ext_resource type="AudioStream" uid="uid://btss8rtkgk8i0" path="res://Assets/Audio/Music/Main Sound 4.mp3" id="9_xpf4e"]
 
 [node name="SceneCredits" type="Control" unique_id=647363157 node_paths=PackedStringArray("_movingControls")]
 layout_mode = 3

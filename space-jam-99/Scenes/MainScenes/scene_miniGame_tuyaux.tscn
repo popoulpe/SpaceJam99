@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dd6yju6y3b6ik" path="res://Assets/UI/miniGames/ui_slider_progress.png" id="21_bpvyt"]
 [ext_resource type="Texture2D" uid="uid://b7en3l4ji1kt7" path="res://Assets/UI/button/ui_box3.png" id="23_k1ae6"]
 [ext_resource type="FontFile" uid="uid://1w8cug5u6vu1" path="res://Assets/UI/fonts/Oxanium-Regular.ttf" id="24_vx851"]
-[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Music/696408__bloodpixelhero__adventure-theme-9.wav" id="25_vx851"]
+[ext_resource type="AudioStream" uid="uid://cuyes8gr3vngg" path="res://Assets/Audio/Music/696408__bloodpixelhero__adventure-theme-9.wav" id="25_vx851"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqu2h"]
 

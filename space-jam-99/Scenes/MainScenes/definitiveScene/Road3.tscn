@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://b6eudaugck8no"]
 
-[ext_resource type="AudioStream" uid="uid://b58umf2g436st" path="res://Assets/Music/Main Sound 2.mp3" id="1_48xn0"]
+[ext_resource type="AudioStream" uid="uid://b58umf2g436st" path="res://Assets/Audio/Music/Main Sound 2.mp3" id="1_48xn0"]
 [ext_resource type="Texture2D" uid="uid://dvliin5whrxu3" path="res://Assets/Enviro/SpaceTest2.2.png" id="2_cshxj"]
 [ext_resource type="PackedScene" uid="uid://gq4c7bc4g1ka" path="res://Assets/Enviro/planete_mesh.fbx" id="3_8x0vo"]
 [ext_resource type="MeshLibrary" uid="uid://d4fn5k0v2jfsw" path="res://Assets/Tileset3D/TiesRoadv3.2.meshlib" id="4_8x0vo"]
