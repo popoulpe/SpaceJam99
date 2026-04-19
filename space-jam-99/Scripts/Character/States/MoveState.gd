@@ -11,8 +11,9 @@ extends State
 @export var deceleration :float = 10
 
 @export var pushAcceleration :float= 15
-
+@onready var skate_particle: CPUParticles3D = $"../../Mesh/skate_anim_V2/Armature/Skeleton3D/Plane/SkateParticle"
 func enter() -> void :
+	skate_particle.emitting = true;
 	super()
 	pass
 

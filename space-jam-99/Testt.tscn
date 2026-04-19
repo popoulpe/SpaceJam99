@@ -10,7 +10,7 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2kr1e"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmkne"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmmd0"]
 shading_mode = 0
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
@@ -18,7 +18,7 @@ albedo_color = Color(1.5257139, 1.5257139, 1.5257139, 1)
 grow_amount = 0.055
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xmkne"]
-material = SubResource("StandardMaterial3D_xmkne")
+material = SubResource("StandardMaterial3D_wmmd0")
 radius = 0.06
 height = 0.7
 radial_segments = 16
@@ -38,14 +38,14 @@ _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0.012965966, -0.37568736), 0.0, 0.0, 0, 0, Vector2(0.9902755, 0.5956761), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f48s1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2cx7b"]
 shading_mode = 0
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
 albedo_color = Color(1.6938539, 1.6938539, 1.6938539, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4ak8j"]
-material = SubResource("StandardMaterial3D_f48s1")
+material = SubResource("StandardMaterial3D_2cx7b")
 radius = 0.1
 height = 3.0
 radial_segments = 6
@@ -61,6 +61,52 @@ render_priority = 0
 shader = ExtResource("6_4ak8j")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wmmd0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hb7a"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1.5257139, 1.5257139, 1.5257139, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1hb7a"]
+material = SubResource("StandardMaterial3D_1hb7a")
+radius = 0.06
+height = 0.5
+radial_segments = 16
+rings = 2
+
+[sub_resource type="Curve" id="Curve_i80ne"]
+_data = [Vector2(0.020642206, 0.15806806), 0.0, 3.110867, 0, 0, Vector2(0.9564219, 0.5826015), 1.5554335, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_5t6hq"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.38515902, 0.66080403, 1)
+colors = PackedColorArray(0.9999998, 0.90371025, 0.5217282, 1, 0.99999994, 0.75146747, 0.5694073, 1, 1, 0.4862745, 0.654902, 1, 0.22114289, 0.23433179, 1, 0.03137255)
+
+[sub_resource type="Curve" id="Curve_jcaer"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0.012965966, -0.37568736), 0.0, 0.0, 0, 0, Vector2(0.9902755, 0.5956761), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i80ne"]
+transparency = 3
+alpha_hash_scale = 2.0
+alpha_antialiasing_mode = 0
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1.5257139, 1.5257139, 1.5257139, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wmmd0"]
+material = SubResource("StandardMaterial3D_i80ne")
+radius = 1.0
+height = 3.0
+radial_segments = 16
+rings = 2
 
 [node name="TestScene" type="Node3D" unique_id=678299224]
 
@@ -169,3 +215,97 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.924225, 38.78748, -92.8587
 
 [node name="SM_Asteromoche" parent="." unique_id=1878781895 instance=ExtResource("7_wmmd0")]
 transform = Transform3D(1, 0, 0, 0, 0.99999905, 0.0013613563, 0, -0.0013613563, 0.99999905, 46.035057, 39.16833, -93.46669)
+
+[node name="SkateParticle2" type="CPUParticles3D" parent="." unique_id=417210146]
+transform = Transform3D(0.14268076, 0, 0.98976874, 0, 1, 0, -0.98976874, 0, 0.14268076, -4.895912, 0.95110893, -14.598135)
+amount = 12
+lifetime = 0.18000000000000002
+preprocess = 0.53
+explosiveness = 0.28
+randomness = 0.55
+lifetime_randomness = 0.88
+mesh = SubResource("CapsuleMesh_1hb7a")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0.2, 1)
+spread = 26.6
+gravity = Vector3(0, -8, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+angular_velocity_min = 1.35
+angular_velocity_max = 159.34
+damping_min = 5.0
+damping_max = 20.0
+angle_min = -2.0
+angle_max = 2.0
+scale_amount_min = 0.6
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_i80ne")
+color = Color(0.33672184, 0.33672184, 0.33672184, 1)
+color_ramp = SubResource("Gradient_5t6hq")
+hue_variation_min = -0.5
+hue_variation_max = 0.5
+hue_variation_curve = SubResource("Curve_jcaer")
+
+[node name="SkateParticle3" type="CPUParticles3D" parent="." unique_id=1400339741]
+transform = Transform3D(0.14268076, 0, 0.98976874, 0, 1, 0, -0.98976874, 0, 0.14268076, -4.895912, 0.95110893, -12.509098)
+amount = 12
+lifetime = 0.18000000000000002
+preprocess = 0.53
+explosiveness = 0.28
+randomness = 0.55
+lifetime_randomness = 0.88
+mesh = SubResource("CapsuleMesh_1hb7a")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0.2, 1)
+spread = 26.6
+gravity = Vector3(0, -8, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+angular_velocity_min = 1.35
+angular_velocity_max = 159.34
+damping_min = 5.0
+damping_max = 20.0
+angle_min = -2.0
+angle_max = 2.0
+scale_amount_min = 0.6
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_i80ne")
+color = Color(0.33672184, 0.33672184, 0.33672184, 1)
+color_ramp = SubResource("Gradient_5t6hq")
+hue_variation_min = -0.5
+hue_variation_max = 0.5
+hue_variation_curve = SubResource("Curve_jcaer")
+
+[node name="ParticleExplozion" type="CPUParticles3D" parent="." unique_id=1849673435]
+transform = Transform3D(0.14268076, 0, 0.98976874, 0, 1, 0, -0.98976874, 0, 0.14268076, -4.895912, 0.95110893, -7.4922123)
+emitting = false
+amount = 30
+lifetime = 0.22
+one_shot = true
+preprocess = 0.53
+explosiveness = 0.25
+randomness = 0.55
+lifetime_randomness = 0.48
+mesh = SubResource("CapsuleMesh_wmmd0")
+emission_shape = 1
+emission_sphere_radius = 0.5
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector3(0, -8, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+damping_min = 5.0
+damping_max = 20.0
+angle_min = -2.0
+angle_max = 2.0
+scale_amount_min = 0.4
+scale_amount_max = 0.75
+scale_amount_curve = SubResource("Curve_i80ne")
+color = Color(0.33672184, 0.33672184, 0.33672184, 1)
+color_ramp = SubResource("Gradient_5t6hq")
+hue_variation_min = -0.1
+hue_variation_max = 0.2

@@ -1,11 +1,14 @@
 extends State
 
 @export var fall_jump_state : State
+@onready var skate_particle: CPUParticles3D = $"../../Mesh/skate_anim_V2/Armature/Skeleton3D/Plane/SkateParticle"
+@onready var jump: Node = $"."
 
 @export var turnSpeed :float=0.25
 
 func enter() -> void :
 	super()
+	skate_particle.emitting = false;
 	pass
 
 func exit() -> void:
