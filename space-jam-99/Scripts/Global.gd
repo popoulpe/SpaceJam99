@@ -6,7 +6,8 @@ var asFinishedLevelTask :bool = false
 var canMove :bool= true
 
 var windowMode
-var ScientifeetDialogStep :int=3
+var ScientifeetDialogStep :int=0
+
 
 var AllScientifeetDialog: Array[String]=[
 "res://Assets/ScientifeetText/dialogue1.txt",
