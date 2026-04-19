@@ -5,7 +5,7 @@ var paused = false
 @export var _AudioSkateTexture : TextureRect
 @export var _Pause : Control
 var hue : float = 0.0
-@export var _position : Array[Vector2]
+@export var _position : Array[Vector2]=[Vector2(0,0),Vector2(0,0)]
 @export var fspeed:float=5.0
 
 func _ready() -> void:
