@@ -216,7 +216,7 @@ mesh = SubResource("ArrayMesh_mg3da")
 shape = SubResource("ConcavePolygonShape3D_x20cm")
 
 [node name="Player" parent="." unique_id=2002350393 instance=ExtResource("3_px6pa")]
-transform = Transform3D(-0.86253136, 0, 0.5060036, 0, 1, 0, -0.5060036, 0, -0.86253136, 21.714106, -14.481182, -3.8630087)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.538, -14.481182, -3.8630087)
 
 [node name="SceneSwitchSkate" parent="." unique_id=423912757 instance=ExtResource("4_4lw3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.591486, -15.712877, -3.0012448)
