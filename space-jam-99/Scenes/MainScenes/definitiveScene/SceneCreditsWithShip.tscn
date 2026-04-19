@@ -100,7 +100,7 @@ isFromEarth = false
 [node name="V2_vaisseau_fenetres" parent="StaticBody3D" unique_id=1072591383 instance=ExtResource("3_rsu0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075, 0, -0.578)
 
-[node name="poster_2" parent="StaticBody3D/V2_vaisseau_fenetres" index="0" unique_id=2066700705]
+[node name="poster_2" parent="StaticBody3D/V2_vaisseau_fenetres" index="0" unique_id=439413787]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.6143842, 14.219234, -21.117237)
 surface_material_override/0 = SubResource("StandardMaterial3D_imsxu")
 surface_material_override/1 = SubResource("StandardMaterial3D_ishq2")
@@ -154,11 +154,12 @@ shape = SubResource("BoxShape3D_m4x57")
 
 [node name="Scientifeet" parent="." unique_id=1396396552 instance=ExtResource("8_traxj")]
 transform = Transform3D(0.13763456, 0, 0.99048305, 0, 1, 0, -0.99048305, 0, 0.13763456, -15.831639, -0.258559, -9.36962)
+randomAnimationOneChanceOn = 0
 
-[node name="Main" parent="Scientifeet/animations_scientifeet" parent_id_path=PackedInt32Array(1396396552, 632991482) index="0" unique_id=1926222440]
+[node name="Main" parent="Scientifeet/animations_scientifeet" parent_id_path=PackedInt32Array(1396396552, 632991482) index="0" unique_id=457592830]
 transform = Transform3D(-0.9999658, 0.007528918, 0.0033959644, 0.007630956, 0.9994867, 0.031107241, -0.003160018, 0.031132089, -0.99951017, -0.28474796, -0.08076965, 1.1567001)
 
-[node name="Skeleton3D" parent="Scientifeet/animations_scientifeet/Main" index="0" unique_id=2002209685]
+[node name="Skeleton3D" parent="Scientifeet/animations_scientifeet/Main" index="0" unique_id=641727910]
 bones/1/rotation = Quaternion(-0.057631038, 0.0018955548, 0.0021163383, 0.9983339)
 bones/2/rotation = Quaternion(-0.015582758, 0.0033794255, 0.004447224, 0.999863)
 bones/3/rotation = Quaternion(0.043703713, 0.0035025142, 0.004350947, 0.999029)

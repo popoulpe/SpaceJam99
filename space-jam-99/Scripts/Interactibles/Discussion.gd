@@ -2,6 +2,7 @@ extends Interactable
 
 @onready var animation_player = $animations_scientifeet/AnimationPlayer
 @onready var random_animation_timer = $RandomAnimationTimer
+@export var randomAnimationOneChanceOn:int=5
 
 var TextFile :String
 var file:FileAccess
@@ -61,8 +62,8 @@ func getNextLine() -> void:
 
 
 func _on_random_animation_timer_timeout():
-	var nb : int = rng.randi_range(0,5)
-	if nb == 3:
+	var nb : int = rng.randi_range(0,randomAnimationOneChanceOn)
+	if nb == 0:
 		animation_player.play(listAnimName[rng.randi_range(0, listAnimName.size())])
 	else:
 		animation_player.play("idle")
