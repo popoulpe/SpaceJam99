@@ -65,7 +65,7 @@ func getNextLine() -> void:
 func _on_random_animation_timer_timeout():
 	var nb : int = rng.randi_range(0,randomAnimationOneChanceOn-1)
 	if nb == 0:
-		animation_player.play(listAnimName[rng.randi_range(0, listAnimName.size())])
+		animation_player.play(listAnimName[rng.randi_range(0, listAnimName.size()-1)])
 	else:
 		animation_player.play("idle")
 	random_animation_timer.start(animation_player.get_section_end_time())
