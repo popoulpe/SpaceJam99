@@ -28,7 +28,6 @@ const BUS_UI := "UI"
 func _ready() -> void:
 	if _music:
 		_music.bus = BUS_MUSIC
-		_music.loop = true
 	if _sfx:
 		_sfx.bus = BUS_SFX
 	if _ui:

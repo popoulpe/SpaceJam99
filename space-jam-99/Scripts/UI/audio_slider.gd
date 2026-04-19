@@ -6,9 +6,9 @@ extends Control
 @export var sliderType : String = "Music"
 
 var bus_map = {
-	"Music": 0,
-	"SFX": 1,
-	"UI": 2
+	"Music":1,
+	"SFX": 2,
+	"UI": 3
 }
 
 func _on_h_slider_value_changed(value: float) -> void:
@@ -29,6 +29,7 @@ func _ready() -> void:
 	_textslider.min_value = _slider.min_value
 	_textslider.step = _slider.step
 	_textslider.value = _slider.value
+	_VisualChange(_textslider.value)
 
 func _VisualChange(value: float) -> void:
 	_textslider.value = value
