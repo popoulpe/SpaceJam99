@@ -212,7 +212,7 @@ shader = ExtResource("4_1nla2")
 size = Vector3(1.375, 1.2680722, 1.7453613)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n1rc1"]
-size = Vector3(2, 135.53683, 304.21912)
+size = Vector3(2, 220.0731, 304.21912)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lw5aq"]
 size = Vector3(2, 206.207, 304.219)
@@ -597,7 +597,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1888.8887, -33.454, -37.24)
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="coucheOzoneCollision" unique_id=2108405555]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.73853, -1.6523285, -3.121399)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.73853, -43.920467, -3.121399)
 shape = SubResource("BoxShape3D_n1rc1")
 
 [node name="ShipCollision" type="Area3D" parent="." unique_id=1578085651]
