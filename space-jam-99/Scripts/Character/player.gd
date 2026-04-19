@@ -4,6 +4,7 @@ class_name Player
 
 @onready var character_body_3d = $CharacterBody3D
 @export var hud:ui_hud_speed
+@export var hud_pause_menu: Control
 @export var timePenality :float = 10
 @export var invulnerabilityDuration:float=2 
 @onready var particle_explozion: CPUParticles3D = $CharacterBody3D/Mesh/ParticleExplozion
@@ -23,3 +24,5 @@ func get_hit():
 	time += timePenality
 	hud.time_update(time, true)
 	particle_explozion.emitting=true;
+	var iInt: int = randi() % 10
+	hud_pause_menu.AudioManager.play_ui_sfx(hud_pause_menu.AudioManager._sfx_vox_degat[iInt])

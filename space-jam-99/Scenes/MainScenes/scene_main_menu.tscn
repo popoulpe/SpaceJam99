@@ -43,7 +43,7 @@ static func locale_chaged() -> void:
 
 [node name="scene_MainMenu" type="Node3D" unique_id=1718710614]
 
-[node name="script_MainMenu" type="Control" parent="." unique_id=714102044]
+[node name="script_MainMenu" type="Control" parent="." unique_id=714102044 node_paths=PackedStringArray("hud_pause_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,6 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_uimbt")
+hud_pause_menu = NodePath("../HudPauseMenu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="script_MainMenu" unique_id=941420194]
 process_mode = 3

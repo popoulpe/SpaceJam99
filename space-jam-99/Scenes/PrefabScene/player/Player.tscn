@@ -594,7 +594,7 @@ playerController = NodePath("..")
 [node name="animations_perso_princ_V2" parent="CharacterBody3D/Mesh" unique_id=1460162433 instance=ExtResource("6_fijso")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="Skeleton3D" parent="CharacterBody3D/Mesh/animations_perso_princ_V2/metarig" parent_id_path=PackedInt32Array(1460162433, 544046716) index="0" unique_id=2129339402]
+[node name="Skeleton3D" parent="CharacterBody3D/Mesh/animations_perso_princ_V2/metarig" parent_id_path=PackedInt32Array(1460162433, 1178975798) index="0" unique_id=1078385133]
 bones/0/position = Vector3(-0.35332674, 3.2480962, 0.018961143)
 bones/0/rotation = Quaternion(0.08334408, 0.8733721, -0.0897248, 0.47140682)
 bones/1/rotation = Quaternion(-0.057670306, -1.650883e-07, -9.4214165e-09, 0.9983357)
