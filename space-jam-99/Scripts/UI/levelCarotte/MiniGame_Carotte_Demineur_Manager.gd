@@ -27,10 +27,11 @@ func awaken()->void:
 	_thisLevel_group_1.clear()
 	_thisLevel_group_2.clear()
 	_thisLevel_group_carotte.clear()
+	_progressBar.value=0
 	_progressBar.tint_progress =progressTint
 	iCaseRevealed=0
 	iCaseBombe=0
-	iLevel = randi() % 5
+	iLevel = randi() % 3
 	var z = 0
 	for i in all_buttons:
 		i._thisText.texture = _base_image
