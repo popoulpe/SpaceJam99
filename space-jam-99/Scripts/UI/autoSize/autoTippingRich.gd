@@ -7,7 +7,7 @@ extends RichTextLabel
 @export var fade_in_duration: float = 0.3  # Renommé pour plus de clarté
 
 var current_index: int = 0
-var is_typing: bool = false
+@export var is_typing: bool = false
 var timer: Timer
 var fade_timer: Timer
 var punctuation_chars: Array = [",", ".", "!", "?", ":", ";", "…"]
@@ -51,8 +51,11 @@ func start_typing():
 	timer.start()
 
 func start_dialogue(newText: String):
-	full_text = newText
-	start_typing()
+	if is_typing:
+			_finish_immediately()
+	else:
+		full_text = newText
+		start_typing()
 
 func _on_typing_timeout():
 	if current_index < full_text.length():

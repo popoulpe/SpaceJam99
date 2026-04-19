@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://Scripts/UI/autoSize/AutoSizeLabel.gd" id="6_crq0y"]
 
 [node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("_movingControl")]
-process_mode = 2
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

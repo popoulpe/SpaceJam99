@@ -458,9 +458,9 @@ collision_mask = 3
 floor_constant_speed = true
 script = ExtResource("2_dbo68")
 
-[node name="HudPauseMenu" parent="CharacterBody3D" unique_id=3991799 instance=ExtResource("4_w7myw")]
-
 [node name="ui_hud_skate" parent="CharacterBody3D" unique_id=1951736353 instance=ExtResource("3_fijso")]
+
+[node name="HudPauseMenu" parent="CharacterBody3D" unique_id=3991799 instance=ExtResource("4_w7myw")]
 
 [node name="CameraFollowPoint" type="Node3D" parent="CharacterBody3D" unique_id=1496072441 node_paths=PackedStringArray("camera", "springArm", "character_body_3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -487,7 +487,7 @@ playerController = NodePath("..")
 [node name="animations_perso_princ_V2" parent="CharacterBody3D/Mesh" unique_id=1460162433 instance=ExtResource("6_fijso")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="Skeleton3D" parent="CharacterBody3D/Mesh/animations_perso_princ_V2/metarig" parent_id_path=PackedInt32Array(1460162433, 2063710745) index="0" unique_id=487621259]
+[node name="Skeleton3D" parent="CharacterBody3D/Mesh/animations_perso_princ_V2/metarig" parent_id_path=PackedInt32Array(1460162433, 1178975798) index="0" unique_id=1078385133]
 bones/0/position = Vector3(-0.35332674, 3.2480962, 0.018961143)
 bones/0/rotation = Quaternion(0.08334408, 0.8733721, -0.0897248, 0.47140682)
 bones/1/rotation = Quaternion(-0.057670306, -1.650883e-07, -9.4214165e-09, 0.9983357)
