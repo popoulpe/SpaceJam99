@@ -10,8 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://bd75xd5wjv1pd" path="res://Assets/UI/button/ui_agrandir.png" id="8_mqd8b"]
 [ext_resource type="Script" uid="uid://dx3v1yfhxeu2k" path="res://Scenes/MainScenes/big_screen_button.gd" id="9_o7s6o"]
 [ext_resource type="Texture2D" uid="uid://cfj088n4onr00" path="res://Assets/UI/button/ui_diminuer.png" id="10_nxot5"]
+[ext_resource type="Texture2D" uid="uid://cvlitijh8rcpv" path="res://Assets/UI/button/ui_box_skate.png" id="11_e7tfh"]
+[ext_resource type="PackedScene" uid="uid://bqekidcw15dne" path="res://Scenes/PrefabScene/audio_slider.tscn" id="11_o7s6o"]
+[ext_resource type="FontFile" uid="uid://bm7oo6qp1ovv1" path="res://Assets/UI/fonts/Oxanium-Bold.ttf" id="12_nxot5"]
+[ext_resource type="Script" uid="uid://042awikgpa65" path="res://Scripts/audio_manager.gd" id="13_vhywa"]
 
-[node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("_movingControl")]
+[node name="HudPauseMenu" type="Control" unique_id=3991799 node_paths=PackedStringArray("_Audio", "_AudioSkateTexture", "_Pause")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -21,9 +25,12 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_fx2et")
-_movingControl = NodePath("TextureRect")
+_Audio = NodePath("Pause")
+_AudioSkateTexture = NodePath("Audio/Control/TextureRect")
+_Pause = NodePath("Audio")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=100157588]
+[node name="Pause" type="TextureRect" parent="." unique_id=100157588]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -35,14 +42,14 @@ texture = ExtResource("1_od536")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="StartTextureButton" type="TextureButton" parent="TextureRect" unique_id=1587160105]
+[node name="StartTextureButton" type="TextureButton" parent="Pause" unique_id=1587160105]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.091000006
-anchor_top = 0.63900006
-anchor_right = 0.68200004
-anchor_bottom = 0.82800007
+anchor_left = 0.12100001
+anchor_top = 0.647
+anchor_right = 0.68
+anchor_bottom = 0.827
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9, 0.9)
@@ -53,7 +60,7 @@ ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("4_4wjug")
 
-[node name="Label" type="Label" parent="TextureRect/StartTextureButton" unique_id=2145975881]
+[node name="Label" type="Label" parent="Pause/StartTextureButton" unique_id=2145975881]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
@@ -67,7 +74,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("5_yw8l3")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 52
 text = "Reprendre"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -78,13 +85,12 @@ script = ExtResource("6_crq0y")
 min_font_size = 2
 max_font_size = 92
 
-[node name="QuitTextureButton" type="TextureButton" parent="TextureRect" unique_id=1208715510]
+[node name="QuitTextureButton" type="TextureButton" parent="Pause" unique_id=1208715510]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.559
-anchor_top = 0.33600003
-anchor_right = 0.808
-anchor_bottom = 0.437
+anchor_left = -0.020000001
+anchor_right = 0.27600002
+anchor_bottom = 0.142
 scale = Vector2(0.9, 0.9)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_v4qc6")
@@ -93,7 +99,7 @@ ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("4_4wjug")
 
-[node name="Label" type="Label" parent="TextureRect/QuitTextureButton" unique_id=1089741630]
+[node name="Label" type="Label" parent="Pause/QuitTextureButton" unique_id=1089741630]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
@@ -105,7 +111,7 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("5_yw8l3")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 41
 text = "Partir"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -116,7 +122,7 @@ script = ExtResource("6_crq0y")
 min_font_size = 2
 max_font_size = 78
 
-[node name="BigScreenButton" type="TextureButton" parent="TextureRect" unique_id=1638133688]
+[node name="BigScreenButton" type="TextureButton" parent="Pause" unique_id=1638133688]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -134,12 +140,257 @@ stretch_mode = 5
 script = ExtResource("9_o7s6o")
 _sprites = Array[Texture]([ExtResource("8_mqd8b"), ExtResource("10_nxot5")])
 
-[connection signal="mouse_entered" from="TextureRect/StartTextureButton" to="TextureRect/StartTextureButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/StartTextureButton" to="TextureRect/StartTextureButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="TextureRect/StartTextureButton" to="." method="_on_start_texture_button_pressed"]
-[connection signal="mouse_entered" from="TextureRect/QuitTextureButton" to="TextureRect/QuitTextureButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/QuitTextureButton" to="TextureRect/QuitTextureButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="TextureRect/QuitTextureButton" to="." method="_on_quit_texture_button_pressed"]
-[connection signal="mouse_entered" from="TextureRect/BigScreenButton" to="TextureRect/BigScreenButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/BigScreenButton" to="TextureRect/BigScreenButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="TextureRect/BigScreenButton" to="TextureRect/BigScreenButton" method="_on_pressed"]
+[node name="OptionButton" type="TextureButton" parent="Pause" unique_id=274915098]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.409
+anchor_right = 0.81100005
+anchor_bottom = 0.573
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_v4qc6")
+texture_hover = ExtResource("3_fx2et")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_4wjug")
+
+[node name="Label" type="Label" parent="Pause/OptionButton" unique_id=96772292]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.261
+anchor_right = 0.8
+anchor_bottom = 0.82100004
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_yw8l3")
+theme_override_font_sizes/font_size = 45
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 2
+max_font_size = 78
+
+[node name="Audio" type="Control" parent="." unique_id=6939635]
+layout_mode = 1
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Control" type="Control" parent="Audio" unique_id=1118963385]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="Audio/Control" unique_id=1140488659]
+self_modulate = Color(0.4911909, 0.4911909, 0.4911909, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = 0.05
+anchor_right = 1.05
+anchor_bottom = 1.0
+rotation = 0.04712389
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("11_e7tfh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Music" type="TextureRect" parent="Audio/Control" unique_id=1768656816]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.15
+anchor_right = 0.9
+anchor_bottom = 0.35
+offset_top = 20.411995
+offset_bottom = 20.412003
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Audio/Control/Music" unique_id=1579555223]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.4
+offset_bottom = 0.044971466
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("12_nxot5")
+theme_override_font_sizes/font_size = 46
+text = "Music"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 1
+max_font_size = 68
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AudioSlider" parent="Audio/Control/Music" unique_id=651303198 instance=ExtResource("11_o7s6o")]
+layout_mode = 1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.9
+
+[node name="Sfx" type="TextureRect" parent="Audio/Control" unique_id=581789885]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.4
+anchor_right = 0.9
+anchor_bottom = 0.6
+offset_top = 5.8319855
+offset_bottom = 5.83197
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="AutoSizeLabel" type="Label" parent="Audio/Control/Sfx" unique_id=935425953]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.4
+offset_bottom = 0.044971466
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("12_nxot5")
+theme_override_font_sizes/font_size = 46
+text = "SFX"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 1
+max_font_size = 68
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AudioSlider" parent="Audio/Control/Sfx" unique_id=758896054 instance=ExtResource("11_o7s6o")]
+layout_mode = 1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.9
+sliderType = "SFX"
+
+[node name="UI" type="TextureRect" parent="Audio/Control" unique_id=1642549305]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.65
+anchor_right = 0.9
+anchor_bottom = 0.85
+offset_top = -11.664032
+offset_bottom = -11.664032
+pivot_offset_ratio = Vector2(0.5, 0.5)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="Audio/Control/UI" unique_id=1710415814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.4
+offset_bottom = 0.044971466
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("12_nxot5")
+theme_override_font_sizes/font_size = 46
+text = "UI"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 1
+max_font_size = 68
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="AudioSlider" parent="Audio/Control/UI" unique_id=1861073162 instance=ExtResource("11_o7s6o")]
+layout_mode = 1
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.9
+sliderType = "UI"
+
+[node name="BackTextureButton" type="TextureButton" parent="Audio" unique_id=1339184694]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.3
+anchor_bottom = 0.15
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_v4qc6")
+texture_hover = ExtResource("3_fx2et")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_4wjug")
+
+[node name="Label" type="Label" parent="Audio/BackTextureButton" unique_id=949981967]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.25
+anchor_right = 0.8
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_yw8l3")
+theme_override_font_sizes/font_size = 43
+text = "Partir"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("6_crq0y")
+min_font_size = 2
+max_font_size = 78
+
+[node name="AudioManager" type="Node" parent="." unique_id=719789525]
+script = ExtResource("13_vhywa")
+
+[node name="MusicStream" type="AudioStreamPlayer" parent="AudioManager" unique_id=1032384253]
+bus = &"Music"
+
+[node name="SFXStream" type="AudioStreamPlayer" parent="AudioManager" unique_id=94707984]
+bus = &"SFX"
+
+[node name="UIStream" type="AudioStreamPlayer" parent="AudioManager" unique_id=329814843]
+bus = &"UI"
+
+[connection signal="mouse_entered" from="Pause/StartTextureButton" to="Pause/StartTextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pause/StartTextureButton" to="Pause/StartTextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Pause/StartTextureButton" to="." method="_on_start_texture_button_pressed"]
+[connection signal="mouse_entered" from="Pause/QuitTextureButton" to="Pause/QuitTextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pause/QuitTextureButton" to="Pause/QuitTextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Pause/QuitTextureButton" to="." method="_on_quit_texture_button_pressed"]
+[connection signal="mouse_entered" from="Pause/BigScreenButton" to="Pause/BigScreenButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pause/BigScreenButton" to="Pause/BigScreenButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Pause/BigScreenButton" to="Pause/BigScreenButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Pause/OptionButton" to="Pause/OptionButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pause/OptionButton" to="Pause/OptionButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Pause/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="mouse_entered" from="Audio/BackTextureButton" to="Audio/BackTextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Audio/BackTextureButton" to="Audio/BackTextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Audio/BackTextureButton" to="." method="_on_back_texture_button_pressed"]
