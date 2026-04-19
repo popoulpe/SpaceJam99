@@ -21,9 +21,13 @@ func _pauseMenu()->void:
 	if(paused):
 		get_tree().paused = false
 		hide()
+		#visible = false
+		#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	else:
 		get_tree().paused = true
 		show()
+		visible = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	paused=!paused
 	print(paused)
 

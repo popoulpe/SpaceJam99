@@ -14,11 +14,11 @@ func _ready():
 	getNextLine()
 
 func Interact(player:PlayerWithoutSkate) -> void:
-	
 	if !fileEnded:
 		print(NextLine)
 		player.hud.interact(NextLine)
-		getNextLine()
+		if(!player.hud.label_scientifeet.is_typing):
+			getNextLine()
 
 func getNextLine() -> void:
 	if file.eof_reached():
