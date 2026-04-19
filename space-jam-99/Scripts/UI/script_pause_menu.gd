@@ -1,13 +1,16 @@
 extends Control
 var paused = false
 
-@export var _movingControl : Control
+@export var _Audio : Control
+@export var _AudioSkateTexture : TextureRect
+@export var _Pause : Control
 var hue : float = 0.0
-@export var _position : Vector2
+@export var _position : Array[Vector2]
 @export var fspeed:float=5.0
 
 func _ready() -> void:
-	_position = _movingControl.position
+	_position[0] = _Pause.position
+	_position[1] = _AudioSkateTexture.position
 	hide()
 	paused = false
 
@@ -26,6 +29,8 @@ func _pauseMenu()->void:
 	else:
 		get_tree().paused = true
 		show()
+		_Audio.hide()
+		_Pause.show()
 		visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	paused=!paused
@@ -45,5 +50,16 @@ func _on_timer_timeout(f:float):
 	var r: float = (sin(angle)*0.5)+0.5
 	var g:float = (sin(angle + TAU /3)*0.5)+0.5
 	
-	_movingControl.scale = Vector2(1+r/30,1+r/30)
-	_movingControl.position = _position + Vector2(r,g)*fspeed
+	_Pause.scale = Vector2(1+r/30,1+r/30)
+	_Pause.position = _position[0] + Vector2(r,g)*fspeed
+	_AudioSkateTexture.scale = Vector2(1+r/30,1+r/30)
+	_AudioSkateTexture.position = _position[1] + Vector2(r,g)*fspeed
+
+func _on_option_button_pressed() -> void:
+	_Pause.hide()
+	_Audio.show()
+
+
+func _on_back_texture_button_pressed() -> void:
+	_Audio.hide()
+	_Pause.show()
